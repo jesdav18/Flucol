@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Constructor.Pantallas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Flucol;
 
-namespace Flucol
+
+namespace Constructor
 {
     static class Program
     {
@@ -17,7 +18,7 @@ namespace Flucol
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmConstructor());
         }
     }
 }

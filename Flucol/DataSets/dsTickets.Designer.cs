@@ -20,17 +20,17 @@ namespace Flucol.DataSets {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsTicketsPosiciones")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsTickets")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsTicketsPosiciones : global::System.Data.DataSet {
+    public partial class dsTickets : global::System.Data.DataSet {
         
-        private dtTicketsPosicionesDataTable tabledtTicketsPosiciones;
+        private dtTicketDataTable tabledtTicket;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public dsTicketsPosiciones() {
+        public dsTickets() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Flucol.DataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected dsTicketsPosiciones(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsTickets(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Flucol.DataSets {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dtTicketsPosiciones"] != null)) {
-                    base.Tables.Add(new dtTicketsPosicionesDataTable(ds.Tables["dtTicketsPosiciones"]));
+                if ((ds.Tables["dtTicket"] != null)) {
+                    base.Tables.Add(new dtTicketDataTable(ds.Tables["dtTicket"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Flucol.DataSets {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dtTicketsPosicionesDataTable dtTicketsPosiciones {
+        public dtTicketDataTable dtTicket {
             get {
-                return this.tabledtTicketsPosiciones;
+                return this.tabledtTicket;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Flucol.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsTicketsPosiciones cln = ((dsTicketsPosiciones)(base.Clone()));
+            dsTickets cln = ((dsTickets)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Flucol.DataSets {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dtTicketsPosiciones"] != null)) {
-                    base.Tables.Add(new dtTicketsPosicionesDataTable(ds.Tables["dtTicketsPosiciones"]));
+                if ((ds.Tables["dtTicket"] != null)) {
+                    base.Tables.Add(new dtTicketDataTable(ds.Tables["dtTicket"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Flucol.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledtTicketsPosiciones = ((dtTicketsPosicionesDataTable)(base.Tables["dtTicketsPosiciones"]));
+            this.tabledtTicket = ((dtTicketDataTable)(base.Tables["dtTicket"]));
             if ((initTable == true)) {
-                if ((this.tabledtTicketsPosiciones != null)) {
-                    this.tabledtTicketsPosiciones.InitVars();
+                if ((this.tabledtTicket != null)) {
+                    this.tabledtTicket.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Flucol.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsTicketsPosiciones";
+            this.DataSetName = "dsTickets";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsTicketsPosiciones.xsd";
+            this.Namespace = "http://tempuri.org/dsTickets.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledtTicketsPosiciones = new dtTicketsPosicionesDataTable();
-            base.Tables.Add(this.tabledtTicketsPosiciones);
+            this.tabledtTicket = new dtTicketDataTable();
+            base.Tables.Add(this.tabledtTicket);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializedtTicketsPosiciones() {
+        private bool ShouldSerializedtTicket() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Flucol.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsTicketsPosiciones ds = new dsTicketsPosiciones();
+            dsTickets ds = new dsTickets();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,23 +270,21 @@ namespace Flucol.DataSets {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void dtTicketsPosicionesRowChangeEventHandler(object sender, dtTicketsPosicionesRowChangeEvent e);
+        public delegate void dtTicketRowChangeEventHandler(object sender, dtTicketRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dtTicketsPosicionesDataTable : global::System.Data.TypedTableBase<dtTicketsPosicionesRow> {
+        public partial class dtTicketDataTable : global::System.Data.TypedTableBase<dtTicketRow> {
             
-            private global::System.Data.DataColumn columnticket;
-            
-            private global::System.Data.DataColumn columnposicion;
+            private global::System.Data.DataColumn columnnumero_ticket;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesDataTable() {
-                this.TableName = "dtTicketsPosiciones";
+            public dtTicketDataTable() {
+                this.TableName = "dtTicket";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +292,7 @@ namespace Flucol.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal dtTicketsPosicionesDataTable(global::System.Data.DataTable table) {
+            internal dtTicketDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,24 +309,16 @@ namespace Flucol.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected dtTicketsPosicionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtTicketDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ticketColumn {
+            public global::System.Data.DataColumn numero_ticketColumn {
                 get {
-                    return this.columnticket;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn posicionColumn {
-                get {
-                    return this.columnposicion;
+                    return this.columnnumero_ticket;
                 }
             }
             
@@ -343,46 +333,45 @@ namespace Flucol.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesRow this[int index] {
+            public dtTicketRow this[int index] {
                 get {
-                    return ((dtTicketsPosicionesRow)(this.Rows[index]));
+                    return ((dtTicketRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtTicketsPosicionesRowChangeEventHandler dtTicketsPosicionesRowChanging;
+            public event dtTicketRowChangeEventHandler dtTicketRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtTicketsPosicionesRowChangeEventHandler dtTicketsPosicionesRowChanged;
+            public event dtTicketRowChangeEventHandler dtTicketRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtTicketsPosicionesRowChangeEventHandler dtTicketsPosicionesRowDeleting;
+            public event dtTicketRowChangeEventHandler dtTicketRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event dtTicketsPosicionesRowChangeEventHandler dtTicketsPosicionesRowDeleted;
+            public event dtTicketRowChangeEventHandler dtTicketRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AdddtTicketsPosicionesRow(dtTicketsPosicionesRow row) {
+            public void AdddtTicketRow(dtTicketRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesRow AdddtTicketsPosicionesRow(string ticket, int posicion) {
-                dtTicketsPosicionesRow rowdtTicketsPosicionesRow = ((dtTicketsPosicionesRow)(this.NewRow()));
+            public dtTicketRow AdddtTicketRow(string numero_ticket) {
+                dtTicketRow rowdtTicketRow = ((dtTicketRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ticket,
-                        posicion};
-                rowdtTicketsPosicionesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdtTicketsPosicionesRow);
-                return rowdtTicketsPosicionesRow;
+                        numero_ticket};
+                rowdtTicketRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtTicketRow);
+                return rowdtTicketRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dtTicketsPosicionesDataTable cln = ((dtTicketsPosicionesDataTable)(base.Clone()));
+                dtTicketDataTable cln = ((dtTicketDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,49 +379,46 @@ namespace Flucol.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dtTicketsPosicionesDataTable();
+                return new dtTicketDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnticket = base.Columns["ticket"];
-                this.columnposicion = base.Columns["posicion"];
+                this.columnnumero_ticket = base.Columns["numero_ticket"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnticket = new global::System.Data.DataColumn("ticket", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnticket);
-                this.columnposicion = new global::System.Data.DataColumn("posicion", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnposicion);
+                this.columnnumero_ticket = new global::System.Data.DataColumn("numero_ticket", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnumero_ticket);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesRow NewdtTicketsPosicionesRow() {
-                return ((dtTicketsPosicionesRow)(this.NewRow()));
+            public dtTicketRow NewdtTicketRow() {
+                return ((dtTicketRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dtTicketsPosicionesRow(builder);
+                return new dtTicketRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dtTicketsPosicionesRow);
+                return typeof(dtTicketRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dtTicketsPosicionesRowChanged != null)) {
-                    this.dtTicketsPosicionesRowChanged(this, new dtTicketsPosicionesRowChangeEvent(((dtTicketsPosicionesRow)(e.Row)), e.Action));
+                if ((this.dtTicketRowChanged != null)) {
+                    this.dtTicketRowChanged(this, new dtTicketRowChangeEvent(((dtTicketRow)(e.Row)), e.Action));
                 }
             }
             
@@ -440,8 +426,8 @@ namespace Flucol.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dtTicketsPosicionesRowChanging != null)) {
-                    this.dtTicketsPosicionesRowChanging(this, new dtTicketsPosicionesRowChangeEvent(((dtTicketsPosicionesRow)(e.Row)), e.Action));
+                if ((this.dtTicketRowChanging != null)) {
+                    this.dtTicketRowChanging(this, new dtTicketRowChangeEvent(((dtTicketRow)(e.Row)), e.Action));
                 }
             }
             
@@ -449,8 +435,8 @@ namespace Flucol.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dtTicketsPosicionesRowDeleted != null)) {
-                    this.dtTicketsPosicionesRowDeleted(this, new dtTicketsPosicionesRowChangeEvent(((dtTicketsPosicionesRow)(e.Row)), e.Action));
+                if ((this.dtTicketRowDeleted != null)) {
+                    this.dtTicketRowDeleted(this, new dtTicketRowChangeEvent(((dtTicketRow)(e.Row)), e.Action));
                 }
             }
             
@@ -458,14 +444,14 @@ namespace Flucol.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dtTicketsPosicionesRowDeleting != null)) {
-                    this.dtTicketsPosicionesRowDeleting(this, new dtTicketsPosicionesRowChangeEvent(((dtTicketsPosicionesRow)(e.Row)), e.Action));
+                if ((this.dtTicketRowDeleting != null)) {
+                    this.dtTicketRowDeleting(this, new dtTicketRowChangeEvent(((dtTicketRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovedtTicketsPosicionesRow(dtTicketsPosicionesRow row) {
+            public void RemovedtTicketRow(dtTicketRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -474,7 +460,7 @@ namespace Flucol.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsTicketsPosiciones ds = new dsTicketsPosiciones();
+                dsTickets ds = new dsTickets();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -492,7 +478,7 @@ namespace Flucol.DataSets {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dtTicketsPosicionesDataTable";
+                attribute2.FixedValue = "dtTicketDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -536,71 +522,43 @@ namespace Flucol.DataSets {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dtTicketsPosicionesRow : global::System.Data.DataRow {
+        public partial class dtTicketRow : global::System.Data.DataRow {
             
-            private dtTicketsPosicionesDataTable tabledtTicketsPosiciones;
+            private dtTicketDataTable tabledtTicket;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal dtTicketsPosicionesRow(global::System.Data.DataRowBuilder rb) : 
+            internal dtTicketRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledtTicketsPosiciones = ((dtTicketsPosicionesDataTable)(this.Table));
+                this.tabledtTicket = ((dtTicketDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string ticket {
+            public string numero_ticket {
                 get {
-                    if (this.IsticketNull()) {
-                        return string.Empty;
+                    if (this.Isnumero_ticketNull()) {
+                        return null;
                     }
                     else {
-                        return ((string)(this[this.tabledtTicketsPosiciones.ticketColumn]));
+                        return ((string)(this[this.tabledtTicket.numero_ticketColumn]));
                     }
                 }
                 set {
-                    this[this.tabledtTicketsPosiciones.ticketColumn] = value;
+                    this[this.tabledtTicket.numero_ticketColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int posicion {
-                get {
-                    try {
-                        return ((int)(this[this.tabledtTicketsPosiciones.posicionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'posicion\' de la tabla \'dtTicketsPosiciones\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtTicketsPosiciones.posicionColumn] = value;
-                }
+            public bool Isnumero_ticketNull() {
+                return this.IsNull(this.tabledtTicket.numero_ticketColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsticketNull() {
-                return this.IsNull(this.tabledtTicketsPosiciones.ticketColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetticketNull() {
-                this[this.tabledtTicketsPosiciones.ticketColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsposicionNull() {
-                return this.IsNull(this.tabledtTicketsPosiciones.posicionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetposicionNull() {
-                this[this.tabledtTicketsPosiciones.posicionColumn] = global::System.Convert.DBNull;
+            public void Setnumero_ticketNull() {
+                this[this.tabledtTicket.numero_ticketColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -608,22 +566,22 @@ namespace Flucol.DataSets {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class dtTicketsPosicionesRowChangeEvent : global::System.EventArgs {
+        public class dtTicketRowChangeEvent : global::System.EventArgs {
             
-            private dtTicketsPosicionesRow eventRow;
+            private dtTicketRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesRowChangeEvent(dtTicketsPosicionesRow row, global::System.Data.DataRowAction action) {
+            public dtTicketRowChangeEvent(dtTicketRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtTicketsPosicionesRow Row {
+            public dtTicketRow Row {
                 get {
                     return this.eventRow;
                 }

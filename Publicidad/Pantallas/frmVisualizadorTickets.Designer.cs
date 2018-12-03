@@ -1,6 +1,6 @@
-﻿namespace Flucol.Pantallas
+﻿namespace Publicidad.Pantallas
 {
-    partial class frmPrincipal
+    partial class frmVisualizadorTickets
     {
         /// <summary>
         /// Required designer variable.
@@ -28,53 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
-            this.ctlPublicidad1 = new Flucol.Controles.CtlPublicidad();
-            this.dsTicketsPosiciones1 = new Flucol.DataSets.dsTicketsPosiciones();
-            this.ctlTicketsPosiciones1 = new Flucol.Controles.CtlTicketsPosiciones();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizadorTickets));
+            this.ctlPublicidad1 = new Publicidad.Controles.CtlPublicidad();
+            this.ctlTicketsPosiciones1 = new Publicidad.Controles.CtlTicketsPosiciones();
             this.SuspendLayout();
             // 
             // ctlPublicidad1
             // 
             this.ctlPublicidad1.BackColor = System.Drawing.Color.White;
-            this.ctlPublicidad1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlPublicidad1.Dock = System.Windows.Forms.DockStyle.Left;
             this.ctlPublicidad1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlPublicidad1.Location = new System.Drawing.Point(0, 0);
             this.ctlPublicidad1.Name = "ctlPublicidad1";
-            this.ctlPublicidad1.Size = new System.Drawing.Size(564, 509);
+            this.ctlPublicidad1.Size = new System.Drawing.Size(418, 439);
             this.ctlPublicidad1.TabIndex = 0;
-            // 
-            // dsTicketsPosiciones1
-            // 
-            this.dsTicketsPosiciones1.DataSetName = "dsTicketsPosiciones";
-            this.dsTicketsPosiciones1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ctlTicketsPosiciones1
             // 
             this.ctlTicketsPosiciones1.BackColor = System.Drawing.Color.White;
-            this.ctlTicketsPosiciones1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ctlTicketsPosiciones1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlTicketsPosiciones1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlTicketsPosiciones1.Location = new System.Drawing.Point(564, 0);
+            this.ctlTicketsPosiciones1.Location = new System.Drawing.Point(418, 0);
             this.ctlTicketsPosiciones1.Name = "ctlTicketsPosiciones1";
-            this.ctlTicketsPosiciones1.Size = new System.Drawing.Size(549, 509);
+            this.ctlTicketsPosiciones1.Size = new System.Drawing.Size(520, 439);
             this.ctlTicketsPosiciones1.TabIndex = 1;
             // 
-            // frmPrincipal
+            // frmVisualizadorTickets
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1113, 509);
-            this.Controls.Add(this.ctlPublicidad1);
+            this.ClientSize = new System.Drawing.Size(938, 439);
             this.Controls.Add(this.ctlTicketsPosiciones1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.ctlPublicidad1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmPrincipal";
-            this.Text = "FLUCOL | PRINCIPAL";
-            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).EndInit();
+            this.Name = "frmVisualizadorTickets";
+            this.Text = "FLUCOL | VISUALIZADOR TICKETS";
             this.ResumeLayout(false);
 
         }
@@ -82,7 +72,6 @@
         #endregion
 
         private Controles.CtlPublicidad ctlPublicidad1;
-        private DataSets.dsTicketsPosiciones dsTicketsPosiciones1;
         private Controles.CtlTicketsPosiciones ctlTicketsPosiciones1;
     }
 }

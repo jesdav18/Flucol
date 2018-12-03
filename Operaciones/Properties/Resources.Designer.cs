@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Flucol.Properties {
+namespace Operaciones.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Flucol.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Flucol.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Operaciones.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,59 @@ namespace Flucol.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconIrAtras {
+        internal static System.Drawing.Bitmap iconAlmuerzo {
             get {
-                object obj = ResourceManager.GetObject("iconIrAtras", resourceCulture);
+                object obj = ResourceManager.GetObject("iconAlmuerzo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDetenerTicket {
+            get {
+                object obj = ResourceManager.GetObject("iconDetenerTicket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconIniciarTicket {
+            get {
+                object obj = ResourceManager.GetObject("iconIniciarTicket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconPausaPersonal {
+            get {
+                object obj = ResourceManager.GetObject("iconPausaPersonal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconPosicion {
+            get {
+                object obj = ResourceManager.GetObject("iconPosicion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconUsuario {
+            get {
+                object obj = ResourceManager.GetObject("iconUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

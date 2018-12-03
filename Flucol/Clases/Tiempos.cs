@@ -1,48 +1,70 @@
-﻿using System;
+﻿using Devart.Data.PostgreSql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace flucol
+namespace Flucol.Clases
 {
-    class Tiempos
+    public class Tiempos
     {
-        public DateTime Pro_Tiempo_Inicio_Cola { get; set; }
-        public DateTime Pro_Tiempo_Finalizacion_Cola { get; set; }
+
+        #region PROPIEDADES
+
+        public PgSqlConnection Pro_Conexion { get; set; }
         public DateTime Pro_Tiempo_Inicio_Espera { get; set; }
         public DateTime Pro_Tiempo_Finalizacion_Espera { get; set; }
         public DateTime Pro_Tiempo_Inicio_Atencion { get; set; }
         public DateTime Pro_Tiempo_Finalizacion_Atencion { get; set; }
 
-        public void Iniciar_Tiempo_Cola()
+        #endregion
+
+        #region FUNCIONES
+
+     
+        public void Registrar_Inicio_Tiempo_Espera(DateTime pInicioEspera, PgSqlConnection pConexion)
         {
+            Pro_Conexion = pConexion;
 
-        }
+            if (Pro_Conexion.State != System.Data.ConnectionState.Open)
+            {
+                Pro_Conexion.Open();
+            }
 
-        public void Finalizar_Tiempo_Cola()
-        {
-
-        }
-
-        public void Iniciar_Tiempo_Espera()
-        {
-
+            PgSqlTransaction pgTrans = Pro_Conexion.BeginTransaction();
+            try
+            {
+                
+            }
+            catch (PgSqlException Exc)
+            {
+                MessageBox.Show(Exc.Message, "FLUCOL");
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show(Exc.Message, "FLUCOL");
+            }
         } 
 
-        public void Finalizar_Tiempo_Espera()
+        public void Registrar_Finalizacion_Tiempo_Espera(DateTime pFinalizacionEspera)
         {
 
         }
 
-        public void Iniciar_Tiempo_Atencion()
+        public void Registrar_Inicio_Tiempo_Atencion(DateTime pInicioEspera)
         {
 
         }
 
-        public void Finalizar_Tiempo_Atencion()
+        public void Registrar_Finalizacion_Tiempo_Atencion(DateTime pFinalizacionEspera)
         {
 
         }
+
+        #endregion
+
+
     }
 }

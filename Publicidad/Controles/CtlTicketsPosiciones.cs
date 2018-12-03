@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Flucol.Controles
+namespace Publicidad.Controles
 {
-    public partial class CtlPublicidad : UserControl
+    public partial class CtlTicketsPosiciones : UserControl
     {
-        public CtlPublicidad()
+        public CtlTicketsPosiciones()
         {
             InitializeComponent();
         }

@@ -1,3 +1,9 @@
 DevExpress.Patch.InMemoryPatch, DevExpress.Patch.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7fc7bfca2443de66
+Infragistics.Win.UltraWinEditors.UltraTimeSpanEditor, Infragistics4.Win.UltraWinEditors.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+Infragistics.Win.UltraWinGauge.UltraGauge, Infragistics4.Win.UltraWinGauge.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
+Infragistics.Win.Misc.UltraLabel, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb
 DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraGauges.Win.GaugeControl, DevExpress.XtraGauges.v17.2.Win, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+Infragistics.Win.Misc.UltraButton, Infragistics4.Win.Misc.v18.1, Version=18.1.20181.177, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb

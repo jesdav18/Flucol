@@ -1,4 +1,4 @@
-﻿namespace Flucol.Controles
+﻿namespace Publicidad.Controles
 {
     partial class CtlTicketsPosiciones
     {
@@ -40,7 +40,7 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.gcPosicion = new DevExpress.XtraGrid.GridControl();
             this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dsTicketsPosiciones1 = new Flucol.DataSets.dsTicketsPosiciones();
+            this.dsTicketsPosiciones1 = new Publicidad.DataSets.dsTicketsPosiciones();
             this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colticket1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();

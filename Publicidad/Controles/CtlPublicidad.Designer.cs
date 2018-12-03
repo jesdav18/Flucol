@@ -1,4 +1,4 @@
-﻿namespace Flucol.Controles
+﻿namespace Publicidad.Controles
 {
     partial class CtlPublicidad
     {
@@ -35,7 +35,7 @@
             // picInicial
             // 
             this.picInicial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInicial.EditValue = global::Flucol.Properties.Resources.en_construccion;
+            this.picInicial.EditValue = global::Publicidad.Properties.Resources.en_construccion;
             this.picInicial.Location = new System.Drawing.Point(0, 0);
             this.picInicial.Name = "picInicial";
             this.picInicial.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
