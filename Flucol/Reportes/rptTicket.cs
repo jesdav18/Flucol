@@ -36,6 +36,8 @@ namespace Flucol.Reportes
             if (!string.IsNullOrEmpty(Pro_NumeroTicket) )
             {
                 lblNumeroTicket.Text = Pro_NumeroTicket;
+                lblHora.Text = string.Format("{0:hh:mm tt}", DateTime.Now);
+                lblFecha.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Now.Date);
             }
 
             
