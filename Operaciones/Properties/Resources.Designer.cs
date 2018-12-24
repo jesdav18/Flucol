@@ -73,9 +73,29 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconAlmuerzoVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconAlmuerzoVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconDetenerTicket {
             get {
                 object obj = ResourceManager.GetObject("iconDetenerTicket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDetenerTicketVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconDetenerTicketVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,29 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconIniciarTicketVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconIniciarTicketVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconPausaPersonal {
             get {
                 object obj = ResourceManager.GetObject("iconPausaPersonal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconPausaPersonalVerde {
+            get {
+                object obj = ResourceManager.GetObject("IconPausaPersonalVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

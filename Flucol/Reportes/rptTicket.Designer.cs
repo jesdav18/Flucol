@@ -174,11 +174,9 @@
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.ReportGeneration.ReportGenerator reportGenerator1;
-        private DataSets.dsTickets dsTickets1;
         private DevExpress.XtraReports.UI.XRLabel lblNumeroTicket;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
-        private DataSets.dsTickets dsTickets2;
         private DevExpress.XtraReports.UI.XRLabel lblFecha;
         private DevExpress.XtraReports.UI.XRLabel lblHora;
         private DevExpress.XtraReports.UI.XRLabel lblNombreAgencia;

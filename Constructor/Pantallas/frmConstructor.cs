@@ -94,11 +94,10 @@ namespace Constructor.Pantallas
             this.Hide();
         }
 
-        private void Construir_Control_Operacional()
+        private void Construir_Acceso_Para_Operaciones()
         {
-            frmOperaciones f_Operaciones = new frmOperaciones();
-            f_Operaciones.ConstruirFormulario(pgConexion);
-            f_Operaciones.Show();
+            frmLogin f_LoginOperaciones = new frmLogin(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
+            f_LoginOperaciones.Show();
             this.Hide();
         }
 
@@ -128,7 +127,7 @@ namespace Constructor.Pantallas
                     Construir_Control_Publicidad();
                     break;
                 case 3:
-                    Construir_Control_Operacional();
+                    Construir_Acceso_Para_Operaciones();
                     break;
             }
 

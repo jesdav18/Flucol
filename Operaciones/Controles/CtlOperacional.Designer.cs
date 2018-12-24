@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlOperacional));
-            this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
+            this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
             this.picPosicion = new DevExpress.XtraEditors.PictureEdit();
@@ -46,6 +47,8 @@
             this.pnlInformacionTickets = new System.Windows.Forms.Panel();
             this.lblTiempoAtencion = new DevExpress.XtraEditors.LabelControl();
             this.lblNumeroTicket = new DevExpress.XtraEditors.LabelControl();
+            this.tmrTiempoAtencion = new System.Windows.Forms.Timer(this.components);
+            this.tmrParoTiempo = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPosicion.Properties)).BeginInit();
@@ -58,24 +61,26 @@
             this.pnlInformacionTickets.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblUsuario
+            // lblNombreUsuario
             // 
-            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Appearance.Options.UseFont = true;
-            this.lblUsuario.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblUsuario.Location = new System.Drawing.Point(159, 32);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(232, 34);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "NOMBRE DE USUARIO";
+            this.lblNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNombreUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.Appearance.Options.UseFont = true;
+            this.lblNombreUsuario.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblNombreUsuario.Location = new System.Drawing.Point(157, 32);
+            this.lblNombreUsuario.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.lblNombreUsuario.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(232, 34);
+            this.lblNombreUsuario.TabIndex = 0;
+            this.lblNombreUsuario.Text = "NOMBRE DE USUARIO";
             // 
             // pnlEncabezado
             // 
             this.pnlEncabezado.Controls.Add(this.lblPosicion);
             this.pnlEncabezado.Controls.Add(this.picPosicion);
             this.pnlEncabezado.Controls.Add(this.picUsuario);
-            this.pnlEncabezado.Controls.Add(this.lblUsuario);
+            this.pnlEncabezado.Controls.Add(this.lblNombreUsuario);
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
             this.pnlEncabezado.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
@@ -91,6 +96,8 @@
             this.lblPosicion.Appearance.Options.UseFont = true;
             this.lblPosicion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPosicion.Location = new System.Drawing.Point(634, 32);
+            this.lblPosicion.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.lblPosicion.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lblPosicion.Name = "lblPosicion";
             this.lblPosicion.Size = new System.Drawing.Size(161, 34);
             this.lblPosicion.TabIndex = 6;
@@ -103,6 +110,9 @@
             this.picPosicion.Location = new System.Drawing.Point(539, 16);
             this.picPosicion.Name = "picPosicion";
             this.picPosicion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picPosicion.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.picPosicion.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.picPosicion.Properties.ReadOnly = true;
             this.picPosicion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picPosicion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picPosicion.Size = new System.Drawing.Size(76, 83);
@@ -115,6 +125,9 @@
             this.picUsuario.Location = new System.Drawing.Point(63, 16);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picUsuario.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.picUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.picUsuario.Properties.ReadOnly = true;
             this.picUsuario.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picUsuario.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picUsuario.Size = new System.Drawing.Size(76, 74);
@@ -192,6 +205,7 @@
             this.cmdCerrarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdCerrarTicket.Size = new System.Drawing.Size(65, 56);
             this.cmdCerrarTicket.TabIndex = 9;
+            this.cmdCerrarTicket.Click += new System.EventHandler(this.cmdCerrarTicket_Click);
             // 
             // cmdIniciarTicket
             // 
@@ -204,6 +218,7 @@
             this.cmdIniciarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdIniciarTicket.Size = new System.Drawing.Size(65, 56);
             this.cmdIniciarTicket.TabIndex = 8;
+            this.cmdIniciarTicket.Click += new System.EventHandler(this.cmdIniciarTicket_Click);
             // 
             // cmdTiempoPersonal
             // 
@@ -216,6 +231,7 @@
             this.cmdTiempoPersonal.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdTiempoPersonal.Size = new System.Drawing.Size(65, 56);
             this.cmdTiempoPersonal.TabIndex = 7;
+            this.cmdTiempoPersonal.Click += new System.EventHandler(this.cmdTiempoPersonal_Click);
             // 
             // lblSalidadAlmuerzo
             // 
@@ -243,6 +259,7 @@
             this.cmdAlmuerzo.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdAlmuerzo.Size = new System.Drawing.Size(65, 56);
             this.cmdAlmuerzo.TabIndex = 5;
+            this.cmdAlmuerzo.Click += new System.EventHandler(this.cmdAlmuerzo_Click);
             // 
             // pnlInformacionTickets
             // 
@@ -288,6 +305,16 @@
             this.lblNumeroTicket.TabIndex = 1;
             this.lblNumeroTicket.Text = "N° TICKET";
             // 
+            // tmrTiempoAtencion
+            // 
+            this.tmrTiempoAtencion.Interval = 1000;
+            this.tmrTiempoAtencion.Tick += new System.EventHandler(this.tmrTiempoAtencion_Tick);
+            // 
+            // tmrParoTiempo
+            // 
+            this.tmrParoTiempo.Interval = 1000;
+            this.tmrParoTiempo.Tick += new System.EventHandler(this.tmrParoTiempo_Tick);
+            // 
             // CtlOperacional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +342,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl lblUsuario;
+        private DevExpress.XtraEditors.LabelControl lblNombreUsuario;
         private DevExpress.XtraEditors.PictureEdit picUsuario;
         private DevExpress.XtraEditors.PictureEdit picPosicion;
         private DevExpress.XtraEditors.PanelControl pnlEncabezado;
@@ -332,5 +359,7 @@
         private DevExpress.XtraEditors.PictureEdit cmdIniciarTicket;
         private DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
         private DevExpress.XtraEditors.LabelControl lblNumeroTicket;
+        private System.Windows.Forms.Timer tmrTiempoAtencion;
+        private System.Windows.Forms.Timer tmrParoTiempo;
     }
 }

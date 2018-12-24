@@ -17,9 +17,27 @@ namespace Operaciones.Pantallas
 
         #region INICIALIZADOR
 
-        public frmOperaciones()
+        public frmOperaciones(PgSqlConnection pConexion,
+                              int pID_Agencia_Servicio,
+                              int pID_Cliente_Servicio,
+                              int pID_Nivel_Acceso,
+                              string pNombre_Empleado,
+                              string pUsuario,
+                              string pDescripcionNivelAcceso,
+                              string pCargo)
         {
             InitializeComponent();
+            ctlOperacional1.ConstruirControl(pConexion, 
+                                             pID_Agencia_Servicio, 
+                                             pID_Cliente_Servicio,
+                                             pID_Nivel_Acceso,
+                                             pDescripcionNivelAcceso,
+                                             pCargo,
+                                             pNombre_Empleado,
+                                             pUsuario
+                                             
+                                             );
+            
            
         }
 
@@ -33,13 +51,31 @@ namespace Operaciones.Pantallas
 
         #region FUNCIONES
 
-        public void ConstruirFormulario(PgSqlConnection pConexion)
+        
+
+        #endregion
+
+        #region EVENTOS CONTROLES
+
+        private void frmOperaciones_KeyDown(object sender, KeyEventArgs e)
         {
-            Pro_Conexion = pConexion;
-            if (Pro_Conexion.State != ConnectionState.Open)
+            if (e.KeyCode == Keys.F1)
             {
-                Pro_Conexion.Open();
+                ctlOperacional1.PresionaF1_IniciarTicket(sender);
             }
+            if (e.KeyCode == Keys.F2)
+            {
+                ctlOperacional1.PresionaF2_CerrarTicket(sender);
+            }
+            if (e.KeyCode == Keys.F12)
+            {
+                ctlOperacional1.PresionaF12_ParoTiempoPersonal(sender);
+            }
+            if (e.KeyCode == Keys.F11)
+            {
+                ctlOperacional1.PresionaF11_SalidaAlmuerzo(sender);
+            }
+
         }
 
         #endregion

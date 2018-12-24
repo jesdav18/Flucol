@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOperaciones));
-
             this.ctlOperacional1 = new Operaciones.Controles.CtlOperacional();
-
             this.SuspendLayout();
-
             // 
             // ctlOperacional1
             // 
@@ -42,6 +39,11 @@
             this.ctlOperacional1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlOperacional1.Location = new System.Drawing.Point(0, 0);
             this.ctlOperacional1.Name = "ctlOperacional1";
+            this.ctlOperacional1.Pro_Cliente = 0;
+            this.ctlOperacional1.Pro_Conexion = null;
+            this.ctlOperacional1.Pro_Posicion = 0;
+            this.ctlOperacional1.Pro_Prioridad_Atencion = 0;
+            this.ctlOperacional1.Pro_Sucursal = 0;
             this.ctlOperacional1.Size = new System.Drawing.Size(951, 509);
             this.ctlOperacional1.TabIndex = 0;
             // 
@@ -56,9 +58,10 @@
             this.Controls.Add(this.ctlOperacional1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "frmOperaciones";
             this.Text = "FLUCOL | OPERACIONES";
-
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmOperaciones_KeyDown);
             this.ResumeLayout(false);
 
         }

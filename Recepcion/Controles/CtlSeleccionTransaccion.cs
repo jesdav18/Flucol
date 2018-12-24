@@ -131,7 +131,7 @@ namespace Recepcion.Controles
             {
                 pgTrans.Rollback();
                 Pro_Ticket_Generado = null;
-                MessageBox.Show("Algo salió mal en el momento de generar el ticket." + Exc.Message,"FLUCOL");
+                MessageBox.Show(Exc.Message,"FLUCOL");
                 
             }
         }

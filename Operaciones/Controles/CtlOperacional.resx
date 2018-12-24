@@ -121,7 +121,7 @@
   <data name="picUsuario.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3SAAAN0gFvkv6OAAAAAmJL
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3QAAAN0AEQbD0HAAAAAmJL
         R0QAAKqNIzIAAAAHdElNRQfiCxIIKR/dxX2KAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTExLTE4VDA4
         OjQxOjMxKzAxOjAwEFY2PgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0xMS0xOFQwODo0MTozMSswMTow
         MGELjoIAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAGxUlEQVR4Xu3de6hlYxzG
@@ -156,4 +156,10 @@
         XL4Rbm0HX/O9JcJjeCzP4blsg23NErbNPtgX+2TfRU/f/t8ZG/sbiHxJ5Yrsm8oAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="tmrTiempoAtencion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tmrParoTiempo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
 </root>
