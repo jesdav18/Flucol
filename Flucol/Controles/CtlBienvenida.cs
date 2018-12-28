@@ -24,13 +24,13 @@ namespace Flucol.Controles
 
         #region PROPIEDADES
 
-        private int Pro_Segundos { get; set; }
+       
 
         #endregion
 
         #region VARIABLES GLOBALES
 
-        const int MAXIMO_SEGUNDOS_BIENVENIDA = 1;
+        
 
         #endregion
 
@@ -44,9 +44,16 @@ namespace Flucol.Controles
 
         public void ConstruirControl()
         {
-            Pro_Segundos = 0;
+            
             tmrBienvenida.Start();
+            System.Reflection.Assembly v_ensamblado = System.Reflection.Assembly.GetExecutingAssembly();
+            System.IO.FileInfo obj_archivo_informacion = new System.IO.FileInfo(v_ensamblado.Location);
+            DateTime v_ultima_actualizacion = obj_archivo_informacion.LastWriteTime;
+            lblUltimaActualizacion.Text = "" + v_ultima_actualizacion.ToShortDateString() + ", " + v_ultima_actualizacion.ToShortTimeString();
 
+            obj_archivo_informacion = null;
+            v_ensamblado = null;
+            
         }
 
         #endregion

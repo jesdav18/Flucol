@@ -227,17 +227,14 @@ namespace Recepcion.Controles
 
         private void tmrTiempoVisualizacionTicket_Tick(object sender, EventArgs e)
         {
-            if (v_SegundosVisualizacionTicket <= TIEMPO_MAXIMO_VISUALIZAR_TICKET)
-            {
-                v_SegundosVisualizacionTicket++;
-            }
-            else
-            {
-                tmrTiempoVisualizacionTicket.Stop();
-                IrAPaginaPrioridades();
-            }
+           
+            tmrTiempoVisualizacionTicket.Stop();
+            IrAPaginaPrioridades();
+            
         }
 
         #endregion
+
+       
     }
 }

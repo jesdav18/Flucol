@@ -59,5 +59,15 @@ namespace Flucol.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_Flucol {
+            get {
+                object obj = ResourceManager.GetObject("img_Flucol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -78,14 +78,33 @@ namespace Flucol.Pantallas
 
         #region FUNCIONES
 
+        private void ReestablecerFormConstructor()
+        {
+            try
+            {
+                this.Hide();
+                this.FormBorderStyle = FormBorderStyle.Sizable;
+                this.WindowState = FormWindowState.Maximized;
+                ctlBienvenida1.Dispose();
+                this.Show();
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show("ALGO SALIÓ MAL EN EL MOMENTO DE REESTABLECER FORMULARIO CONSTRUCTOR: " + Exc.Message, "FLUCOL");
+            }
+        }
+
         private void Construir_Control_SeleccionTransaccion()
         {
             frmRecepcion f_Recepcion = new frmRecepcion();
+            f_Recepcion.MdiParent = this;
             f_Recepcion.ConstruirFormulario(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
-            f_Recepcion.ShowDialog();
-            //this.Hide();
+            ReestablecerFormConstructor();
+            f_Recepcion.Show();
+            
         }
 
+      
         private void Construir_Control_Publicidad()
         {
             frmVisualizadorTickets f_Visualizador = new frmVisualizadorTickets();
@@ -134,7 +153,13 @@ namespace Flucol.Pantallas
            
         }
 
+        private void f_Recepcion_OnCerrarFormulario(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #endregion
 
+       
     }
 }

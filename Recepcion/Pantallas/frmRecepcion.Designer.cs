@@ -38,6 +38,12 @@
             this.ctlSeleccionTransaccion1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlSeleccionTransaccion1.Location = new System.Drawing.Point(0, 0);
             this.ctlSeleccionTransaccion1.Name = "ctlSeleccionTransaccion1";
+            this.ctlSeleccionTransaccion1.Pro_Conexion = null;
+            this.ctlSeleccionTransaccion1.Pro_ID_Cliente_Servicio = 0;
+            this.ctlSeleccionTransaccion1.Pro_ID_Operacion_Servicio = 0;
+            this.ctlSeleccionTransaccion1.Pro_ID_Tipo_Ticket_Servicio = 0;
+            this.ctlSeleccionTransaccion1.Pro_Sucursal = 0;
+            this.ctlSeleccionTransaccion1.Pro_Ticket_Generado = null;
             this.ctlSeleccionTransaccion1.Size = new System.Drawing.Size(926, 457);
             this.ctlSeleccionTransaccion1.TabIndex = 0;
             // 
@@ -51,9 +57,12 @@
             this.ClientSize = new System.Drawing.Size(926, 457);
             this.Controls.Add(this.ctlSeleccionTransaccion1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecepcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLUCOL | RECEPCIÓN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

@@ -335,6 +335,7 @@
             // 
             // tmrTiempoVisualizacionTicket
             // 
+            this.tmrTiempoVisualizacionTicket.Interval = 2000;
             this.tmrTiempoVisualizacionTicket.Tick += new System.EventHandler(this.tmrTiempoVisualizacionTicket_Tick);
             // 
             // documentViewer1
@@ -343,7 +344,11 @@
             this.documentViewer1.DocumentSource = typeof(Core.Reportes.rptTicket);
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.LookAndFeel.SkinName = "Office 2013";
+            this.documentViewer1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.documentViewer1.Name = "documentViewer1";
+            this.documentViewer1.PageBorderColor = System.Drawing.Color.White;
+            this.documentViewer1.SelectedPageBorderColor = System.Drawing.Color.White;
             this.documentViewer1.Size = new System.Drawing.Size(876, 445);
             this.documentViewer1.TabIndex = 0;
             // 
