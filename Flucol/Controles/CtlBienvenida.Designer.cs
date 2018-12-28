@@ -1,4 +1,4 @@
-﻿namespace Constructor.Controles
+﻿namespace Flucol.Controles
 {
     partial class CtlBienvenida
     {
@@ -49,6 +49,7 @@
             // 
             // tmrBienvenida
             // 
+            this.tmrBienvenida.Interval = 500;
             this.tmrBienvenida.Tick += new System.EventHandler(this.tmrBienvenida_Tick);
             // 
             // CtlBienvenida

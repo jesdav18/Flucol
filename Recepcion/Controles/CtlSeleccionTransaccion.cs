@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-using Flucol.Clases;
-using Flucol.Reportes;
+using DevExpress.XtraCharts.Native;
+using Core.Clases;
+using Core.Reportes;
 
 namespace Recepcion.Controles
 {
@@ -138,7 +139,7 @@ namespace Recepcion.Controles
 
         private void RegistrarInicioTiempoEspera()
         {
-            Flucol.Clases.Tiempos objTemporizador = new Flucol.Clases.Tiempos();
+            Core.Clases.Tiempos objTemporizador = new Core.Clases.Tiempos();
             objTemporizador.Registrar_Inicio_Tiempo_Espera(DateTime.Now, Pro_Conexion);
             objTemporizador = null;
         }

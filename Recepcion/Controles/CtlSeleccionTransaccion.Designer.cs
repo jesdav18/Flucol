@@ -48,9 +48,9 @@
             this.cmdTransacciones = new DevExpress.XtraEditors.PictureEdit();
             this.cmdServicioAlCliente = new DevExpress.XtraEditors.PictureEdit();
             this.navPageTicket = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.tmrTiempoEspera = new System.Windows.Forms.Timer(this.components);
             this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer(this.components);
+            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navFrameMenuInicial)).BeginInit();
@@ -333,23 +333,19 @@
             this.navPageTicket.Name = "navPageTicket";
             this.navPageTicket.Size = new System.Drawing.Size(876, 445);
             // 
-            // documentViewer1
-            // 
-            this.documentViewer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.DocumentSource = typeof(Flucol.Reportes.rptTicket);
-            this.documentViewer1.ForeColor = System.Drawing.Color.Black;
-            this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
-            this.documentViewer1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.documentViewer1.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(876, 445);
-            this.documentViewer1.TabIndex = 0;
-            // 
             // tmrTiempoVisualizacionTicket
             // 
             this.tmrTiempoVisualizacionTicket.Tick += new System.EventHandler(this.tmrTiempoVisualizacionTicket_Tick);
+            // 
+            // documentViewer1
+            // 
+            this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.documentViewer1.DocumentSource = typeof(Core.Reportes.rptTicket);
+            this.documentViewer1.IsMetric = true;
+            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.Name = "documentViewer1";
+            this.documentViewer1.Size = new System.Drawing.Size(876, 445);
+            this.documentViewer1.TabIndex = 0;
             // 
             // CtlSeleccionTransaccion
             // 
@@ -402,7 +398,7 @@
         private DevExpress.XtraEditors.PanelControl pnlInferior;
         private DevExpress.XtraEditors.PictureEdit cmdIrAPrioridades;
         private DevExpress.XtraBars.Navigation.NavigationPage navPageTicket;
-        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
         private System.Windows.Forms.Timer tmrTiempoVisualizacionTicket;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
     }
 }

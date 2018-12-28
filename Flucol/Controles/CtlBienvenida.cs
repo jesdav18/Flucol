@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
-namespace Constructor.Controles
+namespace Flucol.Controles
 {
     public partial class CtlBienvenida : UserControl
     {
@@ -30,7 +30,7 @@ namespace Constructor.Controles
 
         #region VARIABLES GLOBALES
 
-        const int MAXIMO_SEGUNDOS_BIENVENIDA = 3;
+        const int MAXIMO_SEGUNDOS_BIENVENIDA = 1;
 
         #endregion
 
@@ -55,17 +55,8 @@ namespace Constructor.Controles
 
         private void tmrBienvenida_Tick(object sender, EventArgs e)
         {
-            if (Pro_Segundos <= MAXIMO_SEGUNDOS_BIENVENIDA)
-            {
-                Pro_Segundos++;
-            }
-            else
-            {
-                tmrBienvenida.Stop();
-                OnTerminaTiempoBienvenida?.Invoke(sender, e);
-
-            }
-
+            tmrBienvenida.Stop();
+            OnTerminaTiempoBienvenida?.Invoke(sender, e);   
         }
 
         #endregion

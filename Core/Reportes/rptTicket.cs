@@ -5,7 +5,7 @@ using System.ComponentModel;
 using DevExpress.XtraReports.UI;
 using Devart.Data.PostgreSql;
 
-namespace Flucol.Reportes
+namespace Core.Reportes
 {
     public partial class rptTicket : DevExpress.XtraReports.UI.XtraReport
     {

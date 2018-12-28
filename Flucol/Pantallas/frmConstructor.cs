@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Speech.Synthesis;
-using Flucol.Reportes;
+using Core.Reportes;
 using DevExpress.XtraReports.UI;
 using Recepcion.Pantallas;
 using Publicidad.Pantallas;
 using Operaciones.Pantallas;
 using Devart.Data.PostgreSql;
 
-namespace Constructor.Pantallas
+namespace Flucol.Pantallas
 {
     public partial class frmConstructor : DevExpress.XtraEditors.XtraForm
     {
@@ -82,22 +82,22 @@ namespace Constructor.Pantallas
         {
             frmRecepcion f_Recepcion = new frmRecepcion();
             f_Recepcion.ConstruirFormulario(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
-            f_Recepcion.Show();
-            this.Hide();
+            f_Recepcion.ShowDialog();
+            //this.Hide();
         }
 
         private void Construir_Control_Publicidad()
         {
             frmVisualizadorTickets f_Visualizador = new frmVisualizadorTickets();
             f_Visualizador.ConstruirFormulario(pgConexion);
-            f_Visualizador.Show();
+            f_Visualizador.ShowDialog();
             this.Hide();
         }
 
         private void Construir_Acceso_Para_Operaciones()
         {
             frmLogin f_LoginOperaciones = new frmLogin(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
-            f_LoginOperaciones.Show();
+            f_LoginOperaciones.ShowDialog();
             this.Hide();
         }
 
@@ -131,7 +131,7 @@ namespace Constructor.Pantallas
                     break;
             }
 
-            this.Hide();
+           
         }
 
         #endregion

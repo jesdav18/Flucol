@@ -1,4 +1,4 @@
-﻿namespace Flucol.Reportes
+﻿namespace Core.Reportes
 {
     partial class rptTicket
     {
