@@ -17,6 +17,7 @@ using Recepcion.Pantallas;
 using Publicidad.Pantallas;
 using Operaciones.Pantallas;
 using Devart.Data.PostgreSql;
+using Flucol.Controles;
 
 namespace Flucol.Pantallas
 {
@@ -28,7 +29,7 @@ namespace Flucol.Pantallas
         public frmConstructor()
         {
             InitializeComponent();
-            ctlBienvenida1.ConstruirControl();
+            ctlBienvenida= new CtlBienvenida();
             pgConexion.Open();
 
         }
@@ -82,10 +83,11 @@ namespace Flucol.Pantallas
         {
             try
             {
+               
                 this.Hide();
+                ctlBienvenida.Dispose();
                 this.FormBorderStyle = FormBorderStyle.Sizable;
-                this.WindowState = FormWindowState.Maximized;
-                ctlBienvenida1.Dispose();
+                this.WindowState = FormWindowState.Maximized;             
                 this.Show();
             }
             catch (Exception Exc)
@@ -94,14 +96,16 @@ namespace Flucol.Pantallas
             }
         }
 
-        private void Construir_Control_SeleccionTransaccion()
-        {
+        private void Construir_Control_SeleccionTransaccion() { 
+
+
+            
             frmRecepcion f_Recepcion = new frmRecepcion();
             f_Recepcion.MdiParent = this;
             f_Recepcion.ConstruirFormulario(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
-            ReestablecerFormConstructor();
             f_Recepcion.Show();
-            
+            ReestablecerFormConstructor();
+
         }
 
       
@@ -129,14 +133,16 @@ namespace Flucol.Pantallas
         #region VARIABLES GLOBALES
 
         PgSqlConnection pgConexion = new PgSqlConnection("User Id=admin; Password=Soporte+23;Host=localhost;Port=5433;Database=flucol_db;Persist Security Info=False");
-        
+        CtlBienvenida ctlBienvenida;
 
         #endregion
 
         #region EVENTOS CONTROLES
 
-        private void ctlBienvenida1_OnTerminaTiempoBienvenida(object sender, EventArgs e)
+        private void ctlBienvenida_OnTerminaTiempoBienvenida(object sender, EventArgs e)
         {
+
+            
             switch (Pro_Modulo)
             {
                 case 1:
@@ -158,8 +164,23 @@ namespace Flucol.Pantallas
             this.Close();
         }
 
-        #endregion
+        private void frmConstructor_Shown(object sender, EventArgs e)
+        {
+            
+        }
 
-       
+    
+        private void frmConstructor_Load(object sender, EventArgs e)
+        {
+           
+           
+            ctlBienvenida.OnTerminaTiempoBienvenida += new EventHandler(ctlBienvenida_OnTerminaTiempoBienvenida);
+            this.Controls.Add(ctlBienvenida);
+            ctlBienvenida.Dock = DockStyle.Fill;
+            ctlBienvenida.ConstruirControl();
+            
+        }
+
+        #endregion
     }
 }

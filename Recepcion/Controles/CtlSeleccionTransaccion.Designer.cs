@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
             this.pnlTitulo = new DevExpress.XtraEditors.PanelControl();
             this.navFrameMenuInicial = new DevExpress.XtraBars.Navigation.NavigationFrame();
@@ -48,8 +47,8 @@
             this.cmdTransacciones = new DevExpress.XtraEditors.PictureEdit();
             this.cmdServicioAlCliente = new DevExpress.XtraEditors.PictureEdit();
             this.navPageTicket = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.tmrTiempoEspera = new System.Windows.Forms.Timer(this.components);
-            this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer(this.components);
+            this.tmrTiempoEspera = new System.Windows.Forms.Timer();
+            this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
@@ -341,7 +340,6 @@
             // documentViewer1
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.DocumentSource = typeof(Core.Reportes.rptTicket);
             this.documentViewer1.IsMetric = true;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.LookAndFeel.SkinName = "Office 2013";
@@ -349,6 +347,7 @@
             this.documentViewer1.Name = "documentViewer1";
             this.documentViewer1.PageBorderColor = System.Drawing.Color.White;
             this.documentViewer1.SelectedPageBorderColor = System.Drawing.Color.White;
+            this.documentViewer1.ShowPageMargins = false;
             this.documentViewer1.Size = new System.Drawing.Size(876, 445);
             this.documentViewer1.TabIndex = 0;
             // 

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblBienvenido = new DevExpress.XtraEditors.LabelControl();
-            this.tmrBienvenida = new System.Windows.Forms.Timer();
+            this.tmrBienvenida = new System.Windows.Forms.Timer(this.components);
             this.lblNombrePrograma = new DevExpress.XtraEditors.LabelControl();
             this.lblUltimaActualizacion = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,7 +59,7 @@
             // 
             // tmrBienvenida
             // 
-            this.tmrBienvenida.Interval = 500;
+            this.tmrBienvenida.Interval = 3000;
             this.tmrBienvenida.Tick += new System.EventHandler(this.tmrBienvenida_Tick);
             // 
             // lblNombrePrograma

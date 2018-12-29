@@ -36,13 +36,13 @@
             this.lblTicket = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.gcTicket = new DevExpress.XtraGrid.GridControl();
-            this.gvTicket = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.gcPosicion = new DevExpress.XtraGrid.GridControl();
-            this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dsTicketsPosiciones1 = new Publicidad.DataSets.dsTicketsPosiciones();
-            this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvTicket = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colticket1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcPosicion = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -50,12 +50,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTicket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -177,6 +177,11 @@
             this.gcTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTicket});
             // 
+            // dsTicketsPosiciones1
+            // 
+            this.dsTicketsPosiciones1.DataSetName = "dsTicketsPosiciones";
+            this.dsTicketsPosiciones1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gvTicket
             // 
             this.gvTicket.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -191,6 +196,13 @@
             this.gvTicket.OptionsView.ShowGroupPanel = false;
             this.gvTicket.OptionsView.ShowIndicator = false;
             // 
+            // colticket1
+            // 
+            this.colticket1.FieldName = "ticket";
+            this.colticket1.Name = "colticket1";
+            this.colticket1.Visible = true;
+            this.colticket1.VisibleIndex = 0;
+            // 
             // panelControl4
             // 
             this.panelControl4.Appearance.BackColor = System.Drawing.Color.White;
@@ -203,19 +215,6 @@
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(310, 183);
             this.panelControl4.TabIndex = 3;
-            // 
-            // gcPosicion
-            // 
-            this.gcPosicion.DataMember = "dtTicketsPosiciones";
-            this.gcPosicion.DataSource = this.dsTicketsPosiciones1;
-            this.gcPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPosicion.Location = new System.Drawing.Point(3, 3);
-            this.gcPosicion.MainView = this.gvPosicion;
-            this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(304, 177);
-            this.gcPosicion.TabIndex = 1;
-            this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPosicion});
             // 
             // gvPosicion
             // 
@@ -231,11 +230,6 @@
             this.gvPosicion.OptionsView.ShowGroupPanel = false;
             this.gvPosicion.OptionsView.ShowIndicator = false;
             // 
-            // dsTicketsPosiciones1
-            // 
-            this.dsTicketsPosiciones1.DataSetName = "dsTicketsPosiciones";
-            this.dsTicketsPosiciones1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // colposicion
             // 
             this.colposicion.FieldName = "posicion";
@@ -243,12 +237,18 @@
             this.colposicion.Visible = true;
             this.colposicion.VisibleIndex = 0;
             // 
-            // colticket1
+            // gcPosicion
             // 
-            this.colticket1.FieldName = "ticket";
-            this.colticket1.Name = "colticket1";
-            this.colticket1.Visible = true;
-            this.colticket1.VisibleIndex = 0;
+            this.gcPosicion.DataMember = "dtTicketsPosiciones";
+            this.gcPosicion.DataSource = this.dsTicketsPosiciones1;
+            this.gcPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcPosicion.Location = new System.Drawing.Point(3, 3);
+            this.gcPosicion.MainView = this.gvPosicion;
+            this.gcPosicion.Name = "gcPosicion";
+            this.gcPosicion.Size = new System.Drawing.Size(304, 177);
+            this.gcPosicion.TabIndex = 1;
+            this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPosicion});
             // 
             // CtlTicketsPosiciones
             // 
@@ -269,12 +269,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTicket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsTicketsPosiciones1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,11 +290,11 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraGrid.GridControl gcTicket;
         private DevExpress.XtraGrid.Views.Grid.GridView gvTicket;
+        private DataSets.dsTicketsPosiciones dsTicketsPosiciones1;
+        private DevExpress.XtraGrid.Columns.GridColumn colticket1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraGrid.GridControl gcPosicion;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPosicion;
-        private DataSets.dsTicketsPosiciones dsTicketsPosiciones1;
-        private DevExpress.XtraGrid.Columns.GridColumn colticket1;
         private DevExpress.XtraGrid.Columns.GridColumn colposicion;
     }
 }

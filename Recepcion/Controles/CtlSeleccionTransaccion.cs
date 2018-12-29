@@ -30,10 +30,9 @@ namespace Recepcion.Controles
 
         #endregion
 
-        #region VARIABLES GLOBALES / CONSTANTES
+        #region VARIABLES GLOBALES / CONSTANTES / OBJETOS
 
-        const int TIEMPO_MAXIMO_VISUALIZAR_TICKET = 100;
-        int v_SegundosVisualizacionTicket = 0;
+        rptTicket rpt = null;
 
         #endregion
 
@@ -81,12 +80,12 @@ namespace Recepcion.Controles
         private void IrAPaginaTicket()
         {
             navFrameMenuInicial.SelectedPage = navPageTicket;
-            rptTicket rpt = new rptTicket();
 
+            rpt = new rptTicket();
             rpt.CargarDatos(Pro_Ticket_Generado);
             rpt.CreateDocument();
             documentViewer1.DocumentSource = rpt;
-            v_SegundosVisualizacionTicket = 0;
+
             tmrTiempoVisualizacionTicket.Start();
         }
 
@@ -122,9 +121,11 @@ namespace Recepcion.Controles
                     Pro_Ticket_Generado = pgDr.GetString("numero_ticket");
                 }
 
+               
                 pgTrans.Commit();
 
-                
+                pgDr.Close();
+                pgComando.Dispose();
 
 
             }
@@ -230,11 +231,13 @@ namespace Recepcion.Controles
            
             tmrTiempoVisualizacionTicket.Stop();
             IrAPaginaPrioridades();
-            
+            rpt.Dispose();
         }
+
+
+   
 
         #endregion
 
-       
     }
 }

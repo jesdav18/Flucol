@@ -48,10 +48,7 @@ namespace Recepcion.Pantallas
             ctlSeleccionTransaccion1.ConstruirControl(Pro_Conexion,Pro_Sucursal,Pro_ID_ClienteServicio);
         }
 
-        private void frmRecepcion_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
+        
 
         #endregion
 
