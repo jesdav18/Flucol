@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblTituloPosiciones = new DevExpress.XtraEditors.LabelControl();
             this.lblTituloTickets = new DevExpress.XtraEditors.LabelControl();
@@ -40,9 +41,12 @@
             this.gvTicket = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colticket1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.gcPosicion = new DevExpress.XtraGrid.GridControl();
             this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcPosicion = new DevExpress.XtraGrid.GridControl();
+            this.tmrConsultaLlamadoTickets = new System.Windows.Forms.Timer(this.components);
+            this.bgLlamadoTickets = new System.ComponentModel.BackgroundWorker();
+            this.tmrConsultaCola = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -54,8 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -216,6 +220,19 @@
             this.panelControl4.Size = new System.Drawing.Size(310, 183);
             this.panelControl4.TabIndex = 3;
             // 
+            // gcPosicion
+            // 
+            this.gcPosicion.DataMember = "dtTicketsPosiciones";
+            this.gcPosicion.DataSource = this.dsTicketsPosiciones1;
+            this.gcPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcPosicion.Location = new System.Drawing.Point(3, 3);
+            this.gcPosicion.MainView = this.gvPosicion;
+            this.gcPosicion.Name = "gcPosicion";
+            this.gcPosicion.Size = new System.Drawing.Size(304, 177);
+            this.gcPosicion.TabIndex = 1;
+            this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPosicion});
+            // 
             // gvPosicion
             // 
             this.gvPosicion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -237,18 +254,20 @@
             this.colposicion.Visible = true;
             this.colposicion.VisibleIndex = 0;
             // 
-            // gcPosicion
+            // tmrConsultaLlamadoTickets
             // 
-            this.gcPosicion.DataMember = "dtTicketsPosiciones";
-            this.gcPosicion.DataSource = this.dsTicketsPosiciones1;
-            this.gcPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPosicion.Location = new System.Drawing.Point(3, 3);
-            this.gcPosicion.MainView = this.gvPosicion;
-            this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(304, 177);
-            this.gcPosicion.TabIndex = 1;
-            this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvPosicion});
+            this.tmrConsultaLlamadoTickets.Interval = 500;
+            this.tmrConsultaLlamadoTickets.Tick += new System.EventHandler(this.tmrConsultaLlamadoTickets_Tick);
+            // 
+            // bgLlamadoTickets
+            // 
+            this.bgLlamadoTickets.WorkerSupportsCancellation = true;
+            this.bgLlamadoTickets.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgLlamadoTickets_DoWork);
+            // 
+            // tmrConsultaCola
+            // 
+            this.tmrConsultaCola.Interval = 1000;
+            this.tmrConsultaCola.Tick += new System.EventHandler(this.tmrConsultaCola_Tick);
             // 
             // CtlTicketsPosiciones
             // 
@@ -273,8 +292,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcPosicion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPosicion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +315,8 @@
         private DevExpress.XtraGrid.GridControl gcPosicion;
         private DevExpress.XtraGrid.Views.Grid.GridView gvPosicion;
         private DevExpress.XtraGrid.Columns.GridColumn colposicion;
+        private System.Windows.Forms.Timer tmrConsultaLlamadoTickets;
+        private System.ComponentModel.BackgroundWorker bgLlamadoTickets;
+        private System.Windows.Forms.Timer tmrConsultaCola;
     }
 }

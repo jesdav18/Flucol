@@ -28,18 +28,22 @@ namespace Publicidad.Pantallas
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
+        public int Pro_ID_Agencia_Servicio { get; set; }
+        public int Pro_ID_Cliente_Servicio { get; set; }
 
         #endregion
 
         #region FUNCIONES
 
-        public void ConstruirFormulario(PgSqlConnection pConexion)
+        public void ConstruirFormulario(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
         {
             Pro_Conexion = pConexion;
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            Pro_ID_Agencia_Servicio = pID_Agencia_Servicio;
+            Pro_ID_Cliente_Servicio = pID_Cliente_Servicio;
+
+            ctlTicketsPosiciones1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
+            ctlPublicidad1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
+
         }
 
         #endregion

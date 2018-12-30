@@ -112,9 +112,11 @@ namespace Flucol.Pantallas
         private void Construir_Control_Publicidad()
         {
             frmVisualizadorTickets f_Visualizador = new frmVisualizadorTickets();
-            f_Visualizador.ConstruirFormulario(pgConexion);
-            f_Visualizador.ShowDialog();
-            this.Hide();
+            f_Visualizador.MdiParent = this;
+            f_Visualizador.ConstruirFormulario(pgConexion,Pro_Sucursal,Pro_ID_ClienteServicio);
+            f_Visualizador.Show();
+            ReestablecerFormConstructor();
+            
         }
 
         private void Construir_Acceso_Para_Operaciones()

@@ -28,37 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picInicial = new DevExpress.XtraEditors.PictureEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInicial.Properties)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlPublicidad));
+            this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
+            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // picInicial
+            // vlcControl1
             // 
-            this.picInicial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picInicial.EditValue = global::Publicidad.Properties.Resources.en_construccion;
-            this.picInicial.Location = new System.Drawing.Point(0, 0);
-            this.picInicial.Name = "picInicial";
-            this.picInicial.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picInicial.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picInicial.Size = new System.Drawing.Size(466, 236);
-            this.picInicial.TabIndex = 0;
+            this.vlcControl1.BackColor = System.Drawing.Color.Black;
+            this.vlcControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vlcControl1.Location = new System.Drawing.Point(0, 0);
+            this.vlcControl1.Name = "vlcControl1";
+            this.vlcControl1.Size = new System.Drawing.Size(466, 236);
+            this.vlcControl1.Spu = -1;
+            this.vlcControl1.TabIndex = 0;
+            this.vlcControl1.Text = "vlcControl1";
+            this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
+            this.vlcControl1.VlcMediaplayerOptions = null;
             // 
             // CtlPublicidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.picInicial);
+            this.Controls.Add(this.vlcControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CtlPublicidad";
             this.Size = new System.Drawing.Size(466, 236);
-            ((System.ComponentModel.ISupportInitialize)(this.picInicial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.PictureEdit picInicial;
+        private Vlc.DotNet.Forms.VlcControl vlcControl1;
     }
 }
