@@ -135,6 +135,7 @@
             this.lblPosicion.Size = new System.Drawing.Size(307, 54);
             this.lblPosicion.TabIndex = 2;
             this.lblPosicion.Text = "POSICIÓN";
+            this.lblPosicion.Visible = false;
             // 
             // lblTicket
             // 

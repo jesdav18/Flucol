@@ -118,21 +118,38 @@ namespace Publicidad.Controles
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
                 {
+                    string primera_letra;
+                    string segunda_letra;
+                    string tercera_letra;
+
                     v_voz = new SpeechSynthesizer();
                     lblTicket.Text = pgDr.GetString("ticket");
                     lblPosicion.Text = pgDr.GetString("posicion");
+                    primera_letra = pgDr.GetString("primera_letra");
+                    segunda_letra = pgDr.GetString("segunda_letra");
+                    tercera_letra = pgDr.GetString("tercera_letra");
 
-                    
-                    v_voz.SelectVoice("Microsoft Server Speech Text to Speech Voice (es-ES, Helena)");
-                    v_voz.SetOutputToDefaultAudioDevice();
-                    v_voz.Speak(lblTicket.Text + ", Posisión " + lblPosicion.Text); //Escribí posición con S , para que la palabra se escuche en versión latina.
+
+                    if (lblTicket.Text != "")
+                    {
+                        v_voz.SelectVoice("Vocalizer Expressive Angelica Harpo 22kHz");
+                        v_voz.SetOutputToDefaultAudioDevice();
+                        v_voz.Speak(primera_letra + "," + segunda_letra + "," + tercera_letra + "," + ", Posisión " + lblPosicion.Text); //Escribí posición con S , para que la palabra se escuche en versión latina.
+
+
+                     
+
+
+                        v_voz.Dispose();
+
+                    }
                 }
 
                 pgDr.Close();
                 pgComando.Dispose();
                 vConexion.Close();
                 vConexion.Dispose();
-                v_voz.Dispose();
+                
 
             }
             catch (Exception Exc)

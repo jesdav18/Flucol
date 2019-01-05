@@ -4,6 +4,7 @@ using Devart.Data.PostgreSql;
 using DevExpress.XtraCharts.Native;
 using Core.Clases;
 using Core.Reportes;
+using DevExpress.XtraReports.UI;
 
 namespace Recepcion.Controles
 {
@@ -80,13 +81,28 @@ namespace Recepcion.Controles
         private void IrAPaginaTicket()
         {
             navFrameMenuInicial.SelectedPage = navPageTicket;
-
+             
             rpt = new rptTicket();
             rpt.CargarDatos(Pro_Ticket_Generado);
             rpt.CreateDocument();
             documentViewer1.DocumentSource = rpt;
-
             tmrTiempoVisualizacionTicket.Start();
+
+            try
+            {
+               
+                ReportPrintTool v_print_tool = new ReportPrintTool(rpt);
+                v_print_tool.Print("POS-X Thermal Printer");
+               
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show(Exc.Message, "FLUCOL");
+            }
+
+
+
+           
         }
 
         

@@ -37,7 +37,7 @@ namespace Publicidad.Controles
         private void CargarMultimedia()
         {
            
-            vlcControl1.SetMedia(new System.IO.FileInfo(@"C:\Users\Bart\Downloads\bongo.mp4"));
+            vlcControl1.SetMedia(new System.IO.FileInfo(@"C:\video.mp4"));
             vlcControl1.Play();
         }
 
