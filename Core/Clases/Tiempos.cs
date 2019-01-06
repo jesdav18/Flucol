@@ -1,6 +1,7 @@
 ﻿using Devart.Data.PostgreSql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,44 +24,42 @@ namespace Core.Clases
 
         #region FUNCIONES
 
-     
-        public void Registrar_Inicio_Tiempo_Espera(DateTime pInicioEspera, PgSqlConnection pConexion)
+
+        public void ActualizarEstadoTicket(PgSqlConnection pConexion,
+                                           int pEstadoTicket, 
+                                           int pID_AgenciaServicio, 
+                                           int pID_ClienteServicio, 
+                                           string pTicketServicio )
         {
+
             Pro_Conexion = pConexion;
 
-            if (Pro_Conexion.State != System.Data.ConnectionState.Open)
+            if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
             }
 
-            PgSqlTransaction pgTrans = Pro_Conexion.BeginTransaction();
             try
             {
-                
-            }
-            catch (PgSqlException Exc)
-            {
-                MessageBox.Show(Exc.Message, "FLUCOL");
+                string sentencia = @"SELECT * FROM area_servicio.ft_mant_actualizar_estado_ticket (
+                                                                                                    :p_estado_ticket,
+                                                                                                    :p_id_agencia_servicio,
+                                                                                                    :p_id_cliente_servicio,
+                                                                                                    :p_ticket_servicio
+                                                                                                )";
+                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+                pgComando.Parameters.Add("p_estado_ticket", PgSqlType.Int).Value = (int) pEstadoTicket;
+                pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = pID_AgenciaServicio;
+                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = pID_ClienteServicio;
+                pgComando.Parameters.Add("p_ticket_servicio", PgSqlType.VarChar).Value = pTicketServicio;
+
+                pgComando.ExecuteNonQuery();
+
             }
             catch (Exception Exc)
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
             }
-        } 
-
-        public void Registrar_Finalizacion_Tiempo_Espera(DateTime pFinalizacionEspera)
-        {
-
-        }
-
-        public void Registrar_Inicio_Tiempo_Atencion(DateTime pInicioEspera)
-        {
-
-        }
-
-        public void Registrar_Finalizacion_Tiempo_Atencion(DateTime pFinalizacionEspera)
-        {
-
         }
 
         #endregion

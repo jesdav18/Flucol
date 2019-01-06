@@ -63,6 +63,16 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_llamar_siguiente_cliente {
+            get {
+                object obj = ResourceManager.GetObject("icon_llamar_siguiente_cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAlmuerzo {
             get {
                 object obj = ResourceManager.GetObject("iconAlmuerzo", resourceCulture);
@@ -116,6 +126,36 @@ namespace Operaciones.Properties {
         internal static System.Drawing.Bitmap iconIniciarTicketVerde {
             get {
                 object obj = ResourceManager.GetObject("iconIniciarTicketVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconLlamarSiguienteClienteVerde {
+            get {
+                object obj = ResourceManager.GetObject("IconLlamarSiguienteClienteVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconNoRespondioLlamado {
+            get {
+                object obj = ResourceManager.GetObject("iconNoRespondioLlamado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconNoRespondioLlamadoVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconNoRespondioLlamadoVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

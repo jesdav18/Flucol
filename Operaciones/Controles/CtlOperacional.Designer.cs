@@ -28,37 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlOperacional));
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
-            this.picPosicion = new DevExpress.XtraEditors.PictureEdit();
-            this.picUsuario = new DevExpress.XtraEditors.PictureEdit();
             this.pnlControlesDeCola = new System.Windows.Forms.Panel();
+            this.lblLlamarCliente = new DevExpress.XtraEditors.LabelControl();
             this.lblCerrarTicket = new DevExpress.XtraEditors.LabelControl();
             this.lblIniciarTicket = new DevExpress.XtraEditors.LabelControl();
             this.lblTiempoPersonal = new DevExpress.XtraEditors.LabelControl();
-            this.cmdCerrarTicket = new DevExpress.XtraEditors.PictureEdit();
-            this.cmdIniciarTicket = new DevExpress.XtraEditors.PictureEdit();
-            this.cmdTiempoPersonal = new DevExpress.XtraEditors.PictureEdit();
             this.lblSalidadAlmuerzo = new DevExpress.XtraEditors.LabelControl();
-            this.cmdAlmuerzo = new DevExpress.XtraEditors.PictureEdit();
             this.pnlInformacionTickets = new System.Windows.Forms.Panel();
             this.lblTiempoAtencion = new DevExpress.XtraEditors.LabelControl();
             this.lblNumeroTicket = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTiempoAtencion = new System.Windows.Forms.Timer(this.components);
-            this.tmrParoTiempo = new System.Windows.Forms.Timer(this.components);
+            this.tmrTiempoAtencion = new System.Windows.Forms.Timer();
+            this.tmrParoTiempo = new System.Windows.Forms.Timer();
+            this.lblMarcarComoNoRespondioLlamado = new DevExpress.XtraEditors.LabelControl();
+            this.cmdClienteNoAtendioLlamado = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdLlamarCliente = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdCerrarTicket = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdIniciarTicket = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdTiempoPersonal = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdAlmuerzo = new DevExpress.XtraEditors.PictureEdit();
+            this.picPosicion = new DevExpress.XtraEditors.PictureEdit();
+            this.picUsuario = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picPosicion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).BeginInit();
             this.pnlControlesDeCola.SuspendLayout();
+            this.pnlInformacionTickets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTiempoPersonal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAlmuerzo.Properties)).BeginInit();
-            this.pnlInformacionTickets.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPosicion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreUsuario
@@ -67,7 +72,7 @@
             this.lblNombreUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.Appearance.Options.UseFont = true;
             this.lblNombreUsuario.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblNombreUsuario.Location = new System.Drawing.Point(157, 32);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(149, 32);
             this.lblNombreUsuario.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.lblNombreUsuario.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lblNombreUsuario.Name = "lblNombreUsuario";
@@ -86,55 +91,29 @@
             this.pnlEncabezado.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.pnlEncabezado.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(852, 114);
+            this.pnlEncabezado.Size = new System.Drawing.Size(1086, 114);
             this.pnlEncabezado.TabIndex = 0;
             // 
             // lblPosicion
             // 
             this.lblPosicion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosicion.Appearance.Options.UseFont = true;
             this.lblPosicion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblPosicion.Location = new System.Drawing.Point(634, 32);
+            this.lblPosicion.Location = new System.Drawing.Point(881, 25);
             this.lblPosicion.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.lblPosicion.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lblPosicion.Name = "lblPosicion";
-            this.lblPosicion.Size = new System.Drawing.Size(161, 34);
+            this.lblPosicion.Size = new System.Drawing.Size(174, 34);
             this.lblPosicion.TabIndex = 6;
             this.lblPosicion.Text = "POSICIÓN";
             // 
-            // picPosicion
-            // 
-            this.picPosicion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picPosicion.EditValue = global::Operaciones.Properties.Resources.iconPosicion;
-            this.picPosicion.Location = new System.Drawing.Point(539, 16);
-            this.picPosicion.Name = "picPosicion";
-            this.picPosicion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picPosicion.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.picPosicion.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.picPosicion.Properties.ReadOnly = true;
-            this.picPosicion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picPosicion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picPosicion.Size = new System.Drawing.Size(76, 83);
-            this.picPosicion.TabIndex = 5;
-            // 
-            // picUsuario
-            // 
-            this.picUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picUsuario.EditValue = ((object)(resources.GetObject("picUsuario.EditValue")));
-            this.picUsuario.Location = new System.Drawing.Point(63, 16);
-            this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picUsuario.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.picUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.picUsuario.Properties.ReadOnly = true;
-            this.picUsuario.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picUsuario.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picUsuario.Size = new System.Drawing.Size(76, 74);
-            this.picUsuario.TabIndex = 4;
-            // 
             // pnlControlesDeCola
             // 
+            this.pnlControlesDeCola.Controls.Add(this.lblMarcarComoNoRespondioLlamado);
+            this.pnlControlesDeCola.Controls.Add(this.cmdClienteNoAtendioLlamado);
+            this.pnlControlesDeCola.Controls.Add(this.lblLlamarCliente);
+            this.pnlControlesDeCola.Controls.Add(this.cmdLlamarCliente);
             this.pnlControlesDeCola.Controls.Add(this.lblCerrarTicket);
             this.pnlControlesDeCola.Controls.Add(this.lblIniciarTicket);
             this.pnlControlesDeCola.Controls.Add(this.lblTiempoPersonal);
@@ -144,10 +123,25 @@
             this.pnlControlesDeCola.Controls.Add(this.lblSalidadAlmuerzo);
             this.pnlControlesDeCola.Controls.Add(this.cmdAlmuerzo);
             this.pnlControlesDeCola.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlControlesDeCola.Location = new System.Drawing.Point(0, 308);
+            this.pnlControlesDeCola.Location = new System.Drawing.Point(0, 314);
             this.pnlControlesDeCola.Name = "pnlControlesDeCola";
-            this.pnlControlesDeCola.Size = new System.Drawing.Size(852, 143);
+            this.pnlControlesDeCola.Size = new System.Drawing.Size(1086, 137);
             this.pnlControlesDeCola.TabIndex = 1;
+            // 
+            // lblLlamarCliente
+            // 
+            this.lblLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblLlamarCliente.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLlamarCliente.Appearance.Options.UseFont = true;
+            this.lblLlamarCliente.Appearance.Options.UseTextOptions = true;
+            this.lblLlamarCliente.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblLlamarCliente.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblLlamarCliente.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblLlamarCliente.Location = new System.Drawing.Point(360, 77);
+            this.lblLlamarCliente.Name = "lblLlamarCliente";
+            this.lblLlamarCliente.Size = new System.Drawing.Size(130, 54);
+            this.lblLlamarCliente.TabIndex = 14;
+            this.lblLlamarCliente.Text = "LLAMAR CLIENTE (F5)";
             // 
             // lblCerrarTicket
             // 
@@ -158,7 +152,7 @@
             this.lblCerrarTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCerrarTicket.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblCerrarTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCerrarTicket.Location = new System.Drawing.Point(690, 81);
+            this.lblCerrarTicket.Location = new System.Drawing.Point(211, 77);
             this.lblCerrarTicket.Name = "lblCerrarTicket";
             this.lblCerrarTicket.Size = new System.Drawing.Size(130, 54);
             this.lblCerrarTicket.TabIndex = 12;
@@ -173,11 +167,11 @@
             this.lblIniciarTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblIniciarTicket.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblIniciarTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblIniciarTicket.Location = new System.Drawing.Point(494, 81);
+            this.lblIniciarTicket.Location = new System.Drawing.Point(70, 77);
             this.lblIniciarTicket.Name = "lblIniciarTicket";
             this.lblIniciarTicket.Size = new System.Drawing.Size(130, 54);
             this.lblIniciarTicket.TabIndex = 11;
-            this.lblIniciarTicket.Text = "INICIAR TICKET (F1)";
+            this.lblIniciarTicket.Text = "INICIAR ATENCIÓN (F1)";
             // 
             // lblTiempoPersonal
             // 
@@ -188,17 +182,126 @@
             this.lblTiempoPersonal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTiempoPersonal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTiempoPersonal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTiempoPersonal.Location = new System.Drawing.Point(211, 81);
+            this.lblTiempoPersonal.Location = new System.Drawing.Point(864, 77);
             this.lblTiempoPersonal.Name = "lblTiempoPersonal";
             this.lblTiempoPersonal.Size = new System.Drawing.Size(142, 54);
             this.lblTiempoPersonal.TabIndex = 10;
             this.lblTiempoPersonal.Text = "TIEMPO PERSONAL (F12)";
             // 
+            // lblSalidadAlmuerzo
+            // 
+            this.lblSalidadAlmuerzo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSalidadAlmuerzo.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalidadAlmuerzo.Appearance.Options.UseFont = true;
+            this.lblSalidadAlmuerzo.Appearance.Options.UseTextOptions = true;
+            this.lblSalidadAlmuerzo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblSalidadAlmuerzo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblSalidadAlmuerzo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSalidadAlmuerzo.Location = new System.Drawing.Point(697, 77);
+            this.lblSalidadAlmuerzo.Name = "lblSalidadAlmuerzo";
+            this.lblSalidadAlmuerzo.Size = new System.Drawing.Size(142, 54);
+            this.lblSalidadAlmuerzo.TabIndex = 6;
+            this.lblSalidadAlmuerzo.Text = "SALIDA ALMUERZO (F11)";
+            // 
+            // pnlInformacionTickets
+            // 
+            this.pnlInformacionTickets.Controls.Add(this.lblTiempoAtencion);
+            this.pnlInformacionTickets.Controls.Add(this.lblNumeroTicket);
+            this.pnlInformacionTickets.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInformacionTickets.Location = new System.Drawing.Point(0, 114);
+            this.pnlInformacionTickets.Name = "pnlInformacionTickets";
+            this.pnlInformacionTickets.Size = new System.Drawing.Size(1086, 200);
+            this.pnlInformacionTickets.TabIndex = 2;
+            // 
+            // lblTiempoAtencion
+            // 
+            this.lblTiempoAtencion.Appearance.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoAtencion.Appearance.Options.UseFont = true;
+            this.lblTiempoAtencion.Appearance.Options.UseTextOptions = true;
+            this.lblTiempoAtencion.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTiempoAtencion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTiempoAtencion.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblTiempoAtencion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTiempoAtencion.Location = new System.Drawing.Point(0, 79);
+            this.lblTiempoAtencion.Name = "lblTiempoAtencion";
+            this.lblTiempoAtencion.Size = new System.Drawing.Size(1086, 121);
+            this.lblTiempoAtencion.TabIndex = 2;
+            this.lblTiempoAtencion.Text = "00:00:00";
+            // 
+            // lblNumeroTicket
+            // 
+            this.lblNumeroTicket.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblNumeroTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroTicket.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblNumeroTicket.Appearance.Options.UseBackColor = true;
+            this.lblNumeroTicket.Appearance.Options.UseFont = true;
+            this.lblNumeroTicket.Appearance.Options.UseForeColor = true;
+            this.lblNumeroTicket.Appearance.Options.UseTextOptions = true;
+            this.lblNumeroTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblNumeroTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblNumeroTicket.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.lblNumeroTicket.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNumeroTicket.Location = new System.Drawing.Point(0, 0);
+            this.lblNumeroTicket.Name = "lblNumeroTicket";
+            this.lblNumeroTicket.Size = new System.Drawing.Size(1086, 79);
+            this.lblNumeroTicket.TabIndex = 1;
+            this.lblNumeroTicket.Text = "N° TICKET";
+            // 
+            // tmrTiempoAtencion
+            // 
+            this.tmrTiempoAtencion.Interval = 1000;
+            this.tmrTiempoAtencion.Tick += new System.EventHandler(this.tmrTiempoAtencion_Tick);
+            // 
+            // tmrParoTiempo
+            // 
+            this.tmrParoTiempo.Interval = 1000;
+            // 
+            // lblMarcarComoNoRespondioLlamado
+            // 
+            this.lblMarcarComoNoRespondioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMarcarComoNoRespondioLlamado.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarcarComoNoRespondioLlamado.Appearance.Options.UseFont = true;
+            this.lblMarcarComoNoRespondioLlamado.Appearance.Options.UseTextOptions = true;
+            this.lblMarcarComoNoRespondioLlamado.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblMarcarComoNoRespondioLlamado.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblMarcarComoNoRespondioLlamado.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblMarcarComoNoRespondioLlamado.Location = new System.Drawing.Point(509, 77);
+            this.lblMarcarComoNoRespondioLlamado.Name = "lblMarcarComoNoRespondioLlamado";
+            this.lblMarcarComoNoRespondioLlamado.Size = new System.Drawing.Size(171, 54);
+            this.lblMarcarComoNoRespondioLlamado.TabIndex = 16;
+            this.lblMarcarComoNoRespondioLlamado.Text = "CLIENTE NO ATENDIO LLAMADO (F6)";
+            // 
+            // cmdClienteNoAtendioLlamado
+            // 
+            this.cmdClienteNoAtendioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdClienteNoAtendioLlamado.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
+            this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(562, 15);
+            this.cmdClienteNoAtendioLlamado.Name = "cmdClienteNoAtendioLlamado";
+            this.cmdClienteNoAtendioLlamado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdClienteNoAtendioLlamado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdClienteNoAtendioLlamado.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdClienteNoAtendioLlamado.Size = new System.Drawing.Size(65, 56);
+            this.cmdClienteNoAtendioLlamado.TabIndex = 15;
+            this.cmdClienteNoAtendioLlamado.Click += new System.EventHandler(this.cmdClienteNoAtendioLlamado_Click);
+            // 
+            // cmdLlamarCliente
+            // 
+            this.cmdLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdLlamarCliente.EditValue = global::Operaciones.Properties.Resources.icon_llamar_siguiente_cliente;
+            this.cmdLlamarCliente.Location = new System.Drawing.Point(396, 15);
+            this.cmdLlamarCliente.Name = "cmdLlamarCliente";
+            this.cmdLlamarCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdLlamarCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdLlamarCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdLlamarCliente.Size = new System.Drawing.Size(65, 56);
+            this.cmdLlamarCliente.TabIndex = 13;
+            this.cmdLlamarCliente.Click += new System.EventHandler(this.cmdLlamarCliente_Click);
+            // 
             // cmdCerrarTicket
             // 
             this.cmdCerrarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdCerrarTicket.EditValue = global::Operaciones.Properties.Resources.iconDetenerTicket;
-            this.cmdCerrarTicket.Location = new System.Drawing.Point(721, 19);
+            this.cmdCerrarTicket.Location = new System.Drawing.Point(242, 15);
             this.cmdCerrarTicket.Name = "cmdCerrarTicket";
             this.cmdCerrarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCerrarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -211,7 +314,7 @@
             // 
             this.cmdIniciarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdIniciarTicket.EditValue = global::Operaciones.Properties.Resources.iconIniciarTicket;
-            this.cmdIniciarTicket.Location = new System.Drawing.Point(526, 19);
+            this.cmdIniciarTicket.Location = new System.Drawing.Point(102, 15);
             this.cmdIniciarTicket.Name = "cmdIniciarTicket";
             this.cmdIniciarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdIniciarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -224,7 +327,7 @@
             // 
             this.cmdTiempoPersonal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdTiempoPersonal.EditValue = global::Operaciones.Properties.Resources.iconPausaPersonal;
-            this.cmdTiempoPersonal.Location = new System.Drawing.Point(249, 19);
+            this.cmdTiempoPersonal.Location = new System.Drawing.Point(902, 15);
             this.cmdTiempoPersonal.Name = "cmdTiempoPersonal";
             this.cmdTiempoPersonal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdTiempoPersonal.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -233,26 +336,11 @@
             this.cmdTiempoPersonal.TabIndex = 7;
             this.cmdTiempoPersonal.Click += new System.EventHandler(this.cmdTiempoPersonal_Click);
             // 
-            // lblSalidadAlmuerzo
-            // 
-            this.lblSalidadAlmuerzo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSalidadAlmuerzo.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalidadAlmuerzo.Appearance.Options.UseFont = true;
-            this.lblSalidadAlmuerzo.Appearance.Options.UseTextOptions = true;
-            this.lblSalidadAlmuerzo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblSalidadAlmuerzo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lblSalidadAlmuerzo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblSalidadAlmuerzo.Location = new System.Drawing.Point(39, 81);
-            this.lblSalidadAlmuerzo.Name = "lblSalidadAlmuerzo";
-            this.lblSalidadAlmuerzo.Size = new System.Drawing.Size(142, 54);
-            this.lblSalidadAlmuerzo.TabIndex = 6;
-            this.lblSalidadAlmuerzo.Text = "SALIDA ALMUERZO (F11)";
-            // 
             // cmdAlmuerzo
             // 
             this.cmdAlmuerzo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdAlmuerzo.EditValue = global::Operaciones.Properties.Resources.iconAlmuerzo;
-            this.cmdAlmuerzo.Location = new System.Drawing.Point(79, 19);
+            this.cmdAlmuerzo.Location = new System.Drawing.Point(741, 15);
             this.cmdAlmuerzo.Name = "cmdAlmuerzo";
             this.cmdAlmuerzo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdAlmuerzo.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -261,59 +349,35 @@
             this.cmdAlmuerzo.TabIndex = 5;
             this.cmdAlmuerzo.Click += new System.EventHandler(this.cmdAlmuerzo_Click);
             // 
-            // pnlInformacionTickets
+            // picPosicion
             // 
-            this.pnlInformacionTickets.Controls.Add(this.lblTiempoAtencion);
-            this.pnlInformacionTickets.Controls.Add(this.lblNumeroTicket);
-            this.pnlInformacionTickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInformacionTickets.Location = new System.Drawing.Point(0, 114);
-            this.pnlInformacionTickets.Name = "pnlInformacionTickets";
-            this.pnlInformacionTickets.Size = new System.Drawing.Size(852, 194);
-            this.pnlInformacionTickets.TabIndex = 2;
+            this.picPosicion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picPosicion.EditValue = global::Operaciones.Properties.Resources.iconPosicion;
+            this.picPosicion.Location = new System.Drawing.Point(799, 7);
+            this.picPosicion.Name = "picPosicion";
+            this.picPosicion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picPosicion.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.picPosicion.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.picPosicion.Properties.ReadOnly = true;
+            this.picPosicion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picPosicion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picPosicion.Size = new System.Drawing.Size(76, 83);
+            this.picPosicion.TabIndex = 5;
             // 
-            // lblTiempoAtencion
+            // picUsuario
             // 
-            this.lblTiempoAtencion.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempoAtencion.Appearance.Options.UseFont = true;
-            this.lblTiempoAtencion.Appearance.Options.UseTextOptions = true;
-            this.lblTiempoAtencion.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTiempoAtencion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTiempoAtencion.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblTiempoAtencion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTiempoAtencion.Location = new System.Drawing.Point(0, 73);
-            this.lblTiempoAtencion.Name = "lblTiempoAtencion";
-            this.lblTiempoAtencion.Size = new System.Drawing.Size(852, 121);
-            this.lblTiempoAtencion.TabIndex = 2;
-            this.lblTiempoAtencion.Text = "00:00:00";
-            // 
-            // lblNumeroTicket
-            // 
-            this.lblNumeroTicket.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblNumeroTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroTicket.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblNumeroTicket.Appearance.Options.UseBackColor = true;
-            this.lblNumeroTicket.Appearance.Options.UseFont = true;
-            this.lblNumeroTicket.Appearance.Options.UseForeColor = true;
-            this.lblNumeroTicket.Appearance.Options.UseTextOptions = true;
-            this.lblNumeroTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblNumeroTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblNumeroTicket.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.lblNumeroTicket.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNumeroTicket.Location = new System.Drawing.Point(0, 0);
-            this.lblNumeroTicket.Name = "lblNumeroTicket";
-            this.lblNumeroTicket.Size = new System.Drawing.Size(852, 73);
-            this.lblNumeroTicket.TabIndex = 1;
-            this.lblNumeroTicket.Text = "N° TICKET";
-            // 
-            // tmrTiempoAtencion
-            // 
-            this.tmrTiempoAtencion.Interval = 1000;
-            this.tmrTiempoAtencion.Tick += new System.EventHandler(this.tmrTiempoAtencion_Tick);
-            // 
-            // tmrParoTiempo
-            // 
-            this.tmrParoTiempo.Interval = 1000;
-            this.tmrParoTiempo.Tick += new System.EventHandler(this.tmrParoTiempo_Tick);
+            this.picUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picUsuario.EditValue = ((object)(resources.GetObject("picUsuario.EditValue")));
+            this.picUsuario.Location = new System.Drawing.Point(55, 16);
+            this.picUsuario.Name = "picUsuario";
+            this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picUsuario.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.picUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.picUsuario.Properties.ReadOnly = true;
+            this.picUsuario.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picUsuario.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picUsuario.Size = new System.Drawing.Size(76, 74);
+            this.picUsuario.TabIndex = 4;
             // 
             // CtlOperacional
             // 
@@ -325,17 +389,19 @@
             this.Controls.Add(this.pnlEncabezado);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CtlOperacional";
-            this.Size = new System.Drawing.Size(852, 451);
+            this.Size = new System.Drawing.Size(1086, 451);
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).EndInit();
             this.pnlEncabezado.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picPosicion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).EndInit();
             this.pnlControlesDeCola.ResumeLayout(false);
+            this.pnlInformacionTickets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTiempoPersonal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAlmuerzo.Properties)).EndInit();
-            this.pnlInformacionTickets.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picPosicion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,5 +427,9 @@
         private DevExpress.XtraEditors.LabelControl lblNumeroTicket;
         private System.Windows.Forms.Timer tmrTiempoAtencion;
         private System.Windows.Forms.Timer tmrParoTiempo;
+        private DevExpress.XtraEditors.LabelControl lblLlamarCliente;
+        private DevExpress.XtraEditors.PictureEdit cmdLlamarCliente;
+        private DevExpress.XtraEditors.LabelControl lblMarcarComoNoRespondioLlamado;
+        private DevExpress.XtraEditors.PictureEdit cmdClienteNoAtendioLlamado;
     }
 }

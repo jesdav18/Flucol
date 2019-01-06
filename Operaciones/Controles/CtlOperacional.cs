@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
+using Core.Clases;
 
 namespace Operaciones.Controles
 {
@@ -32,6 +33,19 @@ namespace Operaciones.Controles
 
         #endregion
 
+        #region ENUMERACIONES
+
+       public enum ESTADOS_TICKETS
+       {
+            EN_ESPERA = 1,
+            LLAMADO = 2,
+            NO_ATENDIO_LLAMADO = 3, 
+            EN_ATENCION = 4,
+            CERRADO = 5
+       }
+
+        #endregion
+
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
@@ -44,6 +58,7 @@ namespace Operaciones.Controles
         public string Pro_Cargo { get; set; }
         public string Pro_NombreEmpleado { get; set; }
         public string Pro_Usuario { get; set; }
+        public string Pro_Ticket_Servicio { get; set; }
 
         #endregion
 
@@ -58,6 +73,7 @@ namespace Operaciones.Controles
                                      string pNombreEmpleado,
                                      string pUsuarioEmpleado)
         {
+
             Pro_Conexion = pConexion;
             Pro_Sucursal = pID_AgenciaServicio;
             Pro_Cliente = pID_ClienteServicio;
@@ -69,12 +85,12 @@ namespace Operaciones.Controles
 
             lblNombreUsuario.Text = Pro_NombreEmpleado;
 
-           
-
         }
 
         private void CargarDatosTicketPosicion()
         {
+            
+
             if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
@@ -112,12 +128,15 @@ namespace Operaciones.Controles
 
         }
 
+        
         private void ReinicioImagenesIcono()
         {
             cmdAlmuerzo.Image = Properties.Resources.iconAlmuerzo;
             cmdTiempoPersonal.Image = Properties.Resources.iconPausaPersonal;
             cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicket;
             cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
+            cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
+            cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
         }
         
 
@@ -132,6 +151,12 @@ namespace Operaciones.Controles
         private void IniciarTicket()
         {
             CargarDatosTicketPosicion();
+            Tiempos cl_tiempos = new Tiempos();
+            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                              (int)ESTADOS_TICKETS.EN_ATENCION,
+                                              Pro_Sucursal,
+                                              Pro_Cliente,
+                                              Pro_Ticket_Servicio);
             tmrTiempoAtencion.Start();
 
         }
@@ -139,8 +164,55 @@ namespace Operaciones.Controles
         private void CerrarTicket()
         {
             tmrTiempoAtencion.Stop();
+            Tiempos cl_tiempos = new Tiempos();
+            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                              (int)ESTADOS_TICKETS.CERRADO,
+                                              Pro_Sucursal,
+                                              Pro_Cliente,
+                                              Pro_Ticket_Servicio);
             ReinicioVariablesTiempo();
 
+        }
+
+        public void MarcarClienteNoRespondioLlamado()
+        {
+            Tiempos cl_tiempos = new Tiempos();
+            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                              (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO,
+                                              Pro_Sucursal,
+                                              Pro_Cliente,
+                                              Pro_Ticket_Servicio);
+        }
+
+        private void LlamarSiguienteCliente()
+        {
+
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                Pro_Conexion.Open();
+            }
+
+            try
+            {
+                string sentencia = "";
+                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+                
+
+
+                Tiempos cl_tiempos = new Tiempos();
+                cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                                  (int)ESTADOS_TICKETS.LLAMADO,
+                                                  Pro_Sucursal,
+                                                  Pro_Cliente,
+                                                  Pro_Ticket_Servicio);
+
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show(Exc.Message, "FLUCOL");
+            }
+
+           
         }
 
         public void MarcarParoTiempoAlmuerzo()
@@ -211,6 +283,20 @@ namespace Operaciones.Controles
             CerrarTicket();
         }
 
+        public void PresionaF5_LlamarCliente(object sender)
+        {
+            ReinicioImagenesIcono();
+            cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+            
+        }
+
+        public void PresionarF6_MarcarClienteNoRespondio(object sender)
+        {
+            ReinicioImagenesIcono();
+            cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
+            
+        }
+
         #endregion
 
         #region EVENTOS CONTROLES
@@ -241,6 +327,20 @@ namespace Operaciones.Controles
             ReinicioImagenesIcono();
             cmdAlmuerzo.Image = Properties.Resources.iconAlmuerzoVerde;
             MarcarParoTiempoAlmuerzo();
+        }
+
+        private void cmdLlamarCliente_Click(object sender, EventArgs e)
+        {
+            ReinicioImagenesIcono();
+            cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+            LlamarSiguienteCliente();
+        }
+
+        private void cmdClienteNoAtendioLlamado_Click(object sender, EventArgs e)
+        {
+            ReinicioImagenesIcono();
+            cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
+            MarcarClienteNoRespondioLlamado();
         }
 
         private void tmrTiempoAtencion_Tick(object sender, EventArgs e)
@@ -304,11 +404,9 @@ namespace Operaciones.Controles
 
         }
 
-        private void tmrParoTiempo_Tick(object sender, EventArgs e)
-        {
-           
-        }
 
         #endregion
+
+       
     }
 }
