@@ -28,31 +28,28 @@ namespace Recepcion.Pantallas
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
-        public int Pro_Sucursal { get; set; }
+        public int Pro_ID_AgenciaServicio { get; set; }
         public int Pro_ID_ClienteServicio { get; set; }
+        public string Pro_NombreAgenciaServicio { get; set; }
 
         #endregion
 
         #region FUNCIONES
 
-        public void ConstruirFormulario(PgSqlConnection pConexion, int pSucursal,int pID_ClienteServicio)
+        public void ConstruirFormulario(PgSqlConnection pConexion, int pAgenciaServicio,int pID_ClienteServicio, string pNombreAgenciaServicio)
         {
-            Pro_Sucursal = pSucursal;
+            Pro_ID_AgenciaServicio = pAgenciaServicio;
             Pro_Conexion = pConexion;
             Pro_ID_ClienteServicio = pID_ClienteServicio;
+            Pro_NombreAgenciaServicio = pNombreAgenciaServicio;
             if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
             }
 
-            ctlSeleccionTransaccion1.ConstruirControl(Pro_Conexion,Pro_Sucursal,Pro_ID_ClienteServicio);
+            ctlSeleccionTransaccion1.ConstruirControl(Pro_Conexion,Pro_ID_AgenciaServicio,Pro_ID_ClienteServicio,Pro_NombreAgenciaServicio);
         }
 
-        
-
-        #endregion
-
-
-       
+        #endregion     
     }
 }

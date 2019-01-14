@@ -47,9 +47,9 @@
             this.cmdTransacciones = new DevExpress.XtraEditors.PictureEdit();
             this.cmdServicioAlCliente = new DevExpress.XtraEditors.PictureEdit();
             this.navPageTicket = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             this.tmrTiempoEspera = new System.Windows.Forms.Timer();
             this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer();
-            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navFrameMenuInicial)).BeginInit();
@@ -134,7 +134,7 @@
             // cmdTerceraEdad
             // 
             this.cmdTerceraEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdTerceraEdad.EditValue = global::Recepcion.Properties.Resources.iconTerceraEdad;
+            this.cmdTerceraEdad.EditValue = global::Recepcion.Properties.Resources.iconAncianos;
             this.cmdTerceraEdad.Location = new System.Drawing.Point(101, 110);
             this.cmdTerceraEdad.Name = "cmdTerceraEdad";
             this.cmdTerceraEdad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -158,7 +158,6 @@
             this.lblEsperaGeneral.Size = new System.Drawing.Size(195, 97);
             this.lblEsperaGeneral.TabIndex = 7;
             this.lblEsperaGeneral.Text = "ESPERA GENERAL";
-            this.lblEsperaGeneral.Click += new System.EventHandler(this.lblEsperaGeneral_Click);
             // 
             // lblCondicionesEspeciales
             // 
@@ -174,7 +173,6 @@
             this.lblCondicionesEspeciales.Size = new System.Drawing.Size(195, 97);
             this.lblCondicionesEspeciales.TabIndex = 3;
             this.lblCondicionesEspeciales.Text = "CONDICIONES ESPECIALES";
-            this.lblCondicionesEspeciales.Click += new System.EventHandler(this.lblCondicionesEspeciales_Click);
             // 
             // lblTerceraEdad
             // 
@@ -190,7 +188,6 @@
             this.lblTerceraEdad.Size = new System.Drawing.Size(149, 85);
             this.lblTerceraEdad.TabIndex = 1;
             this.lblTerceraEdad.Text = "TERCERA EDAD";
-            this.lblTerceraEdad.Click += new System.EventHandler(this.lblTerceraEdad_Click);
             // 
             // cmdCondicionesEspeciales01
             // 
@@ -262,6 +259,7 @@
             this.cmdIrAPrioridades.EditValue = global::Recepcion.Properties.Resources.iconIrAtras;
             this.cmdIrAPrioridades.Location = new System.Drawing.Point(3, 3);
             this.cmdIrAPrioridades.Name = "cmdIrAPrioridades";
+            this.cmdIrAPrioridades.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdIrAPrioridades.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdIrAPrioridades.Size = new System.Drawing.Size(111, 84);
             this.cmdIrAPrioridades.TabIndex = 7;
@@ -281,7 +279,6 @@
             this.lblTransacciones.Size = new System.Drawing.Size(231, 97);
             this.lblTransacciones.TabIndex = 6;
             this.lblTransacciones.Text = "TRANSACCIONES EN CAJA";
-            this.lblTransacciones.Click += new System.EventHandler(this.lblTransacciones_Click);
             // 
             // lblServicioAlCliente
             // 
@@ -297,12 +294,11 @@
             this.lblServicioAlCliente.Size = new System.Drawing.Size(195, 97);
             this.lblServicioAlCliente.TabIndex = 5;
             this.lblServicioAlCliente.Text = "SERVICIO AL CLIENTE";
-            this.lblServicioAlCliente.Click += new System.EventHandler(this.lblServicioAlCliente_Click);
             // 
             // cmdTransacciones
             // 
             this.cmdTransacciones.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmdTransacciones.EditValue = global::Recepcion.Properties.Resources.iconTransacciones;
+            this.cmdTransacciones.EditValue = global::Recepcion.Properties.Resources.iconTransaccionesCaja;
             this.cmdTransacciones.Location = new System.Drawing.Point(514, 55);
             this.cmdTransacciones.Name = "cmdTransacciones";
             this.cmdTransacciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -332,11 +328,6 @@
             this.navPageTicket.Name = "navPageTicket";
             this.navPageTicket.Size = new System.Drawing.Size(876, 445);
             // 
-            // tmrTiempoVisualizacionTicket
-            // 
-            this.tmrTiempoVisualizacionTicket.Interval = 2000;
-            this.tmrTiempoVisualizacionTicket.Tick += new System.EventHandler(this.tmrTiempoVisualizacionTicket_Tick);
-            // 
             // documentViewer1
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -350,6 +341,11 @@
             this.documentViewer1.ShowPageMargins = false;
             this.documentViewer1.Size = new System.Drawing.Size(876, 445);
             this.documentViewer1.TabIndex = 0;
+            // 
+            // tmrTiempoVisualizacionTicket
+            // 
+            this.tmrTiempoVisualizacionTicket.Interval = 2000;
+            this.tmrTiempoVisualizacionTicket.Tick += new System.EventHandler(this.tmrTiempoVisualizacionTicket_Tick);
             // 
             // CtlSeleccionTransaccion
             // 

@@ -39,11 +39,17 @@
             this.ctlOperacional1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlOperacional1.Location = new System.Drawing.Point(0, 0);
             this.ctlOperacional1.Name = "ctlOperacional1";
-            this.ctlOperacional1.Pro_Cliente = 0;
+            this.ctlOperacional1.Pro_Cargo = null;
+            this.ctlOperacional1.Pro_ID_ClienteServicio = 0;
             this.ctlOperacional1.Pro_Conexion = null;
+            this.ctlOperacional1.Pro_DescripcionNivelAcceso = null;
+            this.ctlOperacional1.Pro_ID_NivelAccesoEmpleado = 0;
+            this.ctlOperacional1.Pro_NombreEmpleado = null;
             this.ctlOperacional1.Pro_Posicion = 0;
             this.ctlOperacional1.Pro_Prioridad_Atencion = 0;
-            this.ctlOperacional1.Pro_Sucursal = 0;
+            this.ctlOperacional1.Pro_ID_AgenciaServicio = 0;
+            this.ctlOperacional1.Pro_Ticket_Servicio = null;
+            this.ctlOperacional1.Pro_Usuario = null;
             this.ctlOperacional1.Size = new System.Drawing.Size(951, 509);
             this.ctlOperacional1.TabIndex = 0;
             // 
@@ -57,10 +63,16 @@
             this.ClientSize = new System.Drawing.Size(951, 509);
             this.Controls.Add(this.ctlOperacional1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmOperaciones";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLUCOL | OPERACIONES";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmOperaciones_KeyDown);
             this.ResumeLayout(false);
 

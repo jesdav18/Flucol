@@ -29,7 +29,8 @@ namespace Core.Clases
                                            int pEstadoTicket, 
                                            int pID_AgenciaServicio, 
                                            int pID_ClienteServicio, 
-                                           string pTicketServicio )
+                                           string pTicketServicio,
+                                           string pUsuario)
         {
 
             Pro_Conexion = pConexion;
@@ -45,13 +46,15 @@ namespace Core.Clases
                                                                                                     :p_estado_ticket,
                                                                                                     :p_id_agencia_servicio,
                                                                                                     :p_id_cliente_servicio,
-                                                                                                    :p_ticket_servicio
+                                                                                                    :p_ticket_servicio,
+                                                                                                    :p_usuario
                                                                                                 )";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_estado_ticket", PgSqlType.Int).Value = (int) pEstadoTicket;
                 pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = pID_AgenciaServicio;
                 pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = pID_ClienteServicio;
                 pgComando.Parameters.Add("p_ticket_servicio", PgSqlType.VarChar).Value = pTicketServicio;
+                pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = pUsuario;
 
                 pgComando.ExecuteNonQuery();
 

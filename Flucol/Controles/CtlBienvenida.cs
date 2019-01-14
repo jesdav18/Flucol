@@ -42,7 +42,7 @@ namespace Flucol.Controles
 
         #region FUNCIONES
 
-        public void ConstruirControl()
+        public void ConstruirControl(int pModulo)
         {
             
             tmrBienvenida.Start();
@@ -50,6 +50,20 @@ namespace Flucol.Controles
             System.IO.FileInfo obj_archivo_informacion = new System.IO.FileInfo(v_ensamblado.Location);
             DateTime v_ultima_actualizacion = obj_archivo_informacion.LastWriteTime;
             lblUltimaActualizacion.Text = "" + v_ultima_actualizacion.ToShortDateString() + ", " + v_ultima_actualizacion.ToShortTimeString();
+
+            switch (pModulo)
+            {
+                case 1:
+                    lblModulo.Text = "RECEPCIÓN";
+                    break;
+                case 2:
+                    lblModulo.Text = "VISUALIZACIÓN";
+                    break;
+                case 3:
+                    lblModulo.Text = "OPERACIONES";
+                    break;
+            }
+
 
             obj_archivo_informacion = null;
             v_ensamblado = null;

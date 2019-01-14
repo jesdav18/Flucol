@@ -34,6 +34,7 @@
             this.lblContrasenia = new DevExpress.XtraEditors.LabelControl();
             this.lblEtiqueta = new DevExpress.XtraEditors.LabelControl();
             this.cmdIngresar = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasenia.Properties)).BeginInit();
             this.SuspendLayout();
@@ -121,20 +122,44 @@
             this.cmdIngresar.AppearancePressed.Options.UseFont = true;
             this.cmdIngresar.AppearancePressed.Options.UseForeColor = true;
             this.cmdIngresar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cmdIngresar.Location = new System.Drawing.Point(161, 177);
+            this.cmdIngresar.Location = new System.Drawing.Point(40, 177);
             this.cmdIngresar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.cmdIngresar.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdIngresar.Name = "cmdIngresar";
-            this.cmdIngresar.Size = new System.Drawing.Size(239, 45);
+            this.cmdIngresar.Size = new System.Drawing.Size(177, 45);
             this.cmdIngresar.TabIndex = 5;
             this.cmdIngresar.Text = "INGRESAR";
             this.cmdIngresar.Click += new System.EventHandler(this.cmdIngresar_Click);
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmdCerrar.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmdCerrar.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCerrar.Appearance.Options.UseBackColor = true;
+            this.cmdCerrar.Appearance.Options.UseFont = true;
+            this.cmdCerrar.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.cmdCerrar.AppearancePressed.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCerrar.AppearancePressed.ForeColor = System.Drawing.Color.White;
+            this.cmdCerrar.AppearancePressed.Options.UseBackColor = true;
+            this.cmdCerrar.AppearancePressed.Options.UseFont = true;
+            this.cmdCerrar.AppearancePressed.Options.UseForeColor = true;
+            this.cmdCerrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.cmdCerrar.Location = new System.Drawing.Point(233, 177);
+            this.cmdCerrar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.cmdCerrar.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(167, 45);
+            this.cmdCerrar.TabIndex = 6;
+            this.cmdCerrar.Text = "CERRAR";
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // ctlLoginOperacional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdIngresar);
             this.Controls.Add(this.lblEtiqueta);
             this.Controls.Add(this.lblContrasenia);
@@ -159,5 +184,6 @@
         private DevExpress.XtraEditors.LabelControl lblContrasenia;
         private DevExpress.XtraEditors.LabelControl lblEtiqueta;
         private DevExpress.XtraEditors.SimpleButton cmdIngresar;
+        private DevExpress.XtraEditors.SimpleButton cmdCerrar;
     }
 }

@@ -42,7 +42,7 @@
             this.ctlSeleccionTransaccion1.Pro_ID_Cliente_Servicio = 0;
             this.ctlSeleccionTransaccion1.Pro_ID_Operacion_Servicio = 0;
             this.ctlSeleccionTransaccion1.Pro_ID_Tipo_Ticket_Servicio = 0;
-            this.ctlSeleccionTransaccion1.Pro_Sucursal = 0;
+            this.ctlSeleccionTransaccion1.Pro_ID_AgenciaServicio = 0;
             this.ctlSeleccionTransaccion1.Pro_Ticket_Generado = null;
             this.ctlSeleccionTransaccion1.Size = new System.Drawing.Size(926, 457);
             this.ctlSeleccionTransaccion1.TabIndex = 0;
@@ -57,11 +57,9 @@
             this.ClientSize = new System.Drawing.Size(926, 457);
             this.Controls.Add(this.ctlSeleccionTransaccion1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.Name = "frmRecepcion";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

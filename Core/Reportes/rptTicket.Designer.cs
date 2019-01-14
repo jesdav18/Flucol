@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptTicket));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.lblNombreAgencia = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNumeroTicket = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.reportGenerator1 = new DevExpress.XtraReports.ReportGeneration.ReportGenerator(this.components);
+            this.reportGenerator1 = new DevExpress.XtraReports.ReportGeneration.ReportGenerator();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.pic_Logo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.lblFecha = new DevExpress.XtraReports.UI.XRLabel();
             this.lblHora = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -98,9 +96,16 @@
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1});
-            this.PageHeader.HeightF = 85F;
+            this.pic_Logo});
+            this.PageHeader.HeightF = 87.97001F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // pic_Logo
+            // 
+            this.pic_Logo.LocationFloat = new DevExpress.Utils.PointFloat(13.86F, 2.15F);
+            this.pic_Logo.Name = "pic_Logo";
+            this.pic_Logo.SizeF = new System.Drawing.SizeF(203.38F, 77.97F);
+            this.pic_Logo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // PageFooter
             // 
@@ -139,14 +144,6 @@
             this.lblHora.Text = "00:00AM";
             this.lblHora.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("xrPictureBox1.Image")));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(13.86334F, 2.149655F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(203.3842F, 77.97217F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
-            // 
             // rptTicket
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -181,7 +178,7 @@
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRLabel lblFecha;
         private DevExpress.XtraReports.UI.XRLabel lblHora;
-        private DevExpress.XtraReports.UI.XRLabel lblNombreAgencia;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        public DevExpress.XtraReports.UI.XRLabel lblNombreAgencia;
+        public DevExpress.XtraReports.UI.XRPictureBox pic_Logo;
     }
 }

@@ -193,6 +193,26 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconSalida {
+            get {
+                object obj = ResourceManager.GetObject("iconSalida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconSalidaVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconSalidaVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconUsuario {
             get {
                 object obj = ResourceManager.GetObject("iconUsuario", resourceCulture);

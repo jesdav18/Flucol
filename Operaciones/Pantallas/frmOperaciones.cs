@@ -75,6 +75,18 @@ namespace Operaciones.Pantallas
             {
                 ctlOperacional1.PresionaF11_SalidaAlmuerzo(sender);
             }
+            if (e.KeyCode == Keys.F8)
+            {
+                ctlOperacional1.PresionaF8_CerrarPrograma(sender);
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                ctlOperacional1.PresionaF5_LlamarCliente(sender);
+            }
+            if (e.KeyCode == Keys.F6)
+            {
+                ctlOperacional1.PresionarF6_MarcarClienteNoRespondio(sender);
+            }
 
         }
 

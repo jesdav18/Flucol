@@ -47,7 +47,6 @@
             this.Name = "frmConstructor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmConstructor_Load);
-            this.Shown += new System.EventHandler(this.frmConstructor_Shown);
             this.ResumeLayout(false);
 
         }

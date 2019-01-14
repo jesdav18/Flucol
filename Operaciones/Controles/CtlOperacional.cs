@@ -49,8 +49,8 @@ namespace Operaciones.Controles
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
-        public int Pro_Sucursal { get; set; }
-        public int Pro_Cliente { get; set; }
+        public int Pro_ID_AgenciaServicio { get; set; }
+        public int Pro_ID_ClienteServicio { get; set; }
         public int Pro_Posicion { get; set; }
         public int Pro_Prioridad_Atencion { get; set; } //A qué tipo de Ticket dará prioridad la posicion asignada.
         public int Pro_ID_NivelAccesoEmpleado { get; set; }
@@ -75,15 +75,15 @@ namespace Operaciones.Controles
         {
 
             Pro_Conexion = pConexion;
-            Pro_Sucursal = pID_AgenciaServicio;
-            Pro_Cliente = pID_ClienteServicio;
+            Pro_ID_AgenciaServicio = pID_AgenciaServicio;
+            Pro_ID_ClienteServicio = pID_ClienteServicio;
             Pro_ID_NivelAccesoEmpleado = pID_NivelAccesoEmpleado;
             Pro_DescripcionNivelAcceso = Pro_DescripcionNivelAcceso;
             Pro_Cargo = pCargoEmpleado;
             Pro_NombreEmpleado = pNombreEmpleado;
             Pro_Usuario = pUsuarioEmpleado;
-
             lblNombreUsuario.Text = Pro_NombreEmpleado;
+            CargarDatosTicketPosicion();
 
         }
 
@@ -98,22 +98,22 @@ namespace Operaciones.Controles
 
             try
             {
-                string sentencia = @"SELECT * FROM operaciones.ft_proc_asigna_devuelve_ticket_posicion (
-                                                                                                        :p_usuario, 
-                                                                                                        :p_agencia,
-                                                                                                        :p_cliente
-                                                                                                       );";
+                string sentencia = @"SELECT * FROM operaciones.ft_proc_devuelve_posicion_asignada (
+                                                                                                    :p_usuario, 
+                                                                                                    :p_agencia,
+                                                                                                    :p_cliente
+                                                                                                  );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia,Pro_Conexion);
                 pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_Usuario;
-                pgComando.Parameters.Add("p_agencia", PgSqlType.Int).Value = Pro_Sucursal;
-                pgComando.Parameters.Add("p_cliente", PgSqlType.Int).Value = Pro_Cliente;
+                pgComando.Parameters.Add("p_agencia", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+                pgComando.Parameters.Add("p_cliente", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
 
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
 
                 if (pgDr.Read())
                 {
-                    lblPosicion.Text = pgDr.GetString("posicion");
-                    lblNumeroTicket.Text = pgDr.GetString("ticket");
+                    lblPosicion.Text = "POSICIÓN " + pgDr.GetString("posicion");
+                   
                 }
 
                 pgDr.Close();
@@ -137,6 +137,7 @@ namespace Operaciones.Controles
             cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
             cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
             cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
+            cmdCerrarPrograma.Image = Properties.Resources.iconSalida;
         }
         
 
@@ -150,13 +151,14 @@ namespace Operaciones.Controles
 
         private void IniciarTicket()
         {
-            CargarDatosTicketPosicion();
+            
             Tiempos cl_tiempos = new Tiempos();
             cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                               (int)ESTADOS_TICKETS.EN_ATENCION,
-                                              Pro_Sucursal,
-                                              Pro_Cliente,
-                                              Pro_Ticket_Servicio);
+                                              Pro_ID_AgenciaServicio,
+                                              Pro_ID_ClienteServicio,
+                                              Pro_Ticket_Servicio,
+                                              Pro_Usuario);
             tmrTiempoAtencion.Start();
 
         }
@@ -167,9 +169,10 @@ namespace Operaciones.Controles
             Tiempos cl_tiempos = new Tiempos();
             cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                               (int)ESTADOS_TICKETS.CERRADO,
-                                              Pro_Sucursal,
-                                              Pro_Cliente,
-                                              Pro_Ticket_Servicio);
+                                              Pro_ID_AgenciaServicio,
+                                              Pro_ID_ClienteServicio,
+                                              Pro_Ticket_Servicio,
+                                              Pro_Usuario);
             ReinicioVariablesTiempo();
 
         }
@@ -179,9 +182,10 @@ namespace Operaciones.Controles
             Tiempos cl_tiempos = new Tiempos();
             cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                               (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO,
-                                              Pro_Sucursal,
-                                              Pro_Cliente,
-                                              Pro_Ticket_Servicio);
+                                              Pro_ID_AgenciaServicio,
+                                              Pro_ID_ClienteServicio,
+                                              Pro_Ticket_Servicio,
+                                              Pro_Usuario);
         }
 
         private void LlamarSiguienteCliente()
@@ -194,17 +198,37 @@ namespace Operaciones.Controles
 
             try
             {
-                string sentencia = "";
+                string sentencia = @"SELECT * FROM area_servicio.ft_proc_llama_siguiente_ticket (
+                                                                                                    :p_id_agencia_servicio,
+                                                                                                    :p_id_cliente_servicio,
+                                                                                                    :p_usuario 
+                                                                                                )";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-                
+                pgComando.Parameters.Add("p_id_agencia_servicio",PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
+                pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_Usuario;
+
+                PgSqlDataReader pgDr = pgComando.ExecuteReader();
+
+                if (pgDr.Read())
+                {
+                    Pro_Ticket_Servicio = pgDr.GetString("ticket");
+                    lblNumeroTicket.Text = Pro_Ticket_Servicio;
+                }
+
+                pgDr.Close();
+                pgComando.Dispose();
 
 
                 Tiempos cl_tiempos = new Tiempos();
                 cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                                   (int)ESTADOS_TICKETS.LLAMADO,
-                                                  Pro_Sucursal,
-                                                  Pro_Cliente,
-                                                  Pro_Ticket_Servicio);
+                                                  Pro_ID_AgenciaServicio,
+                                                  Pro_ID_ClienteServicio,
+                                                  Pro_Ticket_Servicio,
+                                                  Pro_Usuario
+                                                  );
+                
 
             }
             catch (Exception Exc)
@@ -246,7 +270,7 @@ namespace Operaciones.Controles
             }
         }
 
-
+     
         #endregion
 
         #region EVENTOS
@@ -287,14 +311,20 @@ namespace Operaciones.Controles
         {
             ReinicioImagenesIcono();
             cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
-            
+            LlamarSiguienteCliente();
         }
 
         public void PresionarF6_MarcarClienteNoRespondio(object sender)
         {
             ReinicioImagenesIcono();
             cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
+            MarcarClienteNoRespondioLlamado();
             
+        }
+
+        public void PresionaF8_CerrarPrograma(object sender)
+        {
+            cmdCerrarPrograma_Click(sender,new EventArgs());
         }
 
         #endregion
@@ -341,6 +371,13 @@ namespace Operaciones.Controles
             ReinicioImagenesIcono();
             cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
             MarcarClienteNoRespondioLlamado();
+        }
+
+        private void cmdCerrarPrograma_Click(object sender, EventArgs e)
+        {
+            ReinicioImagenesIcono();
+            cmdCerrarPrograma.Image = Properties.Resources.iconSalidaVerde;
+            Application.Exit();
         }
 
         private void tmrTiempoAtencion_Tick(object sender, EventArgs e)
@@ -403,7 +440,6 @@ namespace Operaciones.Controles
             lblTiempoAtencion.Text = v_tiempo;
 
         }
-
 
         #endregion
 

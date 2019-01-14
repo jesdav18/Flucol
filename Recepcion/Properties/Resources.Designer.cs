@@ -63,9 +63,39 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconAncianos {
+            get {
+                object obj = ResourceManager.GetObject("iconAncianos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconAncianosVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconAncianosVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconDiscapacidad {
             get {
                 object obj = ResourceManager.GetObject("iconDiscapacidad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDiscapacidadVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconDiscapacidadVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +113,29 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconEmbarazadaVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconEmbarazadaVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconEsperaGeneral {
             get {
                 object obj = ResourceManager.GetObject("iconEsperaGeneral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconEsperaGeneralVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconEsperaGeneralVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +153,16 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconIrAtrasVerde {
+            get {
+                object obj = ResourceManager.GetObject("iconIrAtrasVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconServicioAlCliente {
             get {
                 object obj = ResourceManager.GetObject("iconServicioAlCliente", resourceCulture);
@@ -113,9 +173,9 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconTerceraEdad {
+        internal static System.Drawing.Bitmap iconServicioAlClienteVerde {
             get {
-                object obj = ResourceManager.GetObject("iconTerceraEdad", resourceCulture);
+                object obj = ResourceManager.GetObject("iconServicioAlClienteVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +183,19 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconTransacciones {
+        internal static System.Drawing.Bitmap iconTransaccionesCaja {
             get {
-                object obj = ResourceManager.GetObject("iconTransacciones", resourceCulture);
+                object obj = ResourceManager.GetObject("iconTransaccionesCaja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconTransaccionesCajaVerde {
+            get {
+                object obj = ResourceManager.GetObject("IconTransaccionesCajaVerde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -139,6 +139,11 @@ namespace Operaciones.Controles
             }
         }
 
+
+        #endregion
+
+        #region EVENTOS CONTROLES
+
         private void cmdIngresar_Click(object sender, EventArgs e)
         {
             if (ValidarUsuarioLogueo())
@@ -146,6 +151,11 @@ namespace Operaciones.Controles
                 RedireccionPantallasSegunNivelAcceso();
                 OnUsuarioLogueado?.Invoke(sender, e);
             }
+        }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         #endregion
