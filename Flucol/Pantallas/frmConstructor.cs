@@ -234,8 +234,16 @@ namespace Flucol.Pantallas
         private void ObtenerNombreSucursal()
         {
             if (pgConexion.State != System.Data.ConnectionState.Open)
-            { 
-               pgConexion.Open();     
+            {
+                try
+                {
+                    pgConexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    MessageBox.Show(Exc.Message, "FLUCOL");
+                    return;
+                }
             }
 
             try
