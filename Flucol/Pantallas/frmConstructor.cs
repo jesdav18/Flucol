@@ -1,24 +1,13 @@
 ﻿using System;
-using System.Configuration.Assemblies;
 using System.Configuration;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using System.Speech.Synthesis;
-using Core.Reportes;
-using DevExpress.XtraReports.UI;
 using Recepcion.Pantallas;
 using Publicidad.Pantallas;
 using Operaciones.Pantallas;
 using Devart.Data.PostgreSql;
 using Flucol.Controles;
-using System.Diagnostics;
 
 namespace Flucol.Pantallas
 {

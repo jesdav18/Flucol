@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-using DevExpress.XtraCharts.Native;
-using Core.Clases;
 using Core.Reportes;
 using DevExpress.XtraReports.UI;
 using System.Configuration;

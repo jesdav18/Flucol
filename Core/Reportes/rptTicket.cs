@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-using Devart.Data.PostgreSql;
-using System.Globalization;
+
 
 namespace Core.Reportes
 {

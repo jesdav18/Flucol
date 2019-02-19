@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Devart.Data.PostgreSql;
 using System.Configuration;
-using System.Data.SqlClient;
+
 
 namespace Operaciones.Pantallas
 {
