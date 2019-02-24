@@ -30,6 +30,7 @@ namespace Recepcion.Controles
         public int Pro_ID_Operacion_Servicio { get; set; }
         public string Pro_Ticket_Generado { get; set; }
         public string Pro_NombreAgenciaServicio { get; set; }
+        public string Pro_IP_Host { get; set; }
 
         #endregion
 
@@ -62,12 +63,17 @@ namespace Recepcion.Controles
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion,int pSucursal, int pID_ClienteServicio,string pNombreAgenciaServicio)
+        public void ConstruirControl(PgSqlConnection pConexion,
+                                     int pSucursal, 
+                                     int pID_ClienteServicio,
+                                     string pNombreAgenciaServicio,
+                                     string pIP_Host)
         {
             Pro_Conexion = pConexion;
             Pro_ID_AgenciaServicio = pSucursal;
             Pro_ID_Cliente_Servicio = pID_ClienteServicio;
             Pro_NombreAgenciaServicio = pNombreAgenciaServicio;
+            Pro_IP_Host = pIP_Host;
         }
 
         private void IrAPaginaTransacciones()
@@ -79,9 +85,7 @@ namespace Recepcion.Controles
         {
             navFrameMenuInicial.SelectedPage = NavPagePrioridades;
         }
-
-        
-
+      
         private void IrAPaginaTicket()
         {
             navFrameMenuInicial.SelectedPage = navPageTicket;
@@ -122,13 +126,16 @@ namespace Recepcion.Controles
                                                                                                       :p_id_agencia_servicio,
                                                                                                       :p_id_cliente_servicio,
                                                                                                       :p_id_tipo_ticket_servicio,
-                                                                                                      :p_id_operacion_servicio
+                                                                                                      :p_id_operacion_servicio,
+                                                                                                      :p_direccion_ip
                                                                                                     );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
                 pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente_Servicio;
                 pgComando.Parameters.Add("p_id_tipo_ticket_servicio", PgSqlType.Int).Value = Pro_ID_Tipo_Ticket_Servicio;
                 pgComando.Parameters.Add("p_id_operacion_servicio", PgSqlType.Int).Value = Pro_ID_Operacion_Servicio;
+                pgComando.Parameters.Add("p_direccion_ip", PgSqlType.VarChar).Value = Pro_IP_Host;
+                
 
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
 
@@ -139,18 +146,15 @@ namespace Recepcion.Controles
 
                
                 pgTrans.Commit();
-
                 pgDr.Close();
                 pgComando.Dispose();
-
 
             }
             catch (Exception Exc)
             {
                 pgTrans.Rollback();
                 Pro_Ticket_Generado = null;
-                MessageBox.Show(Exc.Message,"FLUCOL");
-                
+                MessageBox.Show(Exc.Message,"FLUCOL");                
             }
         }
 

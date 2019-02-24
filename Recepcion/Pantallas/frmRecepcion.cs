@@ -28,7 +28,11 @@ namespace Recepcion.Pantallas
 
         #region FUNCIONES
 
-        public void ConstruirFormulario(PgSqlConnection pConexion, int pAgenciaServicio,int pID_ClienteServicio, string pNombreAgenciaServicio)
+        public void ConstruirFormulario(PgSqlConnection pConexion, 
+                                        int pAgenciaServicio,
+                                        int pID_ClienteServicio, 
+                                        string pNombreAgenciaServicio,
+                                        string pIP_Host)
         {
             Pro_ID_AgenciaServicio = pAgenciaServicio;
             Pro_Conexion = pConexion;
@@ -39,7 +43,11 @@ namespace Recepcion.Pantallas
                 Pro_Conexion.Open();
             }
 
-            ctlSeleccionTransaccion1.ConstruirControl(Pro_Conexion,Pro_ID_AgenciaServicio,Pro_ID_ClienteServicio,Pro_NombreAgenciaServicio);
+            ctlSeleccionTransaccion1.ConstruirControl(Pro_Conexion,
+                                                      Pro_ID_AgenciaServicio,
+                                                      Pro_ID_ClienteServicio,
+                                                      Pro_NombreAgenciaServicio,
+                                                      pIP_Host);
         }
 
         #endregion     

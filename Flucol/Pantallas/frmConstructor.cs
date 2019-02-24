@@ -8,6 +8,7 @@ using Publicidad.Pantallas;
 using Operaciones.Pantallas;
 using Devart.Data.PostgreSql;
 using Flucol.Controles;
+using Core.Clases;
 
 namespace Flucol.Pantallas
 {
@@ -19,14 +20,10 @@ namespace Flucol.Pantallas
         public frmConstructor()
         {
             InitializeComponent();
-            
-            
-               ctlBienvenida = new CtlBienvenida();
-                CrearConexion();
-                ObtenerNombreSucursal();
-            
-        
-            
+              
+            ctlBienvenida = new CtlBienvenida();
+            CrearConexion();
+            ObtenerNombreSucursal();           
         }
 
         #endregion
@@ -95,6 +92,13 @@ namespace Flucol.Pantallas
             }
         }
 
+        public string Pro_IP_Host {
+            get
+            {
+                return new Utilidades().ObtenerIP_Host();
+            }         
+        }
+
         public string Pro_NombreAgenciaServicio { get; set; }
 
         #endregion
@@ -138,7 +142,11 @@ namespace Flucol.Pantallas
                 frmRecepcion f_Recepcion = new frmRecepcion();
                 f_Recepcion.MdiParent = this;
                 f_Recepcion.StartPosition = FormStartPosition.CenterScreen;
-                f_Recepcion.ConstruirFormulario(pgConexion, Pro_ID_AgenciaServicio, Pro_ID_ClienteServicio, Pro_NombreAgenciaServicio);
+                f_Recepcion.ConstruirFormulario(pgConexion, 
+                                                Pro_ID_AgenciaServicio, 
+                                                Pro_ID_ClienteServicio, 
+                                                Pro_NombreAgenciaServicio,
+                                                Pro_IP_Host);
                 f_Recepcion.Show();
             }
             catch (Exception Exc)
@@ -204,6 +212,8 @@ namespace Flucol.Pantallas
 
             pgConexion = new PgSqlConnection(v_cadena);
 
+            new Utilidades().ObtenerIP_Host();
+
             try
             {
                 pgConexion.Open();
@@ -214,8 +224,7 @@ namespace Flucol.Pantallas
             }
             catch (Exception Exc)
             {
-               
-               
+                         
             }
            
         }
@@ -271,10 +280,7 @@ namespace Flucol.Pantallas
         #region EVENTOS CONTROLES
 
         private void ctlBienvenida_OnTerminaTiempoBienvenida(object sender, EventArgs e)
-        {
-
-          
-            
+        {           
             switch (Pro_Modulo)
             {
                 case 1:                   
@@ -286,9 +292,7 @@ namespace Flucol.Pantallas
                 case 3:
                     Construir_Acceso_Para_Operaciones();
                     break;
-            }
-
-           
+            }        
         }
 
         private void f_Recepcion_OnCerrarFormulario(object sender, EventArgs e)
@@ -298,14 +302,11 @@ namespace Flucol.Pantallas
 
   
         private void frmConstructor_Load(object sender, EventArgs e)
-        {
-           
-           
+        {                    
             ctlBienvenida.OnTerminaTiempoBienvenida += new EventHandler(ctlBienvenida_OnTerminaTiempoBienvenida);
             this.Controls.Add(ctlBienvenida);
             ctlBienvenida.Dock = DockStyle.Fill;
-            ctlBienvenida.ConstruirControl(Pro_Modulo);
-            
+            ctlBienvenida.ConstruirControl(Pro_Modulo);           
         }
 
         #endregion
