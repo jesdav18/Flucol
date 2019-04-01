@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using System.Speech.Synthesis;
+using System.Configuration;
 
 namespace Publicidad.Controles
 {
@@ -28,7 +29,11 @@ namespace Publicidad.Controles
             Pro_Sucursal = pSucursal;
             Pro_ID_Cliente = pCliente;
 
-            
+
+            Pro_Texto_Descriptivo = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"];
+            Pro_Voz = ConfigurationSettings.AppSettings["VOZ"];
+
+
             tmrConsultaCola.Start();
             tmrConsultaLlamadoTickets.Start();
         }
@@ -73,7 +78,8 @@ namespace Publicidad.Controles
         public PgSqlConnection Pro_Conexion { get; set; }
         public int Pro_ID_Cliente { get; set; }
         public int Pro_Sucursal { get; set; }
-
+        public string Pro_Voz { get; set; }
+        public string Pro_Texto_Descriptivo { get; set; }
 
 
         #endregion
@@ -127,13 +133,11 @@ namespace Publicidad.Controles
 
                     if (lblTicket.Text != "")
                     {
-                        v_voz.SelectVoice("Vocalizer Expressive Angelica Harpo 22kHz");
+                        //v_voz.SelectVoice("Vocalizer Expressive Angelica Harpo 22kHz");
+                        //v_voz.SelectVoice("VE_Mexican_Spanish_Angelica_22kHz");
+                        v_voz.SelectVoice(Pro_Voz);
                         v_voz.SetOutputToDefaultAudioDevice();
-                        v_voz.Speak(primera_letra + "," + segunda_letra + "," + tercera_letra + "," + ", Posisión " + lblPosicion.Text); //Escribí posición con S , para que la palabra se escuche en versión latina.
-
-
-                     
-
+                        v_voz.Speak(primera_letra + "," + segunda_letra + "," + tercera_letra + "," + ", " + Pro_Texto_Descriptivo + lblPosicion.Text); 
 
                         v_voz.Dispose();
 

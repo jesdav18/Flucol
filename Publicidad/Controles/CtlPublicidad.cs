@@ -1,4 +1,5 @@
 ﻿
+using System.Configuration;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
@@ -12,6 +13,7 @@ namespace Publicidad.Controles
         public CtlPublicidad()
         {
             InitializeComponent();
+
         }
 
         #endregion
@@ -20,18 +22,23 @@ namespace Publicidad.Controles
 
         public void ConstruirControl(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
         {
+            
             Pro_Conexion = pConexion;
             Pro_Sucursal = pID_Agencia_Servicio;
             Pro_Cliente = pID_Cliente_Servicio;
+            
             CargarMultimedia();
 
         }
 
         private void CargarMultimedia()
         {
-           
-            vlcControl1.SetMedia(new System.IO.FileInfo(@"C:\video.mp4"));
+
+            string v_ruta_publicidad = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
+            vlcControl1.SetMedia(new System.IO.FileInfo(v_ruta_publicidad));
             vlcControl1.Play();
+
+            v_ruta_publicidad = null;
         }
 
         #endregion

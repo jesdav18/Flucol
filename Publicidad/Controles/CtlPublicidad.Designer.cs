@@ -1,4 +1,6 @@
-﻿namespace Publicidad.Controles
+﻿using System.Configuration;
+
+namespace Publicidad.Controles
 {
     partial class CtlPublicidad
     {
@@ -35,6 +37,9 @@
             // 
             // vlcControl1
             // 
+            string v_ruta_vlc_lib_directory = ConfigurationSettings.AppSettings["RUTA_VLC_LIB_DIRECTORY"];
+           
+         
             this.vlcControl1.BackColor = System.Drawing.Color.Black;
             this.vlcControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlcControl1.Location = new System.Drawing.Point(0, 0);
@@ -43,8 +48,10 @@
             this.vlcControl1.Spu = -1;
             this.vlcControl1.TabIndex = 0;
             this.vlcControl1.Text = "vlcControl1";
-            this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
+            this.vlcControl1.VlcLibDirectory = new System.IO.DirectoryInfo(v_ruta_vlc_lib_directory);
             this.vlcControl1.VlcMediaplayerOptions = null;
+
+            v_ruta_vlc_lib_directory = null;
             // 
             // CtlPublicidad
             // 
