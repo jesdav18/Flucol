@@ -78,7 +78,7 @@
             // 
             // lblTituloPosiciones
             // 
-            this.lblTituloPosiciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPosiciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloPosiciones.Appearance.Options.UseFont = true;
             this.lblTituloPosiciones.Appearance.Options.UseTextOptions = true;
             this.lblTituloPosiciones.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -92,7 +92,7 @@
             // 
             // lblTituloTickets
             // 
-            this.lblTituloTickets.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloTickets.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloTickets.Appearance.Options.UseFont = true;
             this.lblTituloTickets.Appearance.Options.UseTextOptions = true;
             this.lblTituloTickets.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -115,13 +115,13 @@
             this.panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(603, 60);
+            this.panelControl2.Size = new System.Drawing.Size(603, 74);
             this.panelControl2.TabIndex = 1;
             // 
             // lblPosicion
             // 
             this.lblPosicion.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosicion.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblPosicion.Appearance.Options.UseBackColor = true;
             this.lblPosicion.Appearance.Options.UseFont = true;
@@ -132,14 +132,14 @@
             this.lblPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPosicion.Location = new System.Drawing.Point(293, 3);
             this.lblPosicion.Name = "lblPosicion";
-            this.lblPosicion.Size = new System.Drawing.Size(307, 54);
+            this.lblPosicion.Size = new System.Drawing.Size(307, 68);
             this.lblPosicion.TabIndex = 2;
             this.lblPosicion.Text = "POSICIÓN";
             // 
             // lblTicket
             // 
             this.lblTicket.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTicket.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTicket.Appearance.Options.UseBackColor = true;
             this.lblTicket.Appearance.Options.UseFont = true;
@@ -150,7 +150,7 @@
             this.lblTicket.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTicket.Location = new System.Drawing.Point(3, 3);
             this.lblTicket.Name = "lblTicket";
-            this.lblTicket.Size = new System.Drawing.Size(290, 54);
+            this.lblTicket.Size = new System.Drawing.Size(290, 68);
             this.lblTicket.TabIndex = 1;
             this.lblTicket.Text = "TICKET";
             // 
@@ -160,11 +160,11 @@
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.Controls.Add(this.gcTicket);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(0, 93);
+            this.panelControl3.Location = new System.Drawing.Point(0, 107);
             this.panelControl3.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(293, 183);
+            this.panelControl3.Size = new System.Drawing.Size(293, 169);
             this.panelControl3.TabIndex = 2;
             // 
             // gcTicket
@@ -176,7 +176,7 @@
             this.gcTicket.Location = new System.Drawing.Point(3, 3);
             this.gcTicket.MainView = this.gvTicket;
             this.gcTicket.Name = "gcTicket";
-            this.gcTicket.Size = new System.Drawing.Size(287, 177);
+            this.gcTicket.Size = new System.Drawing.Size(287, 163);
             this.gcTicket.TabIndex = 0;
             this.gcTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTicket});
@@ -188,10 +188,11 @@
             // 
             // gvTicket
             // 
-            this.gvTicket.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvTicket.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvTicket.Appearance.Row.Options.UseFont = true;
             this.gvTicket.Appearance.Row.Options.UseTextOptions = true;
             this.gvTicket.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvTicket.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvTicket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colticket1});
             this.gvTicket.GridControl = this.gcTicket;
@@ -213,11 +214,11 @@
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.Controls.Add(this.gcPosicion);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(293, 93);
+            this.panelControl4.Location = new System.Drawing.Point(293, 107);
             this.panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(310, 183);
+            this.panelControl4.Size = new System.Drawing.Size(310, 169);
             this.panelControl4.TabIndex = 3;
             // 
             // gcPosicion
@@ -228,17 +229,18 @@
             this.gcPosicion.Location = new System.Drawing.Point(3, 3);
             this.gcPosicion.MainView = this.gvPosicion;
             this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(304, 177);
+            this.gcPosicion.Size = new System.Drawing.Size(304, 163);
             this.gcPosicion.TabIndex = 1;
             this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPosicion});
             // 
             // gvPosicion
             // 
-            this.gvPosicion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvPosicion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvPosicion.Appearance.Row.Options.UseFont = true;
             this.gvPosicion.Appearance.Row.Options.UseTextOptions = true;
             this.gvPosicion.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvPosicion.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gvPosicion.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colposicion});
             this.gvPosicion.GridControl = this.gcPosicion;

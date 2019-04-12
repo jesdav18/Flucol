@@ -52,6 +52,7 @@
             this.txtUsuario.Properties.PasswordChar = '*';
             this.txtUsuario.Size = new System.Drawing.Size(239, 30);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // txtContrasenia
             // 
@@ -66,6 +67,7 @@
             this.txtContrasenia.Properties.PasswordChar = '*';
             this.txtContrasenia.Size = new System.Drawing.Size(239, 30);
             this.txtContrasenia.TabIndex = 1;
+            this.txtContrasenia.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContrasenia_KeyDown);
             // 
             // lblUsuario
             // 
@@ -130,6 +132,7 @@
             this.cmdIngresar.TabIndex = 5;
             this.cmdIngresar.Text = "INGRESAR";
             this.cmdIngresar.Click += new System.EventHandler(this.cmdIngresar_Click);
+            this.cmdIngresar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmdIngresar_KeyDown);
             // 
             // cmdCerrar
             // 
@@ -153,6 +156,7 @@
             this.cmdCerrar.TabIndex = 6;
             this.cmdCerrar.Text = "CERRAR";
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            this.cmdCerrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmdCerrar_KeyDown);
             // 
             // ctlLoginOperacional
             // 

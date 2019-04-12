@@ -18,6 +18,12 @@ namespace Publicidad.Controles
 
         #endregion
 
+        #region VARIABLES GLOBALES
+
+        string v_ruta_publicidad;
+
+        #endregion
+
         #region FUNCIONES
 
         public void ConstruirControl(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
@@ -26,19 +32,26 @@ namespace Publicidad.Controles
             Pro_Conexion = pConexion;
             Pro_Sucursal = pID_Agencia_Servicio;
             Pro_Cliente = pID_Cliente_Servicio;
-            
-            CargarMultimedia();
+            v_ruta_publicidad = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
 
+            CargarMultimedia();
+           
         }
 
         private void CargarMultimedia()
         {
 
-            string v_ruta_publicidad = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
-            vlcControl1.SetMedia(new System.IO.FileInfo(v_ruta_publicidad));
-            vlcControl1.Play();
-
-            v_ruta_publicidad = null;
+            try
+            {
+                vlcControl1.SetMedia(new System.IO.FileInfo(v_ruta_publicidad));
+                vlcControl1.Play();
+                
+            }
+            catch (System.Exception Exc)
+            {
+                MessageBox.Show("Algo salió mal en la carga de Multimedia. " + Exc.Message);
+            }
+      
         }
 
         #endregion
@@ -49,8 +62,16 @@ namespace Publicidad.Controles
         public int Pro_Cliente { get; set; }
         public int Pro_Sucursal { get; set; }
 
+
         #endregion
 
+        private void vlcControl1_EndReached(object sender, Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs e)
+        {
 
+            
+            
+            vlcControl1.Play();
+
+        }
     }
 }

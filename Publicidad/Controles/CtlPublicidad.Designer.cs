@@ -8,6 +8,7 @@ namespace Publicidad.Controles
         /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        
 
         /// <summary> 
         /// Limpiar los recursos que se estén usando.
@@ -38,8 +39,6 @@ namespace Publicidad.Controles
             // vlcControl1
             // 
             string v_ruta_vlc_lib_directory = ConfigurationSettings.AppSettings["RUTA_VLC_LIB_DIRECTORY"];
-           
-         
             this.vlcControl1.BackColor = System.Drawing.Color.Black;
             this.vlcControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vlcControl1.Location = new System.Drawing.Point(0, 0);
@@ -48,10 +47,10 @@ namespace Publicidad.Controles
             this.vlcControl1.Spu = -1;
             this.vlcControl1.TabIndex = 0;
             this.vlcControl1.Text = "vlcControl1";
+            //this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
             this.vlcControl1.VlcLibDirectory = new System.IO.DirectoryInfo(v_ruta_vlc_lib_directory);
             this.vlcControl1.VlcMediaplayerOptions = null;
-
-            v_ruta_vlc_lib_directory = null;
+            this.vlcControl1.EndReached += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs>(this.vlcControl1_EndReached);
             // 
             // CtlPublicidad
             // 
@@ -70,5 +69,6 @@ namespace Publicidad.Controles
         #endregion
 
         private Vlc.DotNet.Forms.VlcControl vlcControl1;
+        
     }
 }

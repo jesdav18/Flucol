@@ -64,6 +64,7 @@ namespace Operaciones.Controles
             Pro_Conexion = pConexion;
             Pro_Sucursal = pSucursal;
             Pro_Cliente = pCliente;
+            txtUsuario.Focus();
             
         }
 
@@ -76,10 +77,10 @@ namespace Operaciones.Controles
 
             try
             {
-                string sentencia = @"SELECT * FROM operaciones.ft_proc_valida_usuario_acceso (
-                                                                                              :p_usuario,
-                                                                                              :p_contrasenia
-                                                                                            );";
+                string sentencia = @"SELECT * FROM area_servicio.ft_proc_valida_usuario_acceso (
+                                                                                                  :p_usuario,
+                                                                                                  :p_contrasenia
+                                                                                                );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = txtUsuario.Text;
                 pgComando.Parameters.Add("p_contrasenia", PgSqlType.VarChar).Value = txtContrasenia.Text;
@@ -107,6 +108,7 @@ namespace Operaciones.Controles
             catch (Exception Exc)
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
+                txtUsuario.Focus();
                 return false;    
             }
 
@@ -156,6 +158,57 @@ namespace Operaciones.Controles
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtContrasenia.Focus();
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+                txtContrasenia.Focus();
+            }
+        }
+
+        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmdIngresar.Focus();
+            }
+
+            if (e.KeyCode == Keys.Up)
+            {
+                txtUsuario.Focus();
+            }
+        }
+
+        private void cmdIngresar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtContrasenia.Focus();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                cmdCerrar.Focus();
+            }
+        }
+
+        private void cmdCerrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                txtContrasenia.Focus();
+            }
+
+            if (e.KeyCode == Keys.Left)
+            {
+                cmdIngresar.Focus();
+            }
         }
 
         #endregion

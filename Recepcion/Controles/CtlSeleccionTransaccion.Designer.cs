@@ -139,6 +139,7 @@
             this.cmdTerceraEdad.Name = "cmdTerceraEdad";
             this.cmdTerceraEdad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdTerceraEdad.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdTerceraEdad.Properties.ShowMenu = false;
             this.cmdTerceraEdad.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdTerceraEdad.Size = new System.Drawing.Size(99, 91);
             this.cmdTerceraEdad.TabIndex = 8;
@@ -158,6 +159,7 @@
             this.lblEsperaGeneral.Size = new System.Drawing.Size(195, 97);
             this.lblEsperaGeneral.TabIndex = 7;
             this.lblEsperaGeneral.Text = "ESPERA GENERAL";
+            this.lblEsperaGeneral.Click += new System.EventHandler(this.cmdEsperaGeneral_Click);
             // 
             // lblCondicionesEspeciales
             // 
@@ -173,6 +175,7 @@
             this.lblCondicionesEspeciales.Size = new System.Drawing.Size(195, 97);
             this.lblCondicionesEspeciales.TabIndex = 3;
             this.lblCondicionesEspeciales.Text = "CONDICIONES ESPECIALES";
+            this.lblCondicionesEspeciales.Click += new System.EventHandler(this.cmdCondicionesEspeciales_Click);
             // 
             // lblTerceraEdad
             // 
@@ -188,6 +191,7 @@
             this.lblTerceraEdad.Size = new System.Drawing.Size(149, 85);
             this.lblTerceraEdad.TabIndex = 1;
             this.lblTerceraEdad.Text = "TERCERA EDAD";
+            this.lblTerceraEdad.Click += new System.EventHandler(this.cmdTerceraEdad_Click);
             // 
             // cmdCondicionesEspeciales01
             // 
@@ -197,6 +201,7 @@
             this.cmdCondicionesEspeciales01.Name = "cmdCondicionesEspeciales01";
             this.cmdCondicionesEspeciales01.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCondicionesEspeciales01.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdCondicionesEspeciales01.Properties.ShowMenu = false;
             this.cmdCondicionesEspeciales01.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdCondicionesEspeciales01.Size = new System.Drawing.Size(99, 91);
             this.cmdCondicionesEspeciales01.TabIndex = 6;
@@ -210,6 +215,7 @@
             this.cmdEsperaGeneral.Name = "cmdEsperaGeneral";
             this.cmdEsperaGeneral.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdEsperaGeneral.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdEsperaGeneral.Properties.ShowMenu = false;
             this.cmdEsperaGeneral.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdEsperaGeneral.Size = new System.Drawing.Size(99, 91);
             this.cmdEsperaGeneral.TabIndex = 4;
@@ -223,6 +229,7 @@
             this.cmdCondicionesEspeciales.Name = "cmdCondicionesEspeciales";
             this.cmdCondicionesEspeciales.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCondicionesEspeciales.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdCondicionesEspeciales.Properties.ShowMenu = false;
             this.cmdCondicionesEspeciales.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdCondicionesEspeciales.Size = new System.Drawing.Size(99, 91);
             this.cmdCondicionesEspeciales.TabIndex = 2;

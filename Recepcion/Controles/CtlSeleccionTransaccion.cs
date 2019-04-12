@@ -92,7 +92,7 @@ namespace Recepcion.Controles
              
             rpt = new rptTicket();
             rpt.CargarDatos(Pro_Ticket_Generado);
-            rpt.pic_Logo.Image = Image.FromFile(Path.Combine(Application.StartupPath, "logo_cliente.png"));
+            rpt.pic_Logo.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
             rpt.lblNombreAgencia.Text = Pro_NombreAgenciaServicio;
             rpt.CreateDocument();
             documentViewer1.DocumentSource = rpt;
@@ -103,6 +103,7 @@ namespace Recepcion.Controles
                
                 ReportPrintTool v_print_tool = new ReportPrintTool(rpt);
                 v_print_tool.Print(ConfigurationSettings.AppSettings["IMPRESORA_TICKETS"]);
+
                
             }
             catch (Exception Exc)
@@ -160,7 +161,7 @@ namespace Recepcion.Controles
 
         private void ReinicioImagenesIcono()
         {
-            cmdCondicionesEspeciales.Image = Properties.Resources.iconAncianos;
+            cmdTerceraEdad.Image = Properties.Resources.iconAncianos;
             cmdCondicionesEspeciales.Image = Properties.Resources.iconEmbarazada;
             cmdCondicionesEspeciales01.Image = Properties.Resources.iconDiscapacidad;
             cmdEsperaGeneral.Image = Properties.Resources.iconEsperaGeneral;
@@ -245,6 +246,7 @@ namespace Recepcion.Controles
         {
            
             tmrTiempoVisualizacionTicket.Stop();
+            ReinicioImagenesIcono();
             IrAPaginaPrioridades();
             rpt.Dispose();
         }

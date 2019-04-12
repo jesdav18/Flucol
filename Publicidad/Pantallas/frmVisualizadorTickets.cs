@@ -37,8 +37,9 @@ namespace Publicidad.Pantallas
 
         }
 
+
         #endregion
 
-
+        
     }
 }

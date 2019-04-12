@@ -36,23 +36,27 @@ namespace Core.Clases
                 Pro_Conexion.Open();
             }
 
-            try
-            {
-                string sentencia = @"SELECT * FROM area_servicio.ft_mant_actualizar_estado_ticket (
+            string sentencia = @"SELECT * FROM area_servicio.ft_mant_actualizar_estado_ticket (
                                                                                                     :p_estado_ticket,
                                                                                                     :p_id_agencia_servicio,
                                                                                                     :p_id_cliente_servicio,
                                                                                                     :p_ticket_servicio,
                                                                                                     :p_usuario
                                                                                                 )";
-                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-                pgComando.Parameters.Add("p_estado_ticket", PgSqlType.Int).Value = (int) pEstadoTicket;
-                pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = pID_AgenciaServicio;
-                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = pID_ClienteServicio;
-                pgComando.Parameters.Add("p_ticket_servicio", PgSqlType.VarChar).Value = pTicketServicio;
-                pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = pUsuario;
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_estado_ticket", PgSqlType.Int).Value = (int)pEstadoTicket;
+            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = pID_AgenciaServicio;
+            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = pID_ClienteServicio;
+            pgComando.Parameters.Add("p_ticket_servicio", PgSqlType.VarChar).Value = pTicketServicio;
+            pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = pUsuario;
 
+            try
+            {
+                
                 pgComando.ExecuteNonQuery();
+
+                sentencia = null;
+                pgComando.Dispose();
 
             }
             catch (Exception Exc)

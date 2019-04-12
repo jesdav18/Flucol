@@ -9,6 +9,7 @@ using Operaciones.Pantallas;
 using Devart.Data.PostgreSql;
 using Flucol.Controles;
 using Core.Clases;
+using System.Drawing;
 
 namespace Flucol.Pantallas
 {
@@ -306,7 +307,8 @@ namespace Flucol.Pantallas
             ctlBienvenida.OnTerminaTiempoBienvenida += new EventHandler(ctlBienvenida_OnTerminaTiempoBienvenida);
             this.Controls.Add(ctlBienvenida);
             ctlBienvenida.Dock = DockStyle.Fill;
-            ctlBienvenida.ConstruirControl(Pro_Modulo);           
+            ctlBienvenida.ConstruirControl(Pro_Modulo);
+
         }
 
         #endregion

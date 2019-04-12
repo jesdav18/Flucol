@@ -119,31 +119,65 @@ namespace Publicidad.Controles
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
                 {
-                    string primera_letra;
-                    string segunda_letra;
-                    string tercera_letra;
+                    string v_primera_letra;
+                    string v_segunda_letra;
+                    string v_tercera_letra;
+                    string v_cuarta_letra;
+                    string v_quinta_letra;
+                    string v_sexta_letra;
+                    int v_tipo_ticket;
 
                     v_voz = new SpeechSynthesizer();
                     lblTicket.Text = pgDr.GetString("ticket");
                     lblPosicion.Text = pgDr.GetString("posicion");
-                    primera_letra = pgDr.GetString("primera_letra");
-                    segunda_letra = pgDr.GetString("segunda_letra");
-                    tercera_letra = pgDr.GetString("tercera_letra");
-
+                    v_tipo_ticket = pgDr.GetInt32("tipo_ticket");
+                    v_primera_letra = pgDr.GetString("primera_letra");
+                    v_segunda_letra = pgDr.GetString("segunda_letra");
+                    v_tercera_letra = pgDr.GetString("tercera_letra");
+                    v_cuarta_letra = pgDr.GetString("cuarta_letra");
+                    v_quinta_letra = pgDr.GetString("quinta_letra");
+                    v_sexta_letra = pgDr.GetString("sexta_letra");
 
                     if (lblTicket.Text != "")
                     {
                         //v_voz.SelectVoice("Vocalizer Expressive Angelica Harpo 22kHz");
                         //v_voz.SelectVoice("VE_Mexican_Spanish_Angelica_22kHz");
-                        v_voz.SelectVoice(Pro_Voz);
-                        v_voz.SetOutputToDefaultAudioDevice();
-                        v_voz.Speak(primera_letra + "," + segunda_letra + "," + tercera_letra + "," + ", " + Pro_Texto_Descriptivo + lblPosicion.Text); 
 
-                        v_voz.Dispose();
+                        if (v_tipo_ticket == 1)
+                        {
+                            v_voz.SelectVoice(Pro_Voz);
+                            v_voz.SetOutputToDefaultAudioDevice();
+                            v_voz.Speak(v_primera_letra + "," + v_segunda_letra + "," + v_tercera_letra +
+                                        v_cuarta_letra + ", " +
+                                        v_quinta_letra + v_sexta_letra + ", " +
+                                        Pro_Texto_Descriptivo + lblPosicion.Text);
+
+                            v_voz.Dispose();
+                        }
+                        else
+                        {
+                            v_voz.SelectVoice(Pro_Voz);
+                            v_voz.SetOutputToDefaultAudioDevice();
+                            v_voz.Speak(v_primera_letra + "," + v_segunda_letra + ", " + 
+                                        v_tercera_letra + ", " +
+                                        v_cuarta_letra + v_quinta_letra + ", " +
+                                        Pro_Texto_Descriptivo + lblPosicion.Text);
+
+                            v_voz.Dispose();
+                        }
 
                     }
+
+                    v_primera_letra = null;
+                    v_segunda_letra = null;
+                    v_tercera_letra = null;
+                    v_cuarta_letra = null;
+                    v_quinta_letra = null;
+                    v_sexta_letra = null;
                 }
 
+
+                
                 pgDr.Close();
                 pgComando.Dispose();
                 vConexion.Close();

@@ -50,7 +50,7 @@ namespace Flucol.Controles
                     lblModulo.Text = "RECEPCIÓN";
                     break;
                 case 2:
-                    lblModulo.Text = "VISUALIZACIÓN";
+                    lblModulo.Text = "PUBLICIDAD";
                     break;
                 case 3:
                     lblModulo.Text = "OPERACIONES";
