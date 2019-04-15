@@ -12,10 +12,10 @@
   <xs:element name="dsTickets" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTickets" msprop:Generator_UserDSName="dsTickets">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtTicket" msprop:Generator_TableClassName="dtTicketDataTable" msprop:Generator_TableVarName="tabledtTicket" msprop:Generator_TablePropName="dtTicket" msprop:Generator_RowDeletingName="dtTicketRowDeleting" msprop:Generator_RowChangingName="dtTicketRowChanging" msprop:Generator_RowEvHandlerName="dtTicketRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTicketRowDeleted" msprop:Generator_UserTableName="dtTicket" msprop:Generator_RowChangedName="dtTicketRowChanged" msprop:Generator_RowEvArgName="dtTicketRowChangeEvent" msprop:Generator_RowClassName="dtTicketRow">
+        <xs:element name="dtTickets" msprop:Generator_TableClassName="dtTicketsDataTable" msprop:Generator_TableVarName="tabledtTickets" msprop:Generator_TablePropName="dtTickets" msprop:Generator_RowDeletingName="dtTicketsRowDeleting" msprop:Generator_RowChangingName="dtTicketsRowChanging" msprop:Generator_RowEvHandlerName="dtTicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTicketsRowDeleted" msprop:Generator_UserTableName="dtTickets" msprop:Generator_RowChangedName="dtTicketsRowChanged" msprop:Generator_RowEvArgName="dtTicketsRowChangeEvent" msprop:Generator_RowClassName="dtTicketsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="numero_ticket" msprop:Generator_ColumnVarNameInTable="columnnumero_ticket" msprop:Generator_ColumnPropNameInRow="numero_ticket" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInTable="numero_ticketColumn" msprop:Generator_UserColumnName="numero_ticket" type="xs:string" minOccurs="0" />
+              <xs:element name="ticket_servicio" msprop:Generator_ColumnVarNameInTable="columnticket_servicio" msprop:Generator_ColumnPropNameInRow="ticket_servicio" msprop:Generator_ColumnPropNameInTable="ticket_servicioColumn" msprop:Generator_UserColumnName="ticket_servicio" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

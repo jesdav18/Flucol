@@ -5,6 +5,7 @@ using Devart.Data.PostgreSql;
 using Core.Clases;
 using System.Configuration;
 
+
 namespace Operaciones.Controles
 {
     public partial class CtlOperacional : UserControl
@@ -83,10 +84,14 @@ namespace Operaciones.Controles
             Pro_Esta_En_Atencion = false;
             lblNombreUsuario.Text = Pro_NombreEmpleado;
             lblNumeroTicket.Text = "";
-            CargarDatosTicketPosicion();
+            ctlListaTicketsEspera1.ConstruirControl(Pro_Conexion,
+                                                    Pro_ID_AgenciaServicio,
+                                                    Pro_ID_ClienteServicio,
+                                                    Pro_Usuario);
 
         }
 
+        
         private void CargarDatosTicketPosicion()
         {
             
@@ -134,13 +139,12 @@ namespace Operaciones.Controles
         
         private void ReinicioImagenesIcono()
         {
-            cmdAlmuerzo.Image = Properties.Resources.iconAlmuerzo;
-            cmdTiempoPersonal.Image = Properties.Resources.iconPausaPersonal;
+           
             cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicket;
             cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
             cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
             cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
-            cmdCerrarPrograma.Image = Properties.Resources.iconSalida;
+            //cmdRellamar.Image;
         }
         
 
@@ -289,20 +293,7 @@ namespace Operaciones.Controles
 
         #region EVENTOS GLOBALES
 
-        public void PresionaF11_SalidaAlmuerzo(object sender)
-        {
-            ReinicioImagenesIcono();
-            cmdAlmuerzo.Image = Properties.Resources.iconAlmuerzoVerde;
-            MarcarParoTiempoAlmuerzo();
-        }
-
-        public void PresionaF12_ParoTiempoPersonal(object sender)
-        {
-            ReinicioImagenesIcono();
-            cmdTiempoPersonal.Image = Properties.Resources.IconPausaPersonalVerde;
-            MarcarParoTiempoPersonal();
-        } 
-
+      
         public void PresionaF1_IniciarTicket(object sender)
         {
             ReinicioImagenesIcono();
@@ -332,10 +323,7 @@ namespace Operaciones.Controles
             
         }
 
-        public void PresionaF8_CerrarPrograma(object sender)
-        {
-            cmdCerrarPrograma_Click(sender,new EventArgs());
-        }
+     
 
         #endregion
 
@@ -371,39 +359,7 @@ namespace Operaciones.Controles
                 MessageBox.Show("No se ha iniciado ningun ticket.","FLUCOL");
             }
             
-        }
-
-        private void cmdTiempoPersonal_Click(object sender, EventArgs e)
-        {
-            if (!Pro_Esta_En_Atencion)
-            {
-                ReinicioImagenesIcono();
-                cmdTiempoPersonal.Image = Properties.Resources.IconPausaPersonalVerde;
-                MarcarParoTiempoPersonal();
-                Pro_Esta_En_Atencion = false;
-            }
-            else
-            {
-                MessageBox.Show("El ticket aun no ha sido cerrado.","FLUCOL");
-            }
-          
-        }
-
-        private void cmdAlmuerzo_Click(object sender, EventArgs e)
-        {
-            if (!Pro_Esta_En_Atencion)
-            {
-                ReinicioImagenesIcono();
-                cmdAlmuerzo.Image = Properties.Resources.iconAlmuerzoVerde;
-                MarcarParoTiempoAlmuerzo();
-                Pro_Esta_En_Atencion = false;
-            }
-            else
-            {
-                MessageBox.Show("No puede salir a su almuerzo porque el ticket no ha sido cerrado. ","FLUCOL");
-            }
-            
-        }
+        }     
 
         private void cmdLlamarCliente_Click(object sender, EventArgs e)
         {
@@ -441,13 +397,6 @@ namespace Operaciones.Controles
                 MessageBox.Show("Aun no ha finalizado el ticket! ","FLUCOL");
             }
             
-        }
-
-        private void cmdCerrarPrograma_Click(object sender, EventArgs e)
-        {
-            ReinicioImagenesIcono();
-            cmdCerrarPrograma.Image = Properties.Resources.iconSalidaVerde;
-            Application.Exit();
         }
 
         private void tmrTiempoAtencion_Tick(object sender, EventArgs e)
@@ -511,10 +460,43 @@ namespace Operaciones.Controles
 
         }
 
+      
+        private void cmdPersonalTiempo_Click(object sender, EventArgs e)
+        {
+            if (!Pro_Esta_En_Atencion)
+            {
+               
+                MarcarParoTiempoPersonal();
+                Pro_Esta_En_Atencion = false;
+            }
+            else
+            {
+                MessageBox.Show("El ticket aun no ha sido cerrado.", "FLUCOL");
+            }
+        }
 
-        #endregion
+        private void cmdSalidaAlmuerzo_Click(object sender, EventArgs e)
+        {
+            if (!Pro_Esta_En_Atencion)
+            {
+                          
+                MarcarParoTiempoAlmuerzo();
+                Pro_Esta_En_Atencion = false;
+            }
+            else
+            {
+                MessageBox.Show("No puede salir a su almuerzo porque el ticket no ha sido cerrado. ", "FLUCOL");
+            }
+        }
 
-        private void lblNumeroTicket_Click(object sender, EventArgs e)
+        private void cmdCerrarSesion_Click(object sender, EventArgs e)
+        {
+            
+            Application.Exit();
+        }
+
+      
+        private void cmdRellamar_Click(object sender, EventArgs e)
         {
             if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
             {
@@ -522,5 +504,16 @@ namespace Operaciones.Controles
                 LlamarSiguienteCliente(true);
             }
         }
+
+
+        private void picUsuario_Click(object sender, EventArgs e)
+        {
+            popupResumen.ShowPopup();
+            CargarDatosTicketPosicion();
+            lblNombreUsuario.Text = Pro_NombreEmpleado;
+        }
+
+        #endregion
+
     }
 }
