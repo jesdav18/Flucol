@@ -28,6 +28,7 @@ namespace Operaciones.Controles
         public string Pro_NombreEmpleado { get; set; }
         public string Pro_CargoEmpleado { get; set; }
         public string Pro_UsuarioEmpleado { get; set; }
+        public string Pro_CodigoEmpleado { get; set; }
 
 
         #endregion
@@ -79,11 +80,15 @@ namespace Operaciones.Controles
             {
                 string sentencia = @"SELECT * FROM area_servicio.ft_proc_valida_usuario_acceso (
                                                                                                   :p_usuario,
-                                                                                                  :p_contrasenia
+                                                                                                  :p_contrasenia,
+                                                                                                  :p_id_cliente_servicio,
+                                                                                                  :p_id_agencia_servicio
                                                                                                 );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = txtUsuario.Text;
                 pgComando.Parameters.Add("p_contrasenia", PgSqlType.VarChar).Value = txtContrasenia.Text;
+                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_Cliente;
+                pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
 
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
@@ -93,6 +98,7 @@ namespace Operaciones.Controles
                     Pro_ID_NivelAcceso = pgDr.GetInt32("id_nivel_acceso_empleado");
                     Pro_DescripcionNivelAcceso = pgDr.GetString("nivel_acceso_empleado");
                     Pro_CargoEmpleado = pgDr.GetString("cargo_empleado");
+                    Pro_CodigoEmpleado = pgDr.GetString("codigo_empleado");
                 }
 
                 pgDr.Close();
@@ -130,7 +136,8 @@ namespace Operaciones.Controles
                                                                        Pro_NombreEmpleado,
                                                                        Pro_UsuarioEmpleado,
                                                                        Pro_DescripcionNivelAcceso,
-                                                                       Pro_CargoEmpleado);
+                                                                       Pro_CargoEmpleado,
+                                                                       Pro_CodigoEmpleado);
                     frmOperacional.Show();
                     break;
                 case NIVELES_ACCESO.ADMINISTRACION:

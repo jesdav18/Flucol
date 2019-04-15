@@ -28,30 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlOperacional));
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
             this.pnlResumen = new System.Windows.Forms.Panel();
             this.pnlDetalleResumen = new System.Windows.Forms.Panel();
             this.pnlEncabezadoResumen = new System.Windows.Forms.Panel();
-            this.picUsuario = new DevExpress.XtraEditors.PictureEdit();
             this.pnlControlesDeCola = new System.Windows.Forms.Panel();
             this.lblRellamar = new DevExpress.XtraEditors.LabelControl();
-            this.cmdRellamar = new DevExpress.XtraEditors.PictureEdit();
             this.lblMarcarComoNoRespondioLlamado = new DevExpress.XtraEditors.LabelControl();
-            this.cmdClienteNoAtendioLlamado = new DevExpress.XtraEditors.PictureEdit();
             this.lblLlamarCliente = new DevExpress.XtraEditors.LabelControl();
-            this.cmdLlamarCliente = new DevExpress.XtraEditors.PictureEdit();
             this.lblCerrarTicket = new DevExpress.XtraEditors.LabelControl();
             this.lblIniciarTicket = new DevExpress.XtraEditors.LabelControl();
-            this.cmdCerrarTicket = new DevExpress.XtraEditors.PictureEdit();
-            this.cmdIniciarTicket = new DevExpress.XtraEditors.PictureEdit();
             this.pnlInformacionTickets = new System.Windows.Forms.Panel();
             this.lblTiempoAtencion = new DevExpress.XtraEditors.LabelControl();
             this.lblNumeroTicket = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTiempoAtencion = new System.Windows.Forms.Timer();
-            this.tmrParoTiempo = new System.Windows.Forms.Timer();
+            this.tmrTiempoAtencion = new System.Windows.Forms.Timer(this.components);
+            this.tmrParoTiempo = new System.Windows.Forms.Timer(this.components);
             this.Navigation = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pagePrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlListaTickets = new System.Windows.Forms.Panel();
+            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.PagePopups = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.popupResumen = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
@@ -61,32 +59,35 @@
             this.cmdPersonalTiempo = new DevExpress.XtraEditors.SimpleButton();
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.pnlListaTickets = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
+            this.picUsuario = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdRellamar = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdClienteNoAtendioLlamado = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdLlamarCliente = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdCerrarTicket = new DevExpress.XtraEditors.PictureEdit();
+            this.cmdIniciarTicket = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             this.pnlResumen.SuspendLayout();
             this.pnlEncabezadoResumen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).BeginInit();
             this.pnlControlesDeCola.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdRellamar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).BeginInit();
             this.pnlInformacionTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigation)).BeginInit();
             this.Navigation.SuspendLayout();
             this.pagePrincipal.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.pnlListaTickets.SuspendLayout();
             this.PagePopups.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupResumen)).BeginInit();
             this.popupResumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
             this.flyoutPanelControl1.SuspendLayout();
             this.pnlBotones.SuspendLayout();
-            this.pnlListaTickets.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRellamar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlEncabezado
@@ -130,26 +131,6 @@
             this.pnlEncabezadoResumen.Size = new System.Drawing.Size(212, 29);
             this.pnlEncabezadoResumen.TabIndex = 5;
             // 
-            // picUsuario
-            // 
-            this.picUsuario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picUsuario.EditValue = ((object)(resources.GetObject("picUsuario.EditValue")));
-            this.picUsuario.Location = new System.Drawing.Point(170, 0);
-            this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Properties.AllowFocused = false;
-            this.picUsuario.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.picUsuario.Properties.Appearance.Options.UseBackColor = true;
-            this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picUsuario.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.picUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.picUsuario.Properties.ReadOnly = true;
-            this.picUsuario.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picUsuario.Properties.ShowMenu = false;
-            this.picUsuario.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picUsuario.Size = new System.Drawing.Size(42, 29);
-            this.picUsuario.TabIndex = 4;
-            this.picUsuario.Click += new System.EventHandler(this.picUsuario_Click);
-            // 
             // pnlControlesDeCola
             // 
             this.pnlControlesDeCola.BackColor = System.Drawing.Color.White;
@@ -187,20 +168,6 @@
             this.lblRellamar.Text = "RELLAMAR";
             this.lblRellamar.Click += new System.EventHandler(this.cmdRellamar_Click);
             // 
-            // cmdRellamar
-            // 
-            this.cmdRellamar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdRellamar.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
-            this.cmdRellamar.Location = new System.Drawing.Point(679, 16);
-            this.cmdRellamar.Name = "cmdRellamar";
-            this.cmdRellamar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdRellamar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdRellamar.Properties.ShowMenu = false;
-            this.cmdRellamar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdRellamar.Size = new System.Drawing.Size(65, 56);
-            this.cmdRellamar.TabIndex = 17;
-            this.cmdRellamar.Click += new System.EventHandler(this.cmdRellamar_Click);
-            // 
             // lblMarcarComoNoRespondioLlamado
             // 
             this.lblMarcarComoNoRespondioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -219,20 +186,6 @@
             this.lblMarcarComoNoRespondioLlamado.Text = "CLIENTE NO ATENDIO LLAMADO (F6)";
             this.lblMarcarComoNoRespondioLlamado.Click += new System.EventHandler(this.cmdClienteNoAtendioLlamado_Click);
             // 
-            // cmdClienteNoAtendioLlamado
-            // 
-            this.cmdClienteNoAtendioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdClienteNoAtendioLlamado.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
-            this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(875, 16);
-            this.cmdClienteNoAtendioLlamado.Name = "cmdClienteNoAtendioLlamado";
-            this.cmdClienteNoAtendioLlamado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdClienteNoAtendioLlamado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdClienteNoAtendioLlamado.Properties.ShowMenu = false;
-            this.cmdClienteNoAtendioLlamado.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdClienteNoAtendioLlamado.Size = new System.Drawing.Size(65, 56);
-            this.cmdClienteNoAtendioLlamado.TabIndex = 15;
-            this.cmdClienteNoAtendioLlamado.Click += new System.EventHandler(this.cmdClienteNoAtendioLlamado_Click);
-            // 
             // lblLlamarCliente
             // 
             this.lblLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -250,20 +203,6 @@
             this.lblLlamarCliente.TabIndex = 14;
             this.lblLlamarCliente.Text = "LLAMAR CLIENTE (F5)";
             this.lblLlamarCliente.Click += new System.EventHandler(this.cmdLlamarCliente_Click);
-            // 
-            // cmdLlamarCliente
-            // 
-            this.cmdLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdLlamarCliente.EditValue = global::Operaciones.Properties.Resources.icon_llamar_siguiente_cliente;
-            this.cmdLlamarCliente.Location = new System.Drawing.Point(166, 16);
-            this.cmdLlamarCliente.Name = "cmdLlamarCliente";
-            this.cmdLlamarCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdLlamarCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdLlamarCliente.Properties.ShowMenu = false;
-            this.cmdLlamarCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdLlamarCliente.Size = new System.Drawing.Size(65, 56);
-            this.cmdLlamarCliente.TabIndex = 13;
-            this.cmdLlamarCliente.Click += new System.EventHandler(this.cmdLlamarCliente_Click);
             // 
             // lblCerrarTicket
             // 
@@ -300,34 +239,6 @@
             this.lblIniciarTicket.TabIndex = 11;
             this.lblIniciarTicket.Text = "INICIAR ATENCIÓN (F1)";
             this.lblIniciarTicket.Click += new System.EventHandler(this.cmdIniciarTicket_Click);
-            // 
-            // cmdCerrarTicket
-            // 
-            this.cmdCerrarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdCerrarTicket.EditValue = global::Operaciones.Properties.Resources.iconDetenerTicket;
-            this.cmdCerrarTicket.Location = new System.Drawing.Point(508, 16);
-            this.cmdCerrarTicket.Name = "cmdCerrarTicket";
-            this.cmdCerrarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdCerrarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdCerrarTicket.Properties.ShowMenu = false;
-            this.cmdCerrarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdCerrarTicket.Size = new System.Drawing.Size(65, 56);
-            this.cmdCerrarTicket.TabIndex = 9;
-            this.cmdCerrarTicket.Click += new System.EventHandler(this.cmdCerrarTicket_Click);
-            // 
-            // cmdIniciarTicket
-            // 
-            this.cmdIniciarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmdIniciarTicket.EditValue = global::Operaciones.Properties.Resources.iconIniciarTicket;
-            this.cmdIniciarTicket.Location = new System.Drawing.Point(336, 16);
-            this.cmdIniciarTicket.Name = "cmdIniciarTicket";
-            this.cmdIniciarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdIniciarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdIniciarTicket.Properties.ShowMenu = false;
-            this.cmdIniciarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdIniciarTicket.Size = new System.Drawing.Size(65, 56);
-            this.cmdIniciarTicket.TabIndex = 8;
-            this.cmdIniciarTicket.Click += new System.EventHandler(this.cmdIniciarTicket_Click);
             // 
             // pnlInformacionTickets
             // 
@@ -407,11 +318,46 @@
             // 
             // pagePrincipal
             // 
+            this.pagePrincipal.Caption = "pagePrincipal";
             this.pagePrincipal.Controls.Add(this.panel1);
             this.pagePrincipal.Controls.Add(this.pnlEncabezado);
             this.pagePrincipal.Controls.Add(this.pnlControlesDeCola);
             this.pagePrincipal.Name = "pagePrincipal";
             this.pagePrincipal.Size = new System.Drawing.Size(1106, 441);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnlInformacionTickets);
+            this.panel1.Controls.Add(this.pnlListaTickets);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1106, 266);
+            this.panel1.TabIndex = 4;
+            // 
+            // pnlListaTickets
+            // 
+            this.pnlListaTickets.BackColor = System.Drawing.Color.White;
+            this.pnlListaTickets.Controls.Add(this.ctlListaTicketsEspera1);
+            this.pnlListaTickets.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlListaTickets.Location = new System.Drawing.Point(0, 0);
+            this.pnlListaTickets.Name = "pnlListaTickets";
+            this.pnlListaTickets.Size = new System.Drawing.Size(139, 266);
+            this.pnlListaTickets.TabIndex = 3;
+            // 
+            // ctlListaTicketsEspera1
+            // 
+            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
+            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
+            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
+            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlListaTicketsEspera1.Pro_Conexion = null;
+            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_Usuario = null;
+            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(139, 266);
+            this.ctlListaTicketsEspera1.TabIndex = 0;
             // 
             // PagePopups
             // 
@@ -541,38 +487,95 @@
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "NOMBRE DE USUARIO";
             // 
-            // pnlListaTickets
+            // picUsuario
             // 
-            this.pnlListaTickets.BackColor = System.Drawing.Color.White;
-            this.pnlListaTickets.Controls.Add(this.ctlListaTicketsEspera1);
-            this.pnlListaTickets.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlListaTickets.Location = new System.Drawing.Point(0, 0);
-            this.pnlListaTickets.Name = "pnlListaTickets";
-            this.pnlListaTickets.Size = new System.Drawing.Size(139, 266);
-            this.pnlListaTickets.TabIndex = 3;
+            this.picUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picUsuario.EditValue = ((object)(resources.GetObject("picUsuario.EditValue")));
+            this.picUsuario.Location = new System.Drawing.Point(170, 0);
+            this.picUsuario.Name = "picUsuario";
+            this.picUsuario.Properties.AllowFocused = false;
+            this.picUsuario.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.picUsuario.Properties.Appearance.Options.UseBackColor = true;
+            this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picUsuario.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.picUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.picUsuario.Properties.ReadOnly = true;
+            this.picUsuario.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picUsuario.Properties.ShowMenu = false;
+            this.picUsuario.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picUsuario.Size = new System.Drawing.Size(42, 29);
+            this.picUsuario.TabIndex = 4;
+            this.picUsuario.Click += new System.EventHandler(this.picUsuario_Click);
             // 
-            // panel1
+            // cmdRellamar
             // 
-            this.panel1.Controls.Add(this.pnlInformacionTickets);
-            this.panel1.Controls.Add(this.pnlListaTickets);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1106, 266);
-            this.panel1.TabIndex = 4;
+            this.cmdRellamar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdRellamar.EditValue = global::Operaciones.Properties.Resources.icon_rellamar_negro_64;
+            this.cmdRellamar.Location = new System.Drawing.Point(679, 16);
+            this.cmdRellamar.Name = "cmdRellamar";
+            this.cmdRellamar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdRellamar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdRellamar.Properties.ShowMenu = false;
+            this.cmdRellamar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdRellamar.Size = new System.Drawing.Size(65, 56);
+            this.cmdRellamar.TabIndex = 17;
+            this.cmdRellamar.Click += new System.EventHandler(this.cmdRellamar_Click);
             // 
-            // ctlListaTicketsEspera1
+            // cmdClienteNoAtendioLlamado
             // 
-            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
-            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
-            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
-            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlListaTicketsEspera1.Pro_Conexion = null;
-            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
-            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(139, 266);
-            this.ctlListaTicketsEspera1.TabIndex = 0;
+            this.cmdClienteNoAtendioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdClienteNoAtendioLlamado.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
+            this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(875, 16);
+            this.cmdClienteNoAtendioLlamado.Name = "cmdClienteNoAtendioLlamado";
+            this.cmdClienteNoAtendioLlamado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdClienteNoAtendioLlamado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdClienteNoAtendioLlamado.Properties.ShowMenu = false;
+            this.cmdClienteNoAtendioLlamado.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdClienteNoAtendioLlamado.Size = new System.Drawing.Size(65, 56);
+            this.cmdClienteNoAtendioLlamado.TabIndex = 15;
+            this.cmdClienteNoAtendioLlamado.Click += new System.EventHandler(this.cmdClienteNoAtendioLlamado_Click);
+            // 
+            // cmdLlamarCliente
+            // 
+            this.cmdLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdLlamarCliente.EditValue = global::Operaciones.Properties.Resources.icon_llamar_siguiente_cliente;
+            this.cmdLlamarCliente.Location = new System.Drawing.Point(166, 16);
+            this.cmdLlamarCliente.Name = "cmdLlamarCliente";
+            this.cmdLlamarCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdLlamarCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdLlamarCliente.Properties.ShowMenu = false;
+            this.cmdLlamarCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdLlamarCliente.Size = new System.Drawing.Size(65, 56);
+            this.cmdLlamarCliente.TabIndex = 13;
+            this.cmdLlamarCliente.Click += new System.EventHandler(this.cmdLlamarCliente_Click);
+            // 
+            // cmdCerrarTicket
+            // 
+            this.cmdCerrarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdCerrarTicket.EditValue = global::Operaciones.Properties.Resources.iconDetenerTicket;
+            this.cmdCerrarTicket.Location = new System.Drawing.Point(508, 16);
+            this.cmdCerrarTicket.Name = "cmdCerrarTicket";
+            this.cmdCerrarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdCerrarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdCerrarTicket.Properties.ShowMenu = false;
+            this.cmdCerrarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdCerrarTicket.Size = new System.Drawing.Size(65, 56);
+            this.cmdCerrarTicket.TabIndex = 9;
+            this.cmdCerrarTicket.Click += new System.EventHandler(this.cmdCerrarTicket_Click);
+            // 
+            // cmdIniciarTicket
+            // 
+            this.cmdIniciarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmdIniciarTicket.EditValue = global::Operaciones.Properties.Resources.iconIniciarTicket;
+            this.cmdIniciarTicket.Location = new System.Drawing.Point(336, 16);
+            this.cmdIniciarTicket.Name = "cmdIniciarTicket";
+            this.cmdIniciarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdIniciarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdIniciarTicket.Properties.ShowMenu = false;
+            this.cmdIniciarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdIniciarTicket.Size = new System.Drawing.Size(65, 56);
+            this.cmdIniciarTicket.TabIndex = 8;
+            this.cmdIniciarTicket.Click += new System.EventHandler(this.cmdIniciarTicket_Click);
             // 
             // CtlOperacional
             // 
@@ -588,25 +591,25 @@
             this.pnlEncabezado.ResumeLayout(false);
             this.pnlResumen.ResumeLayout(false);
             this.pnlEncabezadoResumen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).EndInit();
             this.pnlControlesDeCola.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmdRellamar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).EndInit();
             this.pnlInformacionTickets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Navigation)).EndInit();
             this.Navigation.ResumeLayout(false);
             this.pagePrincipal.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.pnlListaTickets.ResumeLayout(false);
             this.PagePopups.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupResumen)).EndInit();
             this.popupResumen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
             this.flyoutPanelControl1.ResumeLayout(false);
             this.pnlBotones.ResumeLayout(false);
-            this.pnlListaTickets.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picUsuario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRellamar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdClienteNoAtendioLlamado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdLlamarCliente.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrarTicket.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIniciarTicket.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

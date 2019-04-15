@@ -26,7 +26,7 @@ namespace Operaciones.Controles
         int v_minutos;
         int v_hora;
         string v_tiempo;
-        string v_temporal_ticket;
+        string v_temporal_ticket;      
 
         #endregion
 
@@ -40,6 +40,15 @@ namespace Operaciones.Controles
             EN_ATENCION = 4,
             CERRADO = 5
        }
+
+        public enum MOTIVOS_PARO_TIEMPO
+        {
+            ALMUERZO = 1,
+            PERMISO_OTORGADO = 2,
+            FALLA_EN_SISTEMA = 3,
+            OTROS_MOTIVOS = 4,
+            SALIDA_SANITARIO = 5
+        }
 
         #endregion
 
@@ -57,7 +66,7 @@ namespace Operaciones.Controles
         public string Pro_Usuario { get; set; }
         public string Pro_Ticket_Servicio { get; set; }
         public bool Pro_Esta_En_Atencion { get; set; }
-        
+        public string Pro_CodigoEmpleado { get; set; }
 
         #endregion
 
@@ -70,7 +79,9 @@ namespace Operaciones.Controles
                                      string pDescripcionNivelAccesoEmpleado,
                                      string pCargoEmpleado,
                                      string pNombreEmpleado,
-                                     string pUsuarioEmpleado)
+                                     string pUsuarioEmpleado,
+                                     string pCodigoEmpleado
+                                     )
         {
 
             Pro_Conexion = pConexion;
@@ -81,6 +92,7 @@ namespace Operaciones.Controles
             Pro_Cargo = pCargoEmpleado;
             Pro_NombreEmpleado = pNombreEmpleado;
             Pro_Usuario = pUsuarioEmpleado;
+            Pro_CodigoEmpleado = pCodigoEmpleado;
             Pro_Esta_En_Atencion = false;
             lblNombreUsuario.Text = Pro_NombreEmpleado;
             lblNumeroTicket.Text = "";
@@ -144,7 +156,7 @@ namespace Operaciones.Controles
             cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
             cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
             cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
-            //cmdRellamar.Image;
+            cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64; ;
         }
         
 
@@ -253,38 +265,44 @@ namespace Operaciones.Controles
            
         }
 
-        public void MarcarParoTiempoAlmuerzo()
+        public void MarcarParoTiempo(MOTIVOS_PARO_TIEMPO pMotivo)
         {
-            if (tmrParoTiempo.Enabled)
+            if (Pro_Conexion.State != ConnectionState.Open)
             {
-                tmrParoTiempo.Stop();
-                //Sentencias SQL que registren marcas.
-            }
-            else
-            {
-                tmrParoTiempo.Start();
-                //Sentencias SQL que registren marcas.
+                Pro_Conexion.Open();
             }
 
+            string sentencia = @"SELECT * FROM area_servicio.ft_mant_registra_paros_tiempo (
+                                                                                      :p_codigoempleado,
+                                                                                      :p_id_cliente_servicio,
+                                                                                      :p_id_agencia_servicio,
+                                                                                      :p_id_motivo,
+                                                                                      :p_observaciones
+                                                                                    )";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_codigoempleado", PgSqlType.VarChar).Value = Pro_CodigoEmpleado;
+            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
+            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+            pgComando.Parameters.Add("p_id_motivo", PgSqlType.Int).Value = pMotivo;
+            pgComando.Parameters.Add("p_observaciones", PgSqlType.VarChar).Value = DBNull.Value;
 
+            try
+            {
+                pgComando.ExecuteNonQuery();
+                pgComando.Dispose();
+                sentencia = null;
+
+                MessageBox.Show("El paro de tiempo fue registrado, ya puede cerrar su sesión.", "FLUCOL");
+                this.BringToFront();
+            }
+            catch (Exception Exc)
+            {
+
+                MessageBox.Show("Algo salió mal en el momento de marcar el paro de tiempo. " + Exc.Message, "FLUCOL");
+            }
+            
         }
 
-
-        private void MarcarParoTiempoPersonal()
-        {
-            if (tmrParoTiempo.Enabled)
-            {
-                tmrParoTiempo.Stop();
-                //Sentencias SQL que registren marcas.
-            }
-            else
-            {
-                tmrParoTiempo.Start();
-                //Sentencias SQL que registren marcas.
-            }
-        }
-
-     
         #endregion
 
         #region EVENTOS
@@ -466,7 +484,7 @@ namespace Operaciones.Controles
             if (!Pro_Esta_En_Atencion)
             {
                
-                MarcarParoTiempoPersonal();
+                MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.SALIDA_SANITARIO);
                 Pro_Esta_En_Atencion = false;
             }
             else
@@ -479,8 +497,8 @@ namespace Operaciones.Controles
         {
             if (!Pro_Esta_En_Atencion)
             {
-                          
-                MarcarParoTiempoAlmuerzo();
+
+                MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.ALMUERZO);
                 Pro_Esta_En_Atencion = false;
             }
             else
@@ -501,6 +519,7 @@ namespace Operaciones.Controles
             if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
             {
                 ReinicioImagenesIcono();
+                cmdRellamar.Image = Properties.Resources.icon_rellamar_verde_64;
                 LlamarSiguienteCliente(true);
             }
         }
