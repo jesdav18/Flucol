@@ -73,26 +73,28 @@
             this.panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(603, 33);
+            this.panelControl1.Size = new System.Drawing.Size(809, 76);
             this.panelControl1.TabIndex = 0;
             // 
             // lblTituloPosiciones
             // 
-            this.lblTituloPosiciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPosiciones.Appearance.BackColor = System.Drawing.Color.White;
+            this.lblTituloPosiciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloPosiciones.Appearance.Options.UseBackColor = true;
             this.lblTituloPosiciones.Appearance.Options.UseFont = true;
             this.lblTituloPosiciones.Appearance.Options.UseTextOptions = true;
             this.lblTituloPosiciones.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTituloPosiciones.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTituloPosiciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTituloPosiciones.Location = new System.Drawing.Point(293, 3);
+            this.lblTituloPosiciones.Location = new System.Drawing.Point(445, 3);
             this.lblTituloPosiciones.Name = "lblTituloPosiciones";
-            this.lblTituloPosiciones.Size = new System.Drawing.Size(307, 27);
+            this.lblTituloPosiciones.Size = new System.Drawing.Size(361, 70);
             this.lblTituloPosiciones.TabIndex = 1;
             this.lblTituloPosiciones.Text = "POSICIÓN";
             // 
             // lblTituloTickets
             // 
-            this.lblTituloTickets.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloTickets.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloTickets.Appearance.Options.UseFont = true;
             this.lblTituloTickets.Appearance.Options.UseTextOptions = true;
             this.lblTituloTickets.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -100,7 +102,7 @@
             this.lblTituloTickets.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTituloTickets.Location = new System.Drawing.Point(3, 3);
             this.lblTituloTickets.Name = "lblTituloTickets";
-            this.lblTituloTickets.Size = new System.Drawing.Size(290, 27);
+            this.lblTituloTickets.Size = new System.Drawing.Size(442, 70);
             this.lblTituloTickets.TabIndex = 0;
             this.lblTituloTickets.Text = "TICKET";
             // 
@@ -111,17 +113,17 @@
             this.panelControl2.Controls.Add(this.lblPosicion);
             this.panelControl2.Controls.Add(this.lblTicket);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 33);
+            this.panelControl2.Location = new System.Drawing.Point(0, 76);
             this.panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(603, 74);
+            this.panelControl2.Size = new System.Drawing.Size(809, 134);
             this.panelControl2.TabIndex = 1;
             // 
             // lblPosicion
             // 
             this.lblPosicion.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosicion.Appearance.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosicion.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblPosicion.Appearance.Options.UseBackColor = true;
             this.lblPosicion.Appearance.Options.UseFont = true;
@@ -130,16 +132,16 @@
             this.lblPosicion.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblPosicion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPosicion.Location = new System.Drawing.Point(293, 3);
+            this.lblPosicion.Location = new System.Drawing.Point(445, 3);
             this.lblPosicion.Name = "lblPosicion";
-            this.lblPosicion.Size = new System.Drawing.Size(307, 68);
+            this.lblPosicion.Size = new System.Drawing.Size(361, 128);
             this.lblPosicion.TabIndex = 2;
-            this.lblPosicion.Text = "POSICIÓN";
+            this.lblPosicion.Text = "POS.";
             // 
             // lblTicket
             // 
             this.lblTicket.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTicket.Appearance.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTicket.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTicket.Appearance.Options.UseBackColor = true;
             this.lblTicket.Appearance.Options.UseFont = true;
@@ -150,7 +152,7 @@
             this.lblTicket.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblTicket.Location = new System.Drawing.Point(3, 3);
             this.lblTicket.Name = "lblTicket";
-            this.lblTicket.Size = new System.Drawing.Size(290, 68);
+            this.lblTicket.Size = new System.Drawing.Size(442, 128);
             this.lblTicket.TabIndex = 1;
             this.lblTicket.Text = "TICKET";
             // 
@@ -160,11 +162,11 @@
             this.panelControl3.Appearance.Options.UseBackColor = true;
             this.panelControl3.Controls.Add(this.gcTicket);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl3.Location = new System.Drawing.Point(0, 107);
+            this.panelControl3.Location = new System.Drawing.Point(0, 210);
             this.panelControl3.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(293, 169);
+            this.panelControl3.Size = new System.Drawing.Size(445, 177);
             this.panelControl3.TabIndex = 2;
             // 
             // gcTicket
@@ -176,7 +178,7 @@
             this.gcTicket.Location = new System.Drawing.Point(3, 3);
             this.gcTicket.MainView = this.gvTicket;
             this.gcTicket.Name = "gcTicket";
-            this.gcTicket.Size = new System.Drawing.Size(287, 163);
+            this.gcTicket.Size = new System.Drawing.Size(439, 171);
             this.gcTicket.TabIndex = 0;
             this.gcTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTicket});
@@ -188,7 +190,7 @@
             // 
             // gvTicket
             // 
-            this.gvTicket.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvTicket.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvTicket.Appearance.Row.Options.UseFont = true;
             this.gvTicket.Appearance.Row.Options.UseTextOptions = true;
             this.gvTicket.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -196,15 +198,28 @@
             this.gvTicket.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colticket1});
             this.gvTicket.GridControl = this.gcTicket;
+            this.gvTicket.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.gvTicket.Name = "gvTicket";
+            this.gvTicket.OptionsBehavior.SmartVertScrollBar = false;
+            this.gvTicket.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvTicket.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvTicket.OptionsView.ShowColumnHeaders = false;
             this.gvTicket.OptionsView.ShowGroupPanel = false;
             this.gvTicket.OptionsView.ShowIndicator = false;
+            this.gvTicket.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // colticket1
             // 
             this.colticket1.FieldName = "ticket";
             this.colticket1.Name = "colticket1";
+            this.colticket1.OptionsColumn.AllowEdit = false;
+            this.colticket1.OptionsColumn.AllowFocus = false;
+            this.colticket1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colticket1.OptionsColumn.AllowMove = false;
+            this.colticket1.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colticket1.OptionsColumn.ReadOnly = true;
+            this.colticket1.OptionsFilter.AllowAutoFilter = false;
+            this.colticket1.OptionsFilter.AllowFilter = false;
             this.colticket1.Visible = true;
             this.colticket1.VisibleIndex = 0;
             // 
@@ -214,11 +229,11 @@
             this.panelControl4.Appearance.Options.UseBackColor = true;
             this.panelControl4.Controls.Add(this.gcPosicion);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(293, 107);
+            this.panelControl4.Location = new System.Drawing.Point(445, 210);
             this.panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(310, 169);
+            this.panelControl4.Size = new System.Drawing.Size(364, 177);
             this.panelControl4.TabIndex = 3;
             // 
             // gcPosicion
@@ -229,14 +244,14 @@
             this.gcPosicion.Location = new System.Drawing.Point(3, 3);
             this.gcPosicion.MainView = this.gvPosicion;
             this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(304, 163);
+            this.gcPosicion.Size = new System.Drawing.Size(358, 171);
             this.gcPosicion.TabIndex = 1;
             this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPosicion});
             // 
             // gvPosicion
             // 
-            this.gvPosicion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvPosicion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gvPosicion.Appearance.Row.Options.UseFont = true;
             this.gvPosicion.Appearance.Row.Options.UseTextOptions = true;
             this.gvPosicion.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -244,15 +259,27 @@
             this.gvPosicion.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colposicion});
             this.gvPosicion.GridControl = this.gcPosicion;
+            this.gvPosicion.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.gvPosicion.Name = "gvPosicion";
+            this.gvPosicion.OptionsBehavior.AllowPartialRedrawOnScrolling = false;
+            this.gvPosicion.OptionsBehavior.SmartVertScrollBar = false;
+            this.gvPosicion.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gvPosicion.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gvPosicion.OptionsView.ShowColumnHeaders = false;
             this.gvPosicion.OptionsView.ShowGroupPanel = false;
             this.gvPosicion.OptionsView.ShowIndicator = false;
+            this.gvPosicion.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // colposicion
             // 
             this.colposicion.FieldName = "posicion";
             this.colposicion.Name = "colposicion";
+            this.colposicion.OptionsColumn.AllowEdit = false;
+            this.colposicion.OptionsColumn.AllowFocus = false;
+            this.colposicion.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colposicion.OptionsColumn.AllowMove = false;
+            this.colposicion.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colposicion.OptionsColumn.ReadOnly = true;
             this.colposicion.Visible = true;
             this.colposicion.VisibleIndex = 0;
             // 
@@ -282,7 +309,7 @@
             this.Controls.Add(this.panelControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CtlTicketsPosiciones";
-            this.Size = new System.Drawing.Size(603, 276);
+            this.Size = new System.Drawing.Size(809, 387);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();

@@ -1,4 +1,6 @@
 ﻿
+using Devart.Data.PostgreSql;
+using System;
 using System.Net;
 
 
@@ -22,6 +24,16 @@ namespace Core.Clases
 
             return v_ip_host;
            
+        }
+
+        public DateTime ObtenerHoraServidor(PgSqlConnection pConexion)
+        {
+           
+            string sentencia = "SELECT * FROM configuracion.ft_obtener_hora_servidor();";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, pConexion);
+
+            return (DateTime)pgComando.ExecuteScalar();
+
         }
     }
 }

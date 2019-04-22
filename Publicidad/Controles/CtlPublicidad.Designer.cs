@@ -32,43 +32,43 @@ namespace Publicidad.Controles
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlPublicidad));
-            this.vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
-            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).BeginInit();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.bgReproductor = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
-            // vlcControl1
+            // axWindowsMediaPlayer1
             // 
-            string v_ruta_vlc_lib_directory = ConfigurationSettings.AppSettings["RUTA_VLC_LIB_DIRECTORY"];
-            this.vlcControl1.BackColor = System.Drawing.Color.Black;
-            this.vlcControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vlcControl1.Location = new System.Drawing.Point(0, 0);
-            this.vlcControl1.Name = "vlcControl1";
-            this.vlcControl1.Size = new System.Drawing.Size(466, 236);
-            this.vlcControl1.Spu = -1;
-            this.vlcControl1.TabIndex = 0;
-            this.vlcControl1.Text = "vlcControl1";
-            //this.vlcControl1.VlcLibDirectory = ((System.IO.DirectoryInfo)(resources.GetObject("vlcControl1.VlcLibDirectory")));
-            this.vlcControl1.VlcLibDirectory = new System.IO.DirectoryInfo(v_ruta_vlc_lib_directory);
-            this.vlcControl1.VlcMediaplayerOptions = null;
-            this.vlcControl1.EndReached += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs>(this.vlcControl1_EndReached);
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(218, 236);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
+            // bgReproductor
+            // 
+            this.bgReproductor.WorkerSupportsCancellation = true;
+            this.bgReproductor.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgReproductor_DoWork);
             // 
             // CtlPublicidad
             // 
+            this.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.vlcControl1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "CtlPublicidad";
-            this.Size = new System.Drawing.Size(466, 236);
-            ((System.ComponentModel.ISupportInitialize)(this.vlcControl1)).EndInit();
+            this.Size = new System.Drawing.Size(218, 236);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Vlc.DotNet.Forms.VlcControl vlcControl1;
-        
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.ComponentModel.BackgroundWorker bgReproductor;
     }
 }

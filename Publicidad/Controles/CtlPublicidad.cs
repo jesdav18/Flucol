@@ -3,24 +3,32 @@ using System.Configuration;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
+
+
 namespace Publicidad.Controles
 {
-    public partial class CtlPublicidad : UserControl
+    public partial class CtlPublicidad : DevExpress.XtraEditors.XtraUserControl
     {
 
         #region INICIALIZADOR
-       
+
         public CtlPublicidad()
         {
             InitializeComponent();
+            axWindowsMediaPlayer1.settings.setMode("loop", true);
+            axWindowsMediaPlayer1.uiMode = "none";
+            axWindowsMediaPlayer1.stretchToFit = true;
+
+            axWindowsMediaPlayer1.Width = 10 * 2;
+            axWindowsMediaPlayer1.Height = 10 * 2;
+
+
+
+
+
+
 
         }
-
-        #endregion
-
-        #region VARIABLES GLOBALES
-
-        string v_ruta_publicidad;
 
         #endregion
 
@@ -28,30 +36,27 @@ namespace Publicidad.Controles
 
         public void ConstruirControl(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
         {
-            
+
             Pro_Conexion = pConexion;
             Pro_Sucursal = pID_Agencia_Servicio;
             Pro_Cliente = pID_Cliente_Servicio;
-            v_ruta_publicidad = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
-
             CargarMultimedia();
-           
+
         }
 
         private void CargarMultimedia()
         {
-
             try
             {
-                vlcControl1.SetMedia(new System.IO.FileInfo(v_ruta_publicidad));
-                vlcControl1.Play();
-                
+                if (!bgReproductor.IsBusy)
+                {
+                    bgReproductor.RunWorkerAsync();
+                }
             }
             catch (System.Exception Exc)
             {
                 MessageBox.Show("Algo salió mal en la carga de Multimedia. " + Exc.Message);
             }
-      
         }
 
         #endregion
@@ -63,15 +68,20 @@ namespace Publicidad.Controles
         public int Pro_Sucursal { get; set; }
 
 
+
         #endregion
 
-        private void vlcControl1_EndReached(object sender, Vlc.DotNet.Core.VlcMediaPlayerEndReachedEventArgs e)
+        #region EVENTOS CONTROLES
+       
+        private void bgReproductor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-
+            axWindowsMediaPlayer1.URL = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
             
-            
-            vlcControl1.Play();
 
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+            
         }
+
+        #endregion
     }
 }

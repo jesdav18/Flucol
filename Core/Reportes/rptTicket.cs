@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Core.Clases;
+using Devart.Data.PostgreSql;
+using System;
 
 
 namespace Core.Reportes
@@ -24,24 +26,22 @@ namespace Core.Reportes
 
         #region FUNCIONES
 
-        public void CargarDatos(string pNumeroTicket)
+        public void CargarDatos(string pNumeroTicket,PgSqlConnection pConexion)
         {
             Pro_NumeroTicket = pNumeroTicket;
-           
+            Utilidades cl_util = new Utilidades();
 
             if (!string.IsNullOrEmpty(Pro_NumeroTicket) )
             {
                 lblNumeroTicket.Text = Pro_NumeroTicket;
-                lblHora.Text = string.Format("{0:hh:mm tt}", DateTime.Now);
-                lblFecha.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Now.Date);
+                lblHora.Text = string.Format("{0:hh:mm tt}", cl_util.ObtenerHoraServidor(pConexion));
+                lblFecha.Text = string.Format("{0:dd/MM/yyyy}",cl_util.ObtenerHoraServidor(pConexion));
             }
 
-            
+            cl_util = null;
         }
 
         #endregion
 
     }
-
-
 }

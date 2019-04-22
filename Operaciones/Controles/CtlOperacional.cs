@@ -125,14 +125,12 @@ namespace Operaciones.Controles
 
             try
             {
-                
-
+               
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
 
                 if (pgDr.Read())
                 {
-                    lblPosicion.Text = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " + pgDr.GetString("posicion");
-                   
+                    lblPosicion.Text = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " + pgDr.GetString("posicion");                  
                 }
 
                 pgDr.Close();
@@ -145,10 +143,8 @@ namespace Operaciones.Controles
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
             }
-
         }
-
-        
+       
         private void ReinicioImagenesIcono()
         {
            
@@ -159,7 +155,6 @@ namespace Operaciones.Controles
             cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64; ;
         }
         
-
         private void ReinicioVariablesTiempo()
         {
             v_segundos = 0;
@@ -172,28 +167,30 @@ namespace Operaciones.Controles
         {
             
             Tiempos cl_tiempos = new Tiempos();
-            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+            if(cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                               (int)ESTADOS_TICKETS.EN_ATENCION,
                                               Pro_ID_AgenciaServicio,
                                               Pro_ID_ClienteServicio,
                                               Pro_Ticket_Servicio,
-                                              Pro_Usuario);
-            tmrTiempoAtencion.Start();
-
+                                              Pro_Usuario))
+            {
+                tmrTiempoAtencion.Start();
+            }          
         }
 
         private void CerrarTicket()
         {
             tmrTiempoAtencion.Stop();
             Tiempos cl_tiempos = new Tiempos();
-            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+            if(cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
                                               (int)ESTADOS_TICKETS.CERRADO,
                                               Pro_ID_AgenciaServicio,
                                               Pro_ID_ClienteServicio,
                                               Pro_Ticket_Servicio,
-                                              Pro_Usuario);
-            ReinicioVariablesTiempo();
-
+                                              Pro_Usuario))
+            {
+                ReinicioVariablesTiempo();
+            }       
         }
 
         public void MarcarClienteNoRespondioLlamado()
@@ -240,29 +237,28 @@ namespace Operaciones.Controles
                     lblNumeroTicket.Text = Pro_Ticket_Servicio;
                 }
 
-                
-                Tiempos cl_tiempos = new Tiempos();
-                cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
-                                                  (int)ESTADOS_TICKETS.LLAMADO,
-                                                  Pro_ID_AgenciaServicio,
-                                                  Pro_ID_ClienteServicio,
-                                                  Pro_Ticket_Servicio,
-                                                  Pro_Usuario
-                                                  );
-
-                cl_tiempos = null;
+                if (! p_es_rellamada)
+                {
+                    Tiempos cl_tiempos = new Tiempos();
+                    cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                                      (int)ESTADOS_TICKETS.LLAMADO,
+                                                      Pro_ID_AgenciaServicio,
+                                                      Pro_ID_ClienteServicio,
+                                                      Pro_Ticket_Servicio,
+                                                      Pro_Usuario
+                                                      );
+                    cl_tiempos = null;
+                }
+                               
                 pgDr.Close();
                 pgComando.Dispose();
                 sentencia = null;
-
 
             }
             catch (Exception Exc)
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
-            }
-
-           
+            }         
         }
 
         public void MarcarParoTiempo(MOTIVOS_PARO_TIEMPO pMotivo)
@@ -273,12 +269,12 @@ namespace Operaciones.Controles
             }
 
             string sentencia = @"SELECT * FROM area_servicio.ft_mant_registra_paros_tiempo (
-                                                                                      :p_codigoempleado,
-                                                                                      :p_id_cliente_servicio,
-                                                                                      :p_id_agencia_servicio,
-                                                                                      :p_id_motivo,
-                                                                                      :p_observaciones
-                                                                                    )";
+                                                                                              :p_codigoempleado,
+                                                                                              :p_id_cliente_servicio,
+                                                                                              :p_id_agencia_servicio,
+                                                                                              :p_id_motivo,
+                                                                                              :p_observaciones
+                                                                                            )";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_codigoempleado", PgSqlType.VarChar).Value = Pro_CodigoEmpleado;
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
@@ -292,15 +288,53 @@ namespace Operaciones.Controles
                 pgComando.Dispose();
                 sentencia = null;
 
-                MessageBox.Show("El paro de tiempo fue registrado, ya puede cerrar su sesión.", "FLUCOL");
+                MessageBox.Show("El paro de tiempo fue registrado, ya puede cerrar su sesión. ", "FLUCOL");
                 this.BringToFront();
             }
             catch (Exception Exc)
             {
 
                 MessageBox.Show("Algo salió mal en el momento de marcar el paro de tiempo. " + Exc.Message, "FLUCOL");
+            }            
+        }
+
+        private int ObtenerEstadoTicket()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                Pro_Conexion.Open();
             }
+
+            int v_estado_ticket = 0;
+            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_estado_ticket (
+                                                                                        :p_id_ticket_servicio,
+                                                                                        :p_id_cliente_servicio,
+                                                                                        :p_id_agencia_servicio
+                                                                                    )";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_id_ticket_servicio",PgSqlType.VarChar).Value = lblNumeroTicket.Text;
+            pgComando.Parameters.Add("p_id_cliente_servicio",PgSqlType.Int).Value = Pro_ID_ClienteServicio;
+            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
             
+            try
+            {
+                PgSqlDataReader pgDr = pgComando.ExecuteReader();
+                if (pgDr.Read())
+                {
+                    v_estado_ticket = pgDr.GetInt32("estado");
+                }
+
+                pgDr.Close();
+                sentencia = null;
+                pgComando.Dispose();
+
+                return v_estado_ticket;
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show("Algo salió mal en el momento de obtener estado del ticket. " + Exc.Message);
+                return v_estado_ticket;
+            }
         }
 
         #endregion
@@ -351,53 +385,95 @@ namespace Operaciones.Controles
         {
             if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
             {
+                int v_estado_ticket;
+
                 ReinicioImagenesIcono();
                 cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicketVerde;
-                IniciarTicket();
-                Pro_Esta_En_Atencion = true;
+
+                v_estado_ticket = ObtenerEstadoTicket();
+                if (v_estado_ticket != (int) ESTADOS_TICKETS.LLAMADO)
+                {
+                    MessageBox.Show("El ticket ya no tiene un estado disponible para ser atendido.", "FLUCOL");
+                }
+                else
+                {
+                    IniciarTicket();
+                    Pro_Esta_En_Atencion = true;
+                }           
             }
             else
             {
                 MessageBox.Show("No se ha llamado ningun cliente.","FLUCOL");
-            }
-            
+            }          
         }
 
         private void cmdCerrarTicket_Click(object sender, EventArgs e)
         {
             if (lblNumeroTicket.Text != "")
             {
+
+                int v_estado_ticket;
                 ReinicioImagenesIcono();
                 cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
-                CerrarTicket();
-                Pro_Esta_En_Atencion = false;
+
+                v_estado_ticket = ObtenerEstadoTicket();
+                if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
+                {
+                    MessageBox.Show("No puede cerrarse el ticket porque aun no ha sido atendido.","FLUCOL");
+                }
+                else
+                {
+                    CerrarTicket();
+                    Pro_Esta_En_Atencion = false;
+                }         
             }
             else
             {
                 MessageBox.Show("No se ha iniciado ningun ticket.","FLUCOL");
-            }
-            
+            }          
         }     
 
         private void cmdLlamarCliente_Click(object sender, EventArgs e)
         {
-           
-            if ( !Pro_Esta_En_Atencion)
+
+            if (!Pro_Esta_En_Atencion)
             {
+                int v_estado_ticket;
 
-                cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                v_estado_ticket = ObtenerEstadoTicket();
 
-                ReinicioImagenesIcono();
-                LlamarSiguienteCliente();
+                if (v_estado_ticket != 0 )
+                {
+                   
+                    if (v_estado_ticket == (int) ESTADOS_TICKETS.CERRADO || 
+                        v_estado_ticket == (int) ESTADOS_TICKETS.NO_ATENDIO_LLAMADO 
+                      )
+                    {
 
-                v_temporal_ticket = lblNumeroTicket.Text;
-               
+                        ReinicioImagenesIcono();
+                        cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                        LlamarSiguienteCliente();
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show(@"No se puede llamar a siguiente ticket mientras no cierre o marque
+                                       como atendido el actual ticket.", "FLUCOL");
+                    }
+                }
+                else
+                {
+                    ReinicioImagenesIcono();
+                    cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                    LlamarSiguienteCliente();
+                }
+
+                v_temporal_ticket = lblNumeroTicket.Text;               
             }
             else
             {
                 MessageBox.Show("No puede llamar a otro cliente mientras no cierre el ticket Actual. ","FLUCOL");
-            }
-            
+            }            
         }
 
         private void cmdClienteNoAtendioLlamado_Click(object sender, EventArgs e)
@@ -405,23 +481,32 @@ namespace Operaciones.Controles
 
             if (!Pro_Esta_En_Atencion)
             {
+                int v_estado_ticket;
                 ReinicioImagenesIcono();
                 cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
-                MarcarClienteNoRespondioLlamado();
-                Pro_Esta_En_Atencion = false;
+
+                v_estado_ticket = ObtenerEstadoTicket();
+
+                if (v_estado_ticket != (int)ESTADOS_TICKETS.LLAMADO)
+                {
+                    MessageBox.Show("El ticket no posee un estado disponible para marcar como no Atendido", "FLUCOL");
+                }
+                else
+                {
+                    MarcarClienteNoRespondioLlamado();
+                    Pro_Esta_En_Atencion = false;
+                }    
             }
             else
             {
                 MessageBox.Show("Aun no ha finalizado el ticket! ","FLUCOL");
-            }
-            
+            }            
         }
 
         private void tmrTiempoAtencion_Tick(object sender, EventArgs e)
         {
             v_segundos++;
             v_tiempo = "";
-
 
             if (v_minutos == 60)
             {
@@ -442,8 +527,7 @@ namespace Operaciones.Controles
             }
 
             v_tiempo += ":";
-
-             
+            
             if (v_segundos == 60)
             {
                 v_segundos = 0;
@@ -463,8 +547,7 @@ namespace Operaciones.Controles
             }
                 
             v_tiempo += ":";
-
-        
+       
             if (v_segundos < 10)
             {
                 v_tiempo += "0" + v_segundos;
@@ -477,13 +560,11 @@ namespace Operaciones.Controles
             lblTiempoAtencion.Text = v_tiempo;
 
         }
-
-      
+  
         private void cmdPersonalTiempo_Click(object sender, EventArgs e)
         {
             if (!Pro_Esta_En_Atencion)
-            {
-               
+            {             
                 MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.SALIDA_SANITARIO);
                 Pro_Esta_En_Atencion = false;
             }
@@ -497,7 +578,6 @@ namespace Operaciones.Controles
         {
             if (!Pro_Esta_En_Atencion)
             {
-
                 MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.ALMUERZO);
                 Pro_Esta_En_Atencion = false;
             }
@@ -508,8 +588,7 @@ namespace Operaciones.Controles
         }
 
         private void cmdCerrarSesion_Click(object sender, EventArgs e)
-        {
-            
+        {            
             Application.Exit();
         }
 
@@ -518,12 +597,23 @@ namespace Operaciones.Controles
         {
             if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
             {
+                int v_estado_ticket;
+
                 ReinicioImagenesIcono();
                 cmdRellamar.Image = Properties.Resources.icon_rellamar_verde_64;
-                LlamarSiguienteCliente(true);
+
+                v_estado_ticket = ObtenerEstadoTicket();
+
+                if (v_estado_ticket != (int)ESTADOS_TICKETS.LLAMADO)
+                {
+                    MessageBox.Show("El ticket no posee un estado que permita ser rellamado.", "FLUCOL");
+                }
+                else
+                {
+                    LlamarSiguienteCliente(true);
+                }           
             }
         }
-
 
         private void picUsuario_Click(object sender, EventArgs e)
         {

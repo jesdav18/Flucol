@@ -21,7 +21,7 @@ namespace Core.Clases
         #region FUNCIONES
 
 
-        public void ActualizarEstadoTicket(PgSqlConnection pConexion,
+        public bool ActualizarEstadoTicket(PgSqlConnection pConexion,
                                            int pEstadoTicket, 
                                            int pID_AgenciaServicio, 
                                            int pID_ClienteServicio, 
@@ -58,13 +58,15 @@ namespace Core.Clases
                 sentencia = null;
                 pgComando.Dispose();
 
+                return true;
+
             }
             catch (Exception Exc)
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
+                return false;
             }
         }
-
         #endregion
 
 

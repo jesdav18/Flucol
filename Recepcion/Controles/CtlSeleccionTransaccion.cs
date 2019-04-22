@@ -4,7 +4,6 @@ using Devart.Data.PostgreSql;
 using Core.Reportes;
 using DevExpress.XtraReports.UI;
 using System.Configuration;
-using System.IO;
 using System.Drawing;
 
 namespace Recepcion.Controles
@@ -91,7 +90,7 @@ namespace Recepcion.Controles
             navFrameMenuInicial.SelectedPage = navPageTicket;
              
             rpt = new rptTicket();
-            rpt.CargarDatos(Pro_Ticket_Generado);
+            rpt.CargarDatos(Pro_Ticket_Generado,Pro_Conexion);
             rpt.pic_Logo.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
             rpt.lblNombreAgencia.Text = Pro_NombreAgenciaServicio;
             rpt.CreateDocument();

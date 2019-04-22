@@ -34,7 +34,10 @@ namespace Publicidad.Pantallas
 
             ctlTicketsPosiciones1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
             ctlPublicidad1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
+            ctlTasasCambio1.ConstruirControl(Pro_Conexion);
+            ctlNoticias1.ConstruirControl(Pro_Conexion, Pro_ID_Cliente_Servicio);
 
+            
         }
 
 
