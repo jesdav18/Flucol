@@ -63,6 +63,26 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_Negocios_Negro {
+            get {
+                object obj = ResourceManager.GetObject("icon_Negocios_Negro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_Negocios_Verde {
+            get {
+                object obj = ResourceManager.GetObject("icon_Negocios_Verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAncianos {
             get {
                 object obj = ResourceManager.GetObject("iconAncianos", resourceCulture);

@@ -43,6 +43,7 @@
             this.memoNoticias.Properties.Appearance.Options.UseFont = true;
             this.memoNoticias.Properties.Appearance.Options.UseTextOptions = true;
             this.memoNoticias.Properties.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.memoNoticias.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.memoNoticias.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.memoNoticias.Size = new System.Drawing.Size(488, 93);
             this.memoNoticias.TabIndex = 0;

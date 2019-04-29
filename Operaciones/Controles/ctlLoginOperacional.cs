@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using Core.Clases;
 using Devart.Data.PostgreSql;
 using Operaciones.Pantallas;
 
@@ -33,25 +34,6 @@ namespace Operaciones.Controles
 
         #endregion
 
-        #region ENUMERACIONES
-
-        public enum NIVELES_ACCESO
-        {
-            GERENCIA = 1,
-            OPERACIONAL = 2,
-            ADMINISTRACION = 3,
-            INVITADO = 4
-        }
-
-
-        #endregion
-
-        #region VARIABLES GLOBALES
-
-        NIVELES_ACCESO vNivelAcceso;
-
-        #endregion
-
         #region EVENTOS
 
         public event EventHandler OnUsuarioLogueado;
@@ -78,6 +60,8 @@ namespace Operaciones.Controles
 
             try
             {
+               
+
                 string sentencia = @"SELECT * FROM area_servicio.ft_proc_valida_usuario_acceso (
                                                                                                   :p_usuario,
                                                                                                   :p_contrasenia,
@@ -120,34 +104,6 @@ namespace Operaciones.Controles
 
         }
 
-        private void RedireccionPantallasSegunNivelAcceso()
-        {
-            vNivelAcceso = (NIVELES_ACCESO) Pro_ID_NivelAcceso;
-
-            switch (vNivelAcceso)
-            {
-                case NIVELES_ACCESO.GERENCIA:
-                    break;
-                case NIVELES_ACCESO.OPERACIONAL:
-                    frmOperaciones frmOperacional = new frmOperaciones(Pro_Conexion,
-                                                                       Pro_Sucursal,
-                                                                       Pro_Cliente,
-                                                                       Pro_ID_NivelAcceso,
-                                                                       Pro_NombreEmpleado,
-                                                                       Pro_UsuarioEmpleado,
-                                                                       Pro_DescripcionNivelAcceso,
-                                                                       Pro_CargoEmpleado,
-                                                                       Pro_CodigoEmpleado);
-                    frmOperacional.Show();
-                    break;
-                case NIVELES_ACCESO.ADMINISTRACION:
-                    break;
-                case NIVELES_ACCESO.INVITADO:
-                    break;
-             
-            }
-        }
-
 
         #endregion
 
@@ -157,8 +113,16 @@ namespace Operaciones.Controles
         {
             if (ValidarUsuarioLogueo())
             {
-                RedireccionPantallasSegunNivelAcceso();
-                OnUsuarioLogueado?.Invoke(sender, e);
+                Usuario c_Usuario = new Usuario();
+                c_Usuario.Pro_CodigoEmpleado = Pro_CodigoEmpleado;
+                c_Usuario.Pro_NombreEmpleado = Pro_NombreEmpleado;
+                c_Usuario.Pro_Usuario = Pro_UsuarioEmpleado;
+                c_Usuario.Pro_CargoEmpleado = Pro_CargoEmpleado;
+                c_Usuario.Pro_ID_NivelAcceso = Pro_ID_NivelAcceso;
+                c_Usuario.Pro_Descripcion_NivelAcceso = Pro_DescripcionNivelAcceso;
+
+                OnUsuarioLogueado?.Invoke(c_Usuario, e);
+                c_Usuario = null;
             }
         }
 

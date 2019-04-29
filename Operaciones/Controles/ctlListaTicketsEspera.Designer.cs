@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tmrCargarColaTicketsEspera = new System.Windows.Forms.Timer();
+            this.components = new System.ComponentModel.Container();
+            this.tmrCargarColaTicketsEspera = new System.Windows.Forms.Timer(this.components);
             this.dsTickets1 = new Operaciones.DataSets.dsTickets();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -111,10 +112,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer tmrCargarColaTicketsEspera;
         private DataSets.dsTickets dsTickets1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colticket_servicio;
+        public System.Windows.Forms.Timer tmrCargarColaTicketsEspera;
     }
 }

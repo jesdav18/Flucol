@@ -52,10 +52,11 @@ namespace Recepcion.Controles
             FILA_GENERAL = 4
         }
 
-        enum Tipo_Operaiones_Servicio
+        enum Tipo_Operaciones_Servicio
         {
             OPERACIONES_CAJA = 1,
-            SERVICIO_AL_CLIENTE = 2
+            SERVICIO_AL_CLIENTE = 2,
+            NEGOCIOS = 3
         }
 
         #endregion
@@ -167,12 +168,9 @@ namespace Recepcion.Controles
             cmdTransacciones.Image = Properties.Resources.iconTransaccionesCaja;
             cmdServicioAlCliente.Image = Properties.Resources.iconServicioAlCliente;
             cmdIrAPrioridades.Image = Properties.Resources.iconIrAtras;
+            cmdNegocios.Image = Properties.Resources.icon_Negocios_Negro;
         }
 
-        private void RegistrarInicioTiempoEspera()
-        {
-           
-        }
 
         #endregion
 
@@ -182,7 +180,7 @@ namespace Recepcion.Controles
         {
             ReinicioImagenesIcono();
             cmdServicioAlCliente.Image = Properties.Resources.iconServicioAlClienteVerde;
-            Pro_ID_Operacion_Servicio = (int)Tipo_Operaiones_Servicio.SERVICIO_AL_CLIENTE;
+            Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.SERVICIO_AL_CLIENTE;
             GenerarTicket();
             IrAPaginaTicket();
         }
@@ -191,7 +189,7 @@ namespace Recepcion.Controles
         {
             ReinicioImagenesIcono();
             cmdTransacciones.Image = Properties.Resources.IconTransaccionesCajaVerde;
-            Pro_ID_Operacion_Servicio = (int)Tipo_Operaiones_Servicio.OPERACIONES_CAJA;
+            Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.OPERACIONES_CAJA;
             GenerarTicket();
             IrAPaginaTicket();
         }
@@ -239,8 +237,7 @@ namespace Recepcion.Controles
             cmdIrAPrioridades.Image = Properties.Resources.iconIrAtrasVerde;
             IrAPaginaPrioridades();
         }
-
-     
+    
         private void tmrTiempoVisualizacionTicket_Tick(object sender, EventArgs e)
         {
            
@@ -250,7 +247,17 @@ namespace Recepcion.Controles
             rpt.Dispose();
         }
 
+        private void cmdNegocios_Click(object sender, EventArgs e)
+        {
+            ReinicioImagenesIcono();
+            cmdNegocios.Image = Properties.Resources.icon_Negocios_Verde;
+            Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.NEGOCIOS;
+            GenerarTicket();
+            IrAPaginaTicket();
+        }
+
         #endregion
+
 
     }
 }

@@ -15,12 +15,8 @@ namespace Operaciones.Pantallas
             InitializeComponent();
             ctlLoginOperacional1.ConstruirControl(pConexion, pSucursal, pCliente);
             this.Hide();
+            
         }
-
-
-        #endregion
-
-        #region VARIABLES GLOBALES
 
         #endregion
 
@@ -95,7 +91,9 @@ namespace Operaciones.Pantallas
 
         #endregion
 
-        #region FUNCIONES
+        #region EVENTOS
+
+        public event EventHandler OnUsuarioLogueadoCorrectamente;
 
         #endregion
 
@@ -103,6 +101,7 @@ namespace Operaciones.Pantallas
 
         private void ctlLoginOperacional1_OnUsuarioLogueado(object sender, EventArgs e)
         {
+            OnUsuarioLogueadoCorrectamente?.Invoke(sender, e);
             this.Close();
         }
 

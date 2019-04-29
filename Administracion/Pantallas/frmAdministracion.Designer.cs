@@ -1,6 +1,6 @@
-﻿namespace Flucol.Pantallas
+﻿namespace Administracion.Pantallas
 {
-    partial class frmConstructor
+    partial class frmAdministracion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConstructor));
+            this.ctlDashBoards1 = new Administracion.Controles.ctlDashBoards();
             this.SuspendLayout();
             // 
-            // frmConstructor
+            // ctlDashBoards1
+            // 
+            this.ctlDashBoards1.BackColor = System.Drawing.Color.White;
+            this.ctlDashBoards1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlDashBoards1.Location = new System.Drawing.Point(0, 0);
+            this.ctlDashBoards1.Name = "ctlDashBoards1";
+            this.ctlDashBoards1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlDashBoards1.Size = new System.Drawing.Size(699, 398);
+            this.ctlDashBoards1.TabIndex = 0;
+            // 
+            // frmAdministracion
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 335);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientSize = new System.Drawing.Size(699, 398);
+            this.Controls.Add(this.ctlDashBoards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
-            this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(190, 150);
-            this.Name = "frmConstructor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmConstructor_Load);
-            this.ClientSizeChanged += new System.EventHandler(this.frmConstructor_ClientSizeChanged);
+            this.Name = "frmAdministracion";
+            this.Text = "frmAdministracion";
             this.ResumeLayout(false);
 
         }
 
-
         #endregion
+
+        private Controles.ctlDashBoards ctlDashBoards1;
     }
 }

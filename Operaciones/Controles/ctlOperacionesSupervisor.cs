@@ -10,24 +10,11 @@ using System.Windows.Forms;
 
 namespace Operaciones.Controles
 {
-    public partial class ctlAdministracionPosiciones : UserControl
+    public partial class ctlOperacionesSupervisor : UserControl
     {
-
-        #region INICIALIZADOR
-     
-        public ctlAdministracionPosiciones()
+        public ctlOperacionesSupervisor()
         {
             InitializeComponent();
         }
-
-        #endregion
-
-        #region PROPIEDADES
-
-        #endregion
-
-        #region FUNCIONES
-
-        #endregion
     }
 }

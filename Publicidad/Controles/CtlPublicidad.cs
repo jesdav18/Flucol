@@ -1,5 +1,6 @@
 ﻿
 using System.Configuration;
+using System.Drawing;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
@@ -15,18 +16,12 @@ namespace Publicidad.Controles
         public CtlPublicidad()
         {
             InitializeComponent();
-            axWindowsMediaPlayer1.settings.setMode("loop", true);
+
+            /*axWindowsMediaPlayer1.settings.setMode("loop", true);
             axWindowsMediaPlayer1.uiMode = "none";
-            axWindowsMediaPlayer1.stretchToFit = true;
-
+            axWindowsMediaPlayer1.stretchToFit = true;  
             axWindowsMediaPlayer1.Width = 10 * 2;
-            axWindowsMediaPlayer1.Height = 10 * 2;
-
-
-
-
-
-
+            axWindowsMediaPlayer1.Height = 10 * 2;*/
 
         }
 
@@ -34,7 +29,9 @@ namespace Publicidad.Controles
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
+        public void ConstruirControl(PgSqlConnection pConexion, 
+                                     int pID_Agencia_Servicio, 
+                                     int pID_Cliente_Servicio)
         {
 
             Pro_Conexion = pConexion;
@@ -46,16 +43,9 @@ namespace Publicidad.Controles
 
         private void CargarMultimedia()
         {
-            try
+            if (!bgCargaPublicidad.IsBusy)
             {
-                if (!bgReproductor.IsBusy)
-                {
-                    bgReproductor.RunWorkerAsync();
-                }
-            }
-            catch (System.Exception Exc)
-            {
-                MessageBox.Show("Algo salió mal en la carga de Multimedia. " + Exc.Message);
+                bgCargaPublicidad.RunWorkerAsync();
             }
         }
 
@@ -67,21 +57,20 @@ namespace Publicidad.Controles
         public int Pro_Cliente { get; set; }
         public int Pro_Sucursal { get; set; }
 
-
-
         #endregion
 
         #region EVENTOS CONTROLES
-       
-        private void bgReproductor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            axWindowsMediaPlayer1.URL = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
-            
 
-            axWindowsMediaPlayer1.Ctlcontrols.play();
-            
+        private void bgCargaPublicidad_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            /*axWindowsMediaPlayer1.URL = ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"];
+            axWindowsMediaPlayer1.Ctlcontrols.play();*/
+
+
+            picPublicidad.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_PUBLICIDAD"]);
         }
 
         #endregion
+
     }
 }

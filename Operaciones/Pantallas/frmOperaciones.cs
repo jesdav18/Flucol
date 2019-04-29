@@ -42,12 +42,6 @@ namespace Operaciones.Pantallas
 
         #endregion
 
-        #region FUNCIONES
-
-        
-
-        #endregion
-
         #region EVENTOS CONTROLES
 
         private void frmOperaciones_KeyDown(object sender, KeyEventArgs e)

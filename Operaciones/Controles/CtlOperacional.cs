@@ -16,6 +16,11 @@ namespace Operaciones.Controles
         public CtlOperacional()
         {
             InitializeComponent();
+            ctlOperacionalReducido1.On_CerrarTicket += ctlOperacionalReducido1_CerrarTicket;
+            ctlOperacionalReducido1.On_IniciarTicket += ctlOperacionalReducido1_IniciarTicket;
+            ctlOperacionalReducido1.On_LlamarCliente += ctlOperacionalReducido1_LlamarCliente;
+            ctlOperacionalReducido1.On_RellamarTicket += ctlOperacionalReducido1_RellamarTicket;
+            ctlOperacionalReducido1.On_ClienteNoAtendioLlamado += ctlOperacionalReducido1_ClienteNoAtendioLlamado;
         }
 
         #endregion
@@ -620,6 +625,31 @@ namespace Operaciones.Controles
             popupResumen.ShowPopup();
             CargarDatosTicketPosicion();
             lblNombreUsuario.Text = Pro_NombreEmpleado;
+        }
+
+        private void ctlOperacionalReducido1_ClienteNoAtendioLlamado(object sender, EventArgs e)
+        {
+            cmdClienteNoAtendioLlamado_Click(sender, e);
+        }
+
+        private void ctlOperacionalReducido1_RellamarTicket(object sender, EventArgs e)
+        {
+            cmdRellamar_Click(sender, e);
+        }
+
+        private void ctlOperacionalReducido1_LlamarCliente(object sender, EventArgs e)
+        {
+            cmdLlamarCliente_Click(sender, e);
+        }
+
+        private void ctlOperacionalReducido1_IniciarTicket(object sender, EventArgs e)
+        {
+            cmdIniciarTicket_Click(sender, e);
+        }
+
+        private void ctlOperacionalReducido1_CerrarTicket(object sender, EventArgs e)
+        {
+            cmdCerrarTicket_Click(sender, e);
         }
 
         #endregion

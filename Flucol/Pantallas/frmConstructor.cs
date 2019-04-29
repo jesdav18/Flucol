@@ -10,6 +10,7 @@ using Devart.Data.PostgreSql;
 using Flucol.Controles;
 using Core.Clases;
 using System.Drawing;
+using Administracion.Pantallas;
 
 namespace Flucol.Pantallas
 {
@@ -24,7 +25,10 @@ namespace Flucol.Pantallas
               
             ctlBienvenida = new CtlBienvenida();
             CrearConexion();
-            ObtenerNombreSucursal();           
+            ObtenerNombreSucursal();
+            Pro_AnchoDefecto = this.Width;
+            Pro_AltoDefecto = this.Height;
+           
         }
 
         #endregion
@@ -101,20 +105,29 @@ namespace Flucol.Pantallas
         }
 
         public string Pro_NombreAgenciaServicio { get; set; }
+        public MODULOS Pro_ModuloActivo { get; set; }
+        public int Pro_AnchoDefecto { get; set; }
+        public int Pro_AltoDefecto { get; set; }
 
         #endregion
 
         #region ENUMERACIONES
 
-        public enum PERFILES
+        public enum MODULOS
         {
             RECEPCION = 1,
-            VISUALIZADOR = 2,
+            PUBLICIDAD = 2,
             OPERACIONES = 3,
-            SUPERVISOR = 4
+            ADMINISTRACION = 4
         }
 
-
+        public enum NIVELES_ACCESO
+        {
+            GERENCIA = 1,
+            OPERACIONAL = 2,
+            ADMINISTRACION = 3,
+            INVITADO = 4
+        }
 
         #endregion
 
@@ -149,6 +162,7 @@ namespace Flucol.Pantallas
                                                 Pro_NombreAgenciaServicio,
                                                 Pro_IP_Host);
                 f_Recepcion.Show();
+                Pro_ModuloActivo = MODULOS.RECEPCION;
             }
             catch (Exception Exc)
             {
@@ -167,6 +181,7 @@ namespace Flucol.Pantallas
                 f_Visualizador.StartPosition = FormStartPosition.CenterScreen;
                 f_Visualizador.ConstruirFormulario(pgConexion, Pro_ID_AgenciaServicio, Pro_ID_ClienteServicio);
                 f_Visualizador.Show();
+                Pro_ModuloActivo = MODULOS.PUBLICIDAD;
             }
             catch (Exception Exc)
             {
@@ -177,16 +192,39 @@ namespace Flucol.Pantallas
             
         }
 
+        private void Construir_Control_Administracion()
+        {
+            try
+            {
+                frmAdministracion frmAdministracion = new frmAdministracion();
+                frmAdministracion.MdiParent = this;
+                frmAdministracion.StartPosition = FormStartPosition.CenterScreen;
+                frmAdministracion.ConstruirAdministracion(pgConexion, Pro_ID_ClienteServicio);
+                frmAdministracion.Show();
+                Pro_ModuloActivo = MODULOS.ADMINISTRACION;
+                
+            }
+            catch (Exception Exc)
+            {
+
+                MessageBox.Show("ALGO SALIÓ MAL. " + Exc.Message, "FLUCOL");
+            }
+            ReestablecerFormConstructor();
+
+        }
+
         private void Construir_Acceso_Para_Operaciones()
         {
 
             try
             {
                 frmLogin f_LoginOperaciones = new frmLogin(pgConexion,Pro_ID_AgenciaServicio,Pro_ID_ClienteServicio);
+                f_LoginOperaciones.OnUsuarioLogueadoCorrectamente += f_LoginOperaciones_UsuarioLogueado;
                 ReestablecerFormConstructor();
                 f_LoginOperaciones.MdiParent = this;
                 f_LoginOperaciones.StartPosition = FormStartPosition.CenterScreen;
                 f_LoginOperaciones.Show();
+                Pro_ModuloActivo = MODULOS.OPERACIONES;
 
             }
             catch (Exception Exc)
@@ -195,6 +233,7 @@ namespace Flucol.Pantallas
             }   
         }
 
+ 
         private void CrearConexion()
         {
             StringBuilder v_cadena_conexion = new StringBuilder();
@@ -222,6 +261,7 @@ namespace Flucol.Pantallas
                 {
                     pgConexion.Open();
                 }
+
             }
             catch (Exception Exc)
             {
@@ -269,12 +309,42 @@ namespace Flucol.Pantallas
             }
         }
 
+        private void RedireccionSegunNivelAcceso(Usuario pUsuario)
+        {
+
+            switch ((NIVELES_ACCESO) pUsuario.Pro_ID_NivelAcceso)
+            {
+                case NIVELES_ACCESO.GERENCIA:
+                    break;
+                case NIVELES_ACCESO.OPERACIONAL:
+                    frmOperacional = new frmOperaciones(pgConexion,
+                                                                       Pro_ID_AgenciaServicio,
+                                                                       Pro_ID_ClienteServicio,
+                                                                       pUsuario.Pro_ID_NivelAcceso,
+                                                                       pUsuario.Pro_NombreEmpleado,
+                                                                       pUsuario.Pro_Usuario,
+                                                                       pUsuario.Pro_Descripcion_NivelAcceso,
+                                                                       pUsuario.Pro_CargoEmpleado,
+                                                                       pUsuario.Pro_CodigoEmpleado);
+                    frmOperacional.MdiParent = this;
+                    frmOperacional.StartPosition = FormStartPosition.CenterScreen;
+                    frmOperacional.Show();
+
+                    break;
+                case NIVELES_ACCESO.ADMINISTRACION:
+                    break;
+                case NIVELES_ACCESO.INVITADO:
+                    break;
+            }
+        }
+
         #endregion
 
         #region VARIABLES GLOBALES
 
         PgSqlConnection pgConexion;
         CtlBienvenida ctlBienvenida;
+        frmOperaciones frmOperacional;
 
         #endregion
 
@@ -293,6 +363,9 @@ namespace Flucol.Pantallas
                 case 3:
                     Construir_Acceso_Para_Operaciones();
                     break;
+                case 4:
+                    Construir_Control_Administracion();
+                    break;
             }        
         }
 
@@ -301,17 +374,62 @@ namespace Flucol.Pantallas
             this.Close();
         }
 
-  
+        private void f_LoginOperaciones_UsuarioLogueado(object sender, EventArgs e)
+        {
+            Usuario c_usuario = new Usuario();
+            c_usuario = (Usuario)sender;
+
+            RedireccionSegunNivelAcceso(c_usuario);
+            c_usuario = null;
+        }
+
         private void frmConstructor_Load(object sender, EventArgs e)
-        {                    
+        {
             ctlBienvenida.OnTerminaTiempoBienvenida += new EventHandler(ctlBienvenida_OnTerminaTiempoBienvenida);
             this.Controls.Add(ctlBienvenida);
             ctlBienvenida.Dock = DockStyle.Fill;
             ctlBienvenida.ConstruirControl(Pro_Modulo);
+        }
+
+
+        private void frmConstructor_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (Pro_ModuloActivo == MODULOS.OPERACIONES)
+            {
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+
+                    if (frmOperacional != null)
+                    {
+                        frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
+                        frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Start();
+                    }
+                    this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
+                    
+
+                }
+                else if (this.WindowState == FormWindowState.Normal)
+                {
+                    if (frmOperacional != null)
+                    {
+                        frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.PageOperacionalReducido;
+                        frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Stop();
+                    }
+                    this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
+                }
+                else
+                {
+                    frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
+                    frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Start();
+
+                }
+
+              
+                
+            }
 
         }
 
         #endregion
-
     }
 }

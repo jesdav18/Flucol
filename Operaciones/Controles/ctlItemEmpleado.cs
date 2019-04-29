@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace Operaciones.Controles
 {
-    public partial class ctlAdministracionPosiciones : UserControl
+    public partial class ctlItemEmpleado : UserControl
     {
 
         #region INICIALIZADOR
-     
-        public ctlAdministracionPosiciones()
+
+        public ctlItemEmpleado()
         {
             InitializeComponent();
+
         }
 
         #endregion
@@ -29,5 +30,7 @@ namespace Operaciones.Controles
         #region FUNCIONES
 
         #endregion
+
+  
     }
 }

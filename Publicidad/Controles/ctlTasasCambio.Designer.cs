@@ -32,8 +32,8 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lblVenta = new DevExpress.XtraEditors.LabelControl();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblCompra = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -47,9 +47,9 @@
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Location = new System.Drawing.Point(5, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(198, 30);
+            this.labelControl1.Size = new System.Drawing.Size(186, 24);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "$";
             // 
@@ -86,20 +86,10 @@
             this.panel1.Controls.Add(this.lblVenta);
             this.panel1.Controls.Add(this.labelControl2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(5, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 31);
+            this.panel1.Size = new System.Drawing.Size(186, 31);
             this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblCompra);
-            this.panel2.Controls.Add(this.labelControl3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 61);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(198, 34);
-            this.panel2.TabIndex = 4;
             // 
             // lblVenta
             // 
@@ -111,9 +101,19 @@
             this.lblVenta.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVenta.Location = new System.Drawing.Point(98, 0);
             this.lblVenta.Name = "lblVenta";
-            this.lblVenta.Size = new System.Drawing.Size(100, 31);
+            this.lblVenta.Size = new System.Drawing.Size(88, 31);
             this.lblVenta.TabIndex = 2;
             this.lblVenta.Text = "VENTA:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblCompra);
+            this.panel2.Controls.Add(this.labelControl3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(5, 60);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 34);
+            this.panel2.TabIndex = 4;
             // 
             // lblCompra
             // 
@@ -125,7 +125,7 @@
             this.lblCompra.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCompra.Location = new System.Drawing.Point(98, 0);
             this.lblCompra.Name = "lblCompra";
-            this.lblCompra.Size = new System.Drawing.Size(100, 34);
+            this.lblCompra.Size = new System.Drawing.Size(88, 34);
             this.lblCompra.TabIndex = 3;
             this.lblCompra.Text = "COMPRA:";
             // 
@@ -134,11 +134,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelControl1);
             this.Name = "ctlTasasCambio";
-            this.Size = new System.Drawing.Size(198, 96);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Size = new System.Drawing.Size(196, 94);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

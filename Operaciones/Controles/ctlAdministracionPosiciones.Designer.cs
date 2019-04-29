@@ -28,48 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tileGroup1 = new DevExpress.XtraEditors.TileGroup();
-            this.tileGroup3 = new DevExpress.XtraEditors.TileGroup();        
-            this.button1 = new System.Windows.Forms.Button();
+            this.flpPosiciones = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpEmpleados = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // tileGroup1
+            // flpPosiciones
             // 
-            this.tileGroup1.Name = "tileGroup1";
+            this.flpPosiciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flpPosiciones.Location = new System.Drawing.Point(5, 5);
+            this.flpPosiciones.Name = "flpPosiciones";
+            this.flpPosiciones.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.flpPosiciones.Size = new System.Drawing.Size(698, 232);
+            this.flpPosiciones.TabIndex = 0;
             // 
-            // tileGroup3
+            // flpEmpleados
             // 
-            this.tileGroup3.Name = "tileGroup3";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(212, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
-            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button1_MouseMove);
-           
+            this.flpEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpEmpleados.Location = new System.Drawing.Point(5, 237);
+            this.flpEmpleados.Name = "flpEmpleados";
+            this.flpEmpleados.Size = new System.Drawing.Size(698, 235);
+            this.flpEmpleados.TabIndex = 1;
             // 
             // ctlAdministracionPosiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.flpEmpleados);
+            this.Controls.Add(this.flpPosiciones);
             this.Name = "ctlAdministracionPosiciones";
-            this.Size = new System.Drawing.Size(990, 495);         
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Size = new System.Drawing.Size(708, 477);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.TileGroup tileGroup1;
-        private DevExpress.XtraEditors.TileGroup tileGroup3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flpPosiciones;
+        private System.Windows.Forms.FlowLayoutPanel flpEmpleados;
     }
 }

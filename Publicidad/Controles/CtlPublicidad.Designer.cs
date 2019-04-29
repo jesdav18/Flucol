@@ -33,24 +33,38 @@ namespace Publicidad.Controles
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlPublicidad));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.bgReproductor = new System.ComponentModel.BackgroundWorker();
+            this.picPublicidad = new DevExpress.XtraEditors.PictureEdit();
+            this.bgCargaPublicidad = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPublicidad.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // axWindowsMediaPlayer1
             // 
-            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 218);
             this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(218, 236);
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(50, 18);
             this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.Visible = false;
             // 
-            // bgReproductor
+            // picPublicidad
             // 
-            this.bgReproductor.WorkerSupportsCancellation = true;
-            this.bgReproductor.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgReproductor_DoWork);
+            this.picPublicidad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picPublicidad.Location = new System.Drawing.Point(0, 0);
+            this.picPublicidad.Name = "picPublicidad";
+            this.picPublicidad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.picPublicidad.Properties.NullText = " ";
+            this.picPublicidad.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picPublicidad.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picPublicidad.Size = new System.Drawing.Size(218, 236);
+            this.picPublicidad.TabIndex = 1;
+            this.picPublicidad.UseDirectXPaint = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // bgCargaPublicidad
+            // 
+            this.bgCargaPublicidad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgCargaPublicidad_DoWork);
             // 
             // CtlPublicidad
             // 
@@ -58,10 +72,12 @@ namespace Publicidad.Controles
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picPublicidad);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "CtlPublicidad";
             this.Size = new System.Drawing.Size(218, 236);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPublicidad.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,6 +85,7 @@ namespace Publicidad.Controles
         #endregion
 
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private System.ComponentModel.BackgroundWorker bgReproductor;
+        private DevExpress.XtraEditors.PictureEdit picPublicidad;
+        private System.ComponentModel.BackgroundWorker bgCargaPublicidad;
     }
 }

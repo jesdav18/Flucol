@@ -1,5 +1,7 @@
 ﻿
 using Devart.Data.PostgreSql;
+using System.Configuration;
+using System.Drawing;
 
 namespace Publicidad.Pantallas
 {
@@ -32,12 +34,12 @@ namespace Publicidad.Pantallas
             Pro_ID_Agencia_Servicio = pID_Agencia_Servicio;
             Pro_ID_Cliente_Servicio = pID_Cliente_Servicio;
 
+            picLogoCliente.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
             ctlTicketsPosiciones1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
             ctlPublicidad1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);
             ctlTasasCambio1.ConstruirControl(Pro_Conexion);
             ctlNoticias1.ConstruirControl(Pro_Conexion, Pro_ID_Cliente_Servicio);
-
-            
+        
         }
 
 

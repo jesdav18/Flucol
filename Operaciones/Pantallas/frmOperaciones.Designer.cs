@@ -39,15 +39,18 @@
             this.ctlOperacional1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlOperacional1.Location = new System.Drawing.Point(0, 0);
             this.ctlOperacional1.Name = "ctlOperacional1";
+            this.ctlOperacional1.Padding = new System.Windows.Forms.Padding(5);
             this.ctlOperacional1.Pro_Cargo = null;
-            this.ctlOperacional1.Pro_ID_ClienteServicio = 0;
+            this.ctlOperacional1.Pro_CodigoEmpleado = null;
             this.ctlOperacional1.Pro_Conexion = null;
             this.ctlOperacional1.Pro_DescripcionNivelAcceso = null;
+            this.ctlOperacional1.Pro_Esta_En_Atencion = false;
+            this.ctlOperacional1.Pro_ID_AgenciaServicio = 0;
+            this.ctlOperacional1.Pro_ID_ClienteServicio = 0;
             this.ctlOperacional1.Pro_ID_NivelAccesoEmpleado = 0;
             this.ctlOperacional1.Pro_NombreEmpleado = null;
             this.ctlOperacional1.Pro_Posicion = 0;
             this.ctlOperacional1.Pro_Prioridad_Atencion = 0;
-            this.ctlOperacional1.Pro_ID_AgenciaServicio = 0;
             this.ctlOperacional1.Pro_Ticket_Servicio = null;
             this.ctlOperacional1.Pro_Usuario = null;
             this.ctlOperacional1.Size = new System.Drawing.Size(951, 509);
@@ -80,6 +83,6 @@
 
         #endregion
 
-        private Controles.CtlOperacional ctlOperacional1;
+        public Controles.CtlOperacional ctlOperacional1;
     }
 }
