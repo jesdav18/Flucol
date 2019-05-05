@@ -379,7 +379,7 @@ namespace Administracion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtPromedioAtencionRow AdddtPromedioAtencionRow(string promedio_atencion, System.DateTime a, System.DateTime b) {
+            public dtPromedioAtencionRow AdddtPromedioAtencionRow(string promedio_atencion, string a, int b) {
                 dtPromedioAtencionRow rowdtPromedioAtencionRow = ((dtPromedioAtencionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         promedio_atencion,
@@ -417,9 +417,9 @@ namespace Administracion.DataSet {
             private void InitClass() {
                 this.columnpromedio_atencion = new global::System.Data.DataColumn("promedio_atencion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpromedio_atencion);
-                this.columna = new global::System.Data.DataColumn("a", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columna = new global::System.Data.DataColumn("a", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columna);
-                this.columnb = new global::System.Data.DataColumn("b", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnb = new global::System.Data.DataColumn("b", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnb);
             }
             
@@ -580,10 +580,10 @@ namespace Administracion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime a {
+            public string a {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabledtPromedioAtencion.aColumn]));
+                        return ((string)(this[this.tabledtPromedioAtencion.aColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'a\' de la tabla \'dtPromedioAtencion\' es DBNull.", e);
@@ -596,10 +596,10 @@ namespace Administracion.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime b {
+            public int b {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabledtPromedioAtencion.bColumn]));
+                        return ((int)(this[this.tabledtPromedioAtencion.bColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'b\' de la tabla \'dtPromedioAtencion\' es DBNull.", e);

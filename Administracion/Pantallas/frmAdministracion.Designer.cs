@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctlDashBoards1 = new Administracion.Controles.ctlDashBoards();
+            this.ctlDashBoards1 = new Administracion.Controles.ctlDashBoardsPrincipal();
             this.SuspendLayout();
             // 
             // ctlDashBoards1
@@ -58,6 +58,6 @@
 
         #endregion
 
-        private Controles.ctlDashBoards ctlDashBoards1;
+        private Controles.ctlDashBoardsPrincipal ctlDashBoards1;
     }
 }

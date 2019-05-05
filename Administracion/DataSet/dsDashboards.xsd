@@ -12,12 +12,12 @@
   <xs:element name="dsDashboards" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDashboards" msprop:Generator_UserDSName="dsDashboards">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtPromedioAtencion" msprop:Generator_TableClassName="dtPromedioAtencionDataTable" msprop:Generator_TableVarName="tabledtPromedioAtencion" msprop:Generator_TablePropName="dtPromedioAtencion" msprop:Generator_RowDeletingName="dtPromedioAtencionRowDeleting" msprop:Generator_RowChangingName="dtPromedioAtencionRowChanging" msprop:Generator_RowEvHandlerName="dtPromedioAtencionRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPromedioAtencionRowDeleted" msprop:Generator_UserTableName="dtPromedioAtencion" msprop:Generator_RowChangedName="dtPromedioAtencionRowChanged" msprop:Generator_RowEvArgName="dtPromedioAtencionRowChangeEvent" msprop:Generator_RowClassName="dtPromedioAtencionRow">
+        <xs:element name="dtPromedioAtencion" msprop:Generator_TableClassName="dtPromedioAtencionDataTable" msprop:Generator_TableVarName="tabledtPromedioAtencion" msprop:Generator_RowChangedName="dtPromedioAtencionRowChanged" msprop:Generator_TablePropName="dtPromedioAtencion" msprop:Generator_RowDeletingName="dtPromedioAtencionRowDeleting" msprop:Generator_RowChangingName="dtPromedioAtencionRowChanging" msprop:Generator_RowEvHandlerName="dtPromedioAtencionRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPromedioAtencionRowDeleted" msprop:Generator_RowClassName="dtPromedioAtencionRow" msprop:Generator_UserTableName="dtPromedioAtencion" msprop:Generator_RowEvArgName="dtPromedioAtencionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="promedio_atencion" msprop:Generator_ColumnVarNameInTable="columnpromedio_atencion" msprop:Generator_ColumnPropNameInRow="promedio_atencion" msprop:Generator_ColumnPropNameInTable="promedio_atencionColumn" msprop:Generator_UserColumnName="promedio_atencion" type="xs:string" minOccurs="0" />
-              <xs:element name="a" msprop:Generator_ColumnVarNameInTable="columna" msprop:Generator_ColumnPropNameInRow="a" msprop:Generator_ColumnPropNameInTable="aColumn" msprop:Generator_UserColumnName="a" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="b" msprop:Generator_ColumnVarNameInTable="columnb" msprop:Generator_ColumnPropNameInRow="b" msprop:Generator_ColumnPropNameInTable="bColumn" msprop:Generator_UserColumnName="b" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="a" msprop:Generator_ColumnVarNameInTable="columna" msprop:Generator_ColumnPropNameInRow="a" msprop:Generator_ColumnPropNameInTable="aColumn" msprop:Generator_UserColumnName="a" type="xs:string" minOccurs="0" />
+              <xs:element name="b" msprop:Generator_ColumnVarNameInTable="columnb" msprop:Generator_ColumnPropNameInRow="b" msprop:Generator_ColumnPropNameInTable="bColumn" msprop:Generator_UserColumnName="b" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

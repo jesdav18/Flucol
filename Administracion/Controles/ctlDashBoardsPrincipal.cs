@@ -11,11 +11,11 @@ using Devart.Data.PostgreSql;
 
 namespace Administracion.Controles
 {
-    public partial class ctlDashBoards : UserControl
+    public partial class ctlDashBoardsPrincipal : UserControl
     {
         #region INICIALIZADOR
 
-        public ctlDashBoards()
+        public ctlDashBoardsPrincipal()
         {
             InitializeComponent();
         }
