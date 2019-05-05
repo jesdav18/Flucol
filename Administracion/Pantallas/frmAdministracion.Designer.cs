@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctlDashBoards1 = new Administracion.Controles.ctlDashBoardsPrincipal();
+            this.ctlDashBoardsPrincipal1 = new Administracion.Controles.ctlDashBoardsPrincipal();
             this.SuspendLayout();
             // 
-            // ctlDashBoards1
+            // ctlDashBoardsPrincipal1
             // 
-            this.ctlDashBoards1.BackColor = System.Drawing.Color.White;
-            this.ctlDashBoards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlDashBoards1.Location = new System.Drawing.Point(0, 0);
-            this.ctlDashBoards1.Name = "ctlDashBoards1";
-            this.ctlDashBoards1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlDashBoards1.Size = new System.Drawing.Size(699, 398);
-            this.ctlDashBoards1.TabIndex = 0;
+            this.ctlDashBoardsPrincipal1.BackColor = System.Drawing.Color.White;
+            this.ctlDashBoardsPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlDashBoardsPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.ctlDashBoardsPrincipal1.Name = "ctlDashBoardsPrincipal1";
+            this.ctlDashBoardsPrincipal1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlDashBoardsPrincipal1.Pro_Conexion = null;
+            this.ctlDashBoardsPrincipal1.Pro_ID_Cliente_Servicio = 0;
+            this.ctlDashBoardsPrincipal1.Size = new System.Drawing.Size(699, 398);
+            this.ctlDashBoardsPrincipal1.TabIndex = 0;
             // 
             // frmAdministracion
             // 
@@ -48,16 +50,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 398);
-            this.Controls.Add(this.ctlDashBoards1);
+            this.Controls.Add(this.ctlDashBoardsPrincipal1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAdministracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdministracion";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
 
+
         #endregion
 
-        private Controles.ctlDashBoardsPrincipal ctlDashBoards1;
+        private Controles.ctlDashBoardsPrincipal ctlDashBoardsPrincipal1;
     }
 }

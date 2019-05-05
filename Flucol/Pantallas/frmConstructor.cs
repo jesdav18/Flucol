@@ -199,7 +199,9 @@ namespace Flucol.Pantallas
                 frmAdministracion frmAdministracion = new frmAdministracion();
                 frmAdministracion.MdiParent = this;
                 frmAdministracion.StartPosition = FormStartPosition.CenterScreen;
-                frmAdministracion.ConstruirAdministracion(pgConexion, Pro_ID_ClienteServicio);
+                frmAdministracion.ConstruirAdministracion(pgConexion,
+                                                          Pro_ID_ClienteServicio,
+                                                          Pro_ID_AgenciaServicio);
                 frmAdministracion.Show();
                 Pro_ModuloActivo = MODULOS.ADMINISTRACION;
                 
@@ -218,7 +220,9 @@ namespace Flucol.Pantallas
 
             try
             {
-                frmLogin f_LoginOperaciones = new frmLogin(pgConexion,Pro_ID_AgenciaServicio,Pro_ID_ClienteServicio);
+                frmLogin f_LoginOperaciones = new frmLogin(pgConexion,
+                                                           Pro_ID_AgenciaServicio,
+                                                           Pro_ID_ClienteServicio);
                 f_LoginOperaciones.OnUsuarioLogueadoCorrectamente += f_LoginOperaciones_UsuarioLogueado;
                 ReestablecerFormConstructor();
                 f_LoginOperaciones.MdiParent = this;

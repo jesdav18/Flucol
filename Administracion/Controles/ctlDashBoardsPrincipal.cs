@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
+using System.Configuration;
 
 namespace Administracion.Controles
 {
@@ -25,46 +26,52 @@ namespace Administracion.Controles
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
-        public int Pro_ID_Cliente { get; set; }
+        public int Pro_ID_Cliente_Servicio { get; set; }
+        public int Pro_ID_Agencia_Servicio { get; set; }
 
         #endregion
 
-        public void ConstruirControl(PgSqlConnection pConexion, int pID_ClienteServicio)
+        #region FUNCIONES
+
+        public void ConstruirControl(PgSqlConnection pConexion, 
+                                     int pID_ClienteServicio,
+                                     int pID_AgenciaServicio)
         {
+            picLogoCliente.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
+
             Pro_Conexion = pConexion;
-            Pro_ID_Cliente = pID_ClienteServicio;
-            CargarDatosPromedioAtencion();
+            Pro_ID_Cliente_Servicio = pID_ClienteServicio;
+            Pro_ID_Agencia_Servicio = pID_AgenciaServicio;
+
+            
         }
 
-        private void CargarDatosPromedioAtencion()
+        private void bgCargaDashboards_DoWork(object sender, DoWorkEventArgs e)
         {
+            ctlEmpleadoConMasTicketsAtendidos1.ConstruirControl(Pro_Conexion,
+                                                                4,
+                                                                Pro_ID_Agencia_Servicio,
+                                                                Pro_ID_Cliente_Servicio);
 
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
-
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_promedio_atencion (
-                                                                                            :p_id_cliente_servicio
-                                                                                            
-                                                                                          );";
-            PgSqlCommand pgComando = new PgSqlCommand(sentencia,Pro_Conexion);
-            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente;
-
-            try
-            {
-                dsDashboards1.dtPromedioAtencion.Clear();
-                new PgSqlDataAdapter(pgComando).Fill(dsDashboards1.dtPromedioAtencion);
-                chartControl1.RefreshData();
-
-               
-            }
-            catch (Exception Exc)
-            {
-                MessageBox.Show("Algo salió mal en el momento de cargar promedio de atencion. ", "FLUCOL");
-                
-            }
+            ctlTicketsAtendidos_TicketsNoAtendidos1.ConstruirControl(Pro_Conexion,
+                                                                     Pro_ID_Cliente_Servicio,
+                                                                     Pro_ID_Agencia_Servicio,
+                                                                     4);
+            
         }
 
+        #endregion
+
+        private void pictureEdit1_Click(object sender, EventArgs e)
+        {
+            ssmDashboardsPrincipal.ShowWaitForm();
+
+            if (!bgCargaDashboards.IsBusy)
+            {
+                bgCargaDashboards.RunWorkerAsync();
+            }
+
+            ssmDashboardsPrincipal.CloseWaitForm();
+        }
     }
 }

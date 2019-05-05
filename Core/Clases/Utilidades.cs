@@ -8,6 +8,9 @@ namespace Core.Clases
 {
     public class Utilidades
     {
+
+       
+
         public string ObtenerIP_Host()
         {
             IPHostEntry v_host;
@@ -35,5 +38,7 @@ namespace Core.Clases
             return (DateTime)pgComando.ExecuteScalar();
 
         }
+
+       
     }
 }

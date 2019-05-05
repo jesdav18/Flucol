@@ -19,9 +19,13 @@ namespace Administracion.Pantallas
             InitializeComponent();
             
         }
-        public void ConstruirAdministracion(PgSqlConnection pConexion,int pID_Cliente_Servicio)
+        public void ConstruirAdministracion(PgSqlConnection pConexion,
+                                            int pID_Cliente_Servicio,
+                                            int pID_Agencia_Servicio)
         {
-            ctlDashBoards1.ConstruirControl(pConexion, pID_Cliente_Servicio);
+            ctlDashBoardsPrincipal1.ConstruirControl(pConexion, 
+                                                     pID_Cliente_Servicio,
+                                                     pID_Agencia_Servicio);
         }
     }
 }
