@@ -15,18 +15,6 @@ namespace Flucol.Controles
 
         #endregion
 
-        #region PROPIEDADES
-
-       
-
-        #endregion
-
-        #region VARIABLES GLOBALES
-
-        
-
-        #endregion
-
         #region EVENTOS
 
         public event EventHandler OnTerminaTiempoBienvenida;
@@ -43,7 +31,7 @@ namespace Flucol.Controles
             System.IO.FileInfo obj_archivo_informacion = new System.IO.FileInfo(v_ensamblado.Location);
             DateTime v_ultima_actualizacion = obj_archivo_informacion.LastWriteTime;
             lblUltimaActualizacion.Text = "" + v_ultima_actualizacion.ToShortDateString() + ", " + v_ultima_actualizacion.ToShortTimeString();
-
+           
             switch (pModulo)
             {
                 case 1:
@@ -54,6 +42,9 @@ namespace Flucol.Controles
                     break;
                 case 3:
                     lblModulo.Text = "OPERACIONES";
+                    break;
+                case 4:
+                    lblModulo.Text = "ADMINISTRACIÓN";
                     break;
             }
 

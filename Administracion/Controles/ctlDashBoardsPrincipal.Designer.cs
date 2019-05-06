@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dsDashboards1 = new Administracion.DataSet.dsDashboards();
             this.pnlOpciones = new System.Windows.Forms.Panel();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.pnlBotones = new System.Windows.Forms.Panel();
+            this.cmdDashboards = new DevExpress.XtraEditors.PictureEdit();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.picLogoCliente = new DevExpress.XtraEditors.PictureEdit();
             this.navegacionDasboards = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pageDashBoardsPrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -41,37 +40,33 @@
             this.pnlDashboardsInferior = new System.Windows.Forms.Panel();
             this.ctlEmpleadoConMasTicketsAtendidos1 = new Core.Controles.Dashboards.ctlEmpleadoConMasTicketsAtendidos();
             this.pnlDashboardsMedio = new System.Windows.Forms.Panel();
+            this.ctlVisitasSegunPrioridadServicio1 = new Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio();
             this.pnlDashboardsSuperior = new System.Windows.Forms.Panel();
             this.ctlTicketsAtendidos_TicketsNoAtendidos1 = new Core.Controles.Dashboards.ctlTicketsAtendidos_TicketsNoAtendidos();
             this.pnlEncabezadoDashboards = new System.Windows.Forms.Panel();
             this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
             this.page2 = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pageInicial = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.bgCargaDashboards = new System.ComponentModel.BackgroundWorker();
             this.ssmDashboardsPrincipal = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Administracion.Pantallas.frmEsperaDashboards), true, true, typeof(System.Windows.Forms.UserControl));
-            ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).BeginInit();
             this.pnlOpciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.pnlBotones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdDashboards.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navegacionDasboards)).BeginInit();
             this.navegacionDasboards.SuspendLayout();
             this.pageDashBoardsPrincipal.SuspendLayout();
             this.pnlContenedorDashboardsPrincipal.SuspendLayout();
             this.pnlDashboardsInferior.SuspendLayout();
+            this.pnlDashboardsMedio.SuspendLayout();
             this.pnlDashboardsSuperior.SuspendLayout();
             this.pnlEncabezadoDashboards.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dsDashboards1
-            // 
-            this.dsDashboards1.DataSetName = "dsDashboards";
-            this.dsDashboards1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pnlOpciones
             // 
-            this.pnlOpciones.Controls.Add(this.pictureEdit1);
-            this.pnlOpciones.Controls.Add(this.flowLayoutPanel1);
-            this.pnlOpciones.Controls.Add(this.panel2);
-            this.pnlOpciones.Controls.Add(this.panel1);
+            this.pnlOpciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlOpciones.Controls.Add(this.pnlBotones);
             this.pnlOpciones.Controls.Add(this.picLogoCliente);
             this.pnlOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlOpciones.Location = new System.Drawing.Point(5, 5);
@@ -79,24 +74,40 @@
             this.pnlOpciones.Size = new System.Drawing.Size(92, 453);
             this.pnlOpciones.TabIndex = 1;
             // 
-            // pictureEdit1
+            // pnlBotones
             // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureEdit1.EditValue = global::Administracion.Properties.Resources.iconDashboard_64;
-            this.pictureEdit1.Location = new System.Drawing.Point(21, 93);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(52, 53);
-            this.pictureEdit1.TabIndex = 4;
-            this.pictureEdit1.Click += new System.EventHandler(this.pictureEdit1_Click);
+            this.pnlBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBotones.Controls.Add(this.cmdDashboards);
+            this.pnlBotones.Controls.Add(this.flowLayoutPanel1);
+            this.pnlBotones.Controls.Add(this.panel2);
+            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBotones.Location = new System.Drawing.Point(0, 89);
+            this.pnlBotones.Name = "pnlBotones";
+            this.pnlBotones.Size = new System.Drawing.Size(90, 362);
+            this.pnlBotones.TabIndex = 5;
+            // 
+            // cmdDashboards
+            // 
+            this.cmdDashboards.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmdDashboards.EditValue = global::Administracion.Properties.Resources.iconDashboard_64;
+            this.cmdDashboards.Location = new System.Drawing.Point(21, 0);
+            this.cmdDashboards.Name = "cmdDashboards";
+            this.cmdDashboards.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdDashboards.Properties.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.cmdDashboards.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdDashboards.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdDashboards.Size = new System.Drawing.Size(48, 53);
+            this.cmdDashboards.TabIndex = 4;
+            this.cmdDashboards.ToolTip = "Dashboards";
+            this.cmdDashboards.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdDashboards.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdDashboards.ToolTipTitle = "FLUCOL";
+            this.cmdDashboards.Click += new System.EventHandler(this.cmdDashboards_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 93);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(21, 360);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -104,19 +115,10 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(73, 93);
+            this.panel2.Location = new System.Drawing.Point(69, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(19, 360);
             this.panel2.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 89);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(92, 4);
-            this.panel1.TabIndex = 1;
             // 
             // picLogoCliente
             // 
@@ -127,21 +129,23 @@
             this.picLogoCliente.Properties.NullText = " ";
             this.picLogoCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picLogoCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picLogoCliente.Size = new System.Drawing.Size(92, 89);
+            this.picLogoCliente.Size = new System.Drawing.Size(90, 89);
             this.picLogoCliente.TabIndex = 0;
             // 
             // navegacionDasboards
             // 
             this.navegacionDasboards.Controls.Add(this.pageDashBoardsPrincipal);
             this.navegacionDasboards.Controls.Add(this.page2);
+            this.navegacionDasboards.Controls.Add(this.pageInicial);
             this.navegacionDasboards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navegacionDasboards.Location = new System.Drawing.Point(97, 5);
             this.navegacionDasboards.Name = "navegacionDasboards";
             this.navegacionDasboards.Padding = new System.Windows.Forms.Padding(5);
             this.navegacionDasboards.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pageDashBoardsPrincipal,
-            this.page2});
-            this.navegacionDasboards.SelectedPage = this.pageDashBoardsPrincipal;
+            this.page2,
+            this.pageInicial});
+            this.navegacionDasboards.SelectedPage = this.pageInicial;
             this.navegacionDasboards.Size = new System.Drawing.Size(642, 453);
             this.navegacionDasboards.TabIndex = 2;
             this.navegacionDasboards.Text = "navigationFrame1";
@@ -172,16 +176,18 @@
             // 
             this.pnlDashboardsInferior.Controls.Add(this.ctlEmpleadoConMasTicketsAtendidos1);
             this.pnlDashboardsInferior.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDashboardsInferior.Location = new System.Drawing.Point(0, 446);
+            this.pnlDashboardsInferior.Location = new System.Drawing.Point(0, 323);
             this.pnlDashboardsInferior.Name = "pnlDashboardsInferior";
-            this.pnlDashboardsInferior.Size = new System.Drawing.Size(642, 0);
+            this.pnlDashboardsInferior.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlDashboardsInferior.Size = new System.Drawing.Size(642, 99);
             this.pnlDashboardsInferior.TabIndex = 2;
             // 
             // ctlEmpleadoConMasTicketsAtendidos1
             // 
             this.ctlEmpleadoConMasTicketsAtendidos1.BackColor = System.Drawing.Color.White;
+            this.ctlEmpleadoConMasTicketsAtendidos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctlEmpleadoConMasTicketsAtendidos1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ctlEmpleadoConMasTicketsAtendidos1.Location = new System.Drawing.Point(0, 0);
+            this.ctlEmpleadoConMasTicketsAtendidos1.Location = new System.Drawing.Point(5, 5);
             this.ctlEmpleadoConMasTicketsAtendidos1.MaximumSize = new System.Drawing.Size(190, 225);
             this.ctlEmpleadoConMasTicketsAtendidos1.MinimumSize = new System.Drawing.Size(190, 225);
             this.ctlEmpleadoConMasTicketsAtendidos1.Name = "ctlEmpleadoConMasTicketsAtendidos1";
@@ -195,11 +201,29 @@
             // 
             // pnlDashboardsMedio
             // 
+            this.pnlDashboardsMedio.Controls.Add(this.ctlVisitasSegunPrioridadServicio1);
             this.pnlDashboardsMedio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDashboardsMedio.Location = new System.Drawing.Point(0, 236);
+            this.pnlDashboardsMedio.Location = new System.Drawing.Point(0, 162);
             this.pnlDashboardsMedio.Name = "pnlDashboardsMedio";
-            this.pnlDashboardsMedio.Size = new System.Drawing.Size(642, 210);
+            this.pnlDashboardsMedio.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlDashboardsMedio.Size = new System.Drawing.Size(642, 161);
             this.pnlDashboardsMedio.TabIndex = 1;
+            // 
+            // ctlVisitasSegunPrioridadServicio1
+            // 
+            this.ctlVisitasSegunPrioridadServicio1.BackColor = System.Drawing.Color.White;
+            this.ctlVisitasSegunPrioridadServicio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctlVisitasSegunPrioridadServicio1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlVisitasSegunPrioridadServicio1.Location = new System.Drawing.Point(5, 5);
+            this.ctlVisitasSegunPrioridadServicio1.MaximumSize = new System.Drawing.Size(370, 150);
+            this.ctlVisitasSegunPrioridadServicio1.MinimumSize = new System.Drawing.Size(370, 150);
+            this.ctlVisitasSegunPrioridadServicio1.Name = "ctlVisitasSegunPrioridadServicio1";
+            this.ctlVisitasSegunPrioridadServicio1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlVisitasSegunPrioridadServicio1.Pro_Conexion = null;
+            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Agencia_Servicio = 0;
+            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Cliente_Servicio = 0;
+            this.ctlVisitasSegunPrioridadServicio1.Size = new System.Drawing.Size(370, 150);
+            this.ctlVisitasSegunPrioridadServicio1.TabIndex = 0;
             // 
             // pnlDashboardsSuperior
             // 
@@ -207,20 +231,24 @@
             this.pnlDashboardsSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDashboardsSuperior.Location = new System.Drawing.Point(0, 0);
             this.pnlDashboardsSuperior.Name = "pnlDashboardsSuperior";
-            this.pnlDashboardsSuperior.Size = new System.Drawing.Size(642, 236);
+            this.pnlDashboardsSuperior.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlDashboardsSuperior.Size = new System.Drawing.Size(642, 162);
             this.pnlDashboardsSuperior.TabIndex = 0;
             // 
             // ctlTicketsAtendidos_TicketsNoAtendidos1
             // 
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.BackColor = System.Drawing.Color.White;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Location = new System.Drawing.Point(0, 0);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Location = new System.Drawing.Point(5, 5);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MaximumSize = new System.Drawing.Size(370, 150);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MinimumSize = new System.Drawing.Size(370, 150);
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Name = "ctlTicketsAtendidos_TicketsNoAtendidos1";
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Padding = new System.Windows.Forms.Padding(5);
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Agencia_Servicio = 0;
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Cliente_Servicio = 0;
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Conexion = null;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Size = new System.Drawing.Size(268, 236);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Size = new System.Drawing.Size(370, 150);
             this.ctlTicketsAtendidos_TicketsNoAtendidos1.TabIndex = 0;
             // 
             // pnlEncabezadoDashboards
@@ -253,6 +281,12 @@
             this.page2.Name = "page2";
             this.page2.Size = new System.Drawing.Size(642, 453);
             // 
+            // pageInicial
+            // 
+            this.pageInicial.Caption = "pageInicial";
+            this.pageInicial.Name = "pageInicial";
+            this.pageInicial.Size = new System.Drawing.Size(642, 453);
+            // 
             // bgCargaDashboards
             // 
             this.bgCargaDashboards.WorkerSupportsCancellation = true;
@@ -272,15 +306,16 @@
             this.Name = "ctlDashBoardsPrincipal";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(744, 463);
-            ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).EndInit();
             this.pnlOpciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            this.pnlBotones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdDashboards.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navegacionDasboards)).EndInit();
             this.navegacionDasboards.ResumeLayout(false);
             this.pageDashBoardsPrincipal.ResumeLayout(false);
             this.pnlContenedorDashboardsPrincipal.ResumeLayout(false);
             this.pnlDashboardsInferior.ResumeLayout(false);
+            this.pnlDashboardsMedio.ResumeLayout(false);
             this.pnlDashboardsSuperior.ResumeLayout(false);
             this.pnlEncabezadoDashboards.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -288,13 +323,12 @@
         }
 
         #endregion
-        private DataSet.dsDashboards dsDashboards1;
+        
         private System.Windows.Forms.Panel pnlOpciones;
-        private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.PictureEdit picLogoCliente;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.PictureEdit cmdDashboards;
         private DevExpress.XtraBars.Navigation.NavigationFrame navegacionDasboards;
         private DevExpress.XtraBars.Navigation.NavigationPage pageDashBoardsPrincipal;
         private System.Windows.Forms.Panel pnlEncabezadoDashboards;
@@ -309,5 +343,8 @@
         private DevExpress.XtraSplashScreen.SplashScreenManager ssmDashboardsPrincipal;
         private Core.Controles.Dashboards.ctlEmpleadoConMasTicketsAtendidos ctlEmpleadoConMasTicketsAtendidos1;
         private Core.Controles.Dashboards.ctlTicketsAtendidos_TicketsNoAtendidos ctlTicketsAtendidos_TicketsNoAtendidos1;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageInicial;
+        private System.Windows.Forms.Panel pnlBotones;
+        private Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio ctlVisitasSegunPrioridadServicio1;
     }
 }

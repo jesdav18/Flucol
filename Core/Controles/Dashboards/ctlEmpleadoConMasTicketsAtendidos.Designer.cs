@@ -47,7 +47,7 @@
             this.lblTituloDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTituloDashboard.Location = new System.Drawing.Point(5, 5);
             this.lblTituloDashboard.Name = "lblTituloDashboard";
-            this.lblTituloDashboard.Size = new System.Drawing.Size(180, 34);
+            this.lblTituloDashboard.Size = new System.Drawing.Size(178, 34);
             this.lblTituloDashboard.TabIndex = 0;
             this.lblTituloDashboard.Text = "EMPLEADO CON MAS TICKETS ATENDIDOS";
             // 
@@ -62,7 +62,7 @@
             this.lblNumeroTicketsAtendidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNumeroTicketsAtendidos.Location = new System.Drawing.Point(5, 43);
             this.lblNumeroTicketsAtendidos.Name = "lblNumeroTicketsAtendidos";
-            this.lblNumeroTicketsAtendidos.Size = new System.Drawing.Size(180, 39);
+            this.lblNumeroTicketsAtendidos.Size = new System.Drawing.Size(178, 39);
             this.lblNumeroTicketsAtendidos.TabIndex = 1;
             this.lblNumeroTicketsAtendidos.Text = "100";
             // 
@@ -77,7 +77,7 @@
             this.lblEtiquetaTicketsAtendidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblEtiquetaTicketsAtendidos.Location = new System.Drawing.Point(5, 82);
             this.lblEtiquetaTicketsAtendidos.Name = "lblEtiquetaTicketsAtendidos";
-            this.lblEtiquetaTicketsAtendidos.Size = new System.Drawing.Size(180, 23);
+            this.lblEtiquetaTicketsAtendidos.Size = new System.Drawing.Size(178, 23);
             this.lblEtiquetaTicketsAtendidos.TabIndex = 2;
             this.lblEtiquetaTicketsAtendidos.Text = "TICKETS ATENDIDOS";
             // 
@@ -92,7 +92,7 @@
             this.lblNombreEmpleado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNombreEmpleado.Location = new System.Drawing.Point(5, 105);
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
-            this.lblNombreEmpleado.Size = new System.Drawing.Size(180, 65);
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(178, 63);
             this.lblNombreEmpleado.TabIndex = 3;
             this.lblNombreEmpleado.Text = "GUILLERMO HERNANDEZ";
             // 
@@ -105,9 +105,9 @@
             this.lblSucursalEmpleado.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblSucursalEmpleado.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblSucursalEmpleado.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblSucursalEmpleado.Location = new System.Drawing.Point(5, 170);
+            this.lblSucursalEmpleado.Location = new System.Drawing.Point(5, 168);
             this.lblSucursalEmpleado.Name = "lblSucursalEmpleado";
-            this.lblSucursalEmpleado.Size = new System.Drawing.Size(180, 50);
+            this.lblSucursalEmpleado.Size = new System.Drawing.Size(178, 50);
             this.lblSucursalEmpleado.TabIndex = 4;
             this.lblSucursalEmpleado.Text = "SUCURSAL TESTING";
             // 
@@ -117,7 +117,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 4);
+            this.panel1.Size = new System.Drawing.Size(178, 4);
             this.panel1.TabIndex = 5;
             // 
             // ctlEmpleadoConMasTicketsAtendidos
@@ -125,6 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblNombreEmpleado);
             this.Controls.Add(this.lblEtiquetaTicketsAtendidos);
             this.Controls.Add(this.lblNumeroTicketsAtendidos);
@@ -135,7 +136,7 @@
             this.MinimumSize = new System.Drawing.Size(190, 225);
             this.Name = "ctlEmpleadoConMasTicketsAtendidos";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(190, 225);
+            this.Size = new System.Drawing.Size(188, 223);
             this.ResumeLayout(false);
 
         }

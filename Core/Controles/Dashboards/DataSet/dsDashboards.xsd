@@ -20,6 +20,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="dtVisitasSegunPrioridadServicio" msprop:Generator_TableClassName="dtVisitasSegunPrioridadServicioDataTable" msprop:Generator_TableVarName="tabledtVisitasSegunPrioridadServicio" msprop:Generator_RowChangedName="dtVisitasSegunPrioridadServicioRowChanged" msprop:Generator_TablePropName="dtVisitasSegunPrioridadServicio" msprop:Generator_RowDeletingName="dtVisitasSegunPrioridadServicioRowDeleting" msprop:Generator_RowChangingName="dtVisitasSegunPrioridadServicioRowChanging" msprop:Generator_RowEvHandlerName="dtVisitasSegunPrioridadServicioRowChangeEventHandler" msprop:Generator_RowDeletedName="dtVisitasSegunPrioridadServicioRowDeleted" msprop:Generator_RowClassName="dtVisitasSegunPrioridadServicioRow" msprop:Generator_UserTableName="dtVisitasSegunPrioridadServicio" msprop:Generator_RowEvArgName="dtVisitasSegunPrioridadServicioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conteo_visitas" msprop:Generator_ColumnVarNameInTable="columnconteo_visitas" msprop:Generator_ColumnPropNameInRow="conteo_visitas" msprop:Generator_ColumnPropNameInTable="conteo_visitasColumn" msprop:Generator_UserColumnName="conteo_visitas" type="xs:int" minOccurs="0" />
+              <xs:element name="prioridad_servicio" msprop:Generator_ColumnVarNameInTable="columnprioridad_servicio" msprop:Generator_ColumnPropNameInRow="prioridad_servicio" msprop:Generator_ColumnPropNameInTable="prioridad_servicioColumn" msprop:Generator_UserColumnName="prioridad_servicio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

@@ -46,8 +46,10 @@ namespace Administracion.Controles
             
         }
 
-        private void bgCargaDashboards_DoWork(object sender, DoWorkEventArgs e)
+        private void CargarDatos()
         {
+            ssmDashboardsPrincipal.ShowWaitForm();
+
             ctlEmpleadoConMasTicketsAtendidos1.ConstruirControl(Pro_Conexion,
                                                                 4,
                                                                 Pro_ID_Agencia_Servicio,
@@ -57,21 +59,34 @@ namespace Administracion.Controles
                                                                      Pro_ID_Cliente_Servicio,
                                                                      Pro_ID_Agencia_Servicio,
                                                                      4);
+            ctlVisitasSegunPrioridadServicio1.ConstruirControl(Pro_Conexion,
+                                                               Pro_ID_Cliente_Servicio,
+                                                               Pro_ID_Agencia_Servicio,
+                                                               4);
+            
+            navegacionDasboards.SelectedPage = pageDashBoardsPrincipal;
+            ssmDashboardsPrincipal.CloseWaitForm();
+        }
+
+        private void bgCargaDashboards_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
+
+        }
+
+        private void cmdDashboards_Click(object sender, EventArgs e)
+        {
+
+            /*if (!bgCargaDashboards.IsBusy)
+            {
+                bgCargaDashboards.RunWorkerAsync();
+            }*/
+
+            CargarDatos();
+
             
         }
 
         #endregion
-
-        private void pictureEdit1_Click(object sender, EventArgs e)
-        {
-            ssmDashboardsPrincipal.ShowWaitForm();
-
-            if (!bgCargaDashboards.IsBusy)
-            {
-                bgCargaDashboards.RunWorkerAsync();
-            }
-
-            ssmDashboardsPrincipal.CloseWaitForm();
-        }
     }
 }

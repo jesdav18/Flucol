@@ -33,18 +33,18 @@
             this.lblNombrePrograma = new DevExpress.XtraEditors.LabelControl();
             this.lblUltimaActualizacion = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblModulo = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblModulo = new DevExpress.XtraEditors.LabelControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBienvenido
@@ -108,6 +108,39 @@
             this.panel1.Size = new System.Drawing.Size(551, 65);
             this.panel1.TabIndex = 3;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.lblNombrePrograma);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(551, 24);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblModulo);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 24);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(551, 41);
+            this.panel4.TabIndex = 2;
+            // 
+            // lblModulo
+            // 
+            this.lblModulo.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModulo.Appearance.Options.UseFont = true;
+            this.lblModulo.Appearance.Options.UseTextOptions = true;
+            this.lblModulo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblModulo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblModulo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblModulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblModulo.Location = new System.Drawing.Point(0, 0);
+            this.lblModulo.Name = "lblModulo";
+            this.lblModulo.Size = new System.Drawing.Size(551, 41);
+            this.lblModulo.TabIndex = 2;
+            this.lblModulo.Text = "NOMBRE DE MÓDULO";
+            // 
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,39 +170,6 @@
             this.panel3.Size = new System.Drawing.Size(200, 212);
             this.panel3.TabIndex = 6;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblModulo);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 24);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(551, 41);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.lblNombrePrograma);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(551, 24);
-            this.panel5.TabIndex = 3;
-            // 
-            // lblModulo
-            // 
-            this.lblModulo.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModulo.Appearance.Options.UseFont = true;
-            this.lblModulo.Appearance.Options.UseTextOptions = true;
-            this.lblModulo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblModulo.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lblModulo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblModulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModulo.Location = new System.Drawing.Point(0, 0);
-            this.lblModulo.Name = "lblModulo";
-            this.lblModulo.Size = new System.Drawing.Size(551, 41);
-            this.lblModulo.TabIndex = 2;
-            this.lblModulo.Text = "NOMBRE DE MÓDULO";
-            // 
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
@@ -192,10 +192,10 @@
             this.Name = "CtlBienvenida";
             this.Size = new System.Drawing.Size(551, 335);
             this.panel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
