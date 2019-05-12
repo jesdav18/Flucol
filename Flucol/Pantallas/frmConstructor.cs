@@ -319,6 +319,12 @@ namespace Flucol.Pantallas
             switch ((NIVELES_ACCESO) pUsuario.Pro_ID_NivelAcceso)
             {
                 case NIVELES_ACCESO.GERENCIA:
+                    frmSupervisor = new frmSupervisor(pgConexion,
+                                                      Pro_ID_AgenciaServicio,
+                                                      Pro_ID_ClienteServicio);
+                    frmSupervisor.MdiParent = this;
+                    frmSupervisor.StartPosition = FormStartPosition.CenterScreen;
+                    frmSupervisor.Show();
                     break;
                 case NIVELES_ACCESO.OPERACIONAL:
                     frmOperacional = new frmOperaciones(pgConexion,
@@ -336,6 +342,7 @@ namespace Flucol.Pantallas
 
                     break;
                 case NIVELES_ACCESO.ADMINISTRACION:
+                    
                     break;
                 case NIVELES_ACCESO.INVITADO:
                     break;
@@ -349,6 +356,7 @@ namespace Flucol.Pantallas
         PgSqlConnection pgConexion;
         CtlBienvenida ctlBienvenida;
         frmOperaciones frmOperacional;
+        frmSupervisor frmSupervisor;
 
         #endregion
 

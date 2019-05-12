@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picLogoCliente = new DevExpress.XtraEditors.PictureEdit();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cmdAsignarPosiciones = new DevExpress.XtraEditors.PictureEdit();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.picLogoCliente = new DevExpress.XtraEditors.PictureEdit();
             this.NavigationPrincipal = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pageAsignacionesTraslados = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pageConfiguraciones = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.cmdTraslados = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdAsignaciones = new DevExpress.XtraEditors.SimpleButton();
             this.NavigationAsignacionesTraslados = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pageAsignaciones = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pageTraslados = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cmdAsignaciones = new DevExpress.XtraEditors.SimpleButton();
-            this.cmdTraslados = new DevExpress.XtraEditors.SimpleButton();
             this.pnlContenedorAsignaciones = new System.Windows.Forms.Panel();
+            this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
+            this.pageTraslados = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pageConfiguraciones = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.cmdAsignarPosiciones = new DevExpress.XtraEditors.PictureEdit();
+            this.ctlAsignacionPosiciones1 = new Operaciones.Controles.Configuraciones.ctlAsignacionPosiciones();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NavigationPrincipal)).BeginInit();
             this.NavigationPrincipal.SuspendLayout();
             this.pageAsignacionesTraslados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NavigationAsignacionesTraslados)).BeginInit();
             this.NavigationAsignacionesTraslados.SuspendLayout();
             this.pageAsignaciones.SuspendLayout();
+            this.pnlContenedorAsignaciones.SuspendLayout();
             this.pageTraslados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,17 +70,6 @@
             this.panel1.Size = new System.Drawing.Size(115, 504);
             this.panel1.TabIndex = 0;
             // 
-            // picLogoCliente
-            // 
-            this.picLogoCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picLogoCliente.Location = new System.Drawing.Point(0, 0);
-            this.picLogoCliente.Name = "picLogoCliente";
-            this.picLogoCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picLogoCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picLogoCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picLogoCliente.Size = new System.Drawing.Size(115, 96);
-            this.picLogoCliente.TabIndex = 0;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmdAsignarPosiciones);
@@ -90,14 +81,6 @@
             this.panel2.Size = new System.Drawing.Size(115, 408);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(19, 408);
-            this.panel3.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
@@ -106,18 +89,24 @@
             this.panel4.Size = new System.Drawing.Size(19, 408);
             this.panel4.TabIndex = 1;
             // 
-            // cmdAsignarPosiciones
+            // panel3
             // 
-            this.cmdAsignarPosiciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmdAsignarPosiciones.EditValue = global::Operaciones.Properties.Resources.iconPosicion1;
-            this.cmdAsignarPosiciones.Location = new System.Drawing.Point(19, 0);
-            this.cmdAsignarPosiciones.Name = "cmdAsignarPosiciones";
-            this.cmdAsignarPosiciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdAsignarPosiciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdAsignarPosiciones.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdAsignarPosiciones.Size = new System.Drawing.Size(77, 69);
-            this.cmdAsignarPosiciones.TabIndex = 2;
-            this.cmdAsignarPosiciones.Click += new System.EventHandler(this.cmdAsignarPosiciones_Click);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(19, 408);
+            this.panel3.TabIndex = 0;
+            // 
+            // picLogoCliente
+            // 
+            this.picLogoCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogoCliente.Location = new System.Drawing.Point(0, 0);
+            this.picLogoCliente.Name = "picLogoCliente";
+            this.picLogoCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picLogoCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picLogoCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picLogoCliente.Size = new System.Drawing.Size(115, 96);
+            this.picLogoCliente.TabIndex = 0;
             // 
             // NavigationPrincipal
             // 
@@ -138,16 +127,32 @@
             // pageAsignacionesTraslados
             // 
             this.pageAsignacionesTraslados.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pageAsignacionesTraslados.Caption = "pageAsignacionesTraslados";
             this.pageAsignacionesTraslados.Controls.Add(this.cmdTraslados);
             this.pageAsignacionesTraslados.Controls.Add(this.cmdAsignaciones);
             this.pageAsignacionesTraslados.Controls.Add(this.NavigationAsignacionesTraslados);
             this.pageAsignacionesTraslados.Name = "pageAsignacionesTraslados";
             this.pageAsignacionesTraslados.Size = new System.Drawing.Size(992, 504);
             // 
-            // pageConfiguraciones
+            // cmdTraslados
             // 
-            this.pageConfiguraciones.Name = "pageConfiguraciones";
-            this.pageConfiguraciones.Size = new System.Drawing.Size(992, 504);
+            this.cmdTraslados.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdTraslados.Location = new System.Drawing.Point(139, 0);
+            this.cmdTraslados.Name = "cmdTraslados";
+            this.cmdTraslados.Size = new System.Drawing.Size(153, 64);
+            this.cmdTraslados.TabIndex = 2;
+            this.cmdTraslados.Text = "TRASLADOS";
+            this.cmdTraslados.Click += new System.EventHandler(this.cmdTraslados_Click);
+            // 
+            // cmdAsignaciones
+            // 
+            this.cmdAsignaciones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdAsignaciones.Location = new System.Drawing.Point(0, 0);
+            this.cmdAsignaciones.Name = "cmdAsignaciones";
+            this.cmdAsignaciones.Size = new System.Drawing.Size(139, 64);
+            this.cmdAsignaciones.TabIndex = 1;
+            this.cmdAsignaciones.Text = "ASIGNAR POSICIONES";
+            this.cmdAsignaciones.Click += new System.EventHandler(this.cmdAsignaciones_Click);
             // 
             // NavigationAsignacionesTraslados
             // 
@@ -166,16 +171,20 @@
             // 
             // pageAsignaciones
             // 
+            this.pageAsignaciones.Caption = "pageAsignaciones";
             this.pageAsignaciones.Controls.Add(this.pnlContenedorAsignaciones);
             this.pageAsignaciones.Controls.Add(this.lblTituloDashboardPrincipal);
             this.pageAsignaciones.Name = "pageAsignaciones";
             this.pageAsignaciones.Size = new System.Drawing.Size(992, 440);
             // 
-            // pageTraslados
+            // pnlContenedorAsignaciones
             // 
-            this.pageTraslados.Controls.Add(this.labelControl1);
-            this.pageTraslados.Name = "pageTraslados";
-            this.pageTraslados.Size = new System.Drawing.Size(992, 440);
+            this.pnlContenedorAsignaciones.Controls.Add(this.ctlAsignacionPosiciones1);
+            this.pnlContenedorAsignaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorAsignaciones.Location = new System.Drawing.Point(0, 31);
+            this.pnlContenedorAsignaciones.Name = "pnlContenedorAsignaciones";
+            this.pnlContenedorAsignaciones.Size = new System.Drawing.Size(992, 409);
+            this.pnlContenedorAsignaciones.TabIndex = 5;
             // 
             // lblTituloDashboardPrincipal
             // 
@@ -193,6 +202,13 @@
             this.lblTituloDashboardPrincipal.TabIndex = 3;
             this.lblTituloDashboardPrincipal.Text = "ASIGNACION DE POSICIONES";
             // 
+            // pageTraslados
+            // 
+            this.pageTraslados.Caption = "pageTraslados";
+            this.pageTraslados.Controls.Add(this.labelControl1);
+            this.pageTraslados.Name = "pageTraslados";
+            this.pageTraslados.Size = new System.Drawing.Size(992, 440);
+            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,33 +224,34 @@
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "TRASLADOS";
             // 
-            // cmdAsignaciones
+            // pageConfiguraciones
             // 
-            this.cmdAsignaciones.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmdAsignaciones.Location = new System.Drawing.Point(0, 0);
-            this.cmdAsignaciones.Name = "cmdAsignaciones";
-            this.cmdAsignaciones.Size = new System.Drawing.Size(139, 64);
-            this.cmdAsignaciones.TabIndex = 1;
-            this.cmdAsignaciones.Text = "ASIGNAR POSICIONES";
-            this.cmdAsignaciones.Click += new System.EventHandler(this.cmdAsignaciones_Click);
+            this.pageConfiguraciones.Caption = "pageConfiguraciones";
+            this.pageConfiguraciones.Name = "pageConfiguraciones";
+            this.pageConfiguraciones.Size = new System.Drawing.Size(992, 504);
             // 
-            // cmdTraslados
+            // cmdAsignarPosiciones
             // 
-            this.cmdTraslados.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmdTraslados.Location = new System.Drawing.Point(139, 0);
-            this.cmdTraslados.Name = "cmdTraslados";
-            this.cmdTraslados.Size = new System.Drawing.Size(153, 64);
-            this.cmdTraslados.TabIndex = 2;
-            this.cmdTraslados.Text = "TRASLADOS";
-            this.cmdTraslados.Click += new System.EventHandler(this.cmdTraslados_Click);
+            this.cmdAsignarPosiciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmdAsignarPosiciones.EditValue = global::Operaciones.Properties.Resources.iconPosicion1;
+            this.cmdAsignarPosiciones.Location = new System.Drawing.Point(19, 0);
+            this.cmdAsignarPosiciones.Name = "cmdAsignarPosiciones";
+            this.cmdAsignarPosiciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdAsignarPosiciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdAsignarPosiciones.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdAsignarPosiciones.Size = new System.Drawing.Size(77, 69);
+            this.cmdAsignarPosiciones.TabIndex = 2;
+            this.cmdAsignarPosiciones.Click += new System.EventHandler(this.cmdAsignarPosiciones_Click);
             // 
-            // pnlContenedorAsignaciones
+            // ctlAsignacionPosiciones1
             // 
-            this.pnlContenedorAsignaciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedorAsignaciones.Location = new System.Drawing.Point(0, 31);
-            this.pnlContenedorAsignaciones.Name = "pnlContenedorAsignaciones";
-            this.pnlContenedorAsignaciones.Size = new System.Drawing.Size(992, 409);
-            this.pnlContenedorAsignaciones.TabIndex = 5;
+            this.ctlAsignacionPosiciones1.BackColor = System.Drawing.Color.White;
+            this.ctlAsignacionPosiciones1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlAsignacionPosiciones1.Location = new System.Drawing.Point(0, 0);
+            this.ctlAsignacionPosiciones1.Name = "ctlAsignacionPosiciones1";
+            this.ctlAsignacionPosiciones1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlAsignacionPosiciones1.Size = new System.Drawing.Size(992, 409);
+            this.ctlAsignacionPosiciones1.TabIndex = 0;
             // 
             // ctlOperacionesSupervisor
             // 
@@ -247,16 +264,17 @@
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(1117, 514);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NavigationPrincipal)).EndInit();
             this.NavigationPrincipal.ResumeLayout(false);
             this.pageAsignacionesTraslados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.NavigationAsignacionesTraslados)).EndInit();
             this.NavigationAsignacionesTraslados.ResumeLayout(false);
             this.pageAsignaciones.ResumeLayout(false);
+            this.pnlContenedorAsignaciones.ResumeLayout(false);
             this.pageTraslados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +298,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraBars.Navigation.NavigationPage pageConfiguraciones;
         private System.Windows.Forms.Panel pnlContenedorAsignaciones;
+        private Configuraciones.ctlAsignacionPosiciones ctlAsignacionPosiciones1;
     }
 }

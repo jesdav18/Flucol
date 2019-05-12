@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gcPosicionesDisponibles = new DevExpress.XtraGrid.GridControl();
             this.dsCore1 = new Core.DataSets.dsCore();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvPosicionesDisponibles = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_registro = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_operacion_servicio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colseleccionar_posicion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldescripcion_operacion_servicio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkSeleccionar = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.coldescripcion_operacion_servicio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPosicionesDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCore1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPosicionesDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionar)).BeginInit();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // gcPosicionesDisponibles
             // 
-            this.gridControl1.DataMember = "dtPosicionesDisponibles";
-            this.gridControl1.DataSource = this.dsCore1;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(5, 49);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gcPosicionesDisponibles.DataMember = "dtPosicionesDisponibles";
+            this.gcPosicionesDisponibles.DataSource = this.dsCore1;
+            this.gcPosicionesDisponibles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcPosicionesDisponibles.Location = new System.Drawing.Point(5, 49);
+            this.gcPosicionesDisponibles.MainView = this.gvPosicionesDisponibles;
+            this.gcPosicionesDisponibles.Name = "gcPosicionesDisponibles";
+            this.gcPosicionesDisponibles.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkSeleccionar});
-            this.gridControl1.Size = new System.Drawing.Size(586, 319);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcPosicionesDisponibles.Size = new System.Drawing.Size(586, 319);
+            this.gcPosicionesDisponibles.TabIndex = 0;
+            this.gcPosicionesDisponibles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvPosicionesDisponibles});
             // 
             // dsCore1
             // 
             this.dsCore1.DataSetName = "dsCore";
             this.dsCore1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gridView1
+            // gvPosicionesDisponibles
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.gridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvPosicionesDisponibles.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvPosicionesDisponibles.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvPosicionesDisponibles.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.gvPosicionesDisponibles.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gvPosicionesDisponibles.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvPosicionesDisponibles.Appearance.Row.Options.UseFont = true;
+            this.gvPosicionesDisponibles.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid_registro,
             this.colposicion,
             this.colid_operacion_servicio,
             this.colseleccionar_posicion,
             this.coldescripcion_operacion_servicio});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
+            this.gvPosicionesDisponibles.GridControl = this.gcPosicionesDisponibles;
+            this.gvPosicionesDisponibles.Name = "gvPosicionesDisponibles";
+            this.gvPosicionesDisponibles.OptionsView.ShowGroupPanel = false;
+            this.gvPosicionesDisponibles.OptionsView.ShowIndicator = false;
             // 
             // colid_registro
             // 
@@ -117,6 +117,14 @@
             this.colseleccionar_posicion.VisibleIndex = 2;
             this.colseleccionar_posicion.Width = 98;
             // 
+            // chkSeleccionar
+            // 
+            this.chkSeleccionar.AutoHeight = false;
+            this.chkSeleccionar.CheckBoxOptions.Style = DevExpress.XtraEditors.Controls.CheckBoxStyle.Custom;
+            this.chkSeleccionar.ImageOptions.ImageChecked = global::Core.Properties.Resources.icon_check_32;
+            this.chkSeleccionar.Name = "chkSeleccionar";
+            this.chkSeleccionar.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.chkSeleccionar_EditValueChanging);
+            // 
             // coldescripcion_operacion_servicio
             // 
             this.coldescripcion_operacion_servicio.Caption = "OPERACION ASIGNADA";
@@ -124,13 +132,6 @@
             this.coldescripcion_operacion_servicio.Name = "coldescripcion_operacion_servicio";
             this.coldescripcion_operacion_servicio.Visible = true;
             this.coldescripcion_operacion_servicio.VisibleIndex = 1;
-            // 
-            // chkSeleccionar
-            // 
-            this.chkSeleccionar.AutoHeight = false;
-            this.chkSeleccionar.CheckBoxOptions.Style = DevExpress.XtraEditors.Controls.CheckBoxStyle.Custom;
-            this.chkSeleccionar.ImageOptions.ImageChecked = global::Core.Properties.Resources.icon_check_32;
-            this.chkSeleccionar.Name = "chkSeleccionar";
             // 
             // pnlSuperior
             // 
@@ -172,14 +173,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcPosicionesDisponibles);
             this.Controls.Add(this.pnlSuperior);
             this.Name = "ctlPosicionesDisponibles";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(596, 373);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcPosicionesDisponibles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCore1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvPosicionesDisponibles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionar)).EndInit();
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -189,8 +190,8 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcPosicionesDisponibles;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvPosicionesDisponibles;
         private System.Windows.Forms.Panel pnlSuperior;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;

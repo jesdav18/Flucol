@@ -33,9 +33,9 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gcEmpleadosDisponiblesAsignacion = new DevExpress.XtraGrid.GridControl();
             this.dsConfiguraciones1 = new Operaciones.Controles.Configuraciones.DataSets.dsConfiguraciones();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvEmpleadosDisponiblesAsignacion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colusuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodigo_empleado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombre_empleado = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,9 +47,9 @@
             this.popupPosicionesDisponibles = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
             this.ctlPosicionesDisponibles1 = new Core.Controles.Popups.ctlPosicionesDisponibles();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcEmpleadosDisponiblesAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosDisponiblesAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCargarPosiciones)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupPosicionesDisponibles)).BeginInit();
@@ -58,44 +58,44 @@
             this.flyoutPanelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // gcEmpleadosDisponiblesAsignacion
             // 
-            this.gridControl1.DataMember = "dtAsignacionPosiciones";
-            this.gridControl1.DataSource = this.dsConfiguraciones1;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gcEmpleadosDisponiblesAsignacion.DataMember = "dtAsignacionPosiciones";
+            this.gcEmpleadosDisponiblesAsignacion.DataSource = this.dsConfiguraciones1;
+            this.gcEmpleadosDisponiblesAsignacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcEmpleadosDisponiblesAsignacion.Location = new System.Drawing.Point(0, 0);
+            this.gcEmpleadosDisponiblesAsignacion.MainView = this.gvEmpleadosDisponiblesAsignacion;
+            this.gcEmpleadosDisponiblesAsignacion.Name = "gcEmpleadosDisponiblesAsignacion";
+            this.gcEmpleadosDisponiblesAsignacion.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdCargarPosiciones});
-            this.gridControl1.Size = new System.Drawing.Size(924, 468);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcEmpleadosDisponiblesAsignacion.Size = new System.Drawing.Size(924, 468);
+            this.gcEmpleadosDisponiblesAsignacion.TabIndex = 0;
+            this.gcEmpleadosDisponiblesAsignacion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvEmpleadosDisponiblesAsignacion});
             // 
             // dsConfiguraciones1
             // 
             this.dsConfiguraciones1.DataSetName = "dsConfiguraciones";
             this.dsConfiguraciones1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gridView1
+            // gvEmpleadosDisponiblesAsignacion
             // 
-            this.gridView1.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.HeaderPanel.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvEmpleadosDisponiblesAsignacion.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvEmpleadosDisponiblesAsignacion.Appearance.HeaderPanel.Options.UseFont = true;
+            this.gvEmpleadosDisponiblesAsignacion.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gvEmpleadosDisponiblesAsignacion.Appearance.Row.Options.UseFont = true;
+            this.gvEmpleadosDisponiblesAsignacion.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colusuario,
             this.colcodigo_empleado,
             this.colnombre_empleado,
             this.colposicion_asignada,
             this.colcargo_empleado,
             this.colcargar_posiciones});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowIndicator = false;
+            this.gvEmpleadosDisponiblesAsignacion.GridControl = this.gcEmpleadosDisponiblesAsignacion;
+            this.gvEmpleadosDisponiblesAsignacion.Name = "gvEmpleadosDisponiblesAsignacion";
+            this.gvEmpleadosDisponiblesAsignacion.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            this.gvEmpleadosDisponiblesAsignacion.OptionsView.ShowGroupPanel = false;
+            this.gvEmpleadosDisponiblesAsignacion.OptionsView.ShowIndicator = false;
             // 
             // colusuario
             // 
@@ -160,11 +160,12 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdCargarPosiciones.Name = "cmdCargarPosiciones";
             this.cmdCargarPosiciones.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.cmdCargarPosiciones.Click += new System.EventHandler(this.cmdCargarPosiciones_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.popupPosicionesDisponibles);
-            this.panel1.Controls.Add(this.gridControl1);
+            this.panel1.Controls.Add(this.gcEmpleadosDisponiblesAsignacion);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
@@ -217,9 +218,9 @@
             this.Name = "ctlAsignacionPosiciones";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(934, 478);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcEmpleadosDisponiblesAsignacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosDisponiblesAsignacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCargarPosiciones)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.popupPosicionesDisponibles)).EndInit();
@@ -232,8 +233,8 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcEmpleadosDisponiblesAsignacion;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvEmpleadosDisponiblesAsignacion;
         private System.Windows.Forms.Panel panel1;
         private DataSets.dsConfiguraciones dsConfiguraciones1;
         private DevExpress.XtraGrid.Columns.GridColumn colusuario;

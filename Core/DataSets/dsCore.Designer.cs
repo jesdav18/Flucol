@@ -399,7 +399,7 @@ namespace Core.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtPosicionesDisponiblesRow AdddtPosicionesDisponiblesRow(string id_registro, int posicion, string id_operacion_servicio, string seleccionar_posicion, string descripcion_operacion_servicio) {
+            public dtPosicionesDisponiblesRow AdddtPosicionesDisponiblesRow(string id_registro, int posicion, string id_operacion_servicio, bool seleccionar_posicion, string descripcion_operacion_servicio) {
                 dtPosicionesDisponiblesRow rowdtPosicionesDisponiblesRow = ((dtPosicionesDisponiblesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_registro,
@@ -445,7 +445,7 @@ namespace Core.DataSets {
                 base.Columns.Add(this.columnposicion);
                 this.columnid_operacion_servicio = new global::System.Data.DataColumn("id_operacion_servicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_operacion_servicio);
-                this.columnseleccionar_posicion = new global::System.Data.DataColumn("seleccionar_posicion", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnseleccionar_posicion = new global::System.Data.DataColumn("seleccionar_posicion", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnseleccionar_posicion);
                 this.columndescripcion_operacion_servicio = new global::System.Data.DataColumn("descripcion_operacion_servicio", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion_operacion_servicio);
@@ -642,10 +642,10 @@ namespace Core.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string seleccionar_posicion {
+            public bool seleccionar_posicion {
                 get {
                     try {
-                        return ((string)(this[this.tabledtPosicionesDisponibles.seleccionar_posicionColumn]));
+                        return ((bool)(this[this.tabledtPosicionesDisponibles.seleccionar_posicionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'seleccionar_posicion\' de la tabla \'dtPosicionesDisponible" +
