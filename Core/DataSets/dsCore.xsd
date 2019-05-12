@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCore" targetNamespace="http://tempuri.org/dsCore.xsd" xmlns:mstns="http://tempuri.org/dsCore.xsd" xmlns="http://tempuri.org/dsCore.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCore" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCore" msprop:Generator_UserDSName="dsCore">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPosicionesDisponibles" msprop:Generator_TableClassName="dtPosicionesDisponiblesDataTable" msprop:Generator_TableVarName="tabledtPosicionesDisponibles" msprop:Generator_TablePropName="dtPosicionesDisponibles" msprop:Generator_RowDeletingName="dtPosicionesDisponiblesRowDeleting" msprop:Generator_RowChangingName="dtPosicionesDisponiblesRowChanging" msprop:Generator_RowEvHandlerName="dtPosicionesDisponiblesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPosicionesDisponiblesRowDeleted" msprop:Generator_UserTableName="dtPosicionesDisponibles" msprop:Generator_RowChangedName="dtPosicionesDisponiblesRowChanged" msprop:Generator_RowEvArgName="dtPosicionesDisponiblesRowChangeEvent" msprop:Generator_RowClassName="dtPosicionesDisponiblesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_registro" msprop:Generator_ColumnVarNameInTable="columnid_registro" msprop:Generator_ColumnPropNameInRow="id_registro" msprop:Generator_ColumnPropNameInTable="id_registroColumn" msprop:Generator_UserColumnName="id_registro" type="xs:string" minOccurs="0" />
+              <xs:element name="posicion" msprop:Generator_ColumnVarNameInTable="columnposicion" msprop:Generator_ColumnPropNameInRow="posicion" msprop:Generator_ColumnPropNameInTable="posicionColumn" msprop:Generator_UserColumnName="posicion" type="xs:int" minOccurs="0" />
+              <xs:element name="id_operacion_servicio" msprop:Generator_ColumnVarNameInTable="columnid_operacion_servicio" msprop:Generator_ColumnPropNameInRow="id_operacion_servicio" msprop:Generator_ColumnPropNameInTable="id_operacion_servicioColumn" msprop:Generator_UserColumnName="id_operacion_servicio" type="xs:string" minOccurs="0" />
+              <xs:element name="seleccionar_posicion" msprop:Generator_ColumnVarNameInTable="columnseleccionar_posicion" msprop:Generator_ColumnPropNameInRow="seleccionar_posicion" msprop:Generator_ColumnPropNameInTable="seleccionar_posicionColumn" msprop:Generator_UserColumnName="seleccionar_posicion" type="xs:string" minOccurs="0" />
+              <xs:element name="descripcion_operacion_servicio" msprop:Generator_ColumnVarNameInTable="columndescripcion_operacion_servicio" msprop:Generator_ColumnPropNameInRow="descripcion_operacion_servicio" msprop:Generator_ColumnPropNameInTable="descripcion_operacion_servicioColumn" msprop:Generator_UserColumnName="descripcion_operacion_servicio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

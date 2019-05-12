@@ -28,142 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctlOperacionesSupervisor));
-            this.pnlOpcionesSupervisor = new System.Windows.Forms.Panel();
-            this.cmdAdministracionPosiciones = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.popupOpcionesSupervisor = new DevExpress.Utils.FlyoutPanel();
-            this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
-            this.NavOpcionesSupervisor = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.pageAdministracionPosiciones = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.PageOperaciones = new DevExpress.XtraBars.Navigation.NavigationPage();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdAdministracionPosiciones.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupOpcionesSupervisor)).BeginInit();
-            this.popupOpcionesSupervisor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
-            this.flyoutPanelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NavOpcionesSupervisor)).BeginInit();
-            this.NavOpcionesSupervisor.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picLogoCliente = new DevExpress.XtraEditors.PictureEdit();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cmdAsignarPosiciones = new DevExpress.XtraEditors.PictureEdit();
+            this.NavigationPrincipal = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.pageAsignacionesTraslados = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pageConfiguraciones = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.NavigationAsignacionesTraslados = new DevExpress.XtraBars.Navigation.NavigationFrame();
+            this.pageAsignaciones = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pageTraslados = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cmdAsignaciones = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdTraslados = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlContenedorAsignaciones = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationPrincipal)).BeginInit();
+            this.NavigationPrincipal.SuspendLayout();
+            this.pageAsignacionesTraslados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationAsignacionesTraslados)).BeginInit();
+            this.NavigationAsignacionesTraslados.SuspendLayout();
+            this.pageAsignaciones.SuspendLayout();
+            this.pageTraslados.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlOpcionesSupervisor
+            // panel1
             // 
-            this.pnlOpcionesSupervisor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlOpcionesSupervisor.Location = new System.Drawing.Point(5, 5);
-            this.pnlOpcionesSupervisor.Name = "pnlOpcionesSupervisor";
-            this.pnlOpcionesSupervisor.Size = new System.Drawing.Size(5, 416);
-            this.pnlOpcionesSupervisor.TabIndex = 0;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.picLogoCliente);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(115, 504);
+            this.panel1.TabIndex = 0;
             // 
-            // cmdAdministracionPosiciones
+            // picLogoCliente
             // 
-            this.cmdAdministracionPosiciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmdAdministracionPosiciones.EditValue = ((object)(resources.GetObject("cmdAdministracionPosiciones.EditValue")));
-            this.cmdAdministracionPosiciones.Location = new System.Drawing.Point(3, 3);
-            this.cmdAdministracionPosiciones.Name = "cmdAdministracionPosiciones";
-            this.cmdAdministracionPosiciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdAdministracionPosiciones.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.cmdAdministracionPosiciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdAdministracionPosiciones.Size = new System.Drawing.Size(75, 77);
-            this.cmdAdministracionPosiciones.TabIndex = 0;
+            this.picLogoCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogoCliente.Location = new System.Drawing.Point(0, 0);
+            this.picLogoCliente.Name = "picLogoCliente";
+            this.picLogoCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picLogoCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picLogoCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picLogoCliente.Size = new System.Drawing.Size(115, 96);
+            this.picLogoCliente.TabIndex = 0;
             // 
-            // pictureEdit2
+            // panel2
             // 
-            this.pictureEdit2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(3, 80);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit2.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Size = new System.Drawing.Size(75, 77);
-            this.pictureEdit2.TabIndex = 1;
+            this.panel2.Controls.Add(this.cmdAsignarPosiciones);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 96);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(115, 408);
+            this.panel2.TabIndex = 1;
             // 
-            // popupOpcionesSupervisor
+            // panel3
             // 
-            this.popupOpcionesSupervisor.Appearance.BackColor = System.Drawing.Color.White;
-            this.popupOpcionesSupervisor.Appearance.Options.UseBackColor = true;
-            this.popupOpcionesSupervisor.Controls.Add(this.flyoutPanelControl1);
-            this.popupOpcionesSupervisor.Location = new System.Drawing.Point(717, 55);
-            this.popupOpcionesSupervisor.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.popupOpcionesSupervisor.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.popupOpcionesSupervisor.Name = "popupOpcionesSupervisor";
-            this.popupOpcionesSupervisor.Options.AnchorType = DevExpress.Utils.Win.PopupToolWindowAnchor.Left;
-            this.popupOpcionesSupervisor.Options.AnimationType = DevExpress.Utils.Win.PopupToolWindowAnimation.Fade;
-            this.popupOpcionesSupervisor.Options.CloseOnOuterClick = true;
-            this.popupOpcionesSupervisor.OptionsBeakPanel.BackColor = System.Drawing.Color.White;
-            this.popupOpcionesSupervisor.OwnerControl = this.pnlOpcionesSupervisor;
-            this.popupOpcionesSupervisor.Size = new System.Drawing.Size(81, 239);
-            this.popupOpcionesSupervisor.TabIndex = 2;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(19, 408);
+            this.panel3.TabIndex = 0;
             // 
-            // flyoutPanelControl1
+            // panel4
             // 
-            this.flyoutPanelControl1.Controls.Add(this.pictureEdit2);
-            this.flyoutPanelControl1.Controls.Add(this.cmdAdministracionPosiciones);
-            this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flyoutPanelControl1.FlyoutPanel = this.popupOpcionesSupervisor;
-            this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
-            this.flyoutPanelControl1.Name = "flyoutPanelControl1";
-            this.flyoutPanelControl1.Size = new System.Drawing.Size(81, 239);
-            this.flyoutPanelControl1.TabIndex = 0;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(96, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(19, 408);
+            this.panel4.TabIndex = 1;
             // 
-            // NavOpcionesSupervisor
+            // cmdAsignarPosiciones
             // 
-            this.NavOpcionesSupervisor.Controls.Add(this.pageAdministracionPosiciones);
-            this.NavOpcionesSupervisor.Controls.Add(this.PageOperaciones);
-            this.NavOpcionesSupervisor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NavOpcionesSupervisor.Location = new System.Drawing.Point(10, 5);
-            this.NavOpcionesSupervisor.Name = "NavOpcionesSupervisor";
-            this.NavOpcionesSupervisor.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.pageAdministracionPosiciones,
-            this.PageOperaciones});
-            this.NavOpcionesSupervisor.SelectedPage = this.PageOperaciones;
-            this.NavOpcionesSupervisor.Size = new System.Drawing.Size(701, 416);
-            this.NavOpcionesSupervisor.TabIndex = 3;
-            this.NavOpcionesSupervisor.Text = "navigationFrame1";
+            this.cmdAsignarPosiciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmdAsignarPosiciones.EditValue = global::Operaciones.Properties.Resources.iconPosicion1;
+            this.cmdAsignarPosiciones.Location = new System.Drawing.Point(19, 0);
+            this.cmdAsignarPosiciones.Name = "cmdAsignarPosiciones";
+            this.cmdAsignarPosiciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdAsignarPosiciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdAsignarPosiciones.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdAsignarPosiciones.Size = new System.Drawing.Size(77, 69);
+            this.cmdAsignarPosiciones.TabIndex = 2;
+            this.cmdAsignarPosiciones.Click += new System.EventHandler(this.cmdAsignarPosiciones_Click);
             // 
-            // pageAdministracionPosiciones
+            // NavigationPrincipal
             // 
-            this.pageAdministracionPosiciones.Name = "pageAdministracionPosiciones";
-            this.pageAdministracionPosiciones.Size = new System.Drawing.Size(701, 416);
+            this.NavigationPrincipal.Controls.Add(this.pageAsignacionesTraslados);
+            this.NavigationPrincipal.Controls.Add(this.pageConfiguraciones);
+            this.NavigationPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NavigationPrincipal.Location = new System.Drawing.Point(120, 5);
+            this.NavigationPrincipal.Name = "NavigationPrincipal";
+            this.NavigationPrincipal.Padding = new System.Windows.Forms.Padding(5);
+            this.NavigationPrincipal.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.pageAsignacionesTraslados,
+            this.pageConfiguraciones});
+            this.NavigationPrincipal.SelectedPage = this.pageConfiguraciones;
+            this.NavigationPrincipal.Size = new System.Drawing.Size(992, 504);
+            this.NavigationPrincipal.TabIndex = 1;
+            this.NavigationPrincipal.Text = "navigationFrame1";
             // 
-            // PageOperaciones
+            // pageAsignacionesTraslados
             // 
-            this.PageOperaciones.Name = "PageOperaciones";
-            this.PageOperaciones.Size = new System.Drawing.Size(701, 416);
+            this.pageAsignacionesTraslados.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pageAsignacionesTraslados.Controls.Add(this.cmdTraslados);
+            this.pageAsignacionesTraslados.Controls.Add(this.cmdAsignaciones);
+            this.pageAsignacionesTraslados.Controls.Add(this.NavigationAsignacionesTraslados);
+            this.pageAsignacionesTraslados.Name = "pageAsignacionesTraslados";
+            this.pageAsignacionesTraslados.Size = new System.Drawing.Size(992, 504);
+            // 
+            // pageConfiguraciones
+            // 
+            this.pageConfiguraciones.Name = "pageConfiguraciones";
+            this.pageConfiguraciones.Size = new System.Drawing.Size(992, 504);
+            // 
+            // NavigationAsignacionesTraslados
+            // 
+            this.NavigationAsignacionesTraslados.Controls.Add(this.pageAsignaciones);
+            this.NavigationAsignacionesTraslados.Controls.Add(this.pageTraslados);
+            this.NavigationAsignacionesTraslados.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.NavigationAsignacionesTraslados.Location = new System.Drawing.Point(0, 64);
+            this.NavigationAsignacionesTraslados.Name = "NavigationAsignacionesTraslados";
+            this.NavigationAsignacionesTraslados.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.pageAsignaciones,
+            this.pageTraslados});
+            this.NavigationAsignacionesTraslados.SelectedPage = this.pageTraslados;
+            this.NavigationAsignacionesTraslados.Size = new System.Drawing.Size(992, 440);
+            this.NavigationAsignacionesTraslados.TabIndex = 0;
+            this.NavigationAsignacionesTraslados.Text = "navigationFrame1";
+            // 
+            // pageAsignaciones
+            // 
+            this.pageAsignaciones.Controls.Add(this.pnlContenedorAsignaciones);
+            this.pageAsignaciones.Controls.Add(this.lblTituloDashboardPrincipal);
+            this.pageAsignaciones.Name = "pageAsignaciones";
+            this.pageAsignaciones.Size = new System.Drawing.Size(992, 440);
+            // 
+            // pageTraslados
+            // 
+            this.pageTraslados.Controls.Add(this.labelControl1);
+            this.pageTraslados.Name = "pageTraslados";
+            this.pageTraslados.Size = new System.Drawing.Size(992, 440);
+            // 
+            // lblTituloDashboardPrincipal
+            // 
+            this.lblTituloDashboardPrincipal.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloDashboardPrincipal.Appearance.Options.UseFont = true;
+            this.lblTituloDashboardPrincipal.Appearance.Options.UseTextOptions = true;
+            this.lblTituloDashboardPrincipal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTituloDashboardPrincipal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblTituloDashboardPrincipal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTituloDashboardPrincipal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTituloDashboardPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloDashboardPrincipal.Name = "lblTituloDashboardPrincipal";
+            this.lblTituloDashboardPrincipal.Padding = new System.Windows.Forms.Padding(5);
+            this.lblTituloDashboardPrincipal.Size = new System.Drawing.Size(992, 31);
+            this.lblTituloDashboardPrincipal.TabIndex = 3;
+            this.lblTituloDashboardPrincipal.Text = "ASIGNACION DE POSICIONES";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(992, 31);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "TRASLADOS";
+            // 
+            // cmdAsignaciones
+            // 
+            this.cmdAsignaciones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdAsignaciones.Location = new System.Drawing.Point(0, 0);
+            this.cmdAsignaciones.Name = "cmdAsignaciones";
+            this.cmdAsignaciones.Size = new System.Drawing.Size(139, 64);
+            this.cmdAsignaciones.TabIndex = 1;
+            this.cmdAsignaciones.Text = "ASIGNAR POSICIONES";
+            this.cmdAsignaciones.Click += new System.EventHandler(this.cmdAsignaciones_Click);
+            // 
+            // cmdTraslados
+            // 
+            this.cmdTraslados.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdTraslados.Location = new System.Drawing.Point(139, 0);
+            this.cmdTraslados.Name = "cmdTraslados";
+            this.cmdTraslados.Size = new System.Drawing.Size(153, 64);
+            this.cmdTraslados.TabIndex = 2;
+            this.cmdTraslados.Text = "TRASLADOS";
+            this.cmdTraslados.Click += new System.EventHandler(this.cmdTraslados_Click);
+            // 
+            // pnlContenedorAsignaciones
+            // 
+            this.pnlContenedorAsignaciones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedorAsignaciones.Location = new System.Drawing.Point(0, 31);
+            this.pnlContenedorAsignaciones.Name = "pnlContenedorAsignaciones";
+            this.pnlContenedorAsignaciones.Size = new System.Drawing.Size(992, 409);
+            this.pnlContenedorAsignaciones.TabIndex = 5;
             // 
             // ctlOperacionesSupervisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.NavOpcionesSupervisor);
-            this.Controls.Add(this.popupOpcionesSupervisor);
-            this.Controls.Add(this.pnlOpcionesSupervisor);
+            this.Controls.Add(this.NavigationPrincipal);
+            this.Controls.Add(this.panel1);
             this.Name = "ctlOperacionesSupervisor";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(716, 426);
-            ((System.ComponentModel.ISupportInitialize)(this.cmdAdministracionPosiciones.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupOpcionesSupervisor)).EndInit();
-            this.popupOpcionesSupervisor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
-            this.flyoutPanelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.NavOpcionesSupervisor)).EndInit();
-            this.NavOpcionesSupervisor.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1117, 514);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoCliente.Properties)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAsignarPosiciones.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationPrincipal)).EndInit();
+            this.NavigationPrincipal.ResumeLayout(false);
+            this.pageAsignacionesTraslados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.NavigationAsignacionesTraslados)).EndInit();
+            this.NavigationAsignacionesTraslados.ResumeLayout(false);
+            this.pageAsignaciones.ResumeLayout(false);
+            this.pageTraslados.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlOpcionesSupervisor;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
-        private DevExpress.XtraEditors.PictureEdit cmdAdministracionPosiciones;
-        private DevExpress.Utils.FlyoutPanel popupOpcionesSupervisor;
-        private DevExpress.Utils.FlyoutPanelControl flyoutPanelControl1;
-        private DevExpress.XtraBars.Navigation.NavigationFrame NavOpcionesSupervisor;
-        private DevExpress.XtraBars.Navigation.NavigationPage pageAdministracionPosiciones;
-        private DevExpress.XtraBars.Navigation.NavigationPage PageOperaciones;
+        private System.Windows.Forms.Panel panel1;
+        private DevExpress.XtraEditors.PictureEdit picLogoCliente;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.PictureEdit cmdAsignarPosiciones;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private DevExpress.XtraBars.Navigation.NavigationFrame NavigationPrincipal;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageAsignacionesTraslados;
+        private DevExpress.XtraEditors.SimpleButton cmdTraslados;
+        private DevExpress.XtraEditors.SimpleButton cmdAsignaciones;
+        private DevExpress.XtraBars.Navigation.NavigationFrame NavigationAsignacionesTraslados;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageAsignaciones;
+        private DevExpress.XtraEditors.LabelControl lblTituloDashboardPrincipal;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageTraslados;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageConfiguraciones;
+        private System.Windows.Forms.Panel pnlContenedorAsignaciones;
     }
 }

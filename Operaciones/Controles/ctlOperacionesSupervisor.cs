@@ -16,5 +16,21 @@ namespace Operaciones.Controles
         {
             InitializeComponent();
         }
+
+        private void cmdAsignaciones_Click(object sender, EventArgs e)
+        {
+            NavigationAsignacionesTraslados.SelectedPage = pageAsignaciones;
+        }
+
+        private void cmdTraslados_Click(object sender, EventArgs e)
+        {
+            NavigationAsignacionesTraslados.SelectedPage = pageTraslados;
+
+        }
+
+        private void cmdAsignarPosiciones_Click(object sender, EventArgs e)
+        {
+            NavigationPrincipal.SelectedPage = pageAsignacionesTraslados;
+        }
     }
 }
