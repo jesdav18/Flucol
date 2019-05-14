@@ -75,6 +75,14 @@ namespace Core.Controles.Popups
 
         #endregion
 
+        #region EVENTOS
+
+        public event EventHandler OnSeleccionaPosicion;
+
+        #endregion
+
+        #region EVENTOS CONTROLES
+
         private void chkSeleccionar_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
         {
             var v_fila = gvPosicionesDisponibles.GetFocusedDataRow() as dsCore.dtPosicionesDisponiblesRow;
@@ -88,8 +96,12 @@ namespace Core.Controles.Popups
                         iterador.seleccionar_posicion = false;
                     }
                 }
+
+                OnSeleccionaPosicion?.Invoke(v_fila, e);
             }
 
         }
+
+        #endregion
     }
 }

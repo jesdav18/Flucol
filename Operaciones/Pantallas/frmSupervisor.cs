@@ -16,13 +16,15 @@ namespace Operaciones.Pantallas
     {
         public frmSupervisor(PgSqlConnection pConexion,
                             int pID_AgenciaServicio,
-                            int pID_ClienteServicio)
+                            int pID_ClienteServicio,
+                            string pUsuario)
         {
             InitializeComponent();
 
             ctlOperacionesSupervisor1.ConstruirControl(pConexion,
                                                        pID_AgenciaServicio,
-                                                       pID_ClienteServicio);
+                                                       pID_ClienteServicio,
+                                                       pUsuario);
 
         }
     }

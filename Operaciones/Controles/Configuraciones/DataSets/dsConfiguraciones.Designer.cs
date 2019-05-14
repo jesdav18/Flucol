@@ -291,6 +291,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             
             private global::System.Data.DataColumn columnposicion_asignada;
             
+            private global::System.Data.DataColumn columntipo_ticket_prioridad;
+            
+            private global::System.Data.DataColumn columndescripcion_tipo_ticket;
+            
+            private global::System.Data.DataColumn columntiene_cambios;
+            
+            private global::System.Data.DataColumn columnid_tipo_ticket;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public dtAsignacionPosicionesDataTable() {
@@ -374,6 +382,38 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn tipo_ticket_prioridadColumn {
+                get {
+                    return this.columntipo_ticket_prioridad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn descripcion_tipo_ticketColumn {
+                get {
+                    return this.columndescripcion_tipo_ticket;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn tiene_cambiosColumn {
+                get {
+                    return this.columntiene_cambios;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn id_tipo_ticketColumn {
+                get {
+                    return this.columnid_tipo_ticket;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +449,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public dtAsignacionPosicionesRow AdddtAsignacionPosicionesRow(string usuario, string codigo_empleado, string nombre_empleado, string cargo_empleado, string cargar_posiciones, int posicion_asignada) {
+            public dtAsignacionPosicionesRow AdddtAsignacionPosicionesRow(string usuario, string codigo_empleado, string nombre_empleado, string cargo_empleado, string cargar_posiciones, int posicion_asignada, string tipo_ticket_prioridad, string descripcion_tipo_ticket, bool tiene_cambios, int id_tipo_ticket) {
                 dtAsignacionPosicionesRow rowdtAsignacionPosicionesRow = ((dtAsignacionPosicionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         usuario,
@@ -417,7 +457,11 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
                         nombre_empleado,
                         cargo_empleado,
                         cargar_posiciones,
-                        posicion_asignada};
+                        posicion_asignada,
+                        tipo_ticket_prioridad,
+                        descripcion_tipo_ticket,
+                        tiene_cambios,
+                        id_tipo_ticket};
                 rowdtAsignacionPosicionesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtAsignacionPosicionesRow);
                 return rowdtAsignacionPosicionesRow;
@@ -446,6 +490,10 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
                 this.columncargo_empleado = base.Columns["cargo_empleado"];
                 this.columncargar_posiciones = base.Columns["cargar_posiciones"];
                 this.columnposicion_asignada = base.Columns["posicion_asignada"];
+                this.columntipo_ticket_prioridad = base.Columns["tipo_ticket_prioridad"];
+                this.columndescripcion_tipo_ticket = base.Columns["descripcion_tipo_ticket"];
+                this.columntiene_cambios = base.Columns["tiene_cambios"];
+                this.columnid_tipo_ticket = base.Columns["id_tipo_ticket"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +511,15 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
                 base.Columns.Add(this.columncargar_posiciones);
                 this.columnposicion_asignada = new global::System.Data.DataColumn("posicion_asignada", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnposicion_asignada);
+                this.columntipo_ticket_prioridad = new global::System.Data.DataColumn("tipo_ticket_prioridad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipo_ticket_prioridad);
+                this.columndescripcion_tipo_ticket = new global::System.Data.DataColumn("descripcion_tipo_ticket", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion_tipo_ticket);
+                this.columntiene_cambios = new global::System.Data.DataColumn("tiene_cambios", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntiene_cambios);
+                this.columnid_tipo_ticket = new global::System.Data.DataColumn("id_tipo_ticket", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_tipo_ticket);
+                this.columntiene_cambios.DefaultValue = ((bool)(false));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -706,6 +763,74 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string tipo_ticket_prioridad {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tipo_ticket_prioridad\' de la tabla \'dtAsignacionPosicione" +
+                                "s\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string descripcion_tipo_ticket {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion_tipo_ticket\' de la tabla \'dtAsignacionPosicio" +
+                                "nes\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool tiene_cambios {
+                get {
+                    try {
+                        return ((bool)(this[this.tabledtAsignacionPosiciones.tiene_cambiosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'tiene_cambios\' de la tabla \'dtAsignacionPosiciones\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtAsignacionPosiciones.tiene_cambiosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int id_tipo_ticket {
+                get {
+                    try {
+                        return ((int)(this[this.tabledtAsignacionPosiciones.id_tipo_ticketColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_tipo_ticket\' de la tabla \'dtAsignacionPosiciones\' es D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtAsignacionPosiciones.id_tipo_ticketColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsusuarioNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.usuarioColumn);
             }
@@ -774,6 +899,54 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Setposicion_asignadaNull() {
                 this[this.tabledtAsignacionPosiciones.posicion_asignadaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istipo_ticket_prioridadNull() {
+                return this.IsNull(this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settipo_ticket_prioridadNull() {
+                this[this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isdescripcion_tipo_ticketNull() {
+                return this.IsNull(this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setdescripcion_tipo_ticketNull() {
+                this[this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Istiene_cambiosNull() {
+                return this.IsNull(this.tabledtAsignacionPosiciones.tiene_cambiosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Settiene_cambiosNull() {
+                this[this.tabledtAsignacionPosiciones.tiene_cambiosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isid_tipo_ticketNull() {
+                return this.IsNull(this.tabledtAsignacionPosiciones.id_tipo_ticketColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setid_tipo_ticketNull() {
+                this[this.tabledtAsignacionPosiciones.id_tipo_ticketColumn] = global::System.Convert.DBNull;
             }
         }
         

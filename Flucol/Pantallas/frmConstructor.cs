@@ -319,9 +319,11 @@ namespace Flucol.Pantallas
             switch ((NIVELES_ACCESO) pUsuario.Pro_ID_NivelAcceso)
             {
                 case NIVELES_ACCESO.GERENCIA:
+                    //El frmSupervisor lo tengo aqui provisionalmente.
                     frmSupervisor = new frmSupervisor(pgConexion,
                                                       Pro_ID_AgenciaServicio,
-                                                      Pro_ID_ClienteServicio);
+                                                      Pro_ID_ClienteServicio,
+                                                      pUsuario.Pro_Usuario);
                     frmSupervisor.MdiParent = this;
                     frmSupervisor.StartPosition = FormStartPosition.CenterScreen;
                     frmSupervisor.Show();
@@ -434,12 +436,8 @@ namespace Flucol.Pantallas
                     frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
                     frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Start();
 
-                }
-
-              
-                
+                }          
             }
-
         }
 
         #endregion

@@ -83,6 +83,16 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_prioridad_32 {
+            get {
+                object obj = ResourceManager.GetObject("icon_prioridad_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_rellamar_negro_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_rellamar_negro_64", resourceCulture);

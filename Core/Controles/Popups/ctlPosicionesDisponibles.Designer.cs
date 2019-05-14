@@ -84,6 +84,7 @@
             this.coldescripcion_operacion_servicio});
             this.gvPosicionesDisponibles.GridControl = this.gcPosicionesDisponibles;
             this.gvPosicionesDisponibles.Name = "gvPosicionesDisponibles";
+            this.gvPosicionesDisponibles.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gvPosicionesDisponibles.OptionsView.ShowGroupPanel = false;
             this.gvPosicionesDisponibles.OptionsView.ShowIndicator = false;
             // 
@@ -109,7 +110,7 @@
             // 
             // colseleccionar_posicion
             // 
-            this.colseleccionar_posicion.Caption = " ";
+            this.colseleccionar_posicion.Caption = " SELECCIONAR";
             this.colseleccionar_posicion.ColumnEdit = this.chkSeleccionar;
             this.colseleccionar_posicion.FieldName = "seleccionar_posicion";
             this.colseleccionar_posicion.Name = "colseleccionar_posicion";
@@ -127,7 +128,7 @@
             // 
             // coldescripcion_operacion_servicio
             // 
-            this.coldescripcion_operacion_servicio.Caption = "OPERACION ASIGNADA";
+            this.coldescripcion_operacion_servicio.Caption = "DESCRIPCION";
             this.coldescripcion_operacion_servicio.FieldName = "descripcion_operacion_servicio";
             this.coldescripcion_operacion_servicio.Name = "coldescripcion_operacion_servicio";
             this.coldescripcion_operacion_servicio.Visible = true;
@@ -195,12 +196,12 @@
         private System.Windows.Forms.Panel pnlSuperior;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DataSets.dsCore dsCore1;
         private DevExpress.XtraGrid.Columns.GridColumn colid_registro;
         private DevExpress.XtraGrid.Columns.GridColumn colposicion;
         private DevExpress.XtraGrid.Columns.GridColumn colid_operacion_servicio;
         private DevExpress.XtraGrid.Columns.GridColumn colseleccionar_posicion;
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion_operacion_servicio;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkSeleccionar;
+        public DataSets.dsCore dsCore1;
     }
 }
