@@ -79,11 +79,40 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.Designer.cs">
+      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ctlAdministracionPosiciones.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controles\ctlAdministracionPosiciones.Designer.cs">
       <DependentUpon>ctlAdministracionPosiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlItemEmpleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlItemEmpleado.Designer.cs">
+      <DependentUpon>ctlItemEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlItemPosicion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlItemPosicion.Designer.cs">
+      <DependentUpon>ctlItemPosicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlListaTicketsEspera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlListaTicketsEspera.Designer.cs">
+      <DependentUpon>ctlListaTicketsEspera.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\ctlLoginOperacional.cs">
       <SubType>UserControl</SubType>
@@ -97,6 +126,23 @@
     <Compile Include="Controles\CtlOperacional.Designer.cs">
       <DependentUpon>CtlOperacional.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ctlOperacionalReducido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlOperacionalReducido.Designer.cs">
+      <DependentUpon>ctlOperacionalReducido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlOperacionesSupervisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlOperacionesSupervisor.Designer.cs">
+      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsTickets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,9 +155,27 @@
     <Compile Include="Pantallas\frmOperaciones.Designer.cs">
       <DependentUpon>frmOperaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmSupervisor.Designer.cs">
+      <DependentUpon>frmSupervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\Configuraciones\ctlAsignacionPosiciones.resx">
+      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlAdministracionPosiciones.resx">
       <DependentUpon>ctlAdministracionPosiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlItemEmpleado.resx">
+      <DependentUpon>ctlItemEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlItemPosicion.resx">
+      <DependentUpon>ctlItemPosicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlListaTicketsEspera.resx">
+      <DependentUpon>ctlListaTicketsEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlLoginOperacional.resx">
       <DependentUpon>ctlLoginOperacional.cs</DependentUpon>
@@ -119,11 +183,20 @@
     <EmbeddedResource Include="Controles\CtlOperacional.resx">
       <DependentUpon>CtlOperacional.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlOperacionalReducido.resx">
+      <DependentUpon>ctlOperacionalReducido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlOperacionesSupervisor.resx">
+      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmOperaciones.resx">
       <DependentUpon>frmOperaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmSupervisor.resx">
+      <DependentUpon>frmSupervisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -136,6 +209,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsc">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </None>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfiguraciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xss">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsTickets.xsc">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsTickets.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTickets.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsTickets.xss">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,7 +245,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataSets\" />
+    <None Include="Resources\icon_rellamar_negro_64.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconAlmuerzo.png" />
@@ -199,6 +294,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconNoRespondioLlamado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_rellamar_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_prioridad_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -99,7 +99,6 @@
     <EmbeddedResource Include="Pantallas\frmRecepcion.resx">
       <DependentUpon>frmRecepcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -139,12 +138,6 @@
     <None Include="Resources\iconServicioAlCliente.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconTerceraEdad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconTransacciones.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconIrAtras.png" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +145,23 @@
       <Project>{53D69824-0A2B-41D6-AA83-53F5CF32CF57}</Project>
       <Name>Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_Negocios_Negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_Negocios_Verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\iconAncianos.png" />
+    <Content Include="Resources\iconAncianosVerde.png" />
+    <Content Include="Resources\iconDiscapacidadVerde.png" />
+    <Content Include="Resources\iconEmbarazadaVerde.png" />
+    <Content Include="Resources\iconEsperaGeneralVerde.png" />
+    <Content Include="Resources\iconIrAtrasVerde.png" />
+    <Content Include="Resources\iconServicioAlClienteVerde.png" />
+    <Content Include="Resources\iconTransaccionesCaja.png" />
+    <Content Include="Resources\IconTransaccionesCajaVerde.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

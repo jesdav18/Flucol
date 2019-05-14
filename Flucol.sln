@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flucol", "Flucol\Flucol.csproj", "{E450A1E9-61EA-4CD7-AD9B-281FA44DCB52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administracion", "Administracion\Administracion.csproj", "{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,14 @@ Global
 		{E450A1E9-61EA-4CD7-AD9B-281FA44DCB52}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E450A1E9-61EA-4CD7-AD9B-281FA44DCB52}.Release|x86.ActiveCfg = Release|x86
 		{E450A1E9-61EA-4CD7-AD9B-281FA44DCB52}.Release|x86.Build.0 = Release|x86
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
