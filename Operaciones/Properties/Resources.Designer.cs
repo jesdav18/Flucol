@@ -73,6 +73,16 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_check_32 {
+            get {
+                object obj = ResourceManager.GetObject("icon_check_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_llamar_siguiente_cliente {
             get {
                 object obj = ResourceManager.GetObject("icon_llamar_siguiente_cliente", resourceCulture);
@@ -133,6 +143,16 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconBusqueda_32 {
+            get {
+                object obj = ResourceManager.GetObject("iconBusqueda_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconDetenerTicket {
             get {
                 object obj = ResourceManager.GetObject("iconDetenerTicket", resourceCulture);
@@ -166,6 +186,16 @@ namespace Operaciones.Properties {
         internal static System.Drawing.Bitmap iconIniciarTicketVerde {
             get {
                 object obj = ResourceManager.GetObject("iconIniciarTicketVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconIrAtras {
+            get {
+                object obj = ResourceManager.GetObject("iconIrAtras", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,16 +256,6 @@ namespace Operaciones.Properties {
         internal static System.Drawing.Bitmap iconPosicion {
             get {
                 object obj = ResourceManager.GetObject("iconPosicion", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconPosicion1 {
-            get {
-                object obj = ResourceManager.GetObject("iconPosicion1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

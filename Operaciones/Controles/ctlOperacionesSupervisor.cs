@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using System.Configuration;
@@ -51,19 +45,28 @@ namespace Operaciones.Controles
 
         #endregion
 
+        #region EVENTOS CONTROLES
+    
         private void cmdAsignaciones_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             NavigationAsignacionesTraslados.SelectedPage = pageAsignaciones;
             ctlAsignacionPosiciones1.ConstruirControl(Pro_Conexion,
                                                       Pro_ID_AgenciaServicio,
                                                       Pro_ID_ClienteServicio,
                                                       Pro_Usuario);
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void cmdTraslados_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             NavigationAsignacionesTraslados.SelectedPage = pageTraslados;
-
+            ctlTrasladosEmpleadosServicio1.ConstruirControl(Pro_Conexion,
+                                                            Pro_ID_AgenciaServicio,
+                                                            Pro_ID_ClienteServicio,
+                                                            Pro_Usuario);
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void cmdAsignarPosiciones_Click(object sender, EventArgs e)
@@ -71,6 +74,7 @@ namespace Operaciones.Controles
             NavigationPrincipal.SelectedPage = pageAsignacionesTraslados;
         }
 
-        
+        #endregion
+
     }
 }
