@@ -84,38 +84,10 @@ namespace Administracion.Controles
                 bgCargaDashboards.RunWorkerAsync();
             }*/
 
-            CargarDatos();
-
-            
+            CargarDatos();        
         }
 
         #endregion
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Socket obj_socket = new Socket(AddressFamily.InterNetwork,
-                                            SocketType.Unknown,
-                                            ProtocolType.Tcp);
-
-            IPEndPoint obj_direccion = new IPEndPoint(IPAddress.Parse("127.0.0.1"),
-                                                      1234);
-
-            obj_socket.Connect(obj_direccion);
-            obj_socket.Listen(5);
-
-            listBox1.Items.Add("Conectado.....");
-
-
-
-            string v_info = "Hola Jesuar";
-            byte[] v_cadena_bytes = Encoding.Default.GetBytes(v_info);
-
-            obj_socket.Send(v_cadena_bytes, 0, v_info.Length, 0);
-            obj_socket.Close();
-
-            
-
-           
-        }
+  
     }
 }

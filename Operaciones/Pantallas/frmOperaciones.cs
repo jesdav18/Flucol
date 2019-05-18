@@ -17,7 +17,8 @@ namespace Operaciones.Pantallas
                               string pUsuario,
                               string pDescripcionNivelAcceso,
                               string pCargo,
-                              string pCodigoEmpleado)
+                              string pCodigoEmpleado,
+                              string pNombreAgencia)
         {
             InitializeComponent();
             ctlOperacional1.ConstruirControl(pConexion, 
@@ -28,7 +29,8 @@ namespace Operaciones.Pantallas
                                              pCargo,
                                              pNombre_Empleado,
                                              pUsuario,
-                                             pCodigoEmpleado
+                                             pCodigoEmpleado,
+                                             pNombreAgencia
                                              );
             
            

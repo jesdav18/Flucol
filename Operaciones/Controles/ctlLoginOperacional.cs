@@ -55,7 +55,8 @@ namespace Operaciones.Controles
         {
             if (Pro_Conexion.State != ConnectionState.Open)
             {
-                Pro_Conexion.Open();
+               Pro_Conexion.Open();
+
             }
 
             try

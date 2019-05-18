@@ -55,6 +55,7 @@
             this.pagePrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlListaTickets = new System.Windows.Forms.Panel();
+            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.PagePopups = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.popupResumen = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
@@ -65,8 +66,8 @@
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.PageOperacionalReducido = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.ctlOperacionalReducido1 = new Operaciones.Controles.ctlOperacionalReducido();
+            this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             this.pnlResumen.SuspendLayout();
@@ -98,6 +99,7 @@
             this.pnlEncabezado.Appearance.BackColor = System.Drawing.Color.White;
             this.pnlEncabezado.Appearance.Options.UseBackColor = true;
             this.pnlEncabezado.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlEncabezado.Controls.Add(this.lblAgencia);
             this.pnlEncabezado.Controls.Add(this.pnlResumen);
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
@@ -442,6 +444,20 @@
             this.pnlListaTickets.Size = new System.Drawing.Size(139, 266);
             this.pnlListaTickets.TabIndex = 3;
             // 
+            // ctlListaTicketsEspera1
+            // 
+            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
+            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
+            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
+            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlListaTicketsEspera1.Pro_Conexion = null;
+            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_Usuario = null;
+            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(139, 266);
+            this.ctlListaTicketsEspera1.TabIndex = 0;
+            // 
             // PagePopups
             // 
             this.PagePopups.Caption = "PagePopups";
@@ -581,20 +597,6 @@
             this.PageOperacionalReducido.Name = "PageOperacionalReducido";
             this.PageOperacionalReducido.Size = new System.Drawing.Size(1106, 441);
             // 
-            // ctlListaTicketsEspera1
-            // 
-            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
-            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
-            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
-            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlListaTicketsEspera1.Pro_Conexion = null;
-            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_Usuario = null;
-            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(139, 266);
-            this.ctlListaTicketsEspera1.TabIndex = 0;
-            // 
             // ctlOperacionalReducido1
             // 
             this.ctlOperacionalReducido1.BackColor = System.Drawing.Color.White;
@@ -604,6 +606,23 @@
             this.ctlOperacionalReducido1.Padding = new System.Windows.Forms.Padding(3);
             this.ctlOperacionalReducido1.Size = new System.Drawing.Size(1106, 441);
             this.ctlOperacionalReducido1.TabIndex = 0;
+            // 
+            // lblAgencia
+            // 
+            this.lblAgencia.Appearance.BackColor = System.Drawing.Color.White;
+            this.lblAgencia.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgencia.Appearance.Options.UseBackColor = true;
+            this.lblAgencia.Appearance.Options.UseFont = true;
+            this.lblAgencia.Appearance.Options.UseTextOptions = true;
+            this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lblAgencia.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAgencia.Location = new System.Drawing.Point(0, 0);
+            this.lblAgencia.Name = "lblAgencia";
+            this.lblAgencia.Size = new System.Drawing.Size(894, 37);
+            this.lblAgencia.TabIndex = 19;
+            this.lblAgencia.Text = "RELLAMAR";
             // 
             // CtlOperacional
             // 
@@ -681,5 +700,6 @@
         public DevExpress.XtraBars.Navigation.NavigationPage PageOperacionalReducido;
         public DevExpress.XtraBars.Navigation.NavigationPage pagePrincipal;
         public ctlListaTicketsEspera ctlListaTicketsEspera1;
+        private DevExpress.XtraEditors.LabelControl lblAgencia;
     }
 }

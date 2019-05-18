@@ -59,6 +59,7 @@
             this.popupPosicionesDisponibles = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
             this.ctlPosicionesDisponibles1 = new Core.Controles.Popups.ctlPosicionesDisponibles();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Operaciones.Pantallas.frmEspera), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.gcEmpleadosDisponiblesAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosDisponiblesAsignacion)).BeginInit();
@@ -113,6 +114,9 @@
             this.coldescripcion_tipo_ticket});
             this.gvEmpleadosDisponiblesAsignacion.GridControl = this.gcEmpleadosDisponiblesAsignacion;
             this.gvEmpleadosDisponiblesAsignacion.Name = "gvEmpleadosDisponiblesAsignacion";
+            this.gvEmpleadosDisponiblesAsignacion.OptionsCustomization.AllowGroup = false;
+            this.gvEmpleadosDisponiblesAsignacion.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.False;
+            this.gvEmpleadosDisponiblesAsignacion.OptionsCustomization.AllowQuickHideColumns = false;
             this.gvEmpleadosDisponiblesAsignacion.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gvEmpleadosDisponiblesAsignacion.OptionsView.ShowGroupPanel = false;
             this.gvEmpleadosDisponiblesAsignacion.OptionsView.ShowIndicator = false;
@@ -121,12 +125,18 @@
             // 
             this.colusuario.FieldName = "usuario";
             this.colusuario.Name = "colusuario";
+            this.colusuario.OptionsColumn.AllowEdit = false;
+            this.colusuario.OptionsColumn.AllowFocus = false;
+            this.colusuario.OptionsColumn.ReadOnly = true;
             // 
             // colcodigo_empleado
             // 
             this.colcodigo_empleado.Caption = "CÓDIGO";
             this.colcodigo_empleado.FieldName = "codigo_empleado";
             this.colcodigo_empleado.Name = "colcodigo_empleado";
+            this.colcodigo_empleado.OptionsColumn.AllowEdit = false;
+            this.colcodigo_empleado.OptionsColumn.AllowFocus = false;
+            this.colcodigo_empleado.OptionsColumn.ReadOnly = true;
             this.colcodigo_empleado.Visible = true;
             this.colcodigo_empleado.VisibleIndex = 0;
             this.colcodigo_empleado.Width = 129;
@@ -136,6 +146,9 @@
             this.colnombre_empleado.Caption = "NOMBRE EMPLEADO";
             this.colnombre_empleado.FieldName = "nombre_empleado";
             this.colnombre_empleado.Name = "colnombre_empleado";
+            this.colnombre_empleado.OptionsColumn.AllowEdit = false;
+            this.colnombre_empleado.OptionsColumn.AllowFocus = false;
+            this.colnombre_empleado.OptionsColumn.ReadOnly = true;
             this.colnombre_empleado.Visible = true;
             this.colnombre_empleado.VisibleIndex = 1;
             this.colnombre_empleado.Width = 253;
@@ -149,6 +162,9 @@
             this.colposicion_asignada.Caption = "POSICION ASIGNADA";
             this.colposicion_asignada.FieldName = "posicion_asignada";
             this.colposicion_asignada.Name = "colposicion_asignada";
+            this.colposicion_asignada.OptionsColumn.AllowEdit = false;
+            this.colposicion_asignada.OptionsColumn.AllowFocus = false;
+            this.colposicion_asignada.OptionsColumn.ReadOnly = true;
             this.colposicion_asignada.Visible = true;
             this.colposicion_asignada.VisibleIndex = 3;
             this.colposicion_asignada.Width = 102;
@@ -158,6 +174,9 @@
             this.colcargo_empleado.Caption = "CARGO";
             this.colcargo_empleado.FieldName = "cargo_empleado";
             this.colcargo_empleado.Name = "colcargo_empleado";
+            this.colcargo_empleado.OptionsColumn.AllowEdit = false;
+            this.colcargo_empleado.OptionsColumn.AllowFocus = false;
+            this.colcargo_empleado.OptionsColumn.ReadOnly = true;
             this.colcargo_empleado.Visible = true;
             this.colcargo_empleado.VisibleIndex = 2;
             this.colcargo_empleado.Width = 201;
@@ -211,6 +230,9 @@
             this.coldescripcion_tipo_ticket.Caption = "PRIORIDAD TICKETS";
             this.coldescripcion_tipo_ticket.FieldName = "descripcion_tipo_ticket";
             this.coldescripcion_tipo_ticket.Name = "coldescripcion_tipo_ticket";
+            this.coldescripcion_tipo_ticket.OptionsColumn.AllowEdit = false;
+            this.coldescripcion_tipo_ticket.OptionsColumn.AllowFocus = false;
+            this.coldescripcion_tipo_ticket.OptionsColumn.ReadOnly = true;
             this.coldescripcion_tipo_ticket.Visible = true;
             this.coldescripcion_tipo_ticket.VisibleIndex = 4;
             this.coldescripcion_tipo_ticket.Width = 157;
@@ -227,12 +249,14 @@
             // 
             // cmdGuardaraCambios
             // 
+            this.cmdGuardaraCambios.Appearance.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdGuardaraCambios.Appearance.Options.UseFont = true;
             this.cmdGuardaraCambios.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmdGuardaraCambios.Location = new System.Drawing.Point(0, 405);
             this.cmdGuardaraCambios.Name = "cmdGuardaraCambios";
             this.cmdGuardaraCambios.Size = new System.Drawing.Size(1057, 63);
             this.cmdGuardaraCambios.TabIndex = 1;
-            this.cmdGuardaraCambios.Text = "GUARDAR CAMBIOS";
+            this.cmdGuardaraCambios.Text = "GUARDAR ASIGNACIONES";
             this.cmdGuardaraCambios.Click += new System.EventHandler(this.cmdGuardaraCambios_Click);
             // 
             // popupTipoTickets
@@ -314,6 +338,10 @@
             this.ctlPosicionesDisponibles1.Size = new System.Drawing.Size(527, 298);
             this.ctlPosicionesDisponibles1.TabIndex = 0;
             // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
+            // 
             // ctlAsignacionPosiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +394,6 @@
         private Core.Controles.Popups.ctlTipoTicketServicio ctlTipoTicketServicio1;
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion_tipo_ticket;
         private DevExpress.XtraEditors.SimpleButton cmdGuardaraCambios;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

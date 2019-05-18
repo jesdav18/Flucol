@@ -74,6 +74,8 @@ namespace Recepcion.Controles
             Pro_ID_Cliente_Servicio = pID_ClienteServicio;
             Pro_NombreAgenciaServicio = pNombreAgenciaServicio;
             Pro_IP_Host = pIP_Host;
+            lblAgencia.Text = pNombreAgenciaServicio;
+            pic_LogoInstitucion.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
         }
 
         private void IrAPaginaTransacciones()

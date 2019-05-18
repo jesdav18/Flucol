@@ -49,8 +49,6 @@
             this.pageInicial = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.bgCargaDashboards = new System.ComponentModel.BackgroundWorker();
             this.ssmDashboardsPrincipal = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Administracion.Pantallas.frmEsperaDashboards), true, true, typeof(System.Windows.Forms.UserControl));
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.pnlOpciones.SuspendLayout();
             this.pnlBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDashboards.Properties)).BeginInit();
@@ -63,7 +61,6 @@
             this.pnlDashboardsMedio.SuspendLayout();
             this.pnlDashboardsSuperior.SuspendLayout();
             this.pnlEncabezadoDashboards.SuspendLayout();
-            this.pageInicial.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlOpciones
@@ -80,7 +77,6 @@
             // pnlBotones
             // 
             this.pnlBotones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBotones.Controls.Add(this.simpleButton1);
             this.pnlBotones.Controls.Add(this.cmdDashboards);
             this.pnlBotones.Controls.Add(this.flowLayoutPanel1);
             this.pnlBotones.Controls.Add(this.panel2);
@@ -288,7 +284,6 @@
             // pageInicial
             // 
             this.pageInicial.Caption = "pageInicial";
-            this.pageInicial.Controls.Add(this.listBox1);
             this.pageInicial.Name = "pageInicial";
             this.pageInicial.Size = new System.Drawing.Size(642, 453);
             // 
@@ -300,23 +295,6 @@
             // ssmDashboardsPrincipal
             // 
             this.ssmDashboardsPrincipal.ClosingDelay = 500;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(27, 59);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(36, 23);
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(59, 49);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(283, 121);
-            this.listBox1.TabIndex = 0;
             // 
             // ctlDashBoardsPrincipal
             // 
@@ -340,7 +318,6 @@
             this.pnlDashboardsMedio.ResumeLayout(false);
             this.pnlDashboardsSuperior.ResumeLayout(false);
             this.pnlEncabezadoDashboards.ResumeLayout(false);
-            this.pageInicial.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -369,7 +346,5 @@
         private DevExpress.XtraBars.Navigation.NavigationPage pageInicial;
         private System.Windows.Forms.Panel pnlBotones;
         private Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio ctlVisitasSegunPrioridadServicio1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }

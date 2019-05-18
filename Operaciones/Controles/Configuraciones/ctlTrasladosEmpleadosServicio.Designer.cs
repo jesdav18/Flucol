@@ -40,7 +40,7 @@
             this.colseleccionar_agencia = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkSeleccionarAgenciaServicio = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.pnlBusqueda = new System.Windows.Forms.Panel();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBusquedaAgencia = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.pnlEncabezado = new System.Windows.Forms.Panel();
             this.lblEncabezado = new DevExpress.XtraEditors.LabelControl();
@@ -55,7 +55,7 @@
             this.chkSeleccionar = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.cmdGuardarTraslado = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBusquedaColaborador = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.lblAgenciaServicio = new DevExpress.XtraEditors.LabelControl();
             this.pnlEncabezadoEmpleados = new System.Windows.Forms.Panel();
@@ -69,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAgenciasServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionarAgenciaServicio)).BeginInit();
             this.pnlBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusquedaAgencia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             this.pageEmpleadosServicio.SuspendLayout();
@@ -77,7 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusquedaColaborador.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.pnlEncabezadoEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIrAtras.Properties)).BeginInit();
@@ -144,6 +144,8 @@
             this.colseleccionar_agencia});
             this.gvAgenciasServicio.GridControl = this.gridControl1;
             this.gvAgenciasServicio.Name = "gvAgenciasServicio";
+            this.gvAgenciasServicio.OptionsCustomization.AllowGroup = false;
+            this.gvAgenciasServicio.OptionsCustomization.AllowQuickHideColumns = false;
             this.gvAgenciasServicio.OptionsView.ShowGroupPanel = false;
             this.gvAgenciasServicio.OptionsView.ShowIndicator = false;
             // 
@@ -162,6 +164,9 @@
             this.colnombre_agencia.Caption = "AGENCIA";
             this.colnombre_agencia.FieldName = "nombre_agencia";
             this.colnombre_agencia.Name = "colnombre_agencia";
+            this.colnombre_agencia.OptionsColumn.AllowEdit = false;
+            this.colnombre_agencia.OptionsColumn.AllowFocus = false;
+            this.colnombre_agencia.OptionsColumn.ReadOnly = true;
             this.colnombre_agencia.Visible = true;
             this.colnombre_agencia.VisibleIndex = 0;
             this.colnombre_agencia.Width = 297;
@@ -171,6 +176,9 @@
             this.coldireccion_agencia.Caption = "DIRECCION";
             this.coldireccion_agencia.FieldName = "direccion_agencia";
             this.coldireccion_agencia.Name = "coldireccion_agencia";
+            this.coldireccion_agencia.OptionsColumn.AllowEdit = false;
+            this.coldireccion_agencia.OptionsColumn.AllowFocus = false;
+            this.coldireccion_agencia.OptionsColumn.ReadOnly = true;
             this.coldireccion_agencia.Visible = true;
             this.coldireccion_agencia.VisibleIndex = 1;
             this.coldireccion_agencia.Width = 337;
@@ -197,7 +205,7 @@
             // 
             // pnlBusqueda
             // 
-            this.pnlBusqueda.Controls.Add(this.textEdit1);
+            this.pnlBusqueda.Controls.Add(this.txtBusquedaAgencia);
             this.pnlBusqueda.Controls.Add(this.pictureEdit1);
             this.pnlBusqueda.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBusqueda.Location = new System.Drawing.Point(0, 45);
@@ -206,14 +214,15 @@
             this.pnlBusqueda.Size = new System.Drawing.Size(747, 41);
             this.pnlBusqueda.TabIndex = 2;
             // 
-            // textEdit1
+            // txtBusquedaAgencia
             // 
-            this.textEdit1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textEdit1.Location = new System.Drawing.Point(52, 1);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AutoHeight = false;
-            this.textEdit1.Size = new System.Drawing.Size(695, 35);
-            this.textEdit1.TabIndex = 0;
+            this.txtBusquedaAgencia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtBusquedaAgencia.Location = new System.Drawing.Point(52, 1);
+            this.txtBusquedaAgencia.Name = "txtBusquedaAgencia";
+            this.txtBusquedaAgencia.Properties.AutoHeight = false;
+            this.txtBusquedaAgencia.Size = new System.Drawing.Size(695, 35);
+            this.txtBusquedaAgencia.TabIndex = 0;
+            this.txtBusquedaAgencia.TextChanged += new System.EventHandler(this.txtBusquedaAgencia_TextChanged);
             // 
             // pictureEdit1
             // 
@@ -289,6 +298,8 @@
             this.colseleccionar_empleado});
             this.gvEmpleadosServicio.GridControl = this.gcEmpleadosServicio;
             this.gvEmpleadosServicio.Name = "gvEmpleadosServicio";
+            this.gvEmpleadosServicio.OptionsCustomization.AllowGroup = false;
+            this.gvEmpleadosServicio.OptionsCustomization.AllowQuickHideColumns = false;
             this.gvEmpleadosServicio.OptionsView.ShowGroupPanel = false;
             this.gvEmpleadosServicio.OptionsView.ShowIndicator = false;
             // 
@@ -311,6 +322,9 @@
             this.colnombre_empleado.Caption = "NOMBRE ";
             this.colnombre_empleado.FieldName = "nombre_empleado";
             this.colnombre_empleado.Name = "colnombre_empleado";
+            this.colnombre_empleado.OptionsColumn.AllowEdit = false;
+            this.colnombre_empleado.OptionsColumn.AllowFocus = false;
+            this.colnombre_empleado.OptionsColumn.ReadOnly = true;
             this.colnombre_empleado.Visible = true;
             this.colnombre_empleado.VisibleIndex = 1;
             this.colnombre_empleado.Width = 315;
@@ -320,6 +334,9 @@
             this.colcargo.Caption = "CARGO";
             this.colcargo.FieldName = "cargo";
             this.colcargo.Name = "colcargo";
+            this.colcargo.OptionsColumn.AllowEdit = false;
+            this.colcargo.OptionsColumn.AllowFocus = false;
+            this.colcargo.OptionsColumn.ReadOnly = true;
             this.colcargo.Visible = true;
             this.colcargo.VisibleIndex = 2;
             this.colcargo.Width = 174;
@@ -348,6 +365,8 @@
             this.cmdGuardarTraslado.Appearance.Options.UseFont = true;
             this.cmdGuardarTraslado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmdGuardarTraslado.Location = new System.Drawing.Point(0, 386);
+            this.cmdGuardarTraslado.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.cmdGuardarTraslado.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdGuardarTraslado.Name = "cmdGuardarTraslado";
             this.cmdGuardarTraslado.Size = new System.Drawing.Size(747, 49);
             this.cmdGuardarTraslado.TabIndex = 5;
@@ -356,7 +375,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textEdit2);
+            this.panel1.Controls.Add(this.txtBusquedaColaborador);
             this.panel1.Controls.Add(this.pictureEdit2);
             this.panel1.Controls.Add(this.lblAgenciaServicio);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -366,14 +385,15 @@
             this.panel1.Size = new System.Drawing.Size(747, 87);
             this.panel1.TabIndex = 3;
             // 
-            // textEdit2
+            // txtBusquedaColaborador
             // 
-            this.textEdit2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textEdit2.Location = new System.Drawing.Point(52, 47);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AutoHeight = false;
-            this.textEdit2.Size = new System.Drawing.Size(695, 35);
-            this.textEdit2.TabIndex = 0;
+            this.txtBusquedaColaborador.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtBusquedaColaborador.Location = new System.Drawing.Point(52, 47);
+            this.txtBusquedaColaborador.Name = "txtBusquedaColaborador";
+            this.txtBusquedaColaborador.Properties.AutoHeight = false;
+            this.txtBusquedaColaborador.Size = new System.Drawing.Size(695, 35);
+            this.txtBusquedaColaborador.TabIndex = 0;
+            this.txtBusquedaColaborador.TextChanged += new System.EventHandler(this.txtBusquedaColaborador_TextChanged);
             // 
             // pictureEdit2
             // 
@@ -457,7 +477,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvAgenciasServicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionarAgenciaServicio)).EndInit();
             this.pnlBusqueda.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusquedaAgencia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.pnlEncabezado.ResumeLayout(false);
             this.pageEmpleadosServicio.ResumeLayout(false);
@@ -465,7 +485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosServicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkSeleccionar)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusquedaColaborador.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.pnlEncabezadoEmpleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmdIrAtras.Properties)).EndInit();
@@ -478,7 +498,7 @@
         private DevExpress.XtraBars.Navigation.NavigationFrame NavigationTraslados;
         private DevExpress.XtraBars.Navigation.NavigationPage pageAgenciasServicio;
         private System.Windows.Forms.Panel pnlBusqueda;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtBusquedaAgencia;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.Panel pnlEncabezado;
         private DevExpress.XtraEditors.LabelControl lblEncabezado;
@@ -498,7 +518,7 @@
         private DevExpress.XtraGrid.GridControl gcEmpleadosServicio;
         private DevExpress.XtraGrid.Views.Grid.GridView gvEmpleadosServicio;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtBusquedaColaborador;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.LabelControl lblAgenciaServicio;
         private DevExpress.XtraGrid.Columns.GridColumn colcodigo_empleado;

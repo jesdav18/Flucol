@@ -85,7 +85,8 @@ namespace Operaciones.Controles
                                      string pCargoEmpleado,
                                      string pNombreEmpleado,
                                      string pUsuarioEmpleado,
-                                     string pCodigoEmpleado
+                                     string pCodigoEmpleado,
+                                     string pNombreAgencia
                                      )
         {
 
@@ -101,6 +102,7 @@ namespace Operaciones.Controles
             Pro_Esta_En_Atencion = false;
             lblNombreUsuario.Text = Pro_NombreEmpleado;
             lblNumeroTicket.Text = "";
+            lblAgencia.Text = pNombreAgencia;
             ctlListaTicketsEspera1.ConstruirControl(Pro_Conexion,
                                                     Pro_ID_AgenciaServicio,
                                                     Pro_ID_ClienteServicio,

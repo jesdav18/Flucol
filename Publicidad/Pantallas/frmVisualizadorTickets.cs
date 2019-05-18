@@ -28,11 +28,15 @@ namespace Publicidad.Pantallas
 
         #region FUNCIONES
 
-        public void ConstruirFormulario(PgSqlConnection pConexion, int pID_Agencia_Servicio, int pID_Cliente_Servicio)
+        public void ConstruirFormulario(PgSqlConnection pConexion, 
+                                        int pID_Agencia_Servicio, 
+                                        int pID_Cliente_Servicio,
+                                        string pNombreAgencia)
         {
             Pro_Conexion = pConexion;
             Pro_ID_Agencia_Servicio = pID_Agencia_Servicio;
             Pro_ID_Cliente_Servicio = pID_Cliente_Servicio;
+            lblAgencia.Text = pNombreAgencia;
 
             picLogoCliente.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
             ctlTicketsPosiciones1.ConstruirControl(Pro_Conexion, Pro_ID_Agencia_Servicio, Pro_ID_Cliente_Servicio);

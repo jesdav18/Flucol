@@ -179,7 +179,10 @@ namespace Flucol.Pantallas
                 frmVisualizadorTickets f_Visualizador = new frmVisualizadorTickets();
                 f_Visualizador.MdiParent = this;
                 f_Visualizador.StartPosition = FormStartPosition.CenterScreen;
-                f_Visualizador.ConstruirFormulario(pgConexion, Pro_ID_AgenciaServicio, Pro_ID_ClienteServicio);
+                f_Visualizador.ConstruirFormulario(pgConexion, 
+                                                   Pro_ID_AgenciaServicio, 
+                                                   Pro_ID_ClienteServicio,
+                                                   Pro_NombreAgenciaServicio);
                 f_Visualizador.Show();
                 Pro_ModuloActivo = MODULOS.PUBLICIDAD;
             }
@@ -330,14 +333,15 @@ namespace Flucol.Pantallas
                     break;
                 case NIVELES_ACCESO.OPERACIONAL:
                     frmOperacional = new frmOperaciones(pgConexion,
-                                                                       Pro_ID_AgenciaServicio,
-                                                                       Pro_ID_ClienteServicio,
-                                                                       pUsuario.Pro_ID_NivelAcceso,
-                                                                       pUsuario.Pro_NombreEmpleado,
-                                                                       pUsuario.Pro_Usuario,
-                                                                       pUsuario.Pro_Descripcion_NivelAcceso,
-                                                                       pUsuario.Pro_CargoEmpleado,
-                                                                       pUsuario.Pro_CodigoEmpleado);
+                                                        Pro_ID_AgenciaServicio,
+                                                        Pro_ID_ClienteServicio,
+                                                        pUsuario.Pro_ID_NivelAcceso,
+                                                        pUsuario.Pro_NombreEmpleado,
+                                                        pUsuario.Pro_Usuario,
+                                                        pUsuario.Pro_Descripcion_NivelAcceso,
+                                                        pUsuario.Pro_CargoEmpleado,
+                                                        pUsuario.Pro_CodigoEmpleado,
+                                                        Pro_NombreAgenciaServicio);
                     frmOperacional.MdiParent = this;
                     frmOperacional.StartPosition = FormStartPosition.CenterScreen;
                     frmOperacional.Show();

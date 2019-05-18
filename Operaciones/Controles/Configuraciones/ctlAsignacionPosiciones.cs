@@ -38,6 +38,9 @@ namespace Operaciones.Controles.Configuraciones
                                      int pID_ClienteServicio,
                                      string pUsuario)
         {
+
+            splashScreenManager1.ShowWaitForm();
+
             Pro_Conexion = pConexion;
             Pro_ID_Agencia_Servicio = pID_AgenciaServicio;
             Pro_ID_Cliente_Servicio = pID_ClienteServicio;
@@ -50,10 +53,14 @@ namespace Operaciones.Controles.Configuraciones
 
             ctlTipoTicketServicio1.ConstruirControl(Pro_Conexion);
 
+            splashScreenManager1.CloseWaitForm();
+
         }
 
         private void CargarDatos()
         {
+           
+
             if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
@@ -79,12 +86,17 @@ namespace Operaciones.Controles.Configuraciones
             {
                 MessageBox.Show("Algo salió mal en la carga de empleados disponibles. " + Exc.Message);
             }
+
+          
+
         }
 
         private void AsignarPosicion(int pPosicion, 
                                      int pID_TipoTicketServicio,
                                      string pUsuario)
         {
+            splashScreenManager1.ShowWaitForm();
+
             if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
@@ -116,6 +128,8 @@ namespace Operaciones.Controles.Configuraciones
             {
                 MessageBox.Show("Algo salió mal en la asignacion de esta posición. " + Exc.Message);
             }
+
+            splashScreenManager1.CloseWaitForm();
         }
 
         #endregion

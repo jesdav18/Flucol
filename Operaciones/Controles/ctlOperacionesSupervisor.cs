@@ -34,6 +34,9 @@ namespace Operaciones.Controles
                                      int pID_ClienteServicio,
                                      string pUsuario)
         {
+
+            splashScreenManager1.ShowWaitForm();
+
             Pro_Conexion = pConexion;
             Pro_ID_AgenciaServicio = pID_AgenciaServicio;
             Pro_ID_ClienteServicio = pID_ClienteServicio;
@@ -41,6 +44,7 @@ namespace Operaciones.Controles
 
             picLogoCliente.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
 
+            splashScreenManager1.CloseWaitForm();
         }
 
         #endregion
@@ -49,13 +53,15 @@ namespace Operaciones.Controles
     
         private void cmdAsignaciones_Click(object sender, EventArgs e)
         {
-            splashScreenManager1.ShowWaitForm();
-            NavigationAsignacionesTraslados.SelectedPage = pageAsignaciones;
+                     
             ctlAsignacionPosiciones1.ConstruirControl(Pro_Conexion,
                                                       Pro_ID_AgenciaServicio,
                                                       Pro_ID_ClienteServicio,
                                                       Pro_Usuario);
-            splashScreenManager1.CloseWaitForm();
+            NavigationAsignacionesTraslados.SelectedPage = pageAsignaciones;
+
+            
+
         }
 
         private void cmdTraslados_Click(object sender, EventArgs e)
@@ -71,10 +77,20 @@ namespace Operaciones.Controles
 
         private void cmdAsignarPosiciones_Click(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             NavigationPrincipal.SelectedPage = pageAsignacionesTraslados;
+            splashScreenManager1.CloseWaitForm();
         }
 
         #endregion
 
+        private void cmdMantenimientoEmpleados_Click(object sender, EventArgs e)
+        {
+            ctlMantenimientoUsuarios1.ConstruirControl(Pro_Conexion,
+                                                       Pro_ID_AgenciaServicio,
+                                                       Pro_ID_ClienteServicio,
+                                                       Pro_Usuario);
+            NavigationPrincipal.SelectedPage = PageMantenimientoEmpleados;
+        }
     }
 }

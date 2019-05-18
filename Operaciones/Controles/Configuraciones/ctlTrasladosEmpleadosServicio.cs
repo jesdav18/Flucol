@@ -66,6 +66,7 @@ namespace Operaciones.Controles.Configuraciones
             }
             catch (Exception Exc)
             {
+               
                 MessageBox.Show("Algo salió mal en la carga de agencia servicio. " + Exc.Message);
             }
 
@@ -122,6 +123,8 @@ namespace Operaciones.Controles.Configuraciones
 
                 sentencia = null;
                 pgComando.Dispose();
+
+                MessageBox.Show("El traslado se completó de manera correcta.");
             }
             catch (Exception Exc)
             {
@@ -170,6 +173,16 @@ namespace Operaciones.Controles.Configuraciones
                 Pro_CodigoEmpleadoSelecciondo = v_fila.codigo_empleado;
             }
             
+        }
+
+        private void txtBusquedaAgencia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBusquedaColaborador_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
