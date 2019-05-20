@@ -53,7 +53,7 @@
             this.lblTituloDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTituloDashboard.Location = new System.Drawing.Point(5, 5);
             this.lblTituloDashboard.Name = "lblTituloDashboard";
-            this.lblTituloDashboard.Size = new System.Drawing.Size(358, 34);
+            this.lblTituloDashboard.Size = new System.Drawing.Size(373, 34);
             this.lblTituloDashboard.TabIndex = 1;
             this.lblTituloDashboard.Text = "VISITAS SEGÚN PRIORIDAD DE SERVICIO";
             // 
@@ -63,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 4);
+            this.panel1.Size = new System.Drawing.Size(373, 4);
             this.panel1.TabIndex = 6;
             // 
             // dsDashboards1
@@ -96,7 +96,7 @@
             series1.ValueDataMembersSerializable = "dtVisitasSegunPrioridadServicio.conteo_visitas";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(358, 100);
+            this.chartControl1.Size = new System.Drawing.Size(373, 100);
             this.chartControl1.TabIndex = 7;
             // 
             // ctlVisitasSegunPrioridadServicio
@@ -108,11 +108,11 @@
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloDashboard);
-            this.MaximumSize = new System.Drawing.Size(370, 150);
-            this.MinimumSize = new System.Drawing.Size(370, 150);
+            this.MaximumSize = new System.Drawing.Size(385, 150);
+            this.MinimumSize = new System.Drawing.Size(385, 150);
             this.Name = "ctlVisitasSegunPrioridadServicio";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(368, 148);
+            this.Size = new System.Drawing.Size(383, 148);
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

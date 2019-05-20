@@ -28,6 +28,22 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="dtTraficoClientes" msprop:Generator_TableClassName="dtTraficoClientesDataTable" msprop:Generator_TableVarName="tabledtTraficoClientes" msprop:Generator_RowChangedName="dtTraficoClientesRowChanged" msprop:Generator_TablePropName="dtTraficoClientes" msprop:Generator_RowDeletingName="dtTraficoClientesRowDeleting" msprop:Generator_RowChangingName="dtTraficoClientesRowChanging" msprop:Generator_RowEvHandlerName="dtTraficoClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTraficoClientesRowDeleted" msprop:Generator_RowClassName="dtTraficoClientesRow" msprop:Generator_UserTableName="dtTraficoClientes" msprop:Generator_RowEvArgName="dtTraficoClientesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conteo_tickets" msprop:Generator_ColumnVarNameInTable="columnconteo_tickets" msprop:Generator_ColumnPropNameInRow="conteo_tickets" msprop:Generator_ColumnPropNameInTable="conteo_ticketsColumn" msprop:Generator_UserColumnName="conteo_tickets" type="xs:int" minOccurs="0" />
+              <xs:element name="hora" msprop:Generator_ColumnVarNameInTable="columnhora" msprop:Generator_ColumnPropNameInRow="hora" msprop:Generator_ColumnPropNameInTable="horaColumn" msprop:Generator_UserColumnName="hora" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtVisitasSegunCanalServicio" msprop:Generator_TableClassName="dtVisitasSegunCanalServicioDataTable" msprop:Generator_TableVarName="tabledtVisitasSegunCanalServicio" msprop:Generator_TablePropName="dtVisitasSegunCanalServicio" msprop:Generator_RowDeletingName="dtVisitasSegunCanalServicioRowDeleting" msprop:Generator_RowChangingName="dtVisitasSegunCanalServicioRowChanging" msprop:Generator_RowEvHandlerName="dtVisitasSegunCanalServicioRowChangeEventHandler" msprop:Generator_RowDeletedName="dtVisitasSegunCanalServicioRowDeleted" msprop:Generator_UserTableName="dtVisitasSegunCanalServicio" msprop:Generator_RowChangedName="dtVisitasSegunCanalServicioRowChanged" msprop:Generator_RowEvArgName="dtVisitasSegunCanalServicioRowChangeEvent" msprop:Generator_RowClassName="dtVisitasSegunCanalServicioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="conteo_visitas" msprop:Generator_ColumnVarNameInTable="columnconteo_visitas" msprop:Generator_ColumnPropNameInRow="conteo_visitas" msprop:Generator_ColumnPropNameInTable="conteo_visitasColumn" msprop:Generator_UserColumnName="conteo_visitas" type="xs:int" minOccurs="0" />
+              <xs:element name="canal_servicio" msprop:Generator_ColumnVarNameInTable="columncanal_servicio" msprop:Generator_ColumnPropNameInRow="canal_servicio" msprop:Generator_ColumnPropNameInTable="canal_servicioColumn" msprop:Generator_UserColumnName="canal_servicio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

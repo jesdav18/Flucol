@@ -4,12 +4,11 @@ using Devart.Data.PostgreSql;
 
 namespace Core.Controles.Dashboards
 {
-    public partial class ctlPromedioAtencion : UserControl
+    public partial class ctlTraficoClientes : UserControl
     {
-
         #region INICIALIZADOR
 
-        public ctlPromedioAtencion()
+        public ctlTraficoClientes()
         {
             InitializeComponent();
         }
@@ -17,7 +16,6 @@ namespace Core.Controles.Dashboards
         #endregion
 
         #region PROPIEDADES
-
 
         public PgSqlConnection Pro_Conexion { get; set; }
         public int Pro_ID_ClienteServicio { get; set; }
@@ -45,24 +43,22 @@ namespace Core.Controles.Dashboards
             v_conexion_temporal.Password = Pro_Conexion.Password;
             v_conexion_temporal.Open();
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_promedio_atencion(:p_mes_evaluar,
-                                                                                                 :p_id_cliente_servicio,
-                                                                                                 :p_id_agencia_servicio);";
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_trafico_clientes(:p_mes_a_evaluar,
+                                                                                                :p_id_cliente_servicio,
+                                                                                                :p_id_agencia_servicio)";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, v_conexion_temporal);
-            pgComando.Parameters.Add("p_mes_evaluar", PgSqlType.Int).Value = v_mes_a_evaluar;
+            pgComando.Parameters.Add("p_mes_a_evaluar", PgSqlType.Int).Value = v_mes_a_evaluar;
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
             pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
 
             try
             {
-                PgSqlDataReader pgDr = pgComando.ExecuteReader();
-                if (pgDr.Read())
-                {
-                    lblPromedioAtencion.Text = pgDr.GetString("promedio_atencion");                   
-                }
+                dsDashboards1.dtTraficoClientes.Clear();
+                new PgSqlDataAdapter(pgComando).Fill(dsDashboards1.dtTraficoClientes);
 
-                pgDr.Close();
-                pgDr = null;
+                chrTraficoClientes.Show();
+                chrTraficoClientes.RefreshData();
+
                 sentencia = null;
                 pgComando.Dispose();
                 v_conexion_temporal.Close();
@@ -71,8 +67,9 @@ namespace Core.Controles.Dashboards
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salió mal en el momento de cargar Dashboard \"PROMEDIO DE ATENCION\"." + Exc.Message);
+                MessageBox.Show("Algo salió mal en el momento de cargar el dashboard \"TRAFICO DE CLIENTES\". " + Exc.Message);
             }
+
         }
 
         #endregion

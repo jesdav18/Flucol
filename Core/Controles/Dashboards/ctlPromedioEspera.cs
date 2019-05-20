@@ -4,12 +4,11 @@ using Devart.Data.PostgreSql;
 
 namespace Core.Controles.Dashboards
 {
-    public partial class ctlPromedioAtencion : UserControl
+    public partial class ctlPromedioEspera : UserControl
     {
-
         #region INICIALIZADOR
 
-        public ctlPromedioAtencion()
+        public ctlPromedioEspera()
         {
             InitializeComponent();
         }
@@ -45,9 +44,9 @@ namespace Core.Controles.Dashboards
             v_conexion_temporal.Password = Pro_Conexion.Password;
             v_conexion_temporal.Open();
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_promedio_atencion(:p_mes_evaluar,
-                                                                                                 :p_id_cliente_servicio,
-                                                                                                 :p_id_agencia_servicio);";
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_promedio_espera(:p_mes_evaluar,
+                                                                                               :p_id_cliente_servicio,
+                                                                                               :p_id_agencia_servicio);";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, v_conexion_temporal);
             pgComando.Parameters.Add("p_mes_evaluar", PgSqlType.Int).Value = v_mes_a_evaluar;
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
@@ -58,7 +57,7 @@ namespace Core.Controles.Dashboards
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
                 {
-                    lblPromedioAtencion.Text = pgDr.GetString("promedio_atencion");                   
+                    lblPromedioEspera.Text = pgDr.GetString("promedio_espera");
                 }
 
                 pgDr.Close();
@@ -71,7 +70,7 @@ namespace Core.Controles.Dashboards
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salió mal en el momento de cargar Dashboard \"PROMEDIO DE ATENCION\"." + Exc.Message);
+                MessageBox.Show("Algo salió mal en el momento de cargar Dashboard \"PROMEDIO DE ESPERA\"." + Exc.Message);
             }
         }
 

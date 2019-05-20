@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using System.Configuration;
-using System.Net.Sockets;
-using System.Net;
+
 
 namespace Administracion.Controles
 {
@@ -43,9 +36,7 @@ namespace Administracion.Controles
 
             Pro_Conexion = pConexion;
             Pro_ID_Cliente_Servicio = pID_ClienteServicio;
-            Pro_ID_Agencia_Servicio = pID_AgenciaServicio;
-
-            
+            Pro_ID_Agencia_Servicio = pID_AgenciaServicio;         
         }
 
         private void CargarDatos()
@@ -53,37 +44,43 @@ namespace Administracion.Controles
             ssmDashboardsPrincipal.ShowWaitForm();
 
             ctlEmpleadoConMasTicketsAtendidos1.ConstruirControl(Pro_Conexion,
-                                                                4,
+                                                                5,
                                                                 Pro_ID_Agencia_Servicio,
                                                                 Pro_ID_Cliente_Servicio);
 
             ctlTicketsAtendidos_TicketsNoAtendidos1.ConstruirControl(Pro_Conexion,
                                                                      Pro_ID_Cliente_Servicio,
                                                                      Pro_ID_Agencia_Servicio,
-                                                                     4);
+                                                                     5);
             ctlVisitasSegunPrioridadServicio1.ConstruirControl(Pro_Conexion,
                                                                Pro_ID_Cliente_Servicio,
                                                                Pro_ID_Agencia_Servicio,
-                                                               4);
+                                                               5);
+            ctlPromedioAtencion1.ConstruirControl(Pro_Conexion,
+                                                  5,
+                                                  Pro_ID_Agencia_Servicio,
+                                                  Pro_ID_Cliente_Servicio);
+            ctlTraficoClientes1.ConstruirControl(Pro_Conexion,
+                                                 5,
+                                                 Pro_ID_Agencia_Servicio,
+                                                 Pro_ID_Cliente_Servicio);
+
+            ctlPromedioEspera1.ConstruirControl(Pro_Conexion,
+                                                5,
+                                                Pro_ID_Agencia_Servicio,
+                                                Pro_ID_Cliente_Servicio);
+
+            ctlVisitasSegunCanalDeServicio1.ConstruirControl(Pro_Conexion,
+                                                            Pro_ID_Cliente_Servicio,
+                                                            Pro_ID_Agencia_Servicio,
+                                                            5);
             
             navegacionDasboards.SelectedPage = pageDashBoardsPrincipal;
             ssmDashboardsPrincipal.CloseWaitForm();
         }
 
-        private void bgCargaDashboards_DoWork(object sender, DoWorkEventArgs e)
-        {
-            
-
-        }
-
         private void cmdDashboards_Click(object sender, EventArgs e)
         {
-
-            /*if (!bgCargaDashboards.IsBusy)
-            {
-                bgCargaDashboards.RunWorkerAsync();
-            }*/
-
             CargarDatos();        
         }
 

@@ -75,7 +75,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(5, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 4);
+            this.panel1.Size = new System.Drawing.Size(373, 4);
             this.panel1.TabIndex = 6;
             // 
             // chrt_TicketsAtendidos_NoAtendidos
@@ -95,7 +95,7 @@
             series1.View = pieSeriesView1;
             this.chrt_TicketsAtendidos_NoAtendidos.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chrt_TicketsAtendidos_NoAtendidos.Size = new System.Drawing.Size(358, 150);
+            this.chrt_TicketsAtendidos_NoAtendidos.Size = new System.Drawing.Size(373, 100);
             this.chrt_TicketsAtendidos_NoAtendidos.TabIndex = 7;
             // 
             // ctlTicketsAtendidos_TicketsNoAtendidos
@@ -107,11 +107,11 @@
             this.Controls.Add(this.chrt_TicketsAtendidos_NoAtendidos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloDashboard);
-            this.MaximumSize = new System.Drawing.Size(370, 150);
-            this.MinimumSize = new System.Drawing.Size(370, 150);
+            this.MaximumSize = new System.Drawing.Size(385, 150);
+            this.MinimumSize = new System.Drawing.Size(385, 150);
             this.Name = "ctlTicketsAtendidos_TicketsNoAtendidos";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(368, 198);
+            this.Size = new System.Drawing.Size(383, 148);
             ((System.ComponentModel.ISupportInitialize)(this.dtTicketsAtendidosNoAtendidosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
