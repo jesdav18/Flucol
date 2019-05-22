@@ -16,6 +16,7 @@ namespace Operaciones.Controles
         public CtlOperacional()
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
             ctlOperacionalReducido1.On_CerrarTicket += ctlOperacionalReducido1_CerrarTicket;
             ctlOperacionalReducido1.On_IniciarTicket += ctlOperacionalReducido1_IniciarTicket;
             ctlOperacionalReducido1.On_LlamarCliente += ctlOperacionalReducido1_LlamarCliente;
@@ -113,7 +114,7 @@ namespace Operaciones.Controles
         
         private void CargarDatosTicketPosicion()
         {
-            
+            ValidarConexion();
 
             if (Pro_Conexion.State != ConnectionState.Open)
             {
@@ -121,10 +122,10 @@ namespace Operaciones.Controles
             }
 
             string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_posicion_asignada (
-                                                                                                    :p_usuario, 
-                                                                                                    :p_agencia,
-                                                                                                    :p_cliente
-                                                                                                  );";
+                                                                                                :p_usuario, 
+                                                                                                :p_agencia,
+                                                                                                :p_cliente
+                                                                                                );";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_Usuario;
             pgComando.Parameters.Add("p_agencia", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
@@ -137,7 +138,8 @@ namespace Operaciones.Controles
 
                 if (pgDr.Read())
                 {
-                    lblPosicion.Text = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " + pgDr.GetString("posicion");                  
+                    lblPosicion.Text = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " + 
+                                       pgDr.GetString("posicion");                  
                 }
 
                 pgDr.Close();
@@ -148,20 +150,36 @@ namespace Operaciones.Controles
             }
             catch (Exception Exc)
             {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "CargarDatosTicketPosicion()");
+                v_depurador = null;
                 MessageBox.Show(Exc.Message, "FLUCOL");
             }
         }
-       
+
         private void ReinicioImagenesIcono()
         {
-           
-            cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicket;
-            cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
-            cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
-            cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
-            cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64; ;
+            try
+            {
+                cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicket;
+                cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
+                cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
+                cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
+                cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64; ;
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "ReinicioImagenesIcono()");
+                v_depurador = null;
+            }
+       
         }
-        
+
         private void ReinicioVariablesTiempo()
         {
             v_segundos = 0;
@@ -172,60 +190,103 @@ namespace Operaciones.Controles
 
         private void IniciarTicket()
         {
-            
-            Tiempos cl_tiempos = new Tiempos();
-            if(cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
-                                              (int)ESTADOS_TICKETS.EN_ATENCION,
-                                              Pro_ID_AgenciaServicio,
-                                              Pro_ID_ClienteServicio,
-                                              Pro_Ticket_Servicio,
-                                              Pro_Usuario))
+
+            try
             {
-                tmrTiempoAtencion.Start();
-            }          
+                Tiempos cl_tiempos = new Tiempos();
+                if (cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                                  (int)ESTADOS_TICKETS.EN_ATENCION,
+                                                  Pro_ID_AgenciaServicio,
+                                                  Pro_ID_ClienteServicio,
+                                                  Pro_Ticket_Servicio,
+                                                  Pro_Usuario))
+                {
+                    tmrTiempoAtencion.Start();
+                }
+
+                cl_tiempos = null;
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "IniciarTicket()");
+                v_depurador = null;
+
+            }
+        
         }
 
         private void CerrarTicket()
         {
-            tmrTiempoAtencion.Stop();
-            Tiempos cl_tiempos = new Tiempos();
-            if(cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
-                                              (int)ESTADOS_TICKETS.CERRADO,
-                                              Pro_ID_AgenciaServicio,
-                                              Pro_ID_ClienteServicio,
-                                              Pro_Ticket_Servicio,
-                                              Pro_Usuario))
+
+            try
             {
-                ReinicioVariablesTiempo();
-            }       
+                tmrTiempoAtencion.Stop();
+                Tiempos cl_tiempos = new Tiempos();
+                if (cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                                  (int)ESTADOS_TICKETS.CERRADO,
+                                                  Pro_ID_AgenciaServicio,
+                                                  Pro_ID_ClienteServicio,
+                                                  Pro_Ticket_Servicio,
+                                                  Pro_Usuario))
+                {
+                    ReinicioVariablesTiempo();
+                }
+
+                cl_tiempos = null;
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "CerrarTicket()");
+                v_depurador = null;
+
+            }     
         }
 
         public void MarcarClienteNoRespondioLlamado()
         {
-            Tiempos cl_tiempos = new Tiempos();
-            cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
-                                              (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO,
-                                              Pro_ID_AgenciaServicio,
-                                              Pro_ID_ClienteServicio,
-                                              Pro_Ticket_Servicio,
-                                              Pro_Usuario);
+
+            try
+            {
+                Tiempos cl_tiempos = new Tiempos();
+                cl_tiempos.ActualizarEstadoTicket(Pro_Conexion,
+                                                  (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO,
+                                                  Pro_ID_AgenciaServicio,
+                                                  Pro_ID_ClienteServicio,
+                                                  Pro_Ticket_Servicio,
+                                                  Pro_Usuario);
+
+                cl_tiempos = null;
+
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "MarcarClienteNoRespondioLlamado()");
+                v_depurador = null;
+            }
         }
+
 
         private void LlamarSiguienteCliente(bool p_es_rellamada = false)
         {
 
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
 
             string sentencia = @"SELECT * FROM area_servicio.ft_proc_llama_siguiente_ticket (
-                                                                                                :p_id_agencia_servicio,
-                                                                                                :p_id_cliente_servicio,
-                                                                                                :p_usuario,
-                                                                                                :p_es_rellamada,
-                                                                                                :p_id_ticket_servicio
-                                                                                              )";
+                                                                                            :p_id_agencia_servicio,
+                                                                                            :p_id_cliente_servicio,
+                                                                                            :p_usuario,
+                                                                                            :p_es_rellamada,
+                                                                                            :p_id_ticket_servicio
+                                                                                            )";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
@@ -260,20 +321,23 @@ namespace Operaciones.Controles
                 pgDr.Close();
                 pgComando.Dispose();
                 sentencia = null;
+                pgDr = null;
 
             }
             catch (Exception Exc)
             {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "LlamarSiguienteCliente(bool p_es_rellamada = false)");
+                v_depurador = null;
                 MessageBox.Show(Exc.Message, "FLUCOL");
             }         
         }
 
         public void MarcarParoTiempo(MOTIVOS_PARO_TIEMPO pMotivo)
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
 
             string sentencia = @"SELECT * FROM area_servicio.ft_mant_registra_paros_tiempo (
                                                                                               :p_codigoempleado,
@@ -295,22 +359,23 @@ namespace Operaciones.Controles
                 pgComando.Dispose();
                 sentencia = null;
 
-                MessageBox.Show("El paro de tiempo fue registrado, ya puede cerrar su sesión. ", "FLUCOL");
+                MessageBox.Show("EL PARO DE TIEMPO FUE REGISTRADO, YA PUEDE CERRAR SU SESIÓN. ", "FLUCOL");
                 this.BringToFront();
             }
             catch (Exception Exc)
             {
-
-                MessageBox.Show("Algo salió mal en el momento de marcar el paro de tiempo. " + Exc.Message, "FLUCOL");
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "MarcarParoTiempo(MOTIVOS_PARO_TIEMPO pMotivo)");
+                v_depurador = null;
+                MessageBox.Show("ALGO SALIÓ MAL EN EL MOMENTO DE MARCAR EL PARO DE TIEMPO. " + Exc.Message, "FLUCOL");
             }            
         }
 
         private int ObtenerEstadoTicket()
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
 
             int v_estado_ticket = 0;
             string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_estado_ticket (
@@ -334,55 +399,140 @@ namespace Operaciones.Controles
                 pgDr.Close();
                 sentencia = null;
                 pgComando.Dispose();
+                pgDr = null;
 
                 return v_estado_ticket;
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salió mal en el momento de obtener estado del ticket. " + Exc.Message);
+                MessageBox.Show("ALGO SALIÓ MAL EN EL MOMENTO DE OBTENER ESTADO DEL TICKET. " + Exc.Message);
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "ObtenerEstadoTicket()");
+                v_depurador = null;
+
                 return v_estado_ticket;
+            }
+        }
+
+        private void ValidarConexion()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                try
+                {
+                    Pro_Conexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ValidarConexion()");
+                    v_depurador = null;
+
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+                }
             }
         }
 
         #endregion
 
-        #region EVENTOS
-
-        #endregion
-
         #region EVENTOS GLOBALES
 
-      
         public void PresionaF1_IniciarTicket(object sender)
         {
-            ReinicioImagenesIcono();
-            cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicketVerde;
-            IniciarTicket();
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                ReinicioImagenesIcono();
+                cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicketVerde;
+                IniciarTicket();
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "PresionaF1_IniciarTicket(object sender)");
+                v_depurador = null;
+
+            }
         }
 
         public void PresionaF2_CerrarTicket(object sender)
         {
-            ReinicioImagenesIcono();
-            cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
-            CerrarTicket();
+
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                ReinicioImagenesIcono();
+                cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
+                CerrarTicket();
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "PresionaF2_CerrarTicket(object sender)");
+                v_depurador = null;
+
+            }
         }
 
         public void PresionaF5_LlamarCliente(object sender)
         {
-            ReinicioImagenesIcono();
-            cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
-            LlamarSiguienteCliente();
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                ReinicioImagenesIcono();
+                cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                LlamarSiguienteCliente();
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "PresionaF5_LlamarCliente(object sender)");
+                v_depurador = null;
+            }  
         }
 
         public void PresionarF6_MarcarClienteNoRespondio(object sender)
         {
-            ReinicioImagenesIcono();
-            cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
-            MarcarClienteNoRespondioLlamado();
-            
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                ReinicioImagenesIcono();
+                cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
+                MarcarClienteNoRespondioLlamado();
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "PresionarF6_MarcarClienteNoRespondio(object sender)");
+                v_depurador = null;
+            }
+    
         }
-
-     
 
         #endregion
 
@@ -390,124 +540,225 @@ namespace Operaciones.Controles
 
         private void cmdIniciarTicket_Click(object sender, EventArgs e)
         {
-            if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
+            try
             {
-                int v_estado_ticket;
-
-                ReinicioImagenesIcono();
-                cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicketVerde;
-
-                v_estado_ticket = ObtenerEstadoTicket();
-                if (v_estado_ticket != (int) ESTADOS_TICKETS.LLAMADO)
+                if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
                 {
-                    MessageBox.Show("El ticket ya no tiene un estado disponible para ser atendido.", "FLUCOL");
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    int v_estado_ticket;
+
+                    ReinicioImagenesIcono();
+
+                    cmdIniciarTicket.Image = Properties.Resources.iconIniciarTicketVerde;
+
+                    v_estado_ticket = ObtenerEstadoTicket();
+
+                    switch ((ESTADOS_TICKETS)v_estado_ticket)
+                    {
+                        case ESTADOS_TICKETS.EN_ESPERA:
+                            MessageBox.Show("EL TICKET ESTA EN ESPERA.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.LLAMADO:
+                            IniciarTicket();
+                            Pro_Esta_En_Atencion = true;
+                            break;
+                        case ESTADOS_TICKETS.NO_ATENDIO_LLAMADO:
+                            MessageBox.Show("EL TICKET FUE MARCADO COMO \"NO ATENDIO LLAMADO\".", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.EN_ATENCION:
+                            MessageBox.Show("EL TICKET YA ESTA SIENDO ATENDIDO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.CERRADO:
+                            MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                      
+                    }
+
+                    Cursor.Current = Cursors.Arrow;
                 }
                 else
                 {
-                    IniciarTicket();
-                    Pro_Esta_En_Atencion = true;
-                }           
+                    MessageBox.Show("NO SE HA LLAMADO NINGUN CLIENTE.", "FLUCOL");
+                }
             }
-            else
+            catch (Exception Exc)
             {
-                MessageBox.Show("No se ha llamado ningun cliente.","FLUCOL");
-            }          
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdIniciarTicket_Click(object sender, EventArgs e)");
+                v_depurador = null;
+            }     
         }
 
         private void cmdCerrarTicket_Click(object sender, EventArgs e)
         {
-            if (lblNumeroTicket.Text != "")
+            try
             {
-
-                int v_estado_ticket;
-                ReinicioImagenesIcono();
-                cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
-
-                v_estado_ticket = ObtenerEstadoTicket();
-                if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
+                if (lblNumeroTicket.Text != "")
                 {
-                    MessageBox.Show("No puede cerrarse el ticket porque aun no ha sido atendido.","FLUCOL");
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    int v_estado_ticket;
+
+                    ReinicioImagenesIcono();
+
+                    cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
+
+                    v_estado_ticket = ObtenerEstadoTicket();
+                    if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
+                    {
+                        MessageBox.Show("NO PUEDE CERRARSE EL TICKET PORQUE AUN NO HA SIDO ATENDIDO.", "FLUCOL");
+                    }
+                    else
+                    {
+                        CerrarTicket();
+                        Pro_Esta_En_Atencion = false;
+                        lblNumeroTicket.Text = "";
+                    }
+
+                    Cursor.Current = Cursors.Arrow;
                 }
                 else
                 {
-                    CerrarTicket();
-                    Pro_Esta_En_Atencion = false;
-                }         
+                    MessageBox.Show("NO SE HA INICIADO NINGUN TICKET.", "FLUCOL");
+                }
             }
-            else
+            catch (Exception Exc)
             {
-                MessageBox.Show("No se ha iniciado ningun ticket.","FLUCOL");
-            }          
+
+                Cursor.Current = Cursors.Arrow;
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdCerrarTicket_Click(object sender, EventArgs e)");
+                v_depurador = null;
+            }
+   
         }     
 
         private void cmdLlamarCliente_Click(object sender, EventArgs e)
         {
-
-            if (!Pro_Esta_En_Atencion)
+            try
             {
-                int v_estado_ticket;
-
-                v_estado_ticket = ObtenerEstadoTicket();
-
-                if (v_estado_ticket != 0 )
+                if (!Pro_Esta_En_Atencion)
                 {
-                   
-                    if (v_estado_ticket == (int) ESTADOS_TICKETS.CERRADO || 
-                        v_estado_ticket == (int) ESTADOS_TICKETS.NO_ATENDIO_LLAMADO 
-                      )
+
+                    Cursor.Current = Cursors.WaitCursor;
+                    int v_estado_ticket;
+
+                    v_estado_ticket = ObtenerEstadoTicket();
+
+                    if (v_estado_ticket != 0)
                     {
 
-                        ReinicioImagenesIcono();
-                        cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
-                        LlamarSiguienteCliente();
-                       
+                        if (v_estado_ticket == (int)ESTADOS_TICKETS.CERRADO ||
+                            v_estado_ticket == (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO
+                          )
+                        {
+
+                            ReinicioImagenesIcono();
+
+                            cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                            LlamarSiguienteCliente();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(@"NO SE PUEDE LLAMAR A SIGUIENTE TICKET MIENTRAS NO CIERRE O MARQUE
+                                       COMO ATENDIDO EL ACTUAL TICKET.", "FLUCOL");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show(@"No se puede llamar a siguiente ticket mientras no cierre o marque
-                                       como atendido el actual ticket.", "FLUCOL");
+
+                        ReinicioImagenesIcono();
+
+                        cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+                        LlamarSiguienteCliente();
                     }
+
+                    v_temporal_ticket = lblNumeroTicket.Text;
+
+                    Cursor.Current = Cursors.Arrow;
                 }
                 else
                 {
-                    ReinicioImagenesIcono();
-                    cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
-                    LlamarSiguienteCliente();
+                    MessageBox.Show("NO PUEDE LLAMAR A OTRO CLIENTE MIENTRAS NO CIERRE EL TICKET ACTUAL. ", "FLUCOL");
                 }
-
-                v_temporal_ticket = lblNumeroTicket.Text;               
             }
-            else
+            catch (Exception Exc)
             {
-                MessageBox.Show("No puede llamar a otro cliente mientras no cierre el ticket Actual. ","FLUCOL");
-            }            
+
+                Cursor.Current = Cursors.Arrow;
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdLlamarCliente_Click(object sender, EventArgs e)");
+                v_depurador = null;
+            }           
         }
 
         private void cmdClienteNoAtendioLlamado_Click(object sender, EventArgs e)
         {
-
-            if (!Pro_Esta_En_Atencion)
+            try
             {
-                int v_estado_ticket;
-                ReinicioImagenesIcono();
-                cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
-
-                v_estado_ticket = ObtenerEstadoTicket();
-
-                if (v_estado_ticket != (int)ESTADOS_TICKETS.LLAMADO)
+                if (!Pro_Esta_En_Atencion)
                 {
-                    MessageBox.Show("El ticket no posee un estado disponible para marcar como no Atendido", "FLUCOL");
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    int v_estado_ticket;
+
+                    ReinicioImagenesIcono();
+
+                    cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamadoVerde;
+
+                    v_estado_ticket = ObtenerEstadoTicket();
+
+                    switch ((ESTADOS_TICKETS)v_estado_ticket)
+                    {
+                        case ESTADOS_TICKETS.EN_ESPERA:
+                            MessageBox.Show("EL TICKET ESTA EN ESPERA.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.LLAMADO:
+                            MarcarClienteNoRespondioLlamado();
+                            Pro_Esta_En_Atencion = false;
+                            lblNumeroTicket.Text = "";
+                            break;
+                        case ESTADOS_TICKETS.NO_ATENDIO_LLAMADO:
+                            MessageBox.Show("EL TICKET FUE MARCADO COMO \"NO ATENDIO LLAMADO\".", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.EN_ATENCION:
+                            MessageBox.Show("EL TICKET YA ESTA SIENDO ATENDIDO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.CERRADO:
+                            MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                        
+                    }
+
+                    Cursor.Current = Cursors.Arrow;
+
                 }
                 else
                 {
-                    MarcarClienteNoRespondioLlamado();
-                    Pro_Esta_En_Atencion = false;
-                }    
+                    MessageBox.Show("AUN NO HA FINALIZADO EL TICKET. ", "FLUCOL");
+                }
             }
-            else
+            catch (Exception Exc)
             {
-                MessageBox.Show("Aun no ha finalizado el ticket! ","FLUCOL");
-            }            
+                Cursor.Current = Cursors.Arrow;
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdClienteNoAtendioLlamado_Click(object sender, EventArgs e)");
+                v_depurador = null;
+
+            }         
         }
 
         private void tmrTiempoAtencion_Tick(object sender, EventArgs e)
@@ -570,63 +821,155 @@ namespace Operaciones.Controles
   
         private void cmdPersonalTiempo_Click(object sender, EventArgs e)
         {
-            if (!Pro_Esta_En_Atencion)
-            {             
-                MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.SALIDA_SANITARIO);
-                Pro_Esta_En_Atencion = false;
-            }
-            else
+            try
             {
-                MessageBox.Show("El ticket aun no ha sido cerrado.", "FLUCOL");
+                if (!Pro_Esta_En_Atencion)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.SALIDA_SANITARIO);
+                    Pro_Esta_En_Atencion = false;
+
+                    Cursor.Current = Cursors.WaitCursor;
+                }
+                else
+                {
+                    MessageBox.Show("EL TICKET AUN NO HA SIDO CERRADO.", "FLUCOL");
+                }
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdPersonalTiempo_Click(object sender, EventArgs e)");
+                v_depurador = null;
+
             }
         }
 
         private void cmdSalidaAlmuerzo_Click(object sender, EventArgs e)
         {
-            if (!Pro_Esta_En_Atencion)
+
+            try
             {
-                MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.ALMUERZO);
-                Pro_Esta_En_Atencion = false;
+                if (!Pro_Esta_En_Atencion)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    MarcarParoTiempo(MOTIVOS_PARO_TIEMPO.ALMUERZO);
+                    Pro_Esta_En_Atencion = false;
+
+                    Cursor.Current = Cursors.Arrow;
+                }
+                else
+                {
+                    MessageBox.Show("NO PUEDE SALIR A SU ALMUERZO PORQUE EL TICKET NO HA SIDO CERRADO. ", "FLUCOL");
+                }
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdSalidaAlmuerzo_Click(object sender, EventArgs e)");
+                v_depurador = null;
+
+            }    
+        }
+
+        public void cmdCerrarSesion_Click(object sender, EventArgs e)
+        {
+
+            if (Pro_Esta_En_Atencion)
+            {
+                MessageBox.Show("DEBE CERRAR EL TICKET PARA PODER CERRAR LA SESION.");
             }
             else
             {
-                MessageBox.Show("No puede salir a su almuerzo porque el ticket no ha sido cerrado. ", "FLUCOL");
+                ctlListaTicketsEspera1.Pro_CargarLista = false;
+                Application.Exit();
             }
-        }
-
-        private void cmdCerrarSesion_Click(object sender, EventArgs e)
-        {            
-            Application.Exit();
         }
 
       
         private void cmdRellamar_Click(object sender, EventArgs e)
         {
-            if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
+            try
             {
-                int v_estado_ticket;
-
-                ReinicioImagenesIcono();
-                cmdRellamar.Image = Properties.Resources.icon_rellamar_verde_64;
-
-                v_estado_ticket = ObtenerEstadoTicket();
-
-                if (v_estado_ticket != (int)ESTADOS_TICKETS.LLAMADO)
+                if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
                 {
-                    MessageBox.Show("El ticket no posee un estado que permita ser rellamado.", "FLUCOL");
+                    Cursor.Current = Cursors.WaitCursor;
+
+                    int v_estado_ticket;
+
+                    ReinicioImagenesIcono();
+
+                    cmdRellamar.Image = Properties.Resources.icon_rellamar_verde_64;
+
+                    v_estado_ticket = ObtenerEstadoTicket();
+
+                    switch ((ESTADOS_TICKETS)v_estado_ticket)
+                    {
+                        case ESTADOS_TICKETS.EN_ESPERA:
+                            MessageBox.Show("EL TICKET ESTA EN ESPERA.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.LLAMADO:
+                            LlamarSiguienteCliente(true);
+                            break;
+                        case ESTADOS_TICKETS.NO_ATENDIO_LLAMADO:
+                            MessageBox.Show("EL TICKET FUE MARCADO COMO \"NO ATENDIO LLAMADO\".", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.EN_ATENCION:
+                            MessageBox.Show("EL TICKET YA ESTA SIENDO ATENDIDO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.CERRADO:
+                            MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                       
+                    }
+
+                    Cursor.Current = Cursors.Arrow;
+
                 }
-                else
-                {
-                    LlamarSiguienteCliente(true);
-                }           
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "cmdRellamar_Click(object sender, EventArgs e)");
+                v_depurador = null;
             }
         }
 
         private void picUsuario_Click(object sender, EventArgs e)
         {
-            popupResumen.ShowPopup();
-            CargarDatosTicketPosicion();
-            lblNombreUsuario.Text = Pro_NombreEmpleado;
+
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                popupResumen.ShowPopup();
+                CargarDatosTicketPosicion();
+                lblNombreUsuario.Text = Pro_NombreEmpleado;
+
+                Cursor.Current = Cursors.Arrow;
+            }
+            catch (Exception Exc)
+            {
+                Cursor.Current = Cursors.Arrow;
+
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "picUsuario_Click(object sender, EventArgs e)");
+                v_depurador = null;
+            }     
         }
 
         private void ctlOperacionalReducido1_ClienteNoAtendioLlamado(object sender, EventArgs e)

@@ -26,6 +26,7 @@ namespace Flucol.Pantallas
             ctlBienvenida = new CtlBienvenida();
             CrearConexion();
             ObtenerNombreSucursal();
+            LimpiarTickets();
             Pro_AnchoDefecto = this.Width;
             Pro_AltoDefecto = this.Height;
            
@@ -309,11 +310,47 @@ namespace Flucol.Pantallas
 
                 pgDr.Close();
                 pgComando.Dispose();
+                sentencia = null;
             }
             catch (Exception Exc)
             {
                 MessageBox.Show(Exc.Message, "FLUCOL");
             }
+        }
+
+        private void LimpiarTickets()
+        {
+            if (pgConexion.State != System.Data.ConnectionState.Open)
+            {
+                try
+                {
+                    pgConexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    MessageBox.Show(Exc.Message, "FLUCOL");
+                    return;
+                }
+            }
+
+            string sentencia = @"SELECT * FROM configuracion.ft_proc_limpiar_tickets_temporal(:p_id_cliente_servicio,
+                                                                                              :p_id_agencia_servicio
+                                                                                              );";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, pgConexion);
+            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
+
+            try
+            {
+                pgComando.ExecuteNonQuery();
+                sentencia = null;
+                pgComando.Dispose();
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show("Algo salió mal en el momento de limpiar caché de tickets. " + Exc.Message);
+            }
+
         }
 
         private void RedireccionSegunNivelAcceso(Usuario pUsuario)
@@ -412,38 +449,74 @@ namespace Flucol.Pantallas
 
         private void frmConstructor_ClientSizeChanged(object sender, EventArgs e)
         {
-            if (Pro_ModuloActivo == MODULOS.OPERACIONES)
-            {
-                if (this.WindowState == FormWindowState.Maximized)
-                {
 
-                    if (frmOperacional != null)
+            try
+            {
+                if (Pro_ModuloActivo == MODULOS.OPERACIONES)
+                {
+                    if (this.WindowState == FormWindowState.Maximized)
+                    {
+
+                        if (frmOperacional != null)
+                        {
+                            frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
+
+                        }
+                        this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
+
+
+                    }
+                    else if (this.WindowState == FormWindowState.Normal)
+                    {
+                        if (frmOperacional != null)
+                        {
+                            frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.PageOperacionalReducido;
+
+                        }
+                        this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
+                    }
+                    else
                     {
                         frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
-                        frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Start();
-                    }
-                    this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
-                    
 
-                }
-                else if (this.WindowState == FormWindowState.Normal)
-                {
-                    if (frmOperacional != null)
-                    {
-                        frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.PageOperacionalReducido;
-                        frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Stop();
                     }
-                    this.Size = new Size(this.MinimumSize.Width, this.MinimumSize.Height);
                 }
-                else
-                {
-                    frmOperacional.ctlOperacional1.Navigation.SelectedPage = frmOperacional.ctlOperacional1.pagePrincipal;
-                    frmOperacional.ctlOperacional1.ctlListaTicketsEspera1.tmrCargarColaTicketsEspera.Start();
-
-                }          
             }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "frmConstructor_ClientSizeChanged(object sender, EventArgs e)");
+                v_depurador = null;
+            }        
+        }
+
+        private void frmConstructor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            try
+            {
+                if (Pro_ModuloActivo == MODULOS.OPERACIONES)
+                {
+                    if (frmOperacional.ctlOperacional1.Pro_Esta_En_Atencion)
+                    {
+                        e.Cancel = true;
+                        MessageBox.Show("DEBE CERRAR EL TICKET PARA PODER CERRAR LA SESION.", "FLUCOL");
+                    }
+                }
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "frmConstructor_FormClosing(object sender, FormClosingEventArgs e)");
+                v_depurador = null;
+            }      
         }
 
         #endregion
+
     }
 }

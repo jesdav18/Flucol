@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tmrCargarColaTicketsEspera = new System.Windows.Forms.Timer(this.components);
             this.dsTickets1 = new Operaciones.DataSets.dsTickets();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -38,11 +36,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tmrCargarColaTicketsEspera
-            // 
-            this.tmrCargarColaTicketsEspera.Interval = 500;
-            this.tmrCargarColaTicketsEspera.Tick += new System.EventHandler(this.tmrCargarColaTicketsEspera_Tick);
             // 
             // dsTickets1
             // 
@@ -57,7 +50,7 @@
             this.gridControl1.Location = new System.Drawing.Point(5, 5);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(103, 189);
+            this.gridControl1.Size = new System.Drawing.Size(101, 187);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -100,10 +93,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.gridControl1);
             this.Name = "ctlListaTicketsEspera";
             this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(113, 199);
+            this.Size = new System.Drawing.Size(111, 197);
             ((System.ComponentModel.ISupportInitialize)(this.dsTickets1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -116,6 +110,5 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colticket_servicio;
-        public System.Windows.Forms.Timer tmrCargarColaTicketsEspera;
     }
 }

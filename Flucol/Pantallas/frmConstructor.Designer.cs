@@ -48,6 +48,7 @@
             this.MinimumSize = new System.Drawing.Size(190, 150);
             this.Name = "frmConstructor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConstructor_FormClosing);
             this.Load += new System.EventHandler(this.frmConstructor_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmConstructor_ClientSizeChanged);
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 
@@ -31,7 +32,8 @@ namespace Flucol.Controles
             System.IO.FileInfo obj_archivo_informacion = new System.IO.FileInfo(v_ensamblado.Location);
             DateTime v_ultima_actualizacion = obj_archivo_informacion.LastWriteTime;
             lblUltimaActualizacion.Text = "" + v_ultima_actualizacion.ToShortDateString() + ", " + v_ultima_actualizacion.ToShortTimeString();
-           
+            lblVersion.Text = Assembly.GetEntryAssembly().GetName().Version.ToString() ;
+
             switch (pModulo)
             {
                 case 1:

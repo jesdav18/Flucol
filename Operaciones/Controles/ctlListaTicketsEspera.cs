@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-using System.Collections;
-using Operaciones.DataSets;
+using Core.Clases;
+
 
 namespace Operaciones.Controles
 {
@@ -31,17 +26,13 @@ namespace Operaciones.Controles
         public int Pro_ID_AgenciaServicio { get; set; }
         public int Pro_ID_ClienteServicio { get; set; }
         public string Pro_Usuario { get; set; }
-
-        #endregion
-
-        #region VARIABLES GLOBALES
-        ArrayList v_lista;
+        public bool Pro_CargarLista { get; set; }
 
         #endregion
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion,
+        public async void  ConstruirControl(PgSqlConnection pConexion,
                                      int p_ID_AgenciaServicio,
                                      int p_ID_ClienteServicio,
                                      string p_usuario)
@@ -50,41 +41,72 @@ namespace Operaciones.Controles
             Pro_ID_AgenciaServicio = p_ID_AgenciaServicio;
             Pro_ID_ClienteServicio = p_ID_ClienteServicio;
             Pro_Usuario = p_usuario;
-            CargarListaTicketsEnEspera();
-            tmrCargarColaTicketsEspera.Start();
-            ArrayList v_lista = new ArrayList();
+            Pro_CargarLista = true;
+
+           await this.ListaTicketsAsincrono();
         }
 
-        private void CargarListaTicketsEnEspera()
+        private void ValidarConexion()
         {
-
-
             if (Pro_Conexion.State != ConnectionState.Open)
             {
-                Pro_Conexion.Open();
+                try
+                {
+                    Pro_Conexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ValidarConexion()");
+                    v_depurador = null;
+
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+                }
             }
+        }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_cola_tickets_en_espera(:p_id_cliente_servicio,
-                                                                                                     :p_id_agencia_servicio,
-                                                                                                     :p_usuario);";
-
-            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
-            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
-            pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_Usuario;
-
-            try
+        private async Task ListaTicketsAsincrono()
+        {
+            while (true)
             {
-                dsTickets1.dtTickets.Clear();
-                new PgSqlDataAdapter(pgComando).Fill(dsTickets1.dtTickets);
+                ValidarConexion();
 
-                sentencia = null;
-                pgComando.Dispose();
-               
-            }
-            catch (Exception Exc)
-            {
-                MessageBox.Show("Algo salió mal en el momento de Cargar la lista de Tickets en espera.", "FLUCOL");
+                string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_cola_tickets_en_espera(:p_id_cliente_servicio,
+                                                                                                         :p_id_agencia_servicio,
+                                                                                                         :p_usuario);";
+
+                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
+                pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+                pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_Usuario;
+
+                try
+                {
+                    dsTickets1.dtTickets.Clear();
+                    new PgSqlDataAdapter(pgComando).Fill(dsTickets1.dtTickets);
+
+                    sentencia = null;
+                    pgComando.Dispose();
+
+                }
+                catch (Exception Exc)
+                {
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ListaTicketsAsincrono()");
+                    v_depurador = null;
+
+                    MessageBox.Show("ALGO SALIÓ MAL EN EL MOMENTO DE CARGAR LA LISTA DE TICKETS EN ESPERA.", "FLUCOL");
+                }
+
+                await Task.Delay(200);
             }
         }
 
@@ -101,11 +123,6 @@ namespace Operaciones.Controles
         private void OnTicketSeleccionado(object sender, EventArgs e)
         {
             OnSeleccionaTicket?.Invoke(sender, e);
-        }
-
-        private void tmrCargarColaTicketsEspera_Tick(object sender, EventArgs e)
-        {
-            CargarListaTicketsEnEspera();
         }
 
         #endregion

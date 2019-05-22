@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.lblTituloPosiciones = new DevExpress.XtraEditors.LabelControl();
             this.lblTituloTickets = new DevExpress.XtraEditors.LabelControl();
@@ -43,9 +44,9 @@
             this.gcPosicion = new DevExpress.XtraGrid.GridControl();
             this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tmrConsultaLlamadoTickets = new System.Windows.Forms.Timer();
+            this.tmrConsultaLlamadoTickets = new System.Windows.Forms.Timer(this.components);
             this.bgLlamadoTickets = new System.ComponentModel.BackgroundWorker();
-            this.tmrConsultaCola = new System.Windows.Forms.Timer();
+            this.tmrConsultaCola = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -206,6 +207,7 @@
             this.gvTicket.OptionsView.ShowGroupPanel = false;
             this.gvTicket.OptionsView.ShowIndicator = false;
             this.gvTicket.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gvTicket.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvTicket_InvalidRowException);
             // 
             // colticket1
             // 
@@ -268,6 +270,7 @@
             this.gvPosicion.OptionsView.ShowGroupPanel = false;
             this.gvPosicion.OptionsView.ShowIndicator = false;
             this.gvPosicion.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gvPosicion.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gvPosicion_InvalidRowException);
             // 
             // colposicion
             // 

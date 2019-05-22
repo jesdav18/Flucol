@@ -118,9 +118,10 @@
             // 
             this.pnlTickets.Controls.Add(this.ctlTicketsPosiciones1);
             this.pnlTickets.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlTickets.Location = new System.Drawing.Point(5, 99);
+            this.pnlTickets.Location = new System.Drawing.Point(5, 107);
             this.pnlTickets.Name = "pnlTickets";
-            this.pnlTickets.Size = new System.Drawing.Size(539, 345);
+            this.pnlTickets.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlTickets.Size = new System.Drawing.Size(539, 337);
             this.pnlTickets.TabIndex = 4;
             // 
             // ctlTicketsPosiciones1
@@ -128,7 +129,7 @@
             this.ctlTicketsPosiciones1.BackColor = System.Drawing.Color.White;
             this.ctlTicketsPosiciones1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlTicketsPosiciones1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlTicketsPosiciones1.Location = new System.Drawing.Point(0, 0);
+            this.ctlTicketsPosiciones1.Location = new System.Drawing.Point(5, 5);
             this.ctlTicketsPosiciones1.Name = "ctlTicketsPosiciones1";
             this.ctlTicketsPosiciones1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.ctlTicketsPosiciones1.Pro_Conexion = null;
@@ -136,19 +137,19 @@
             this.ctlTicketsPosiciones1.Pro_Sucursal = 0;
             this.ctlTicketsPosiciones1.Pro_Texto_Descriptivo = null;
             this.ctlTicketsPosiciones1.Pro_Voz = null;
-            this.ctlTicketsPosiciones1.Size = new System.Drawing.Size(539, 345);
+            this.ctlTicketsPosiciones1.Size = new System.Drawing.Size(529, 327);
             this.ctlTicketsPosiciones1.TabIndex = 1;
             // 
             // ctlPublicidad1
             // 
             this.ctlPublicidad1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlPublicidad1.Location = new System.Drawing.Point(544, 99);
+            this.ctlPublicidad1.Location = new System.Drawing.Point(544, 107);
             this.ctlPublicidad1.Name = "ctlPublicidad1";
             this.ctlPublicidad1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.ctlPublicidad1.Pro_Cliente = 0;
             this.ctlPublicidad1.Pro_Conexion = null;
             this.ctlPublicidad1.Pro_Sucursal = 0;
-            this.ctlPublicidad1.Size = new System.Drawing.Size(352, 345);
+            this.ctlPublicidad1.Size = new System.Drawing.Size(352, 337);
             this.ctlPublicidad1.TabIndex = 0;
             // 
             // pnlTitulo
@@ -160,7 +161,8 @@
             this.pnlTitulo.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.pnlTitulo.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(891, 94);
+            this.pnlTitulo.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlTitulo.Size = new System.Drawing.Size(891, 102);
             this.pnlTitulo.TabIndex = 5;
             // 
             // lblTitulo
@@ -175,9 +177,9 @@
             this.lblTitulo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTitulo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Location = new System.Drawing.Point(3, 3);
+            this.lblTitulo.Location = new System.Drawing.Point(8, 8);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(885, 45);
+            this.lblTitulo.Size = new System.Drawing.Size(875, 46);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BIENVENIDO";
             // 
@@ -193,9 +195,9 @@
             this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblAgencia.Location = new System.Drawing.Point(3, 48);
+            this.lblAgencia.Location = new System.Drawing.Point(8, 54);
             this.lblAgencia.Name = "lblAgencia";
-            this.lblAgencia.Size = new System.Drawing.Size(885, 43);
+            this.lblAgencia.Size = new System.Drawing.Size(875, 40);
             this.lblAgencia.TabIndex = 1;
             this.lblAgencia.Text = "BIENVENIDO";
             // 

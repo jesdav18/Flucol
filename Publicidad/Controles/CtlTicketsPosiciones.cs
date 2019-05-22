@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using System.Speech.Synthesis;
 using System.Configuration;
+using DevExpress.XtraEditors.Controls;
 
 namespace Publicidad.Controles
 {
@@ -23,7 +24,9 @@ namespace Publicidad.Controles
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion, int pSucursal, int pCliente)
+        public void ConstruirControl(PgSqlConnection pConexion, 
+                                    int pSucursal, 
+                                    int pCliente)
         {
             Pro_Conexion = pConexion;
             Pro_Sucursal = pSucursal;
@@ -40,27 +43,20 @@ namespace Publicidad.Controles
 
         private void CargarColaTickets()
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
+
+            string sentencia = @"SELECT * FROM area_servicio.ft_proc_obtener_cola_tickets (
+                                                                                            :p_cliente_servicio,
+                                                                                            :p_agencia_servicio
+                                                                                            );";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente;
+            pgComando.Parameters.Add("p_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
 
             try
             {
-                string sentencia = @"SELECT * FROM area_servicio.ft_proc_obtener_cola_tickets (
-                                                                                                  :p_cliente_servicio,
-                                                                                                  :p_agencia_servicio
-                                                                                              );";
-
-                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-                pgComando.Parameters.Add("p_cliente_servicio",PgSqlType.Int).Value = Pro_ID_Cliente;
-                pgComando.Parameters.Add("p_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
-
                 dsTicketsPosiciones1.dtTicketsPosiciones.Clear();
                 new PgSqlDataAdapter(pgComando).Fill(dsTicketsPosiciones1.dtTicketsPosiciones);
-
-
-              
             }
             catch (Exception Exc)
             {
@@ -68,8 +64,24 @@ namespace Publicidad.Controles
             }
         }
 
-        
-        
+        private void ValidarConexion()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                try
+                {
+                    Pro_Conexion.Open();
+                }
+                catch (Exception)
+                {
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+                }
+            }
+        }
 
         #endregion
 
@@ -96,26 +108,24 @@ namespace Publicidad.Controles
 
         private void bgLlamadoTickets_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
 
             SpeechSynthesizer v_voz = null;
+
             PgSqlConnection vConexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
             vConexion.Password = Pro_Conexion.Password;
             vConexion.Open();
 
+            string sentencia = @"SELECT * FROM area_servicio.ft_proc_consulta_llamados_tickets (
+                                                                                                :p_agencia_servicio,
+                                                                                                :p_cliente_servicio
+                                                                                               )";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, vConexion);
+            pgComando.Parameters.Add("p_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
+            pgComando.Parameters.Add("p_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente;
+
             try
             {
-                string sentencia = @"SELECT * FROM area_servicio.ft_proc_consulta_llamados_tickets (
-                                                                                                      :p_agencia_servicio,
-                                                                                                      :p_cliente_servicio
-                                                                                                    )";
-                PgSqlCommand pgComando = new PgSqlCommand(sentencia, vConexion);
-                pgComando.Parameters.Add("p_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
-                pgComando.Parameters.Add("p_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente;
-
+               
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
                 {
@@ -141,7 +151,6 @@ namespace Publicidad.Controles
                     if (lblTicket.Text != "")
                     {
                         //v_voz.SelectVoice("Vocalizer Expressive Angelica Harpo 22kHz");
-                        //v_voz.SelectVoice("VE_Mexican_Spanish_Angelica_22kHz");
 
                         if (v_tipo_ticket == 1)
                         {
@@ -175,14 +184,13 @@ namespace Publicidad.Controles
                     v_quinta_letra = null;
                     v_sexta_letra = null;
                 }
-
-
-                
+       
                 pgDr.Close();
+                pgDr = null;
                 pgComando.Dispose();
                 vConexion.Close();
                 vConexion.Dispose();
-                
+                sentencia = null;
 
             }
             catch (Exception Exc)
@@ -191,13 +199,22 @@ namespace Publicidad.Controles
             }
         }
 
-        
-
         private void tmrConsultaCola_Tick(object sender, EventArgs e)
         {
             CargarColaTickets();
         }
 
+        private void gvTicket_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
+        {
+            e.ExceptionMode = ExceptionMode.NoAction;
+        }
+
+        private void gvPosicion_InvalidRowException(object sender, DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventArgs e)
+        {
+            e.ExceptionMode = ExceptionMode.NoAction;
+        }
+
         #endregion
+
     }
 }

@@ -40,6 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblVersion = new DevExpress.XtraEditors.LabelControl();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -162,6 +163,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblVersion);
             this.panel3.Controls.Add(this.lblUltimaActualizacion);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
@@ -177,6 +179,21 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(15, 212);
             this.panel6.TabIndex = 3;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.Appearance.Options.UseFont = true;
+            this.lblVersion.Appearance.Options.UseTextOptions = true;
+            this.lblVersion.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblVersion.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblVersion.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblVersion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblVersion.Location = new System.Drawing.Point(0, 27);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(185, 27);
+            this.lblVersion.TabIndex = 4;
+            this.lblVersion.Text = "FECHA ÚLTIMA ACTUALIZACIÓN";
             // 
             // CtlBienvenida
             // 
@@ -214,5 +231,6 @@
         private DevExpress.XtraEditors.LabelControl lblModulo;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
+        private DevExpress.XtraEditors.LabelControl lblVersion;
     }
 }

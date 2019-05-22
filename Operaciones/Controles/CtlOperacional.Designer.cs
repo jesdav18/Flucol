@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlOperacional));
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
+            this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
             this.pnlResumen = new System.Windows.Forms.Panel();
             this.pnlDetalleResumen = new System.Windows.Forms.Panel();
             this.pnlEncabezadoResumen = new System.Windows.Forms.Panel();
@@ -49,8 +49,8 @@
             this.pnlInformacionTickets = new System.Windows.Forms.Panel();
             this.lblTiempoAtencion = new DevExpress.XtraEditors.LabelControl();
             this.lblNumeroTicket = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTiempoAtencion = new System.Windows.Forms.Timer(this.components);
-            this.tmrParoTiempo = new System.Windows.Forms.Timer(this.components);
+            this.tmrTiempoAtencion = new System.Windows.Forms.Timer();
+            this.tmrParoTiempo = new System.Windows.Forms.Timer();
             this.Navigation = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pagePrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,7 +67,6 @@
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.PageOperacionalReducido = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.ctlOperacionalReducido1 = new Operaciones.Controles.ctlOperacionalReducido();
-            this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             this.pnlResumen.SuspendLayout();
@@ -108,6 +107,23 @@
             this.pnlEncabezado.Name = "pnlEncabezado";
             this.pnlEncabezado.Size = new System.Drawing.Size(1106, 37);
             this.pnlEncabezado.TabIndex = 0;
+            // 
+            // lblAgencia
+            // 
+            this.lblAgencia.Appearance.BackColor = System.Drawing.Color.White;
+            this.lblAgencia.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgencia.Appearance.Options.UseBackColor = true;
+            this.lblAgencia.Appearance.Options.UseFont = true;
+            this.lblAgencia.Appearance.Options.UseTextOptions = true;
+            this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblAgencia.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblAgencia.Location = new System.Drawing.Point(0, 0);
+            this.lblAgencia.Name = "lblAgencia";
+            this.lblAgencia.Size = new System.Drawing.Size(894, 37);
+            this.lblAgencia.TabIndex = 19;
+            this.lblAgencia.Text = "NOMBRE SUCURSAL";
             // 
             // pnlResumen
             // 
@@ -340,9 +356,9 @@
             this.pnlInformacionTickets.Controls.Add(this.lblTiempoAtencion);
             this.pnlInformacionTickets.Controls.Add(this.lblNumeroTicket);
             this.pnlInformacionTickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInformacionTickets.Location = new System.Drawing.Point(139, 0);
+            this.pnlInformacionTickets.Location = new System.Drawing.Point(125, 0);
             this.pnlInformacionTickets.Name = "pnlInformacionTickets";
-            this.pnlInformacionTickets.Size = new System.Drawing.Size(967, 266);
+            this.pnlInformacionTickets.Size = new System.Drawing.Size(981, 266);
             this.pnlInformacionTickets.TabIndex = 2;
             // 
             // lblTiempoAtencion
@@ -360,7 +376,7 @@
             this.lblTiempoAtencion.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.lblTiempoAtencion.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lblTiempoAtencion.Name = "lblTiempoAtencion";
-            this.lblTiempoAtencion.Size = new System.Drawing.Size(967, 163);
+            this.lblTiempoAtencion.Size = new System.Drawing.Size(981, 163);
             this.lblTiempoAtencion.TabIndex = 2;
             this.lblTiempoAtencion.Text = "00:00:00";
             // 
@@ -379,7 +395,7 @@
             this.lblNumeroTicket.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNumeroTicket.Location = new System.Drawing.Point(0, 0);
             this.lblNumeroTicket.Name = "lblNumeroTicket";
-            this.lblNumeroTicket.Size = new System.Drawing.Size(967, 103);
+            this.lblNumeroTicket.Size = new System.Drawing.Size(981, 103);
             this.lblNumeroTicket.TabIndex = 1;
             this.lblNumeroTicket.Text = "N° TICKET";
             // 
@@ -441,7 +457,7 @@
             this.pnlListaTickets.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlListaTickets.Location = new System.Drawing.Point(0, 0);
             this.pnlListaTickets.Name = "pnlListaTickets";
-            this.pnlListaTickets.Size = new System.Drawing.Size(139, 266);
+            this.pnlListaTickets.Size = new System.Drawing.Size(125, 266);
             this.pnlListaTickets.TabIndex = 3;
             // 
             // ctlListaTicketsEspera1
@@ -451,11 +467,12 @@
             this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
             this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
             this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlListaTicketsEspera1.Pro_CargarLista = false;
             this.ctlListaTicketsEspera1.Pro_Conexion = null;
             this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
             this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
             this.ctlListaTicketsEspera1.Pro_Usuario = null;
-            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(139, 266);
+            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(125, 266);
             this.ctlListaTicketsEspera1.TabIndex = 0;
             // 
             // PagePopups
@@ -606,23 +623,6 @@
             this.ctlOperacionalReducido1.Padding = new System.Windows.Forms.Padding(3);
             this.ctlOperacionalReducido1.Size = new System.Drawing.Size(1106, 441);
             this.ctlOperacionalReducido1.TabIndex = 0;
-            // 
-            // lblAgencia
-            // 
-            this.lblAgencia.Appearance.BackColor = System.Drawing.Color.White;
-            this.lblAgencia.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgencia.Appearance.Options.UseBackColor = true;
-            this.lblAgencia.Appearance.Options.UseFont = true;
-            this.lblAgencia.Appearance.Options.UseTextOptions = true;
-            this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
-            this.lblAgencia.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblAgencia.Location = new System.Drawing.Point(0, 0);
-            this.lblAgencia.Name = "lblAgencia";
-            this.lblAgencia.Size = new System.Drawing.Size(894, 37);
-            this.lblAgencia.TabIndex = 19;
-            this.lblAgencia.Text = "RELLAMAR";
             // 
             // CtlOperacional
             // 
