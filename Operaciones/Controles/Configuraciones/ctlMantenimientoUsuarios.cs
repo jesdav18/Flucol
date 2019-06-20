@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using Core.Clases;
 using Devart.Data.PostgreSql;
 
 namespace Operaciones.Controles.Configuraciones
@@ -33,18 +34,16 @@ namespace Operaciones.Controles.Configuraciones
                                      int pID_ClienteServicio,
                                      string pUsuario)
         {
+            LimpiarCajasTexto();
             Pro_Conexion = pConexion;
             Pro_ID_AgenciaServicio = pID_AgenciaServicio;
             Pro_ID_ClienteServicio = pID_ClienteServicio;
-            Pro_Usuario = pUsuario;
+            Pro_Usuario = pUsuario;          
         }
 
         private void CargarDatosAgenciasServicio()
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
 
             string sentencia = @"SELECT * FROM area_servicio.ft_view_agencias_servicio_disponibles(:p_id_cliente_servicio,
                                                                                                    :p_id_agencia_servicio);";
@@ -62,19 +61,15 @@ namespace Operaciones.Controles.Configuraciones
             catch (Exception Exc)
             {
 
-                MessageBox.Show("Algo salió mal en la carga de agencia servicio. " + Exc.Message);
+                MessageBox.Show("ALGO SALIÓ MAL EN LA CARGA DE AGENCIA SERVICIO. " + Exc.Message,"FLUCOL");
             }
         }
 
         private void CargarDatosCargosDisponibles()
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+            ValidarConexion();
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_view_cargos_disponibles();";
-                                                                                        
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_cargos_disponibles();";                                                                                        
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             
             try
@@ -88,17 +83,14 @@ namespace Operaciones.Controles.Configuraciones
             catch (Exception Exc)
             {
 
-                MessageBox.Show("Algo salió mal en la carga de los cargos de empleado. " + Exc.Message);
+                MessageBox.Show("ALGO SALIÓ MAL EN LA CARGA DE LOS CARGOS DE EMPLEADO. " + Exc.Message,"FLUCOL");
             }
         }
 
         private void RegistrarEmpleado()
         {
-            
-            if (Pro_Conexion.State != System.Data.ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
+
+            ValidarConexion();
 
             string sentencia = @"SELECT * FROM area_servicio.ft_proc_registrar_empleado(:pID_ClienteServicio,
                                                                                         :pID_AgenciaServicio,
@@ -136,12 +128,15 @@ namespace Operaciones.Controles.Configuraciones
                 sentencia = null;
                 pgComando.Dispose();
 
-                MessageBox.Show("Empleado Registrado Exitosamente");
+                MessageBox.Show("EMPLEADO REGISTRADO EXITOSAMENTE", "FLUCOL");
+
+                LimpiarCajasTexto();
+                NavigationEmpleados.SelectedPage = pagePrimeraPagina;
 
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salio en el momento de registrar el empleado. " + Exc.Message);
+                MessageBox.Show("ALGO SALIO EN EL MOMENTO DE REGISTRAR EL EMPLEADO. " + Exc.Message, "FLUCOL");
             }
         }
 
@@ -157,44 +152,42 @@ namespace Operaciones.Controles.Configuraciones
 
             if (string.IsNullOrEmpty(txtCodigoEmpleado.Text))
             {
-                epProveedorErrores.SetError(txtCodigoEmpleado, "Ingrese Codigo de Empleado");
-                epProveedorErrores.SetError(cmdIrAtras, "Algunos campos en la pagina anterior necesitan llenarse.");
+                epProveedorErrores.SetError(txtCodigoEmpleado, "INGRESE CODIGO DE EMPLEADO");
+                epProveedorErrores.SetError(cmdIrAtras, "ALGUNOS CAMPOS EN LA PAGINA ANTERIOR NECESITAN LLENARSE.");
                 v_contador_errores++;
             }
 
             if (string.IsNullOrEmpty(txtPrimerNombre.Text))
             {
-                epProveedorErrores.SetError(txtPrimerNombre, "Ingrese Primer Nombre");
-                epProveedorErrores.SetError(cmdIrAtras, "Algunos campos en la pagina anterior necesitan llenarse.");
+                epProveedorErrores.SetError(txtPrimerNombre, "INGRESE PRIMER NOMBRE");
+                epProveedorErrores.SetError(cmdIrAtras, "ALGUNOS CAMPOS EN LA PAGINA ANTERIOR NECESITAN LLENARSE.");
                 v_contador_errores++;
             }
 
             if (string.IsNullOrEmpty(txtPrimerApellido.Text))
             {
-                epProveedorErrores.SetError(txtPrimerApellido, "Ingrese Primer Apellido");
-                epProveedorErrores.SetError(cmdIrAtras, "Algunos campos en la pagina anterior necesitan llenarse.");
+                epProveedorErrores.SetError(txtPrimerApellido, "INGRESE PRIMER APELLIDO");
+                epProveedorErrores.SetError(cmdIrAtras, "ALGUNOS CAMPOS EN LA PAGINA ANTERIOR NECESITAN LLENARSE.");
                 v_contador_errores++;
             }
 
             if (string.IsNullOrEmpty(txtIdentidadEmpleado.Text))
             {
-                epProveedorErrores.SetError(txtIdentidadEmpleado, "Ingrese Numero de Identidad");
+                epProveedorErrores.SetError(txtIdentidadEmpleado, "INGRESE NUMERO DE IDENTIDAD");
                 v_contador_errores++;
             }
 
             if (string.IsNullOrEmpty(txtUsuario.Text))
             {
-                epProveedorErrores.SetError(txtUsuario, "Ingrese Usuario");
+                epProveedorErrores.SetError(txtUsuario, "INGRESE USUARIO");
                 v_contador_errores++;
             }
 
             if (string.IsNullOrEmpty(txtContraseniaTemporal.Text))
             {
-                epProveedorErrores.SetError(txtContraseniaTemporal, "Ingrese una contraseña");
+                epProveedorErrores.SetError(txtContraseniaTemporal, "INGRESE UNA CONTRASEÑA");
                 v_contador_errores++;
             }
-
-           
 
             if (v_contador_errores == 0)
             {
@@ -204,7 +197,45 @@ namespace Operaciones.Controles.Configuraciones
             {
                 return false;
             }
+        }
 
+        private void LimpiarCajasTexto()
+        {
+            txtIdentidadEmpleado.Text = "";
+            txtCodigoEmpleado.Text = "";
+            txtPrimerNombre.Text = "";
+            txtPrimerApellido.Text = "";
+            txtSegundoApellido.Text = "";
+            txtSegundoNombre.Text = "";
+            gridCargos.EditValue = "";
+            gridAgencias.EditValue = "";
+            txtUsuario.Text = "";
+            txtContraseniaTemporal.Text = "";
+        }
+
+        private void ValidarConexion()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                try
+                {
+                    Pro_Conexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ValidarConexion()");
+                    v_depurador = null;
+
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+                }
+            }
         }
 
         #endregion
@@ -230,12 +261,12 @@ namespace Operaciones.Controles.Configuraciones
             if (ValidarCamposObligatorios())
             {
                 RegistrarEmpleado();
-            }
-            
+            }           
         }
 
         private void cmdSiguiente_Click(object sender, EventArgs e)
         {
+            txtIdentidadEmpleado.Focus();
             CargarDatosAgenciasServicio();
             CargarDatosCargosDisponibles();
             NavigationEmpleados.SelectedPage = pageSegundaPagina;
@@ -243,6 +274,7 @@ namespace Operaciones.Controles.Configuraciones
 
         private void cmdIrAtras_Click(object sender, EventArgs e)
         {
+            txtCodigoEmpleado.Focus();
             NavigationEmpleados.SelectedPage = pagePrimeraPagina;
         }
 

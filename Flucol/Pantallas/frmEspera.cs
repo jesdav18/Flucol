@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraWaitForm;
 
-namespace Operaciones.Pantallas
+namespace Flucol.Pantallas
 {
     public partial class frmEspera : WaitForm
     {
@@ -27,7 +27,7 @@ namespace Operaciones.Pantallas
         public override void SetDescription(string description)
         {
             base.SetDescription(description);
-            
+           
         }
         public override void ProcessCommand(Enum cmd, object arg)
         {

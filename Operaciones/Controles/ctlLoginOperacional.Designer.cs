@@ -35,14 +35,16 @@
             this.lblEtiqueta = new DevExpress.XtraEditors.LabelControl();
             this.cmdIngresar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
+            this.picLogoInstitucion = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasenia.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInstitucion.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(161, 71);
+            this.txtUsuario.Location = new System.Drawing.Point(155, 224);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Properties.Appearance.Options.UseFont = true;
@@ -57,7 +59,7 @@
             // txtContrasenia
             // 
             this.txtContrasenia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContrasenia.Location = new System.Drawing.Point(161, 117);
+            this.txtContrasenia.Location = new System.Drawing.Point(155, 270);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasenia.Properties.Appearance.Options.UseFont = true;
@@ -74,7 +76,7 @@
             this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Appearance.Options.UseFont = true;
-            this.lblUsuario.Location = new System.Drawing.Point(73, 81);
+            this.lblUsuario.Location = new System.Drawing.Point(67, 234);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(64, 20);
             this.lblUsuario.TabIndex = 2;
@@ -85,7 +87,7 @@
             this.lblContrasenia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContrasenia.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasenia.Appearance.Options.UseFont = true;
-            this.lblContrasenia.Location = new System.Drawing.Point(40, 127);
+            this.lblContrasenia.Location = new System.Drawing.Point(34, 280);
             this.lblContrasenia.Name = "lblContrasenia";
             this.lblContrasenia.Size = new System.Drawing.Size(97, 20);
             this.lblContrasenia.TabIndex = 3;
@@ -104,9 +106,9 @@
             this.lblEtiqueta.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblEtiqueta.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.lblEtiqueta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEtiqueta.Location = new System.Drawing.Point(0, 0);
+            this.lblEtiqueta.Location = new System.Drawing.Point(5, 5);
             this.lblEtiqueta.Name = "lblEtiqueta";
-            this.lblEtiqueta.Size = new System.Drawing.Size(442, 41);
+            this.lblEtiqueta.Size = new System.Drawing.Size(429, 41);
             this.lblEtiqueta.TabIndex = 4;
             this.lblEtiqueta.Text = "ACCESO DE USUARIO";
             // 
@@ -124,7 +126,7 @@
             this.cmdIngresar.AppearancePressed.Options.UseFont = true;
             this.cmdIngresar.AppearancePressed.Options.UseForeColor = true;
             this.cmdIngresar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cmdIngresar.Location = new System.Drawing.Point(40, 177);
+            this.cmdIngresar.Location = new System.Drawing.Point(34, 330);
             this.cmdIngresar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.cmdIngresar.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdIngresar.Name = "cmdIngresar";
@@ -148,7 +150,7 @@
             this.cmdCerrar.AppearancePressed.Options.UseFont = true;
             this.cmdCerrar.AppearancePressed.Options.UseForeColor = true;
             this.cmdCerrar.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.cmdCerrar.Location = new System.Drawing.Point(233, 177);
+            this.cmdCerrar.Location = new System.Drawing.Point(227, 330);
             this.cmdCerrar.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.cmdCerrar.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdCerrar.Name = "cmdCerrar";
@@ -158,11 +160,29 @@
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             this.cmdCerrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmdCerrar_KeyDown);
             // 
+            // picLogoInstitucion
+            // 
+            this.picLogoInstitucion.EditValue = global::Operaciones.Properties.Resources.iconUsuario;
+            this.picLogoInstitucion.Location = new System.Drawing.Point(132, 52);
+            this.picLogoInstitucion.Name = "picLogoInstitucion";
+            this.picLogoInstitucion.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.picLogoInstitucion.Properties.AllowFocused = false;
+            this.picLogoInstitucion.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.picLogoInstitucion.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.picLogoInstitucion.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.picLogoInstitucion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picLogoInstitucion.Properties.NullText = " ";
+            this.picLogoInstitucion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picLogoInstitucion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picLogoInstitucion.Size = new System.Drawing.Size(177, 151);
+            this.picLogoInstitucion.TabIndex = 7;
+            // 
             // ctlLoginOperacional
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.picLogoInstitucion);
             this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdIngresar);
             this.Controls.Add(this.lblEtiqueta);
@@ -171,10 +191,14 @@
             this.Controls.Add(this.txtContrasenia);
             this.Controls.Add(this.txtUsuario);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximumSize = new System.Drawing.Size(439, 405);
+            this.MinimumSize = new System.Drawing.Size(439, 405);
             this.Name = "ctlLoginOperacional";
-            this.Size = new System.Drawing.Size(442, 249);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Size = new System.Drawing.Size(439, 405);
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasenia.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInstitucion.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +213,6 @@
         private DevExpress.XtraEditors.LabelControl lblEtiqueta;
         private DevExpress.XtraEditors.SimpleButton cmdIngresar;
         private DevExpress.XtraEditors.SimpleButton cmdCerrar;
+        private DevExpress.XtraEditors.PictureEdit picLogoInstitucion;
     }
 }

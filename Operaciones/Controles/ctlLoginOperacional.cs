@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Configuration;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using Core.Clases;
 using Devart.Data.PostgreSql;
@@ -34,6 +36,18 @@ namespace Operaciones.Controles
 
         #endregion
 
+        #region ENUMERACIONES
+
+        public enum NIVELES_ACCESO
+        {
+            ADMINISTRACION = 1,
+            OPERACIONAL = 2,
+            SUPERVISOR = 3,
+            INVITADO = 4
+        }
+
+        #endregion
+
         #region EVENTOS
 
         public event EventHandler OnUsuarioLogueado;
@@ -48,32 +62,33 @@ namespace Operaciones.Controles
             Pro_Sucursal = pSucursal;
             Pro_Cliente = pCliente;
             txtUsuario.Focus();
-            
+
+            picLogoInstitucion.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
+
         }
 
         private bool ValidarUsuarioLogueo()
         {
-            if (Pro_Conexion.State != ConnectionState.Open)
-            {
-               Pro_Conexion.Open();
 
-            }
+            bool v_encontro_usuario = false;
+
+            ValidarConexion();
 
             try
             {
-               
-
                 string sentencia = @"SELECT * FROM area_servicio.ft_proc_valida_usuario_acceso (
                                                                                                   :p_usuario,
                                                                                                   :p_contrasenia,
-                                                                                                  :p_id_cliente_servicio,
-                                                                                                  :p_id_agencia_servicio
+                                                                                                  :p_id_agencia_servicio,
+                                                                                                  :p_id_cliente_servicio
+                                                                                                  
                                                                                                 );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = txtUsuario.Text;
                 pgComando.Parameters.Add("p_contrasenia", PgSqlType.VarChar).Value = txtContrasenia.Text;
-                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_Cliente;
                 pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
+                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_Cliente;
+                
 
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
                 if (pgDr.Read())
@@ -84,6 +99,7 @@ namespace Operaciones.Controles
                     Pro_DescripcionNivelAcceso = pgDr.GetString("nivel_acceso_empleado");
                     Pro_CargoEmpleado = pgDr.GetString("cargo_empleado");
                     Pro_CodigoEmpleado = pgDr.GetString("codigo_empleado");
+                    v_encontro_usuario = true;
                 }
 
                 pgDr.Close();
@@ -92,8 +108,29 @@ namespace Operaciones.Controles
                 pgDr = null;
                 pgComando.Dispose();
 
-                return true;
 
+                if (v_encontro_usuario)
+                {
+                    if ((NIVELES_ACCESO) Pro_ID_NivelAcceso == NIVELES_ACCESO.OPERACIONAL)
+                    {
+                        if (CargarDatosTicketPosicion())
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
 
             }
             catch (Exception Exc)
@@ -103,6 +140,91 @@ namespace Operaciones.Controles
                 return false;    
             }
 
+        }
+
+        private bool CargarDatosTicketPosicion()
+        {
+            string v_datos_posicion = null;
+            ValidarConexion();
+
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                Pro_Conexion.Open();
+            }
+
+            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_posicion_asignada (
+                                                                                                :p_usuario, 
+                                                                                                :p_agencia,
+                                                                                                :p_cliente
+                                                                                                );";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_UsuarioEmpleado;
+            pgComando.Parameters.Add("p_agencia", PgSqlType.Int).Value = Pro_Sucursal;
+            pgComando.Parameters.Add("p_cliente", PgSqlType.Int).Value = Pro_Cliente;
+
+            try
+            {
+
+                PgSqlDataReader pgDr = pgComando.ExecuteReader();
+
+                if (pgDr.Read())
+                {
+                    
+                    v_datos_posicion = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " +
+                                       pgDr.GetString("posicion");
+                }
+
+
+                pgDr.Close();
+                pgDr = null;
+                pgComando.Dispose();
+                sentencia = null;
+
+                if (string.IsNullOrEmpty(v_datos_posicion))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+
+            }
+            catch (Exception Exc)
+            {
+                DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                v_depurador.CapturadorExcepciones(Exc,
+                                                  this.Name,
+                                                  "CargarDatosTicketPosicion()");
+                v_depurador = null;
+                MessageBox.Show(Exc.Message, "FLUCOL");
+                return false;
+            }
+        }
+
+        private void ValidarConexion()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                try
+                {
+                    Pro_Conexion.Open();
+                }
+                catch (Exception Exc)
+                {
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ValidarConexion()");
+                    v_depurador = null;
+
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+                }
+            }
         }
 
 
@@ -149,7 +271,7 @@ namespace Operaciones.Controles
         {
             if (e.KeyCode == Keys.Enter)
             {
-                cmdIngresar.Focus();
+                cmdIngresar_Click(sender, e);
             }
 
             if (e.KeyCode == Keys.Up)

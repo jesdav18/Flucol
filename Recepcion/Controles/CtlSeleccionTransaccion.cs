@@ -5,6 +5,8 @@ using Core.Reportes;
 using DevExpress.XtraReports.UI;
 using System.Configuration;
 using System.Drawing;
+using Core.Clases;
+using System.Data;
 
 namespace Recepcion.Controles
 {
@@ -16,6 +18,7 @@ namespace Recepcion.Controles
         public CtlSeleccionTransaccion()
         {
             InitializeComponent();
+           // DevExpress.Data.CurrencyDataController.DisableThreadingProblemsDetection = true;
         }
 
         #endregion
@@ -36,10 +39,6 @@ namespace Recepcion.Controles
         #region VARIABLES GLOBALES / CONSTANTES / OBJETOS
 
         rptTicket rpt = null;
-
-        #endregion
-
-        #region EVENTOS
 
         #endregion
 
@@ -96,17 +95,22 @@ namespace Recepcion.Controles
             rpt.CargarDatos(Pro_Ticket_Generado,Pro_Conexion);
             rpt.pic_Logo.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
             rpt.lblNombreAgencia.Text = Pro_NombreAgenciaServicio;
-            rpt.CreateDocument();
-            documentViewer1.DocumentSource = rpt;
-            tmrTiempoVisualizacionTicket.Start();
+            
 
             try
             {
-               
+
+                splashScreenManager1.ShowWaitForm();
+                rpt.CreateDocument();
+                documentViewer1.DocumentSource = rpt;
+
+                splashScreenManager1.CloseWaitForm();
+
+
+                tmrTiempoVisualizacionTicket.Start();
                 ReportPrintTool v_print_tool = new ReportPrintTool(rpt);
                 v_print_tool.Print(ConfigurationSettings.AppSettings["IMPRESORA_TICKETS"]);
 
-               
             }
             catch (Exception Exc)
             {
@@ -117,29 +121,29 @@ namespace Recepcion.Controles
         
         private void GenerarTicket()
         {
-            if (Pro_Conexion.State != System.Data.ConnectionState.Open)
-            {
-                Pro_Conexion.Open();
-            }
 
+            ValidarConexion();
+
+            splashScreenManager1.ShowWaitForm();
             PgSqlTransaction pgTrans = Pro_Conexion.BeginTransaction();
+
+            string sentencia = @"SELECT * FROM configuracion.sp_proc_genera_correlativos_ticket (
+                                                                                                :p_id_agencia_servicio,
+                                                                                                :p_id_cliente_servicio,
+                                                                                                :p_id_tipo_ticket_servicio,
+                                                                                                :p_id_operacion_servicio,
+                                                                                                :p_direccion_ip
+                                                                                            );";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
+            pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
+            pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente_Servicio;
+            pgComando.Parameters.Add("p_id_tipo_ticket_servicio", PgSqlType.Int).Value = Pro_ID_Tipo_Ticket_Servicio;
+            pgComando.Parameters.Add("p_id_operacion_servicio", PgSqlType.Int).Value = Pro_ID_Operacion_Servicio;
+            pgComando.Parameters.Add("p_direccion_ip", PgSqlType.VarChar).Value = Pro_IP_Host;
+
             try
             {
-                string sentencia = @"SELECT * FROM configuracion.sp_proc_genera_correlativos_ticket (
-                                                                                                      :p_id_agencia_servicio,
-                                                                                                      :p_id_cliente_servicio,
-                                                                                                      :p_id_tipo_ticket_servicio,
-                                                                                                      :p_id_operacion_servicio,
-                                                                                                      :p_direccion_ip
-                                                                                                    );";
-                PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-                pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
-                pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente_Servicio;
-                pgComando.Parameters.Add("p_id_tipo_ticket_servicio", PgSqlType.Int).Value = Pro_ID_Tipo_Ticket_Servicio;
-                pgComando.Parameters.Add("p_id_operacion_servicio", PgSqlType.Int).Value = Pro_ID_Operacion_Servicio;
-                pgComando.Parameters.Add("p_direccion_ip", PgSqlType.VarChar).Value = Pro_IP_Host;
-                
-
+               
                 PgSqlDataReader pgDr = pgComando.ExecuteReader();
 
                 if (pgDr.Read())
@@ -151,28 +155,72 @@ namespace Recepcion.Controles
                 pgTrans.Commit();
                 pgDr.Close();
                 pgComando.Dispose();
+                sentencia = null;
 
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception Exc)
             {
+                splashScreenManager1.CloseWaitForm();
                 pgTrans.Rollback();
                 Pro_Ticket_Generado = null;
                 MessageBox.Show(Exc.Message,"FLUCOL");                
-            }
+            }          
         }
 
         private void ReinicioImagenesIcono()
         {
+
+            if(splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
+
+            splashScreenManager1.ShowWaitForm();
+
             cmdTerceraEdad.Image = Properties.Resources.iconAncianos;
             cmdCondicionesEspeciales.Image = Properties.Resources.iconEmbarazada;
             cmdCondicionesEspeciales01.Image = Properties.Resources.iconDiscapacidad;
             cmdEsperaGeneral.Image = Properties.Resources.iconEsperaGeneral;
             cmdTransacciones.Image = Properties.Resources.iconTransaccionesCaja;
             cmdServicioAlCliente.Image = Properties.Resources.iconServicioAlCliente;
-            cmdIrAPrioridades.Image = Properties.Resources.iconIrAtras;
+            cmdIrSeleccionTransacciones.Image = Properties.Resources.iconIrAtras;
             cmdNegocios.Image = Properties.Resources.icon_Negocios_Negro;
+
+            splashScreenManager1.CloseWaitForm();
         }
 
+        private void ValidarConexion()
+        {
+            if (Pro_Conexion.State != ConnectionState.Open)
+            {
+                try
+                {
+                    splashScreenManager2.ShowWaitForm();
+
+                    Pro_Conexion.Open();
+
+                    splashScreenManager2.CloseWaitForm();
+                }
+                catch (Exception Exc)
+                {
+                    splashScreenManager2.ShowWaitForm();
+                    DepuradorExcepciones v_depurador = new DepuradorExcepciones();
+                    v_depurador.CapturadorExcepciones(Exc,
+                                                      this.Name,
+                                                      "ValidarConexion()");
+                    v_depurador = null;
+
+                    PgSqlConnection v_conexion = new PgSqlConnection(Pro_Conexion.ConnectionString);
+                    v_conexion.Password = Pro_Conexion.Password;
+                    Pro_Conexion = v_conexion;
+                    Pro_Conexion.Open();
+                    v_conexion = null;
+
+                    splashScreenManager2.CloseWaitForm();
+                }
+            }
+        }
 
         #endregion
 
@@ -180,86 +228,154 @@ namespace Recepcion.Controles
 
         private void cmdServicioAlCliente_Click(object sender, EventArgs e)
         {
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+
+          
             ReinicioImagenesIcono();
             cmdServicioAlCliente.Image = Properties.Resources.iconServicioAlClienteVerde;
             Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.SERVICIO_AL_CLIENTE;
-            GenerarTicket();
-            IrAPaginaTicket();
+            IrAPaginaPrioridades();
+
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }       
         }
 
         private void cmdTransacciones_Click(object sender, EventArgs e)
         {
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+
+           
             ReinicioImagenesIcono();
             cmdTransacciones.Image = Properties.Resources.IconTransaccionesCajaVerde;
             Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.OPERACIONES_CAJA;
-            GenerarTicket();
-            IrAPaginaTicket();
+            IrAPaginaPrioridades();splashScreenManager1.ShowWaitForm();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
        
         private void cmdTerceraEdad_Click(object sender, EventArgs e)
         {
+
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+          
             ReinicioImagenesIcono();
-            cmdTerceraEdad.Image = Properties.Resources.iconAncianosVerde;
-            IrAPaginaTransacciones();
+            cmdTerceraEdad.Image = Properties.Resources.iconAncianosVerde;         
             Pro_ID_Tipo_Ticket_Servicio = (int)Tipo_Ticket_Servicio.TERCERA_EDAD;
+            GenerarTicket();
+            IrAPaginaTicket();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
-    
+
         private void cmdCondicionesEspeciales_Click(object sender, EventArgs e)
         {
-            ReinicioImagenesIcono();
-            cmdCondicionesEspeciales.Image = Properties.Resources.iconEmbarazadaVerde;
-            cmdCondicionesEspeciales01.Image = Properties.Resources.iconDiscapacidadVerde;
-            IrAPaginaTransacciones();
-            Pro_ID_Tipo_Ticket_Servicio = (int)Tipo_Ticket_Servicio.ATENCION_ESPECIAL;
-        }
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
 
-        private void cmdCondicionesEspeciales01_Click(object sender, EventArgs e)
-        {
+           
             ReinicioImagenesIcono();
             cmdCondicionesEspeciales.Image = Properties.Resources.iconEmbarazadaVerde;
             cmdCondicionesEspeciales01.Image = Properties.Resources.iconDiscapacidadVerde;
-            IrAPaginaTransacciones();
             Pro_ID_Tipo_Ticket_Servicio = (int)Tipo_Ticket_Servicio.ATENCION_ESPECIAL;
+            GenerarTicket();
+            IrAPaginaTicket();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
         private void cmdEsperaGeneral_Click(object sender, EventArgs e)
         {
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+          
             ReinicioImagenesIcono();
             cmdEsperaGeneral.Image = Properties.Resources.iconEsperaGeneralVerde;
-            IrAPaginaTransacciones();
             Pro_ID_Tipo_Ticket_Servicio = (int)Tipo_Ticket_Servicio.FILA_GENERAL;
+            GenerarTicket();
+            IrAPaginaTicket();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
-       
-        private void cmdIrAPrioridades_Click(object sender, EventArgs e)
-        {
-            ReinicioImagenesIcono();
-            cmdIrAPrioridades.Image = Properties.Resources.iconIrAtrasVerde;
-            IrAPaginaPrioridades();
-        }
-    
         private void tmrTiempoVisualizacionTicket_Tick(object sender, EventArgs e)
         {
-           
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+
+          
             tmrTiempoVisualizacionTicket.Stop();
             ReinicioImagenesIcono();
-            IrAPaginaPrioridades();
+            IrAPaginaTransacciones();
             rpt.Dispose();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
         private void cmdNegocios_Click(object sender, EventArgs e)
         {
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+
+         
             ReinicioImagenesIcono();
             cmdNegocios.Image = Properties.Resources.icon_Negocios_Verde;
             Pro_ID_Operacion_Servicio = (int)Tipo_Operaciones_Servicio.NEGOCIOS;
-            GenerarTicket();
-            IrAPaginaTicket();
+            IrAPaginaPrioridades();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
+        }
+
+        private void cmdIrSeleccionTransacciones_Click(object sender, EventArgs e)
+        {
+            if (!splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.ShowWaitForm();
+            }
+
+          
+            ReinicioImagenesIcono();
+            cmdIrSeleccionTransacciones.Image = Properties.Resources.iconIrAtrasVerde;
+            IrAPaginaTransacciones();
+            if (splashScreenManager1.IsSplashFormVisible)
+            {
+                splashScreenManager1.CloseWaitForm();
+            }
         }
 
         #endregion
-
 
     }
 }

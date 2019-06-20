@@ -177,12 +177,12 @@ namespace Operaciones.Controles.Configuraciones
 
         private void txtBusquedaAgencia_TextChanged(object sender, EventArgs e)
         {
-
+            gvAgenciasServicio.ApplyFindFilter("\"" + txtBusquedaAgencia.Text + "\"");
         }
 
         private void txtBusquedaColaborador_TextChanged(object sender, EventArgs e)
         {
-
+            gvEmpleadosServicio.ApplyFindFilter("\"" + txtBusquedaColaborador.Text + "\"");
         }
     }
 }

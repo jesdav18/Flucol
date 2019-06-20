@@ -91,10 +91,12 @@ namespace Operaciones.Controles.Configuraciones
 
         }
 
-        private void AsignarPosicion(int pPosicion, 
+        private bool AsignarPosicion(int pPosicion, 
                                      int pID_TipoTicketServicio,
                                      string pUsuario)
         {
+            bool v_respuesta = false;
+
             splashScreenManager1.ShowWaitForm();
 
             if (Pro_Conexion.State != ConnectionState.Open)
@@ -118,23 +120,21 @@ namespace Operaciones.Controles.Configuraciones
 
             try
             {
-                pgComando.ExecuteNonQuery();
+                v_respuesta = (bool) pgComando.ExecuteScalar();
                 sentencia = null;
-                pgComando.Dispose();
-
+                pgComando.Dispose(); 
                
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salió mal en la asignacion de esta posición. " + Exc.Message);
+                v_respuesta = false;
+                MessageBox.Show(Exc.Message);
+                
             }
 
             splashScreenManager1.CloseWaitForm();
+            return v_respuesta;
         }
-
-        #endregion
-
-        #region VARIABLES GLOBALES
 
         #endregion
 
@@ -258,30 +258,80 @@ namespace Operaciones.Controles.Configuraciones
             }         
         }
 
+        public bool ValidarSiHayCambiosSinGuardar()
+        {
+            bool v_respuesta = false;
+            foreach (dsConfiguraciones.dtAsignacionPosicionesRow iterador in dsConfiguraciones1.dtAsignacionPosiciones)
+            {
+                if (iterador.tiene_cambios)
+                {
+                    v_respuesta = true;
+                    break;
+                }
+            }
+
+             return v_respuesta;
+        }
+
+
         private void cmdGuardaraCambios_Click(object sender, EventArgs e)
         {
+            bool v_respuesta = false;
+
             try
             {
                 foreach (dsConfiguraciones.dtAsignacionPosicionesRow iterador in dsConfiguraciones1.dtAsignacionPosiciones)
                 {
-                    if (iterador.tiene_cambios && 
-                        !iterador.Isid_tipo_ticketNull() && 
-                        !iterador.Isposicion_asignadaNull())
+                    if (iterador.tiene_cambios)
                     {
-                        AsignarPosicion(iterador.posicion_asignada,
-                                        iterador.id_tipo_ticket,
-                                        iterador.usuario);
+
+                        if (!iterador.Isid_tipo_ticketNull() &&
+                        !iterador.Isposicion_asignadaNull())
+                        {
+                            if (
+                                 AsignarPosicion(
+                                                    iterador.posicion_asignada,
+                                                    iterador.id_tipo_ticket,
+                                                    iterador.usuario 
+                                                 
+                                                ) )
+                            {
+                                v_respuesta = true;
+                            }
+                        }
+                        else
+                        {
+                            if (iterador.Isid_tipo_ticketNull() && 
+                                iterador.Isposicion_asignadaNull())
+                            {
+                                MessageBox.Show("AUN NO SE HA ASIGNADO UNA POSICION, NI EL TIPO DE FILA QUE ATENDERA " + iterador.nombre_empleado,"FLUCOL");
+                            }
+                            else if(iterador.Isposicion_asignadaNull()){
+                                MessageBox.Show("NO SE HA ASIGNADO UNA POSICION A " + iterador.nombre_empleado);
+                            }
+                            else if(iterador.Isid_tipo_ticketNull())
+                            {
+                                MessageBox.Show("NO SE HA ASIGNADO UN TIPO DE FILA A " + iterador.nombre_empleado);
+                            }
+
+                            break;
+
+                        }
+                                    
                     }
-                    
+                                    
                 }
 
-                MessageBox.Show("La asignación de posiciones ha concluido de manera correcta");
-                CargarDatos();
+                if (v_respuesta)
+                {
+                    MessageBox.Show("LA ASIGNACIÓN DE POSICIONES HA CONCLUIDO DE MANERA CORRECTA.", "FLUCOL");
+                    CargarDatos();
+                }
 
             }
             catch (Exception Exc)
             {
-                MessageBox.Show("Algo salio mal en la asignacion de posiciones. " + Exc.Message);
+                MessageBox.Show("ALGO SALIO MAL EN LA ASIGNACION DE POSICIONES. " + Exc.Message);
             }
         }
 

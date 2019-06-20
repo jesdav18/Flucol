@@ -44,9 +44,8 @@
             this.gcPosicion = new DevExpress.XtraGrid.GridControl();
             this.gvPosicion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colposicion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tmrConsultaLlamadoTickets = new System.Windows.Forms.Timer(this.components);
-            this.bgLlamadoTickets = new System.ComponentModel.BackgroundWorker();
-            this.tmrConsultaCola = new System.Windows.Forms.Timer(this.components);
+            this.tmrColaTickets = new System.Windows.Forms.Timer(this.components);
+            this.tmrLlamadoTickets = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -73,7 +72,7 @@
             this.panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(617, 76);
+            this.panelControl1.Size = new System.Drawing.Size(573, 76);
             this.panelControl1.TabIndex = 0;
             // 
             // lblTituloPosiciones
@@ -88,7 +87,7 @@
             this.lblTituloPosiciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTituloPosiciones.Location = new System.Drawing.Point(300, 3);
             this.lblTituloPosiciones.Name = "lblTituloPosiciones";
-            this.lblTituloPosiciones.Size = new System.Drawing.Size(314, 70);
+            this.lblTituloPosiciones.Size = new System.Drawing.Size(270, 70);
             this.lblTituloPosiciones.TabIndex = 1;
             this.lblTituloPosiciones.Text = "POSICIÓN";
             // 
@@ -117,7 +116,7 @@
             this.panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(617, 134);
+            this.panelControl2.Size = new System.Drawing.Size(573, 134);
             this.panelControl2.TabIndex = 1;
             // 
             // lblPosicion
@@ -134,7 +133,7 @@
             this.lblPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPosicion.Location = new System.Drawing.Point(300, 3);
             this.lblPosicion.Name = "lblPosicion";
-            this.lblPosicion.Size = new System.Drawing.Size(314, 128);
+            this.lblPosicion.Size = new System.Drawing.Size(270, 128);
             this.lblPosicion.TabIndex = 2;
             this.lblPosicion.Text = "POS.";
             // 
@@ -234,7 +233,7 @@
             this.panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(317, 177);
+            this.panelControl4.Size = new System.Drawing.Size(273, 177);
             this.panelControl4.TabIndex = 3;
             // 
             // gcPosicion
@@ -245,7 +244,7 @@
             this.gcPosicion.Location = new System.Drawing.Point(3, 3);
             this.gcPosicion.MainView = this.gvPosicion;
             this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(311, 171);
+            this.gcPosicion.Size = new System.Drawing.Size(267, 171);
             this.gcPosicion.TabIndex = 1;
             this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPosicion});
@@ -285,20 +284,15 @@
             this.colposicion.Visible = true;
             this.colposicion.VisibleIndex = 0;
             // 
-            // tmrConsultaLlamadoTickets
+            // tmrColaTickets
             // 
-            this.tmrConsultaLlamadoTickets.Interval = 500;
-            this.tmrConsultaLlamadoTickets.Tick += new System.EventHandler(this.tmrConsultaLlamadoTickets_Tick);
+            this.tmrColaTickets.Interval = 1000;
+            this.tmrColaTickets.Tick += new System.EventHandler(this.tmrColaTickets_Tick);
             // 
-            // bgLlamadoTickets
+            // tmrLlamadoTickets
             // 
-            this.bgLlamadoTickets.WorkerSupportsCancellation = true;
-            this.bgLlamadoTickets.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgLlamadoTickets_DoWork);
-            // 
-            // tmrConsultaCola
-            // 
-            this.tmrConsultaCola.Interval = 1000;
-            this.tmrConsultaCola.Tick += new System.EventHandler(this.tmrConsultaCola_Tick);
+            this.tmrLlamadoTickets.Interval = 800;
+            this.tmrLlamadoTickets.Tick += new System.EventHandler(this.tmrLlamadoTickets_Tick);
             // 
             // CtlTicketsPosiciones
             // 
@@ -311,7 +305,7 @@
             this.Controls.Add(this.panelControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CtlTicketsPosiciones";
-            this.Size = new System.Drawing.Size(617, 387);
+            this.Size = new System.Drawing.Size(573, 387);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -338,16 +332,15 @@
         private DevExpress.XtraEditors.LabelControl lblPosicion;
         private DevExpress.XtraEditors.LabelControl lblTicket;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraGrid.GridControl gcTicket;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvTicket;
         private DataSets.dsTicketsPosiciones dsTicketsPosiciones1;
         private DevExpress.XtraGrid.Columns.GridColumn colticket1;
         private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraGrid.GridControl gcPosicion;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvPosicion;
         private DevExpress.XtraGrid.Columns.GridColumn colposicion;
-        private System.Windows.Forms.Timer tmrConsultaLlamadoTickets;
-        private System.ComponentModel.BackgroundWorker bgLlamadoTickets;
-        private System.Windows.Forms.Timer tmrConsultaCola;
+        public DevExpress.XtraGrid.GridControl gcTicket;
+        public DevExpress.XtraGrid.GridControl gcPosicion;
+        public DevExpress.XtraGrid.Views.Grid.GridView gvTicket;
+        public DevExpress.XtraGrid.Views.Grid.GridView gvPosicion;
+        private System.Windows.Forms.Timer tmrColaTickets;
+        private System.Windows.Forms.Timer tmrLlamadoTickets;
     }
 }

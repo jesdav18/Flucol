@@ -132,8 +132,10 @@
             this.ctlTicketsPosiciones1.Location = new System.Drawing.Point(5, 5);
             this.ctlTicketsPosiciones1.Name = "ctlTicketsPosiciones1";
             this.ctlTicketsPosiciones1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.ctlTicketsPosiciones1.Pro_CargarColaTicketsActivo = false;
             this.ctlTicketsPosiciones1.Pro_Conexion = null;
             this.ctlTicketsPosiciones1.Pro_ID_Cliente = 0;
+            this.ctlTicketsPosiciones1.Pro_LlamadoTicketsActivo = false;
             this.ctlTicketsPosiciones1.Pro_Sucursal = 0;
             this.ctlTicketsPosiciones1.Pro_Texto_Descriptivo = null;
             this.ctlTicketsPosiciones1.Pro_Voz = null;

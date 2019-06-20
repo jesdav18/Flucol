@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlOperacional));
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
             this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
@@ -49,13 +50,12 @@
             this.pnlInformacionTickets = new System.Windows.Forms.Panel();
             this.lblTiempoAtencion = new DevExpress.XtraEditors.LabelControl();
             this.lblNumeroTicket = new DevExpress.XtraEditors.LabelControl();
-            this.tmrTiempoAtencion = new System.Windows.Forms.Timer();
-            this.tmrParoTiempo = new System.Windows.Forms.Timer();
+            this.tmrTiempoAtencion = new System.Windows.Forms.Timer(this.components);
+            this.tmrParoTiempo = new System.Windows.Forms.Timer(this.components);
             this.Navigation = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pagePrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlListaTickets = new System.Windows.Forms.Panel();
-            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.PagePopups = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.popupResumen = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
@@ -66,6 +66,7 @@
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.PageOperacionalReducido = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.ctlOperacionalReducido1 = new Operaciones.Controles.ctlOperacionalReducido();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
@@ -158,7 +159,11 @@
             this.picUsuario.EditValue = ((object)(resources.GetObject("picUsuario.EditValue")));
             this.picUsuario.Location = new System.Drawing.Point(170, 0);
             this.picUsuario.Name = "picUsuario";
+            this.picUsuario.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
             this.picUsuario.Properties.AllowFocused = false;
+            this.picUsuario.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.picUsuario.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.picUsuario.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.picUsuario.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.picUsuario.Properties.Appearance.Options.UseBackColor = true;
             this.picUsuario.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -186,9 +191,9 @@
             this.pnlControlesDeCola.Controls.Add(this.cmdCerrarTicket);
             this.pnlControlesDeCola.Controls.Add(this.cmdIniciarTicket);
             this.pnlControlesDeCola.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlControlesDeCola.Location = new System.Drawing.Point(0, 303);
+            this.pnlControlesDeCola.Location = new System.Drawing.Point(0, 266);
             this.pnlControlesDeCola.Name = "pnlControlesDeCola";
-            this.pnlControlesDeCola.Size = new System.Drawing.Size(1106, 138);
+            this.pnlControlesDeCola.Size = new System.Drawing.Size(933, 138);
             this.pnlControlesDeCola.TabIndex = 1;
             // 
             // lblRellamar
@@ -202,7 +207,7 @@
             this.lblRellamar.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblRellamar.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblRellamar.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblRellamar.Location = new System.Drawing.Point(624, 78);
+            this.lblRellamar.Location = new System.Drawing.Point(544, 77);
             this.lblRellamar.Name = "lblRellamar";
             this.lblRellamar.Size = new System.Drawing.Size(171, 54);
             this.lblRellamar.TabIndex = 18;
@@ -213,8 +218,13 @@
             // 
             this.cmdRellamar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdRellamar.EditValue = global::Operaciones.Properties.Resources.icon_rellamar_negro_64;
-            this.cmdRellamar.Location = new System.Drawing.Point(679, 16);
+            this.cmdRellamar.Location = new System.Drawing.Point(599, 15);
             this.cmdRellamar.Name = "cmdRellamar";
+            this.cmdRellamar.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowFocused = false;
+            this.cmdRellamar.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdRellamar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdRellamar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdRellamar.Properties.ShowMenu = false;
@@ -234,7 +244,7 @@
             this.lblMarcarComoNoRespondioLlamado.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblMarcarComoNoRespondioLlamado.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblMarcarComoNoRespondioLlamado.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblMarcarComoNoRespondioLlamado.Location = new System.Drawing.Point(817, 78);
+            this.lblMarcarComoNoRespondioLlamado.Location = new System.Drawing.Point(737, 77);
             this.lblMarcarComoNoRespondioLlamado.Name = "lblMarcarComoNoRespondioLlamado";
             this.lblMarcarComoNoRespondioLlamado.Size = new System.Drawing.Size(171, 54);
             this.lblMarcarComoNoRespondioLlamado.TabIndex = 16;
@@ -245,8 +255,13 @@
             // 
             this.cmdClienteNoAtendioLlamado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdClienteNoAtendioLlamado.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
-            this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(875, 16);
+            this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(795, 15);
             this.cmdClienteNoAtendioLlamado.Name = "cmdClienteNoAtendioLlamado";
+            this.cmdClienteNoAtendioLlamado.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowFocused = false;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdClienteNoAtendioLlamado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdClienteNoAtendioLlamado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdClienteNoAtendioLlamado.Properties.ShowMenu = false;
@@ -266,7 +281,7 @@
             this.lblLlamarCliente.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblLlamarCliente.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblLlamarCliente.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblLlamarCliente.Location = new System.Drawing.Point(130, 78);
+            this.lblLlamarCliente.Location = new System.Drawing.Point(50, 77);
             this.lblLlamarCliente.Name = "lblLlamarCliente";
             this.lblLlamarCliente.Size = new System.Drawing.Size(130, 54);
             this.lblLlamarCliente.TabIndex = 14;
@@ -277,8 +292,13 @@
             // 
             this.cmdLlamarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdLlamarCliente.EditValue = global::Operaciones.Properties.Resources.icon_llamar_siguiente_cliente;
-            this.cmdLlamarCliente.Location = new System.Drawing.Point(166, 16);
+            this.cmdLlamarCliente.Location = new System.Drawing.Point(86, 15);
             this.cmdLlamarCliente.Name = "cmdLlamarCliente";
+            this.cmdLlamarCliente.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowFocused = false;
+            this.cmdLlamarCliente.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdLlamarCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdLlamarCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdLlamarCliente.Properties.ShowMenu = false;
@@ -298,7 +318,7 @@
             this.lblCerrarTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCerrarTicket.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblCerrarTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCerrarTicket.Location = new System.Drawing.Point(473, 81);
+            this.lblCerrarTicket.Location = new System.Drawing.Point(393, 80);
             this.lblCerrarTicket.Name = "lblCerrarTicket";
             this.lblCerrarTicket.Size = new System.Drawing.Size(130, 54);
             this.lblCerrarTicket.TabIndex = 12;
@@ -316,7 +336,7 @@
             this.lblIniciarTicket.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblIniciarTicket.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblIniciarTicket.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblIniciarTicket.Location = new System.Drawing.Point(305, 78);
+            this.lblIniciarTicket.Location = new System.Drawing.Point(225, 77);
             this.lblIniciarTicket.Name = "lblIniciarTicket";
             this.lblIniciarTicket.Size = new System.Drawing.Size(130, 54);
             this.lblIniciarTicket.TabIndex = 11;
@@ -327,8 +347,13 @@
             // 
             this.cmdCerrarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdCerrarTicket.EditValue = global::Operaciones.Properties.Resources.iconDetenerTicket;
-            this.cmdCerrarTicket.Location = new System.Drawing.Point(508, 16);
+            this.cmdCerrarTicket.Location = new System.Drawing.Point(428, 15);
             this.cmdCerrarTicket.Name = "cmdCerrarTicket";
+            this.cmdCerrarTicket.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowFocused = false;
+            this.cmdCerrarTicket.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdCerrarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCerrarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdCerrarTicket.Properties.ShowMenu = false;
@@ -341,8 +366,13 @@
             // 
             this.cmdIniciarTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmdIniciarTicket.EditValue = global::Operaciones.Properties.Resources.iconIniciarTicket;
-            this.cmdIniciarTicket.Location = new System.Drawing.Point(336, 16);
+            this.cmdIniciarTicket.Location = new System.Drawing.Point(256, 15);
             this.cmdIniciarTicket.Name = "cmdIniciarTicket";
+            this.cmdIniciarTicket.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowFocused = false;
+            this.cmdIniciarTicket.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdIniciarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdIniciarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdIniciarTicket.Properties.ShowMenu = false;
@@ -355,10 +385,11 @@
             // 
             this.pnlInformacionTickets.Controls.Add(this.lblTiempoAtencion);
             this.pnlInformacionTickets.Controls.Add(this.lblNumeroTicket);
+            this.pnlInformacionTickets.Controls.Add(this.pnlControlesDeCola);
             this.pnlInformacionTickets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlInformacionTickets.Location = new System.Drawing.Point(125, 0);
+            this.pnlInformacionTickets.Location = new System.Drawing.Point(173, 0);
             this.pnlInformacionTickets.Name = "pnlInformacionTickets";
-            this.pnlInformacionTickets.Size = new System.Drawing.Size(981, 266);
+            this.pnlInformacionTickets.Size = new System.Drawing.Size(933, 404);
             this.pnlInformacionTickets.TabIndex = 2;
             // 
             // lblTiempoAtencion
@@ -376,7 +407,7 @@
             this.lblTiempoAtencion.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.lblTiempoAtencion.LookAndFeel.UseDefaultLookAndFeel = false;
             this.lblTiempoAtencion.Name = "lblTiempoAtencion";
-            this.lblTiempoAtencion.Size = new System.Drawing.Size(981, 163);
+            this.lblTiempoAtencion.Size = new System.Drawing.Size(933, 163);
             this.lblTiempoAtencion.TabIndex = 2;
             this.lblTiempoAtencion.Text = "00:00:00";
             // 
@@ -395,7 +426,7 @@
             this.lblNumeroTicket.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNumeroTicket.Location = new System.Drawing.Point(0, 0);
             this.lblNumeroTicket.Name = "lblNumeroTicket";
-            this.lblNumeroTicket.Size = new System.Drawing.Size(981, 103);
+            this.lblNumeroTicket.Size = new System.Drawing.Size(933, 103);
             this.lblNumeroTicket.TabIndex = 1;
             this.lblNumeroTicket.Text = "N° TICKET";
             // 
@@ -436,7 +467,6 @@
             this.pagePrincipal.Caption = "pagePrincipal";
             this.pagePrincipal.Controls.Add(this.panel1);
             this.pagePrincipal.Controls.Add(this.pnlEncabezado);
-            this.pagePrincipal.Controls.Add(this.pnlControlesDeCola);
             this.pagePrincipal.Name = "pagePrincipal";
             this.pagePrincipal.Size = new System.Drawing.Size(1106, 441);
             // 
@@ -447,7 +477,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1106, 266);
+            this.panel1.Size = new System.Drawing.Size(1106, 404);
             this.panel1.TabIndex = 4;
             // 
             // pnlListaTickets
@@ -457,23 +487,8 @@
             this.pnlListaTickets.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlListaTickets.Location = new System.Drawing.Point(0, 0);
             this.pnlListaTickets.Name = "pnlListaTickets";
-            this.pnlListaTickets.Size = new System.Drawing.Size(125, 266);
+            this.pnlListaTickets.Size = new System.Drawing.Size(173, 404);
             this.pnlListaTickets.TabIndex = 3;
-            // 
-            // ctlListaTicketsEspera1
-            // 
-            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
-            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
-            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
-            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlListaTicketsEspera1.Pro_CargarLista = false;
-            this.ctlListaTicketsEspera1.Pro_Conexion = null;
-            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_Usuario = null;
-            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(125, 266);
-            this.ctlListaTicketsEspera1.TabIndex = 0;
             // 
             // PagePopups
             // 
@@ -614,6 +629,23 @@
             this.PageOperacionalReducido.Name = "PageOperacionalReducido";
             this.PageOperacionalReducido.Size = new System.Drawing.Size(1106, 441);
             // 
+            // ctlListaTicketsEspera1
+            // 
+            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
+            this.ctlListaTicketsEspera1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
+            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
+            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlListaTicketsEspera1.Pro_CargarLista = false;
+            this.ctlListaTicketsEspera1.Pro_Conexion = null;
+            this.ctlListaTicketsEspera1.Pro_ConteoTicketsEspera = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_Usuario = null;
+            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(173, 404);
+            this.ctlListaTicketsEspera1.TabIndex = 0;
+            // 
             // ctlOperacionalReducido1
             // 
             this.ctlOperacionalReducido1.BackColor = System.Drawing.Color.White;
@@ -671,8 +703,6 @@
         private DevExpress.XtraEditors.LabelControl lblIniciarTicket;
         private DevExpress.XtraEditors.PictureEdit cmdCerrarTicket;
         private DevExpress.XtraEditors.PictureEdit cmdIniciarTicket;
-        private DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
-        private DevExpress.XtraEditors.LabelControl lblNumeroTicket;
         private System.Windows.Forms.Timer tmrTiempoAtencion;
         private System.Windows.Forms.Timer tmrParoTiempo;
         private DevExpress.XtraEditors.LabelControl lblLlamarCliente;
@@ -701,5 +731,7 @@
         public DevExpress.XtraBars.Navigation.NavigationPage pagePrincipal;
         public ctlListaTicketsEspera ctlListaTicketsEspera1;
         private DevExpress.XtraEditors.LabelControl lblAgencia;
+        public DevExpress.XtraEditors.LabelControl lblNumeroTicket;
+        public DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
     }
 }

@@ -7,11 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraWaitForm;
 
-namespace Operaciones.Pantallas
+namespace Recepcion.Controles
 {
-    public partial class frmEspera : WaitForm
+    public partial class frmEsperaRecepcion : WaitForm
     {
-        public frmEspera()
+        public frmEsperaRecepcion()
         {
             InitializeComponent();
             
@@ -22,12 +22,12 @@ namespace Operaciones.Pantallas
         public override void SetCaption(string caption)
         {
             base.SetCaption(caption);
-            
+          
         }
         public override void SetDescription(string description)
         {
             base.SetDescription(description);
-            
+           
         }
         public override void ProcessCommand(Enum cmd, object arg)
         {

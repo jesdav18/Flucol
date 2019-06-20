@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
@@ -21,6 +22,9 @@ namespace Operaciones.Pantallas
                               string pNombreAgencia)
         {
             InitializeComponent();
+
+            ctlOperacional1.OnCerrarSesion += ctlOperacional1_OnCerrarSesion;
+
             ctlOperacional1.ConstruirControl(pConexion, 
                                              pID_Agencia_Servicio, 
                                              pID_Cliente_Servicio,
@@ -41,6 +45,12 @@ namespace Operaciones.Pantallas
         #region PROPIEDADES
 
         public PgSqlConnection Pro_Conexion { get; set; }
+
+        #endregion
+
+        #region EVENTOS
+
+        public event EventHandler OnCerrarSesion;
 
         #endregion
 
@@ -65,6 +75,12 @@ namespace Operaciones.Pantallas
                 ctlOperacional1.PresionarF6_MarcarClienteNoRespondio(sender);
             }
 
+        }
+
+        private void ctlOperacional1_OnCerrarSesion(object sender, EventArgs e)
+        {
+            this.Close();
+            OnCerrarSesion?.Invoke(sender, e);
         }
 
         #endregion

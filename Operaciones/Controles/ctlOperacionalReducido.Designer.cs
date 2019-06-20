@@ -88,6 +88,11 @@
             this.cmdLlamarCliente.EditValue = global::Operaciones.Properties.Resources.icon_llamar_siguiente_cliente;
             this.cmdLlamarCliente.Location = new System.Drawing.Point(0, 0);
             this.cmdLlamarCliente.Name = "cmdLlamarCliente";
+            this.cmdLlamarCliente.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowFocused = false;
+            this.cmdLlamarCliente.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdLlamarCliente.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdLlamarCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdLlamarCliente.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.cmdLlamarCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -95,6 +100,10 @@
             this.cmdLlamarCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdLlamarCliente.Size = new System.Drawing.Size(31, 27);
             this.cmdLlamarCliente.TabIndex = 14;
+            this.cmdLlamarCliente.ToolTip = "Llamar Siguiente Ticket\r\n";
+            this.cmdLlamarCliente.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdLlamarCliente.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdLlamarCliente.ToolTipTitle = "FLUCOL";
             this.cmdLlamarCliente.Click += new System.EventHandler(this.cmdLlamarCliente_Click);
             // 
             // cmdIniciarTicket
@@ -103,6 +112,11 @@
             this.cmdIniciarTicket.EditValue = global::Operaciones.Properties.Resources.iconIniciarTicket;
             this.cmdIniciarTicket.Location = new System.Drawing.Point(31, 0);
             this.cmdIniciarTicket.Name = "cmdIniciarTicket";
+            this.cmdIniciarTicket.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowFocused = false;
+            this.cmdIniciarTicket.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIniciarTicket.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdIniciarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdIniciarTicket.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.cmdIniciarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -110,6 +124,10 @@
             this.cmdIniciarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdIniciarTicket.Size = new System.Drawing.Size(28, 27);
             this.cmdIniciarTicket.TabIndex = 15;
+            this.cmdIniciarTicket.ToolTip = "Iniciar Atención";
+            this.cmdIniciarTicket.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdIniciarTicket.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdIniciarTicket.ToolTipTitle = "FLUCOL";
             this.cmdIniciarTicket.Click += new System.EventHandler(this.cmdIniciarTicket_Click);
             // 
             // cmdCerrarTicket
@@ -118,6 +136,11 @@
             this.cmdCerrarTicket.EditValue = global::Operaciones.Properties.Resources.iconDetenerTicket;
             this.cmdCerrarTicket.Location = new System.Drawing.Point(59, 0);
             this.cmdCerrarTicket.Name = "cmdCerrarTicket";
+            this.cmdCerrarTicket.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowFocused = false;
+            this.cmdCerrarTicket.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCerrarTicket.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdCerrarTicket.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCerrarTicket.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.cmdCerrarTicket.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -125,6 +148,10 @@
             this.cmdCerrarTicket.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdCerrarTicket.Size = new System.Drawing.Size(38, 27);
             this.cmdCerrarTicket.TabIndex = 16;
+            this.cmdCerrarTicket.ToolTip = "Cerrar Ticket";
+            this.cmdCerrarTicket.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdCerrarTicket.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdCerrarTicket.ToolTipTitle = "FLUCOL";
             this.cmdCerrarTicket.Click += new System.EventHandler(this.cmdCerrarTicket_Click);
             // 
             // cmdRellamar
@@ -133,6 +160,11 @@
             this.cmdRellamar.EditValue = global::Operaciones.Properties.Resources.icon_rellamar_negro_64;
             this.cmdRellamar.Location = new System.Drawing.Point(97, 0);
             this.cmdRellamar.Name = "cmdRellamar";
+            this.cmdRellamar.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowFocused = false;
+            this.cmdRellamar.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdRellamar.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdRellamar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdRellamar.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.cmdRellamar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -140,6 +172,10 @@
             this.cmdRellamar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdRellamar.Size = new System.Drawing.Size(30, 27);
             this.cmdRellamar.TabIndex = 18;
+            this.cmdRellamar.ToolTip = "Rellamar Ticket";
+            this.cmdRellamar.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdRellamar.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdRellamar.ToolTipTitle = "FLUCOL";
             this.cmdRellamar.Click += new System.EventHandler(this.cmdRellamar_Click);
             // 
             // cmdClienteNoAtendioLlamado
@@ -148,6 +184,11 @@
             this.cmdClienteNoAtendioLlamado.EditValue = global::Operaciones.Properties.Resources.iconNoRespondioLlamado;
             this.cmdClienteNoAtendioLlamado.Location = new System.Drawing.Point(127, 0);
             this.cmdClienteNoAtendioLlamado.Name = "cmdClienteNoAtendioLlamado";
+            this.cmdClienteNoAtendioLlamado.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowFocused = false;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdClienteNoAtendioLlamado.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdClienteNoAtendioLlamado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdClienteNoAtendioLlamado.Properties.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.cmdClienteNoAtendioLlamado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -155,6 +196,10 @@
             this.cmdClienteNoAtendioLlamado.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdClienteNoAtendioLlamado.Size = new System.Drawing.Size(32, 27);
             this.cmdClienteNoAtendioLlamado.TabIndex = 19;
+            this.cmdClienteNoAtendioLlamado.ToolTip = "Marcar como \"No atendió Llamado\"";
+            this.cmdClienteNoAtendioLlamado.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdClienteNoAtendioLlamado.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdClienteNoAtendioLlamado.ToolTipTitle = "FLUCOL";
             this.cmdClienteNoAtendioLlamado.Click += new System.EventHandler(this.cmdClienteNoAtendioLlamado_Click);
             // 
             // pnlControles
@@ -193,14 +238,13 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LabelControl lblNumeroTicket;
-        private DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
         private DevExpress.XtraEditors.PictureEdit cmdLlamarCliente;
         private DevExpress.XtraEditors.PictureEdit cmdIniciarTicket;
         private DevExpress.XtraEditors.PictureEdit cmdCerrarTicket;
         private DevExpress.XtraEditors.PictureEdit cmdRellamar;
         private DevExpress.XtraEditors.PictureEdit cmdClienteNoAtendioLlamado;
         private System.Windows.Forms.Panel pnlControles;
+        public DevExpress.XtraEditors.LabelControl lblNumeroTicket;
+        public DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
     }
 }

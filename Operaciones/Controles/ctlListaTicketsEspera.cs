@@ -27,6 +27,7 @@ namespace Operaciones.Controles
         public int Pro_ID_ClienteServicio { get; set; }
         public string Pro_Usuario { get; set; }
         public bool Pro_CargarLista { get; set; }
+        public int Pro_ConteoTicketsEspera { get; set; }
 
         #endregion
 
@@ -43,7 +44,7 @@ namespace Operaciones.Controles
             Pro_Usuario = p_usuario;
             Pro_CargarLista = true;
 
-           await this.ListaTicketsAsincrono();
+            await this.ListaTicketsAsincrono();
         }
 
         private void ValidarConexion()
@@ -73,7 +74,7 @@ namespace Operaciones.Controles
 
         private async Task ListaTicketsAsincrono()
         {
-            while (true)
+            while (Pro_CargarLista)
             {
                 ValidarConexion();
 
@@ -91,6 +92,8 @@ namespace Operaciones.Controles
                     dsTickets1.dtTickets.Clear();
                     new PgSqlDataAdapter(pgComando).Fill(dsTickets1.dtTickets);
 
+                    Pro_ConteoTicketsEspera = dsTickets1.dtTickets.Count;
+
                     sentencia = null;
                     pgComando.Dispose();
 
@@ -106,7 +109,7 @@ namespace Operaciones.Controles
                     MessageBox.Show("ALGO SALIÓ MAL EN EL MOMENTO DE CARGAR LA LISTA DE TICKETS EN ESPERA.", "FLUCOL");
                 }
 
-                await Task.Delay(200);
+                await Task.Delay(500);
             }
         }
 

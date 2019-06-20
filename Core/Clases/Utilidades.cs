@@ -9,8 +9,6 @@ namespace Core.Clases
     public class Utilidades
     {
 
-       
-
         public string ObtenerIP_Host()
         {
             IPHostEntry v_host;

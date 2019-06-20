@@ -10,12 +10,15 @@ namespace Operaciones.Pantallas
 
         #region INICIALIZADOR
 
-        public frmLogin(PgSqlConnection pConexion,  int pSucursal, int pCliente)
+        public frmLogin(PgSqlConnection pConexion,  
+                        int pSucursal, 
+                        int pCliente)
         {
             InitializeComponent();
-            ctlLoginOperacional1.ConstruirControl(pConexion, pSucursal, pCliente);
+            ctlLoginOperacional1.ConstruirControl(pConexion, 
+                                                  pSucursal, 
+                                                  pCliente);
             this.Hide();
-            
         }
 
         #endregion
@@ -105,8 +108,12 @@ namespace Operaciones.Pantallas
             this.Close();
         }
 
+        private void frmLogin_Shown(object sender, EventArgs e)
+        {
+            ctlLoginOperacional1.Left = (this.ClientSize.Width - ctlLoginOperacional1.Width) / 2;
+            ctlLoginOperacional1.Top = (this.ClientSize.Height - ctlLoginOperacional1.Height) / 2;
+        }
+
         #endregion
-
-
     }
 }

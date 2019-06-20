@@ -63,6 +63,16 @@ namespace Recepcion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gif_cargando {
+            get {
+                object obj = ResourceManager.GetObject("gif_cargando", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_Negocios_Negro {
             get {
                 object obj = ResourceManager.GetObject("icon_Negocios_Negro", resourceCulture);
@@ -216,6 +226,16 @@ namespace Recepcion.Properties {
         internal static System.Drawing.Bitmap IconTransaccionesCajaVerde {
             get {
                 object obj = ResourceManager.GetObject("IconTransaccionesCajaVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap preloader {
+            get {
+                object obj = ResourceManager.GetObject("preloader", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

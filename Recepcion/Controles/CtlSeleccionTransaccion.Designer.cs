@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Recepcion.Controles.frmEsperaRecepcion), true, true, typeof(System.Windows.Forms.UserControl));
             this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
             this.pnlTitulo = new DevExpress.XtraEditors.PanelControl();
+            this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
+            this.pic_LogoInstitucion = new DevExpress.XtraEditors.PictureEdit();
             this.navFrameMenuInicial = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.NavPagePrioridades = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnlInferior = new DevExpress.XtraEditors.PanelControl();
+            this.cmdIrSeleccionTransacciones = new DevExpress.XtraEditors.PictureEdit();
             this.cmdTerceraEdad = new DevExpress.XtraEditors.PictureEdit();
             this.lblEsperaGeneral = new DevExpress.XtraEditors.LabelControl();
             this.lblCondicionesEspeciales = new DevExpress.XtraEditors.LabelControl();
@@ -42,37 +48,37 @@
             this.navPageTipoTransaccion = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.lblNegocios = new DevExpress.XtraEditors.LabelControl();
             this.cmdNegocios = new DevExpress.XtraEditors.PictureEdit();
-            this.pnlInferior = new DevExpress.XtraEditors.PanelControl();
-            this.cmdIrAPrioridades = new DevExpress.XtraEditors.PictureEdit();
             this.lblTransacciones = new DevExpress.XtraEditors.LabelControl();
             this.lblServicioAlCliente = new DevExpress.XtraEditors.LabelControl();
             this.cmdTransacciones = new DevExpress.XtraEditors.PictureEdit();
             this.cmdServicioAlCliente = new DevExpress.XtraEditors.PictureEdit();
             this.navPageTicket = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
-            this.tmrTiempoEspera = new System.Windows.Forms.Timer();
-            this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer();
-            this.lblAgencia = new DevExpress.XtraEditors.LabelControl();
-            this.pic_LogoInstitucion = new DevExpress.XtraEditors.PictureEdit();
+            this.tmrTiempoVisualizacionTicket = new System.Windows.Forms.Timer(this.components);
+            this.splashScreenManager2 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Recepcion.Controles.frmCargandoConexion), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoInstitucion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navFrameMenuInicial)).BeginInit();
             this.navFrameMenuInicial.SuspendLayout();
             this.NavPagePrioridades.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlInferior)).BeginInit();
+            this.pnlInferior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIrSeleccionTransacciones.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTerceraEdad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCondicionesEspeciales01.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdEsperaGeneral.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCondicionesEspeciales.Properties)).BeginInit();
             this.navPageTipoTransaccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdNegocios.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlInferior)).BeginInit();
-            this.pnlInferior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIrAPrioridades.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTransacciones.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdServicioAlCliente.Properties)).BeginInit();
             this.navPageTicket.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoInstitucion.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // lblTitulo
             // 
@@ -105,6 +111,42 @@
             this.pnlTitulo.Size = new System.Drawing.Size(896, 158);
             this.pnlTitulo.TabIndex = 1;
             // 
+            // lblAgencia
+            // 
+            this.lblAgencia.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblAgencia.Appearance.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgencia.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblAgencia.Appearance.Options.UseBackColor = true;
+            this.lblAgencia.Appearance.Options.UseFont = true;
+            this.lblAgencia.Appearance.Options.UseForeColor = true;
+            this.lblAgencia.Appearance.Options.UseTextOptions = true;
+            this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblAgencia.Location = new System.Drawing.Point(162, 82);
+            this.lblAgencia.Name = "lblAgencia";
+            this.lblAgencia.Size = new System.Drawing.Size(731, 73);
+            this.lblAgencia.TabIndex = 1;
+            this.lblAgencia.Text = "BIENVENIDO";
+            // 
+            // pic_LogoInstitucion
+            // 
+            this.pic_LogoInstitucion.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pic_LogoInstitucion.Location = new System.Drawing.Point(3, 3);
+            this.pic_LogoInstitucion.Name = "pic_LogoInstitucion";
+            this.pic_LogoInstitucion.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.pic_LogoInstitucion.Properties.AllowFocused = false;
+            this.pic_LogoInstitucion.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.pic_LogoInstitucion.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.pic_LogoInstitucion.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.pic_LogoInstitucion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pic_LogoInstitucion.Properties.NullText = " ";
+            this.pic_LogoInstitucion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pic_LogoInstitucion.Properties.ShowMenu = false;
+            this.pic_LogoInstitucion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.pic_LogoInstitucion.Size = new System.Drawing.Size(159, 152);
+            this.pic_LogoInstitucion.TabIndex = 9;
+            // 
             // navFrameMenuInicial
             // 
             this.navFrameMenuInicial.Controls.Add(this.NavPagePrioridades);
@@ -117,7 +159,7 @@
             this.NavPagePrioridades,
             this.navPageTipoTransaccion,
             this.navPageTicket});
-            this.navFrameMenuInicial.SelectedPage = this.NavPagePrioridades;
+            this.navFrameMenuInicial.SelectedPage = this.navPageTipoTransaccion;
             this.navFrameMenuInicial.Size = new System.Drawing.Size(896, 354);
             this.navFrameMenuInicial.TabIndex = 2;
             this.navFrameMenuInicial.Text = "navMenuPrioridades";
@@ -127,6 +169,8 @@
             // 
             // NavPagePrioridades
             // 
+            this.NavPagePrioridades.Caption = "NavPagePrioridades";
+            this.NavPagePrioridades.Controls.Add(this.pnlInferior);
             this.NavPagePrioridades.Controls.Add(this.cmdTerceraEdad);
             this.NavPagePrioridades.Controls.Add(this.lblEsperaGeneral);
             this.NavPagePrioridades.Controls.Add(this.lblCondicionesEspeciales);
@@ -138,17 +182,52 @@
             this.NavPagePrioridades.Name = "NavPagePrioridades";
             this.NavPagePrioridades.Size = new System.Drawing.Size(896, 354);
             // 
+            // pnlInferior
+            // 
+            this.pnlInferior.Appearance.BackColor = System.Drawing.Color.White;
+            this.pnlInferior.Appearance.Options.UseBackColor = true;
+            this.pnlInferior.Controls.Add(this.cmdIrSeleccionTransacciones);
+            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlInferior.Location = new System.Drawing.Point(0, 264);
+            this.pnlInferior.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.pnlInferior.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.pnlInferior.Name = "pnlInferior";
+            this.pnlInferior.Size = new System.Drawing.Size(896, 90);
+            this.pnlInferior.TabIndex = 9;
+            // 
+            // cmdIrSeleccionTransacciones
+            // 
+            this.cmdIrSeleccionTransacciones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cmdIrSeleccionTransacciones.EditValue = global::Recepcion.Properties.Resources.iconIrAtras;
+            this.cmdIrSeleccionTransacciones.Location = new System.Drawing.Point(3, 3);
+            this.cmdIrSeleccionTransacciones.Name = "cmdIrSeleccionTransacciones";
+            this.cmdIrSeleccionTransacciones.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIrSeleccionTransacciones.Properties.AllowFocused = false;
+            this.cmdIrSeleccionTransacciones.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIrSeleccionTransacciones.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIrSeleccionTransacciones.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdIrSeleccionTransacciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdIrSeleccionTransacciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdIrSeleccionTransacciones.Size = new System.Drawing.Size(111, 84);
+            this.cmdIrSeleccionTransacciones.TabIndex = 8;
+            this.cmdIrSeleccionTransacciones.Click += new System.EventHandler(this.cmdIrSeleccionTransacciones_Click);
+            // 
             // cmdTerceraEdad
             // 
             this.cmdTerceraEdad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdTerceraEdad.EditValue = global::Recepcion.Properties.Resources.iconAncianos;
-            this.cmdTerceraEdad.Location = new System.Drawing.Point(86, 48);
+            this.cmdTerceraEdad.Location = new System.Drawing.Point(120, 43);
             this.cmdTerceraEdad.Name = "cmdTerceraEdad";
+            this.cmdTerceraEdad.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTerceraEdad.Properties.AllowFocused = false;
+            this.cmdTerceraEdad.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTerceraEdad.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTerceraEdad.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdTerceraEdad.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdTerceraEdad.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdTerceraEdad.Properties.ShowMenu = false;
             this.cmdTerceraEdad.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdTerceraEdad.Size = new System.Drawing.Size(181, 138);
+            this.cmdTerceraEdad.Size = new System.Drawing.Size(135, 105);
             this.cmdTerceraEdad.TabIndex = 8;
             this.cmdTerceraEdad.Click += new System.EventHandler(this.cmdTerceraEdad_Click);
             // 
@@ -161,7 +240,7 @@
             this.lblEsperaGeneral.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblEsperaGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblEsperaGeneral.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblEsperaGeneral.Location = new System.Drawing.Point(609, 197);
+            this.lblEsperaGeneral.Location = new System.Drawing.Point(619, 154);
             this.lblEsperaGeneral.Name = "lblEsperaGeneral";
             this.lblEsperaGeneral.Size = new System.Drawing.Size(195, 97);
             this.lblEsperaGeneral.TabIndex = 7;
@@ -177,7 +256,7 @@
             this.lblCondicionesEspeciales.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCondicionesEspeciales.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblCondicionesEspeciales.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCondicionesEspeciales.Location = new System.Drawing.Point(356, 197);
+            this.lblCondicionesEspeciales.Location = new System.Drawing.Point(366, 154);
             this.lblCondicionesEspeciales.Name = "lblCondicionesEspeciales";
             this.lblCondicionesEspeciales.Size = new System.Drawing.Size(195, 97);
             this.lblCondicionesEspeciales.TabIndex = 3;
@@ -193,7 +272,7 @@
             this.lblTerceraEdad.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTerceraEdad.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTerceraEdad.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTerceraEdad.Location = new System.Drawing.Point(96, 203);
+            this.lblTerceraEdad.Location = new System.Drawing.Point(106, 160);
             this.lblTerceraEdad.Name = "lblTerceraEdad";
             this.lblTerceraEdad.Size = new System.Drawing.Size(149, 85);
             this.lblTerceraEdad.TabIndex = 1;
@@ -204,27 +283,37 @@
             // 
             this.cmdCondicionesEspeciales01.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdCondicionesEspeciales01.EditValue = global::Recepcion.Properties.Resources.iconDiscapacidad;
-            this.cmdCondicionesEspeciales01.Location = new System.Drawing.Point(443, 48);
+            this.cmdCondicionesEspeciales01.Location = new System.Drawing.Point(457, 43);
             this.cmdCondicionesEspeciales01.Name = "cmdCondicionesEspeciales01";
+            this.cmdCondicionesEspeciales01.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales01.Properties.AllowFocused = false;
+            this.cmdCondicionesEspeciales01.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales01.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales01.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdCondicionesEspeciales01.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCondicionesEspeciales01.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdCondicionesEspeciales01.Properties.ShowMenu = false;
             this.cmdCondicionesEspeciales01.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdCondicionesEspeciales01.Size = new System.Drawing.Size(134, 138);
+            this.cmdCondicionesEspeciales01.Size = new System.Drawing.Size(135, 100);
             this.cmdCondicionesEspeciales01.TabIndex = 6;
-            this.cmdCondicionesEspeciales01.Click += new System.EventHandler(this.cmdCondicionesEspeciales01_Click);
+            this.cmdCondicionesEspeciales01.Click += new System.EventHandler(this.cmdCondicionesEspeciales_Click);
             // 
             // cmdEsperaGeneral
             // 
             this.cmdEsperaGeneral.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdEsperaGeneral.EditValue = global::Recepcion.Properties.Resources.iconEsperaGeneral;
-            this.cmdEsperaGeneral.Location = new System.Drawing.Point(640, 48);
+            this.cmdEsperaGeneral.Location = new System.Drawing.Point(656, 43);
             this.cmdEsperaGeneral.Name = "cmdEsperaGeneral";
+            this.cmdEsperaGeneral.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdEsperaGeneral.Properties.AllowFocused = false;
+            this.cmdEsperaGeneral.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdEsperaGeneral.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdEsperaGeneral.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdEsperaGeneral.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdEsperaGeneral.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdEsperaGeneral.Properties.ShowMenu = false;
             this.cmdEsperaGeneral.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdEsperaGeneral.Size = new System.Drawing.Size(134, 138);
+            this.cmdEsperaGeneral.Size = new System.Drawing.Size(119, 100);
             this.cmdEsperaGeneral.TabIndex = 4;
             this.cmdEsperaGeneral.Click += new System.EventHandler(this.cmdEsperaGeneral_Click);
             // 
@@ -232,22 +321,26 @@
             // 
             this.cmdCondicionesEspeciales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdCondicionesEspeciales.EditValue = global::Recepcion.Properties.Resources.iconEmbarazada;
-            this.cmdCondicionesEspeciales.Location = new System.Drawing.Point(303, 48);
+            this.cmdCondicionesEspeciales.Location = new System.Drawing.Point(330, 43);
             this.cmdCondicionesEspeciales.Name = "cmdCondicionesEspeciales";
+            this.cmdCondicionesEspeciales.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales.Properties.AllowFocused = false;
+            this.cmdCondicionesEspeciales.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdCondicionesEspeciales.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdCondicionesEspeciales.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCondicionesEspeciales.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdCondicionesEspeciales.Properties.ShowMenu = false;
             this.cmdCondicionesEspeciales.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdCondicionesEspeciales.Size = new System.Drawing.Size(134, 138);
+            this.cmdCondicionesEspeciales.Size = new System.Drawing.Size(135, 100);
             this.cmdCondicionesEspeciales.TabIndex = 2;
             this.cmdCondicionesEspeciales.Click += new System.EventHandler(this.cmdCondicionesEspeciales_Click);
             // 
             // navPageTipoTransaccion
             // 
-            this.navPageTipoTransaccion.Caption = "navigationPage2";
+            this.navPageTipoTransaccion.Caption = "navPageTipoTransaccion";
             this.navPageTipoTransaccion.Controls.Add(this.lblNegocios);
             this.navPageTipoTransaccion.Controls.Add(this.cmdNegocios);
-            this.navPageTipoTransaccion.Controls.Add(this.pnlInferior);
             this.navPageTipoTransaccion.Controls.Add(this.lblTransacciones);
             this.navPageTipoTransaccion.Controls.Add(this.lblServicioAlCliente);
             this.navPageTipoTransaccion.Controls.Add(this.cmdTransacciones);
@@ -265,7 +358,7 @@
             this.lblNegocios.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblNegocios.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblNegocios.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblNegocios.Location = new System.Drawing.Point(607, 139);
+            this.lblNegocios.Location = new System.Drawing.Point(609, 179);
             this.lblNegocios.Name = "lblNegocios";
             this.lblNegocios.Size = new System.Drawing.Size(231, 97);
             this.lblNegocios.TabIndex = 10;
@@ -276,39 +369,19 @@
             // 
             this.cmdNegocios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdNegocios.EditValue = global::Recepcion.Properties.Resources.icon_Negocios_Negro;
-            this.cmdNegocios.Location = new System.Drawing.Point(680, 17);
+            this.cmdNegocios.Location = new System.Drawing.Point(682, 57);
             this.cmdNegocios.Name = "cmdNegocios";
+            this.cmdNegocios.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdNegocios.Properties.AllowFocused = false;
+            this.cmdNegocios.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdNegocios.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdNegocios.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdNegocios.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdNegocios.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdNegocios.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdNegocios.Size = new System.Drawing.Size(99, 91);
             this.cmdNegocios.TabIndex = 9;
             this.cmdNegocios.Click += new System.EventHandler(this.cmdNegocios_Click);
-            // 
-            // pnlInferior
-            // 
-            this.pnlInferior.Appearance.BackColor = System.Drawing.Color.White;
-            this.pnlInferior.Appearance.Options.UseBackColor = true;
-            this.pnlInferior.Controls.Add(this.cmdIrAPrioridades);
-            this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(0, 264);
-            this.pnlInferior.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.pnlInferior.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(896, 90);
-            this.pnlInferior.TabIndex = 8;
-            // 
-            // cmdIrAPrioridades
-            // 
-            this.cmdIrAPrioridades.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmdIrAPrioridades.EditValue = global::Recepcion.Properties.Resources.iconIrAtras;
-            this.cmdIrAPrioridades.Location = new System.Drawing.Point(3, 3);
-            this.cmdIrAPrioridades.Name = "cmdIrAPrioridades";
-            this.cmdIrAPrioridades.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.cmdIrAPrioridades.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.cmdIrAPrioridades.Size = new System.Drawing.Size(111, 84);
-            this.cmdIrAPrioridades.TabIndex = 7;
-            this.cmdIrAPrioridades.Click += new System.EventHandler(this.cmdIrAPrioridades_Click);
             // 
             // lblTransacciones
             // 
@@ -319,11 +392,12 @@
             this.lblTransacciones.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTransacciones.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTransacciones.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTransacciones.Location = new System.Drawing.Point(309, 139);
+            this.lblTransacciones.Location = new System.Drawing.Point(311, 179);
             this.lblTransacciones.Name = "lblTransacciones";
             this.lblTransacciones.Size = new System.Drawing.Size(231, 97);
             this.lblTransacciones.TabIndex = 6;
             this.lblTransacciones.Text = "TRANSACCIONES EN CAJA";
+            this.lblTransacciones.Click += new System.EventHandler(this.cmdTransacciones_Click);
             // 
             // lblServicioAlCliente
             // 
@@ -334,18 +408,24 @@
             this.lblServicioAlCliente.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblServicioAlCliente.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblServicioAlCliente.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblServicioAlCliente.Location = new System.Drawing.Point(58, 139);
+            this.lblServicioAlCliente.Location = new System.Drawing.Point(60, 179);
             this.lblServicioAlCliente.Name = "lblServicioAlCliente";
             this.lblServicioAlCliente.Size = new System.Drawing.Size(195, 97);
             this.lblServicioAlCliente.TabIndex = 5;
             this.lblServicioAlCliente.Text = "SERVICIO AL CLIENTE";
+            this.lblServicioAlCliente.Click += new System.EventHandler(this.cmdServicioAlCliente_Click);
             // 
             // cmdTransacciones
             // 
             this.cmdTransacciones.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdTransacciones.EditValue = global::Recepcion.Properties.Resources.iconTransaccionesCaja;
-            this.cmdTransacciones.Location = new System.Drawing.Point(380, 17);
+            this.cmdTransacciones.Location = new System.Drawing.Point(382, 57);
             this.cmdTransacciones.Name = "cmdTransacciones";
+            this.cmdTransacciones.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTransacciones.Properties.AllowFocused = false;
+            this.cmdTransacciones.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTransacciones.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdTransacciones.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
             this.cmdTransacciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdTransacciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdTransacciones.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
@@ -357,9 +437,21 @@
             // 
             this.cmdServicioAlCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmdServicioAlCliente.EditValue = global::Recepcion.Properties.Resources.iconServicioAlCliente;
-            this.cmdServicioAlCliente.Location = new System.Drawing.Point(108, 17);
+            this.cmdServicioAlCliente.Location = new System.Drawing.Point(110, 57);
             this.cmdServicioAlCliente.Name = "cmdServicioAlCliente";
+            this.cmdServicioAlCliente.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdServicioAlCliente.Properties.AllowFocused = false;
+            this.cmdServicioAlCliente.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdServicioAlCliente.Properties.AllowScrollOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdServicioAlCliente.Properties.AllowZoomOnMouseWheel = DevExpress.Utils.DefaultBoolean.False;
+            this.cmdServicioAlCliente.Properties.Appearance.Image = global::Recepcion.Properties.Resources.iconServicioAlCliente;
+            this.cmdServicioAlCliente.Properties.Appearance.Options.UseImage = true;
+            this.cmdServicioAlCliente.Properties.AppearanceFocused.Image = global::Recepcion.Properties.Resources.iconServicioAlClienteVerde;
+            this.cmdServicioAlCliente.Properties.AppearanceFocused.Options.UseImage = true;
             this.cmdServicioAlCliente.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdServicioAlCliente.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.cmdServicioAlCliente.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.cmdServicioAlCliente.Properties.NullText = " ";
             this.cmdServicioAlCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdServicioAlCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.cmdServicioAlCliente.Size = new System.Drawing.Size(99, 91);
@@ -392,35 +484,9 @@
             this.tmrTiempoVisualizacionTicket.Interval = 2000;
             this.tmrTiempoVisualizacionTicket.Tick += new System.EventHandler(this.tmrTiempoVisualizacionTicket_Tick);
             // 
-            // lblAgencia
+            // splashScreenManager2
             // 
-            this.lblAgencia.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lblAgencia.Appearance.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgencia.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblAgencia.Appearance.Options.UseBackColor = true;
-            this.lblAgencia.Appearance.Options.UseFont = true;
-            this.lblAgencia.Appearance.Options.UseForeColor = true;
-            this.lblAgencia.Appearance.Options.UseTextOptions = true;
-            this.lblAgencia.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblAgencia.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblAgencia.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblAgencia.Location = new System.Drawing.Point(162, 82);
-            this.lblAgencia.Name = "lblAgencia";
-            this.lblAgencia.Size = new System.Drawing.Size(731, 73);
-            this.lblAgencia.TabIndex = 1;
-            this.lblAgencia.Text = "BIENVENIDO";
-            // 
-            // pic_LogoInstitucion
-            // 
-            this.pic_LogoInstitucion.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pic_LogoInstitucion.Location = new System.Drawing.Point(3, 3);
-            this.pic_LogoInstitucion.Name = "pic_LogoInstitucion";
-            this.pic_LogoInstitucion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pic_LogoInstitucion.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pic_LogoInstitucion.Properties.ShowMenu = false;
-            this.pic_LogoInstitucion.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pic_LogoInstitucion.Size = new System.Drawing.Size(159, 152);
-            this.pic_LogoInstitucion.TabIndex = 9;
+            this.splashScreenManager2.ClosingDelay = 500;
             // 
             // CtlSeleccionTransaccion
             // 
@@ -434,22 +500,22 @@
             this.Size = new System.Drawing.Size(906, 522);
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoInstitucion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navFrameMenuInicial)).EndInit();
             this.navFrameMenuInicial.ResumeLayout(false);
             this.NavPagePrioridades.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlInferior)).EndInit();
+            this.pnlInferior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmdIrSeleccionTransacciones.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTerceraEdad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCondicionesEspeciales01.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdEsperaGeneral.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCondicionesEspeciales.Properties)).EndInit();
             this.navPageTipoTransaccion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmdNegocios.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlInferior)).EndInit();
-            this.pnlInferior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmdIrAPrioridades.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdTransacciones.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdServicioAlCliente.Properties)).EndInit();
             this.navPageTicket.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_LogoInstitucion.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,9 +538,6 @@
         private DevExpress.XtraEditors.LabelControl lblServicioAlCliente;
         private DevExpress.XtraEditors.PictureEdit cmdTransacciones;
         private DevExpress.XtraEditors.PictureEdit cmdServicioAlCliente;
-        private System.Windows.Forms.Timer tmrTiempoEspera;
-        private DevExpress.XtraEditors.PanelControl pnlInferior;
-        private DevExpress.XtraEditors.PictureEdit cmdIrAPrioridades;
         private DevExpress.XtraBars.Navigation.NavigationPage navPageTicket;
         private System.Windows.Forms.Timer tmrTiempoVisualizacionTicket;
         private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
@@ -482,5 +545,9 @@
         private DevExpress.XtraEditors.PictureEdit cmdNegocios;
         private DevExpress.XtraEditors.LabelControl lblAgencia;
         private DevExpress.XtraEditors.PictureEdit pic_LogoInstitucion;
+        private DevExpress.XtraEditors.PanelControl pnlInferior;
+        private DevExpress.XtraEditors.PictureEdit cmdIrSeleccionTransacciones;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager2;
     }
 }

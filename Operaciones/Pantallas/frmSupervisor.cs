@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Devart.Data.PostgreSql;
 
 namespace Operaciones.Pantallas
@@ -17,15 +8,28 @@ namespace Operaciones.Pantallas
         public frmSupervisor(PgSqlConnection pConexion,
                             int pID_AgenciaServicio,
                             int pID_ClienteServicio,
-                            string pUsuario)
+                            string pUsuario,
+                            string pNombreAgencia,
+                            string pNombreEmpleado)
         {
             InitializeComponent();
+
+            ctlOperacionesSupervisor1.OnCerrarSesionSupervisor += OnCerrarSesionSupervisor;
 
             ctlOperacionesSupervisor1.ConstruirControl(pConexion,
                                                        pID_AgenciaServicio,
                                                        pID_ClienteServicio,
-                                                       pUsuario);
+                                                       pUsuario,
+                                                       pNombreAgencia,
+                                                       pNombreEmpleado);
 
+        }
+
+        public event EventHandler OnCierraSesionSupervisor;
+
+        private void OnCerrarSesionSupervisor(object sender, EventArgs e)
+        {
+            OnCierraSesionSupervisor?.Invoke(sender, e);
         }
     }
 }

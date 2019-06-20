@@ -1,6 +1,6 @@
 ﻿using Core.Clases;
 using Devart.Data.PostgreSql;
-using System;
+
 
 
 namespace Core.Reportes

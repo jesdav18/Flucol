@@ -38,6 +38,10 @@
             this.ctlOperacionesSupervisor1.Location = new System.Drawing.Point(0, 0);
             this.ctlOperacionesSupervisor1.Name = "ctlOperacionesSupervisor1";
             this.ctlOperacionesSupervisor1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlOperacionesSupervisor1.Pro_Conexion = null;
+            this.ctlOperacionesSupervisor1.Pro_ID_AgenciaServicio = 0;
+            this.ctlOperacionesSupervisor1.Pro_ID_ClienteServicio = 0;
+            this.ctlOperacionesSupervisor1.Pro_Usuario = null;
             this.ctlOperacionesSupervisor1.Size = new System.Drawing.Size(933, 539);
             this.ctlOperacionesSupervisor1.TabIndex = 0;
             // 
@@ -53,6 +57,7 @@
             this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "frmSupervisor";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSupervisor";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

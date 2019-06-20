@@ -73,6 +73,13 @@ namespace Operaciones.Controles
         public string Pro_Ticket_Servicio { get; set; }
         public bool Pro_Esta_En_Atencion { get; set; }
         public string Pro_CodigoEmpleado { get; set; }
+        public bool Pro_Esta_En_ModoReducido { get; set; }
+      
+        #endregion
+
+        #region EVENTOS
+
+        public event EventHandler OnCerrarSesion;
 
         #endregion
 
@@ -101,18 +108,21 @@ namespace Operaciones.Controles
             Pro_Usuario = pUsuarioEmpleado;
             Pro_CodigoEmpleado = pCodigoEmpleado;
             Pro_Esta_En_Atencion = false;
+            Pro_Esta_En_ModoReducido = false;
             lblNombreUsuario.Text = Pro_NombreEmpleado;
             lblNumeroTicket.Text = "";
             lblAgencia.Text = pNombreAgencia;
+
+                        
             ctlListaTicketsEspera1.ConstruirControl(Pro_Conexion,
                                                     Pro_ID_AgenciaServicio,
                                                     Pro_ID_ClienteServicio,
                                                     Pro_Usuario);
 
+          
         }
-
         
-        private void CargarDatosTicketPosicion()
+        private bool CargarDatosTicketPosicion()
         {
             ValidarConexion();
 
@@ -138,14 +148,25 @@ namespace Operaciones.Controles
 
                 if (pgDr.Read())
                 {
+                    lblPosicion.Text = null;
                     lblPosicion.Text = ConfigurationSettings.AppSettings["TEXTO_DESCRIPTIVO"] + " " + 
                                        pgDr.GetString("posicion");                  
                 }
+
 
                 pgDr.Close();
                 pgDr = null;
                 pgComando.Dispose();
                 sentencia = null;
+
+                if (string.IsNullOrEmpty(lblPosicion.Text))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
 
             }
             catch (Exception Exc)
@@ -156,6 +177,7 @@ namespace Operaciones.Controles
                                                   "CargarDatosTicketPosicion()");
                 v_depurador = null;
                 MessageBox.Show(Exc.Message, "FLUCOL");
+                return false;
             }
         }
 
@@ -301,8 +323,14 @@ namespace Operaciones.Controles
 
                 if (pgDr.Read())
                 {
+                    if (Pro_Esta_En_ModoReducido)
+                    {
+                        ctlOperacionalReducido1.lblNumeroTicket.Text = pgDr.GetString(0);
+                    }
+
                     Pro_Ticket_Servicio = pgDr.GetString(0);
                     lblNumeroTicket.Text = Pro_Ticket_Servicio;
+
                 }
 
                 if (! p_es_rellamada)
@@ -384,7 +412,7 @@ namespace Operaciones.Controles
                                                                                         :p_id_agencia_servicio
                                                                                     )";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
-            pgComando.Parameters.Add("p_id_ticket_servicio",PgSqlType.VarChar).Value = lblNumeroTicket.Text;
+            pgComando.Parameters.Add("p_id_ticket_servicio",PgSqlType.VarChar).Value = Pro_Ticket_Servicio;
             pgComando.Parameters.Add("p_id_cliente_servicio",PgSqlType.Int).Value = Pro_ID_ClienteServicio;
             pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
             
@@ -442,6 +470,7 @@ namespace Operaciones.Controles
             }
         }
 
+        
         #endregion
 
         #region EVENTOS GLOBALES
@@ -599,13 +628,17 @@ namespace Operaciones.Controles
             {
                 if (lblNumeroTicket.Text != "")
                 {
-                    Cursor.Current = Cursors.WaitCursor;
-
                     int v_estado_ticket;
 
+                    Cursor.Current = Cursors.WaitCursor;
                     ReinicioImagenesIcono();
 
                     cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
+
+                    if (ctlListaTicketsEspera1.Pro_ConteoTicketsEspera == 0)
+                    {
+                        lblNumeroTicket.Text = "NO HAY TICKETS EN COLA";
+                    }
 
                     v_estado_ticket = ObtenerEstadoTicket();
                     if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
@@ -641,8 +674,10 @@ namespace Operaciones.Controles
 
         private void cmdLlamarCliente_Click(object sender, EventArgs e)
         {
+            
             try
             {
+
                 if (!Pro_Esta_En_Atencion)
                 {
 
@@ -660,34 +695,37 @@ namespace Operaciones.Controles
                         {
 
                             ReinicioImagenesIcono();
-
                             cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+
                             LlamarSiguienteCliente();
 
                         }
                         else
                         {
-                            MessageBox.Show(@"NO SE PUEDE LLAMAR A SIGUIENTE TICKET MIENTRAS NO CIERRE O MARQUE
-                                       COMO ATENDIDO EL ACTUAL TICKET.", "FLUCOL");
+                            MessageBox.Show(@"NO SE PUEDE LLAMAR A SIGUIENTE TICKET MIENTRAS NO CIERRE O MARQUE COMO ATENDIDO EL ACTUAL TICKET.", "FLUCOL");
                         }
                     }
                     else
                     {
-
                         ReinicioImagenesIcono();
-
                         cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
+
                         LlamarSiguienteCliente();
                     }
 
                     v_temporal_ticket = lblNumeroTicket.Text;
 
+                    
                     Cursor.Current = Cursors.Arrow;
+                    
                 }
                 else
                 {
                     MessageBox.Show("NO PUEDE LLAMAR A OTRO CLIENTE MIENTRAS NO CIERRE EL TICKET ACTUAL. ", "FLUCOL");
                 }
+
+              
+
             }
             catch (Exception Exc)
             {
@@ -816,6 +854,7 @@ namespace Operaciones.Controles
             }
                
             lblTiempoAtencion.Text = v_tiempo;
+            ctlOperacionalReducido1.lblTiempoAtencion.Text = v_tiempo;
 
         }
   
@@ -890,7 +929,7 @@ namespace Operaciones.Controles
             else
             {
                 ctlListaTicketsEspera1.Pro_CargarLista = false;
-                Application.Exit();
+                OnCerrarSesion?.Invoke(sender, e);
             }
         }
 
@@ -906,7 +945,6 @@ namespace Operaciones.Controles
                     int v_estado_ticket;
 
                     ReinicioImagenesIcono();
-
                     cmdRellamar.Image = Properties.Resources.icon_rellamar_verde_64;
 
                     v_estado_ticket = ObtenerEstadoTicket();

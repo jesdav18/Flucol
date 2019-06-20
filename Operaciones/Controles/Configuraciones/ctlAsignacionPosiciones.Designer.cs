@@ -60,6 +60,7 @@
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
             this.ctlPosicionesDisponibles1 = new Core.Controles.Popups.ctlPosicionesDisponibles();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Operaciones.Pantallas.frmEspera), true, true, typeof(System.Windows.Forms.UserControl));
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.gcEmpleadosDisponiblesAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleadosDisponiblesAsignacion)).BeginInit();
@@ -74,6 +75,8 @@
             this.popupPosicionesDisponibles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).BeginInit();
             this.flyoutPanelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
+            this.gridSplitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gcEmpleadosDisponiblesAsignacion
@@ -195,10 +198,13 @@
             // 
             // cmdCargarPosiciones
             // 
+            this.cmdCargarPosiciones.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmdCargarPosiciones.Appearance.Options.UseBackColor = true;
             this.cmdCargarPosiciones.AutoHeight = false;
             editorButtonImageOptions1.Image = global::Operaciones.Properties.Resources.icon_asignar_32;
             this.cmdCargarPosiciones.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cmdCargarPosiciones.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdCargarPosiciones.Name = "cmdCargarPosiciones";
             this.cmdCargarPosiciones.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdCargarPosiciones.Click += new System.EventHandler(this.cmdCargarPosiciones_Click);
@@ -217,10 +223,13 @@
             // 
             // cmdAsignarPrioridadAtencion
             // 
+            this.cmdAsignarPrioridadAtencion.Appearance.BackColor = System.Drawing.Color.White;
+            this.cmdAsignarPrioridadAtencion.Appearance.Options.UseBackColor = true;
             this.cmdAsignarPrioridadAtencion.AutoHeight = false;
             editorButtonImageOptions2.Image = global::Operaciones.Properties.Resources.icon_prioridad_32;
             this.cmdAsignarPrioridadAtencion.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cmdAsignarPrioridadAtencion.LookAndFeel.UseDefaultLookAndFeel = false;
             this.cmdAsignarPrioridadAtencion.Name = "cmdAsignarPrioridadAtencion";
             this.cmdAsignarPrioridadAtencion.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdAsignarPrioridadAtencion.Click += new System.EventHandler(this.cmdAsignarPrioridadAtencion_Click);
@@ -239,7 +248,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gcEmpleadosDisponiblesAsignacion);
+            this.panel1.Controls.Add(this.gridSplitContainer1);
             this.panel1.Controls.Add(this.cmdGuardaraCambios);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(5, 5);
@@ -342,6 +351,16 @@
             // 
             this.splashScreenManager1.ClosingDelay = 500;
             // 
+            // gridSplitContainer1
+            // 
+            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridSplitContainer1.Grid = this.gcEmpleadosDisponiblesAsignacion;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Panel1.Controls.Add(this.gcEmpleadosDisponiblesAsignacion);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(1057, 405);
+            this.gridSplitContainer1.TabIndex = 2;
+            // 
             // ctlAsignacionPosiciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,6 +386,8 @@
             this.popupPosicionesDisponibles.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.flyoutPanelControl1)).EndInit();
             this.flyoutPanelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
+            this.gridSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -395,5 +416,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion_tipo_ticket;
         private DevExpress.XtraEditors.SimpleButton cmdGuardaraCambios;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
     }
 }

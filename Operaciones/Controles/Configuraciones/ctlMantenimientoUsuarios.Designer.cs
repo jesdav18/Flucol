@@ -154,6 +154,8 @@
             // 
             // NavigationPrincipal
             // 
+            this.NavigationPrincipal.Appearance.BackColor = System.Drawing.Color.White;
+            this.NavigationPrincipal.Appearance.Options.UseBackColor = true;
             this.NavigationPrincipal.Controls.Add(this.pageCrearUsuarios);
             this.NavigationPrincipal.Controls.Add(this.pageConfiguracionUsuarios);
             this.NavigationPrincipal.Controls.Add(this.pageInicial);
@@ -179,6 +181,8 @@
             // 
             // NavigationEmpleados
             // 
+            this.NavigationEmpleados.Appearance.BackColor = System.Drawing.Color.White;
+            this.NavigationEmpleados.Appearance.Options.UseBackColor = true;
             this.NavigationEmpleados.Controls.Add(this.pagePrimeraPagina);
             this.NavigationEmpleados.Controls.Add(this.pageSegundaPagina);
             this.NavigationEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -324,6 +328,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.cmdSiguiente);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 399);
@@ -478,6 +483,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.cmdRegistrarEmpleado);
             this.panel3.Controls.Add(this.cmdIrAtras);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -595,7 +601,6 @@
             // pageConfiguracionUsuarios
             // 
             this.pageConfiguracionUsuarios.Caption = "pageConfiguracionUsuarios";
-            this.pageConfiguracionUsuarios.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pageConfiguracionUsuarios.Name = "pageConfiguracionUsuarios";
             this.pageConfiguracionUsuarios.Size = new System.Drawing.Size(758, 445);
             // 

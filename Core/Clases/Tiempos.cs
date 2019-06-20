@@ -50,10 +50,14 @@ namespace Core.Clases
             pgComando.Parameters.Add("p_ticket_servicio", PgSqlType.VarChar).Value = pTicketServicio;
             pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = pUsuario;
 
+            PgSqlTransaction pgTrans = Pro_Conexion.BeginTransaction();
+
             try
             {
                 
                 pgComando.ExecuteNonQuery();
+                pgTrans.Commit();
+
 
                 sentencia = null;
                 pgComando.Dispose();
@@ -63,6 +67,8 @@ namespace Core.Clases
             }
             catch (Exception Exc)
             {
+                pgTrans.Rollback();
+
                 DepuradorExcepciones v_depurador = new DepuradorExcepciones();
                 v_depurador.CapturadorExcepciones(Exc,
                                                   "class Tiempos",

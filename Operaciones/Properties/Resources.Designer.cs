@@ -63,6 +63,16 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gif_cargando {
+            get {
+                object obj = ResourceManager.GetObject("gif_cargando", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_asignar_32 {
             get {
                 object obj = ResourceManager.GetObject("icon_asignar_32", resourceCulture);
@@ -73,9 +83,49 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_asignar_posiciones_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_asignar_posiciones_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_asignar_posiciones_verde_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_asignar_posiciones_verde_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_atras_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_atras_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_cerrar_sesion_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_cerrar_sesion_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_cerrar_sesion_verde_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_cerrar_sesion_verde_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +183,26 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_posiciones_verde_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_posiciones_verde_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_posiciones64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_posiciones64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_prioridad_32 {
             get {
                 object obj = ResourceManager.GetObject("icon_prioridad_32", resourceCulture);
@@ -183,9 +253,39 @@ namespace Operaciones.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_traslados_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_traslados_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_traslados_verde {
+            get {
+                object obj = ResourceManager.GetObject("icon_traslados_verde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_usuario_configuracion_negro_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_usuario_configuracion_negro_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_usuario_verde_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_usuario_verde_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
