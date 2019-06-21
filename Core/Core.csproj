@@ -114,6 +114,8 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ConexionBD.cs" />
+    <Compile Include="Clases\DepuradorExcepciones.cs" />
     <Compile Include="Clases\Tiempos.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
@@ -122,6 +124,30 @@
     </Compile>
     <Compile Include="Controles\Dashboards\ctlEmpleadoConMasTicketsAtendidos.Designer.cs">
       <DependentUpon>ctlEmpleadoConMasTicketsAtendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlPromedioAtencion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlPromedioAtencion.Designer.cs">
+      <DependentUpon>ctlPromedioAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlPromedioEspera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlPromedioEspera.Designer.cs">
+      <DependentUpon>ctlPromedioEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlTraficoClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlTraficoClientes.Designer.cs">
+      <DependentUpon>ctlTraficoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlVisitasSegunCanalDeServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlVisitasSegunCanalDeServicio.Designer.cs">
+      <DependentUpon>ctlVisitasSegunCanalDeServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\Dashboards\ctlVisitasSegunPrioridadServicio.cs">
       <SubType>UserControl</SubType>
@@ -174,6 +200,16 @@
     <EmbeddedResource Include="Controles\Dashboards\ctlEmpleadoConMasTicketsAtendidos.resx">
       <DependentUpon>ctlEmpleadoConMasTicketsAtendidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Dashboards\ctlPromedioAtencion.resx">
+      <DependentUpon>ctlPromedioAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Dashboards\ctlPromedioEspera.resx">
+      <DependentUpon>ctlPromedioEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Dashboards\ctlVisitasSegunCanalDeServicio.resx">
+      <DependentUpon>ctlVisitasSegunCanalDeServicio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\Dashboards\ctlVisitasSegunPrioridadServicio.resx">
       <DependentUpon>ctlVisitasSegunPrioridadServicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,7 +222,6 @@
     <EmbeddedResource Include="Controles\Popups\ctlTipoTicketServicio.resx">
       <DependentUpon>ctlTipoTicketServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

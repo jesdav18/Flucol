@@ -86,6 +86,18 @@
     <Compile Include="Controles\CtlSeleccionTransaccion.Designer.cs">
       <DependentUpon>CtlSeleccionTransaccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmEsperaCargandoConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaCargandoConexion.Designer.cs">
+      <DependentUpon>frmEsperaCargandoConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaRecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaRecepcion.Designer.cs">
+      <DependentUpon>frmEsperaRecepcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\frmRecepcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtlSeleccionTransaccion.resx">
       <DependentUpon>CtlSeleccionTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEsperaCargandoConexion.resx">
+      <DependentUpon>frmEsperaCargandoConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEsperaRecepcion.resx">
+      <DependentUpon>frmEsperaRecepcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmRecepcion.resx">
       <DependentUpon>frmRecepcion.cs</DependentUpon>
@@ -153,6 +171,8 @@
     <None Include="Resources\icon_Negocios_Verde.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\preloader.gif" />
+    <None Include="Resources\gif_cargando.gif" />
     <Content Include="Resources\iconAncianos.png" />
     <Content Include="Resources\iconAncianosVerde.png" />
     <Content Include="Resources\iconDiscapacidadVerde.png" />

@@ -31,23 +31,11 @@ namespace Publicidad.Controles
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlPublicidad));
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtlPublicidad));           
             this.picPublicidad = new DevExpress.XtraEditors.PictureEdit();
-            this.bgCargaPublicidad = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.bgCargaPublicidad = new System.ComponentModel.BackgroundWorker();           
             ((System.ComponentModel.ISupportInitialize)(this.picPublicidad.Properties)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 218);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(50, 18);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            this.axWindowsMediaPlayer1.Visible = false;
+            this.SuspendLayout();            
             // 
             // picPublicidad
             // 
@@ -72,11 +60,9 @@ namespace Publicidad.Controles
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.picPublicidad);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.picPublicidad);         
             this.Name = "CtlPublicidad";
-            this.Size = new System.Drawing.Size(218, 236);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+            this.Size = new System.Drawing.Size(218, 236);          
             ((System.ComponentModel.ISupportInitialize)(this.picPublicidad.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -84,7 +70,7 @@ namespace Publicidad.Controles
 
         #endregion
 
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+      
         private DevExpress.XtraEditors.PictureEdit picPublicidad;
         private System.ComponentModel.BackgroundWorker bgCargaPublicidad;
     }

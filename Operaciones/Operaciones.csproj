@@ -85,28 +85,25 @@
     <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.Designer.cs">
       <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.Designer.cs">
+      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.cs">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\ctlAdministracionPosiciones.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\ctlAdministracionPosiciones.Designer.cs">
-      <DependentUpon>ctlAdministracionPosiciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\ctlItemEmpleado.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\ctlItemEmpleado.Designer.cs">
-      <DependentUpon>ctlItemEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\ctlItemPosicion.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\ctlItemPosicion.Designer.cs">
-      <DependentUpon>ctlItemPosicion.cs</DependentUpon>
     </Compile>
     <Compile Include="Controles\ctlListaTicketsEspera.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +135,12 @@
     <Compile Include="Controles\ctlOperacionesSupervisor.Designer.cs">
       <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEspera.Designer.cs">
+      <DependentUpon>frmEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\dsTickets.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -165,14 +168,11 @@
     <EmbeddedResource Include="Controles\Configuraciones\ctlAsignacionPosiciones.resx">
       <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ctlAdministracionPosiciones.resx">
-      <DependentUpon>ctlAdministracionPosiciones.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoUsuarios.resx">
+      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ctlItemEmpleado.resx">
-      <DependentUpon>ctlItemEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ctlItemPosicion.resx">
-      <DependentUpon>ctlItemPosicion.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.resx">
+      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlListaTicketsEspera.resx">
       <DependentUpon>ctlListaTicketsEspera.cs</DependentUpon>
@@ -188,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlOperacionesSupervisor.resx">
       <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEspera.resx">
+      <DependentUpon>frmEspera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -303,6 +306,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_prioridad_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBusqueda_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_check_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconIrAtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nuevo_usuario_negro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario_configuracion_negro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reset_clave_nregro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_configuracion_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nuevo_usuario_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_siguiente_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_atras_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif_cargando.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_posiciones64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cerrar_sesion_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cerrar_sesion_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_posiciones_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_traslados_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_posiciones_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_posiciones_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_traslados_verde.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
