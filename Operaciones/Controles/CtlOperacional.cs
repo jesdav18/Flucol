@@ -40,6 +40,7 @@ namespace Operaciones.Controles
 
        public enum ESTADOS_TICKETS
        {
+            NO_HA_SIDO_LLAMADO = 0,
             EN_ESPERA = 1,
             LLAMADO = 2,
             NO_ATENDIO_LLAMADO = 3, 
@@ -208,6 +209,7 @@ namespace Operaciones.Controles
             v_minutos = 0;
             v_hora = 0;
             lblTiempoAtencion.Text = "00:00:00";
+            ctlOperacionalReducido1.lblTiempoAtencion.Text = "00:00:00";
         }
 
         private void IniciarTicket()
@@ -635,13 +637,21 @@ namespace Operaciones.Controles
 
                     cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicketVerde;
 
-                    if (ctlListaTicketsEspera1.Pro_ConteoTicketsEspera == 0)
+                    v_estado_ticket = ObtenerEstadoTicket();
+
+                    if (ctlListaTicketsEspera1.Pro_ConteoTicketsEspera == 0 && (v_estado_ticket == (int)ESTADOS_TICKETS.CERRADO || v_estado_ticket == (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO))
                     {
                         lblNumeroTicket.Text = "NO HAY TICKETS EN COLA";
                     }
 
-                    v_estado_ticket = ObtenerEstadoTicket();
-                    if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
+
+
+                    if (v_estado_ticket == (int)ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO)
+                    {
+                        MessageBox.Show("NO HA SIDO LLAMADO NINGUN TICKET O NO HAY TICKETS EN ESPERA.", "FLUCOL");
+                    }
+
+                    else if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
                     {
                         MessageBox.Show("NO PUEDE CERRARSE EL TICKET PORQUE AUN NO HA SIDO ATENDIDO.", "FLUCOL");
                     }
@@ -650,6 +660,7 @@ namespace Operaciones.Controles
                         CerrarTicket();
                         Pro_Esta_En_Atencion = false;
                         lblNumeroTicket.Text = "";
+                        ctlOperacionalReducido1.lblNumeroTicket.Text = "";
                     }
 
                     Cursor.Current = Cursors.Arrow;
@@ -765,6 +776,7 @@ namespace Operaciones.Controles
                             MarcarClienteNoRespondioLlamado();
                             Pro_Esta_En_Atencion = false;
                             lblNumeroTicket.Text = "";
+                            ctlOperacionalReducido1.lblNumeroTicket.Text = "";
                             break;
                         case ESTADOS_TICKETS.NO_ATENDIO_LLAMADO:
                             MessageBox.Show("EL TICKET FUE MARCADO COMO \"NO ATENDIO LLAMADO\".", "FLUCOL");
@@ -774,6 +786,9 @@ namespace Operaciones.Controles
                             break;
                         case ESTADOS_TICKETS.CERRADO:
                             MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO:
+                            MessageBox.Show("NO SE HA LLAMADO NINGUN CLIENTE.", "FLUCOL");
                             break;
                         
                     }
