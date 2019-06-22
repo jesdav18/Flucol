@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using Core.Clases;
 using System.Configuration;
-
+using System.Drawing;
 
 namespace Operaciones.Controles
 {
@@ -190,7 +190,14 @@ namespace Operaciones.Controles
                 cmdCerrarTicket.Image = Properties.Resources.iconDetenerTicket;
                 cmdLlamarCliente.Image = Properties.Resources.icon_llamar_siguiente_cliente;
                 cmdClienteNoAtendioLlamado.Image = Properties.Resources.iconNoRespondioLlamado;
-                cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64; ;
+                cmdRellamar.Image = Properties.Resources.icon_rellamar_negro_64;
+
+
+                if (tmrAlerta.Enabled)
+                {
+                    tmrAlerta.Stop();
+                    lblNumeroTicket.BackColor = Color.FromArgb(0, 192, 0);
+                }
             }
             catch (Exception Exc)
             {
@@ -573,7 +580,7 @@ namespace Operaciones.Controles
         {
             try
             {
-                if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
+                if (lblNumeroTicket.Text != "")
                 {
                     Cursor.Current = Cursors.WaitCursor;
 
@@ -602,6 +609,9 @@ namespace Operaciones.Controles
                             break;
                         case ESTADOS_TICKETS.CERRADO:
                             MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO:
+                            MessageBox.Show("NO HAY TICKETS EN ESPERA.", "FLUCOL");
                             break;
                       
                     }
@@ -641,14 +651,14 @@ namespace Operaciones.Controles
 
                     if (ctlListaTicketsEspera1.Pro_ConteoTicketsEspera == 0 && (v_estado_ticket == (int)ESTADOS_TICKETS.CERRADO || v_estado_ticket == (int)ESTADOS_TICKETS.NO_ATENDIO_LLAMADO))
                     {
-                        lblNumeroTicket.Text = "NO HAY TICKETS EN COLA";
+                        lblNumeroTicket.Text = "NO HAY TICKETS EN ESPERA";
                     }
 
 
 
                     if (v_estado_ticket == (int)ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO)
                     {
-                        MessageBox.Show("NO HA SIDO LLAMADO NINGUN TICKET O NO HAY TICKETS EN ESPERA.", "FLUCOL");
+                        MessageBox.Show("NO HAY TICKETS EN ESPERA.", "FLUCOL");
                     }
 
                     else if (v_estado_ticket != (int)ESTADOS_TICKETS.EN_ATENCION)
@@ -713,6 +723,7 @@ namespace Operaciones.Controles
                         }
                         else
                         {
+
                             MessageBox.Show(@"NO SE PUEDE LLAMAR A SIGUIENTE TICKET MIENTRAS NO CIERRE O MARQUE COMO ATENDIDO EL ACTUAL TICKET.", "FLUCOL");
                         }
                     }
@@ -722,6 +733,11 @@ namespace Operaciones.Controles
                         cmdLlamarCliente.Image = Properties.Resources.IconLlamarSiguienteClienteVerde;
 
                         LlamarSiguienteCliente();
+                    }
+
+                    if (lblNumeroTicket.Text.Contains("NO HAY"))
+                    {
+                        tmrAlerta.Start();
                     }
 
                     v_temporal_ticket = lblNumeroTicket.Text;
@@ -788,7 +804,7 @@ namespace Operaciones.Controles
                             MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
                             break;
                         case ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO:
-                            MessageBox.Show("NO SE HA LLAMADO NINGUN CLIENTE.", "FLUCOL");
+                            MessageBox.Show("NO HAY TICKETS EN ESPERA.", "FLUCOL");
                             break;
                         
                     }
@@ -953,7 +969,7 @@ namespace Operaciones.Controles
         {
             try
             {
-                if (lblNumeroTicket.Text != "" && lblNumeroTicket.Text != "NO HAY TICKETS EN COLA")
+                if (lblNumeroTicket.Text != "")
                 {
                     Cursor.Current = Cursors.WaitCursor;
 
@@ -980,6 +996,9 @@ namespace Operaciones.Controles
                             break;
                         case ESTADOS_TICKETS.CERRADO:
                             MessageBox.Show("EL TICKET YA FUE CERRADO.", "FLUCOL");
+                            break;
+                        case ESTADOS_TICKETS.NO_HA_SIDO_LLAMADO:
+                            MessageBox.Show("NO HAY TICKETS EN ESPERA", "FLUCOL");
                             break;
                        
                     }
@@ -1052,5 +1071,16 @@ namespace Operaciones.Controles
 
         #endregion
 
+        private void tmrAlerta_Tick(object sender, EventArgs e)
+        {
+            if (lblNumeroTicket.BackColor == Color.FromArgb(0, 192, 0))
+            {
+                lblNumeroTicket.BackColor = Color.FromArgb(0, 140, 0);
+            }
+            else
+            {
+                lblNumeroTicket.BackColor = Color.FromArgb(0, 192, 0);
+            }
+        }
     }
 }

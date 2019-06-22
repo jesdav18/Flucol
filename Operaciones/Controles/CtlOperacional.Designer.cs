@@ -56,6 +56,7 @@
             this.pagePrincipal = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlListaTickets = new System.Windows.Forms.Panel();
+            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.PagePopups = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.popupResumen = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
@@ -66,8 +67,8 @@
             this.lblPosicion = new DevExpress.XtraEditors.LabelControl();
             this.lblNombreUsuario = new DevExpress.XtraEditors.LabelControl();
             this.PageOperacionalReducido = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ctlListaTicketsEspera1 = new Operaciones.Controles.ctlListaTicketsEspera();
             this.ctlOperacionalReducido1 = new Operaciones.Controles.ctlOperacionalReducido();
+            this.tmrAlerta = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             this.pnlResumen.SuspendLayout();
@@ -490,6 +491,24 @@
             this.pnlListaTickets.Size = new System.Drawing.Size(173, 404);
             this.pnlListaTickets.TabIndex = 3;
             // 
+            // ctlListaTicketsEspera1
+            // 
+            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
+            this.ctlListaTicketsEspera1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
+            this.ctlListaTicketsEspera1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
+            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlListaTicketsEspera1.Pro_CargarLista = false;
+            this.ctlListaTicketsEspera1.Pro_Conexion = null;
+            this.ctlListaTicketsEspera1.Pro_ConteoTicketsEspera = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
+            this.ctlListaTicketsEspera1.Pro_Usuario = null;
+            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(173, 404);
+            this.ctlListaTicketsEspera1.TabIndex = 0;
+            // 
             // PagePopups
             // 
             this.PagePopups.Caption = "PagePopups";
@@ -629,36 +648,25 @@
             this.PageOperacionalReducido.Name = "PageOperacionalReducido";
             this.PageOperacionalReducido.Size = new System.Drawing.Size(1106, 441);
             // 
-            // ctlListaTicketsEspera1
-            // 
-            this.ctlListaTicketsEspera1.BackColor = System.Drawing.Color.White;
-            this.ctlListaTicketsEspera1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlListaTicketsEspera1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ctlListaTicketsEspera1.Location = new System.Drawing.Point(0, 0);
-            this.ctlListaTicketsEspera1.Name = "ctlListaTicketsEspera1";
-            this.ctlListaTicketsEspera1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlListaTicketsEspera1.Pro_CargarLista = false;
-            this.ctlListaTicketsEspera1.Pro_Conexion = null;
-            this.ctlListaTicketsEspera1.Pro_ConteoTicketsEspera = 0;
-            this.ctlListaTicketsEspera1.Pro_ID_AgenciaServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_ID_ClienteServicio = 0;
-            this.ctlListaTicketsEspera1.Pro_Usuario = null;
-            this.ctlListaTicketsEspera1.Size = new System.Drawing.Size(173, 404);
-            this.ctlListaTicketsEspera1.TabIndex = 0;
-            // 
             // ctlOperacionalReducido1
             // 
             this.ctlOperacionalReducido1.BackColor = System.Drawing.Color.White;
             this.ctlOperacionalReducido1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ctlOperacionalReducido1.Location = new System.Drawing.Point(0, 0);
+            this.ctlOperacionalReducido1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctlOperacionalReducido1.Name = "ctlOperacionalReducido1";
             this.ctlOperacionalReducido1.Padding = new System.Windows.Forms.Padding(3);
             this.ctlOperacionalReducido1.Size = new System.Drawing.Size(1106, 441);
             this.ctlOperacionalReducido1.TabIndex = 0;
             // 
+            // tmrAlerta
+            // 
+            this.tmrAlerta.Interval = 300;
+            this.tmrAlerta.Tick += new System.EventHandler(this.tmrAlerta_Tick);
+            // 
             // CtlOperacional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Navigation);
@@ -733,5 +741,6 @@
         private DevExpress.XtraEditors.LabelControl lblAgencia;
         public DevExpress.XtraEditors.LabelControl lblNumeroTicket;
         public DevExpress.XtraEditors.LabelControl lblTiempoAtencion;
+        private System.Windows.Forms.Timer tmrAlerta;
     }
 }
