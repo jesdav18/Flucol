@@ -37,6 +37,14 @@ namespace Core.Clases
 
         }
 
+        public int ObtenerNumeroMes(PgSqlConnection pConexion)
+        {
+            string sentencia = "SELECT * FROM configuracion.ft_proc_obtener_numero_mes();";
+            PgSqlCommand pgComando = new PgSqlCommand(sentencia, pConexion);
+
+            return (int)pgComando.ExecuteScalar();
+        }
+
        
     }
 }

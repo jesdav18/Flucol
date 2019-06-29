@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
             this.pnlOpciones = new System.Windows.Forms.Panel();
             this.pnlBotones = new System.Windows.Forms.Panel();
             this.cmdDashboards = new DevExpress.XtraEditors.PictureEdit();
@@ -41,15 +44,23 @@
             this.ctlPromedioAtencion1 = new Core.Controles.Dashboards.ctlPromedioAtencion();
             this.ctlEmpleadoConMasTicketsAtendidos1 = new Core.Controles.Dashboards.ctlEmpleadoConMasTicketsAtendidos();
             this.ctlPromedioEspera1 = new Core.Controles.Dashboards.ctlPromedioEspera();
-            this.pnlEncabezadoDashboards = new System.Windows.Forms.Panel();
-            this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
-            this.page2 = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pageInicial = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.ssmDashboardsPrincipal = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Administracion.Pantallas.frmEsperaDashboards), true, true, typeof(System.Windows.Forms.UserControl));
             this.ctlTicketsAtendidos_TicketsNoAtendidos1 = new Core.Controles.Dashboards.ctlTicketsAtendidos_TicketsNoAtendidos();
             this.ctlVisitasSegunPrioridadServicio1 = new Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio();
             this.ctlTraficoClientes1 = new Core.Controles.Dashboards.ctlTraficoClientes();
             this.ctlVisitasSegunCanalDeServicio1 = new Core.Controles.Dashboards.ctlVisitasSegunCanalDeServicio();
+            this.pnlEncabezadoDashboards = new System.Windows.Forms.Panel();
+            this.picAtrasDashboardPrincipal = new DevExpress.XtraEditors.PictureEdit();
+            this.lblTituloDashboardPrincipal = new DevExpress.XtraEditors.LabelControl();
+            this.pageAgenciasDisponibles = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ctlAgenciasDisponiblesParaDashboards1 = new Administracion.Controles.ctlAgenciasDisponiblesParaDashboards();
+            this.pageInicial = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.ssmDashboardsPrincipal = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Administracion.Pantallas.frmEsperaDashboards), true, true, typeof(System.Windows.Forms.UserControl));
+            this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.dtDesde = new DevExpress.XtraEditors.DateEdit();
+            this.dateHasta = new DevExpress.XtraEditors.DateEdit();
+            this.cmdBusqueda = new DevExpress.XtraEditors.PictureEdit();
             this.pnlOpciones.SuspendLayout();
             this.pnlBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDashboards.Properties)).BeginInit();
@@ -60,6 +71,14 @@
             this.pnlContenedorDashboardsPrincipal.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.pnlEncabezadoDashboards.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAtrasDashboardPrincipal.Properties)).BeginInit();
+            this.pageAgenciasDisponibles.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDesde.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDesde.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHasta.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHasta.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdBusqueda.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlOpciones
@@ -134,7 +153,7 @@
             // navegacionDasboards
             // 
             this.navegacionDasboards.Controls.Add(this.pageDashBoardsPrincipal);
-            this.navegacionDasboards.Controls.Add(this.page2);
+            this.navegacionDasboards.Controls.Add(this.pageAgenciasDisponibles);
             this.navegacionDasboards.Controls.Add(this.pageInicial);
             this.navegacionDasboards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navegacionDasboards.Location = new System.Drawing.Point(97, 5);
@@ -142,7 +161,7 @@
             this.navegacionDasboards.Padding = new System.Windows.Forms.Padding(5);
             this.navegacionDasboards.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pageDashBoardsPrincipal,
-            this.page2,
+            this.pageAgenciasDisponibles,
             this.pageInicial});
             this.navegacionDasboards.SelectedPage = this.pageInicial;
             this.navegacionDasboards.Size = new System.Drawing.Size(642, 644);
@@ -162,11 +181,16 @@
             // 
             // pnlContenedorDashboardsPrincipal
             // 
+            this.pnlContenedorDashboardsPrincipal.Controls.Add(this.cmdBusqueda);
+            this.pnlContenedorDashboardsPrincipal.Controls.Add(this.dateHasta);
+            this.pnlContenedorDashboardsPrincipal.Controls.Add(this.dtDesde);
+            this.pnlContenedorDashboardsPrincipal.Controls.Add(this.labelControl2);
+            this.pnlContenedorDashboardsPrincipal.Controls.Add(this.labelControl1);
             this.pnlContenedorDashboardsPrincipal.Controls.Add(this.flowLayoutPanel2);
             this.pnlContenedorDashboardsPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedorDashboardsPrincipal.Location = new System.Drawing.Point(0, 31);
+            this.pnlContenedorDashboardsPrincipal.Location = new System.Drawing.Point(0, 45);
             this.pnlContenedorDashboardsPrincipal.Name = "pnlContenedorDashboardsPrincipal";
-            this.pnlContenedorDashboardsPrincipal.Size = new System.Drawing.Size(642, 613);
+            this.pnlContenedorDashboardsPrincipal.Size = new System.Drawing.Size(642, 599);
             this.pnlContenedorDashboardsPrincipal.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -178,10 +202,10 @@
             this.flowLayoutPanel2.Controls.Add(this.ctlVisitasSegunPrioridadServicio1);
             this.flowLayoutPanel2.Controls.Add(this.ctlTraficoClientes1);
             this.flowLayoutPanel2.Controls.Add(this.ctlVisitasSegunCanalDeServicio1);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Controls.Add(this.schedulerControl1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 119);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(642, 613);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(642, 480);
             this.flowLayoutPanel2.TabIndex = 5;
             // 
             // ctlPromedioAtencion1
@@ -228,46 +252,6 @@
             this.ctlPromedioEspera1.Pro_ID_ClienteServicio = 0;
             this.ctlPromedioEspera1.Size = new System.Drawing.Size(190, 225);
             this.ctlPromedioEspera1.TabIndex = 8;
-            // 
-            // pnlEncabezadoDashboards
-            // 
-            this.pnlEncabezadoDashboards.Controls.Add(this.lblTituloDashboardPrincipal);
-            this.pnlEncabezadoDashboards.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEncabezadoDashboards.Location = new System.Drawing.Point(0, 0);
-            this.pnlEncabezadoDashboards.Name = "pnlEncabezadoDashboards";
-            this.pnlEncabezadoDashboards.Size = new System.Drawing.Size(642, 31);
-            this.pnlEncabezadoDashboards.TabIndex = 0;
-            // 
-            // lblTituloDashboardPrincipal
-            // 
-            this.lblTituloDashboardPrincipal.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloDashboardPrincipal.Appearance.Options.UseFont = true;
-            this.lblTituloDashboardPrincipal.Appearance.Options.UseTextOptions = true;
-            this.lblTituloDashboardPrincipal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTituloDashboardPrincipal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lblTituloDashboardPrincipal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTituloDashboardPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTituloDashboardPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.lblTituloDashboardPrincipal.Name = "lblTituloDashboardPrincipal";
-            this.lblTituloDashboardPrincipal.Size = new System.Drawing.Size(642, 31);
-            this.lblTituloDashboardPrincipal.TabIndex = 1;
-            this.lblTituloDashboardPrincipal.Text = "DASHBOARDS PRINCIPAL";
-            // 
-            // page2
-            // 
-            this.page2.Caption = "page2";
-            this.page2.Name = "page2";
-            this.page2.Size = new System.Drawing.Size(642, 644);
-            // 
-            // pageInicial
-            // 
-            this.pageInicial.Caption = "pageInicial";
-            this.pageInicial.Name = "pageInicial";
-            this.pageInicial.Size = new System.Drawing.Size(642, 644);
-            // 
-            // ssmDashboardsPrincipal
-            // 
-            this.ssmDashboardsPrincipal.ClosingDelay = 500;
             // 
             // ctlTicketsAtendidos_TicketsNoAtendidos1
             // 
@@ -329,6 +313,161 @@
             this.ctlVisitasSegunCanalDeServicio1.Size = new System.Drawing.Size(385, 312);
             this.ctlVisitasSegunCanalDeServicio1.TabIndex = 13;
             // 
+            // pnlEncabezadoDashboards
+            // 
+            this.pnlEncabezadoDashboards.Controls.Add(this.picAtrasDashboardPrincipal);
+            this.pnlEncabezadoDashboards.Controls.Add(this.lblTituloDashboardPrincipal);
+            this.pnlEncabezadoDashboards.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEncabezadoDashboards.Location = new System.Drawing.Point(0, 0);
+            this.pnlEncabezadoDashboards.Name = "pnlEncabezadoDashboards";
+            this.pnlEncabezadoDashboards.Size = new System.Drawing.Size(642, 45);
+            this.pnlEncabezadoDashboards.TabIndex = 0;
+            // 
+            // picAtrasDashboardPrincipal
+            // 
+            this.picAtrasDashboardPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picAtrasDashboardPrincipal.EditValue = global::Administracion.Properties.Resources.icon_atras_64;
+            this.picAtrasDashboardPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.picAtrasDashboardPrincipal.Name = "picAtrasDashboardPrincipal";
+            this.picAtrasDashboardPrincipal.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picAtrasDashboardPrincipal.Properties.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.picAtrasDashboardPrincipal.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picAtrasDashboardPrincipal.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picAtrasDashboardPrincipal.Size = new System.Drawing.Size(57, 45);
+            this.picAtrasDashboardPrincipal.TabIndex = 5;
+            this.picAtrasDashboardPrincipal.ToolTip = "Dashboards";
+            this.picAtrasDashboardPrincipal.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.picAtrasDashboardPrincipal.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.picAtrasDashboardPrincipal.ToolTipTitle = "FLUCOL";
+            this.picAtrasDashboardPrincipal.Click += new System.EventHandler(this.picAtrasDashboardPrincipal_Click);
+            // 
+            // lblTituloDashboardPrincipal
+            // 
+            this.lblTituloDashboardPrincipal.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloDashboardPrincipal.Appearance.Options.UseFont = true;
+            this.lblTituloDashboardPrincipal.Appearance.Options.UseTextOptions = true;
+            this.lblTituloDashboardPrincipal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTituloDashboardPrincipal.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblTituloDashboardPrincipal.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTituloDashboardPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTituloDashboardPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.lblTituloDashboardPrincipal.Name = "lblTituloDashboardPrincipal";
+            this.lblTituloDashboardPrincipal.Size = new System.Drawing.Size(642, 45);
+            this.lblTituloDashboardPrincipal.TabIndex = 1;
+            this.lblTituloDashboardPrincipal.Text = "DASHBOARDS PRINCIPAL";
+            // 
+            // pageAgenciasDisponibles
+            // 
+            this.pageAgenciasDisponibles.Caption = "pageAgenciasDisponibles";
+            this.pageAgenciasDisponibles.Controls.Add(this.ctlAgenciasDisponiblesParaDashboards1);
+            this.pageAgenciasDisponibles.Name = "pageAgenciasDisponibles";
+            this.pageAgenciasDisponibles.Size = new System.Drawing.Size(642, 644);
+            // 
+            // ctlAgenciasDisponiblesParaDashboards1
+            // 
+            this.ctlAgenciasDisponiblesParaDashboards1.BackColor = System.Drawing.Color.White;
+            this.ctlAgenciasDisponiblesParaDashboards1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlAgenciasDisponiblesParaDashboards1.Location = new System.Drawing.Point(0, 0);
+            this.ctlAgenciasDisponiblesParaDashboards1.Name = "ctlAgenciasDisponiblesParaDashboards1";
+            this.ctlAgenciasDisponiblesParaDashboards1.Padding = new System.Windows.Forms.Padding(5);
+            this.ctlAgenciasDisponiblesParaDashboards1.Pro_Conexion = null;
+            this.ctlAgenciasDisponiblesParaDashboards1.Pro_ID_ClienteServicio = 0;
+            this.ctlAgenciasDisponiblesParaDashboards1.Size = new System.Drawing.Size(642, 644);
+            this.ctlAgenciasDisponiblesParaDashboards1.TabIndex = 0;
+            // 
+            // pageInicial
+            // 
+            this.pageInicial.Caption = "pageInicial";
+            this.pageInicial.Name = "pageInicial";
+            this.pageInicial.Size = new System.Drawing.Size(642, 644);
+            // 
+            // ssmDashboardsPrincipal
+            // 
+            this.ssmDashboardsPrincipal.ClosingDelay = 500;
+            // 
+            // schedulerControl1
+            // 
+            this.schedulerControl1.Location = new System.Drawing.Point(3, 1182);
+            this.schedulerControl1.Name = "schedulerControl1";
+            this.schedulerControl1.Size = new System.Drawing.Size(400, 200);
+            this.schedulerControl1.Start = new System.DateTime(2019, 6, 23, 0, 0, 0, 0);
+            this.schedulerControl1.TabIndex = 14;
+            this.schedulerControl1.Text = "schedulerControl1";
+            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler4);
+            this.schedulerControl1.Views.FullWeekView.Enabled = true;
+            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler5);
+            this.schedulerControl1.Views.WeekView.Enabled = false;
+            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseTextOptions = true;
+            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(24, 51);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(70, 26);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "DESDE:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.labelControl2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(24, 87);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(70, 26);
+            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Text = "HASTA:";
+            // 
+            // dtDesde
+            // 
+            this.dtDesde.EditValue = null;
+            this.dtDesde.Location = new System.Drawing.Point(111, 57);
+            this.dtDesde.Name = "dtDesde";
+            this.dtDesde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDesde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtDesde.Size = new System.Drawing.Size(196, 20);
+            this.dtDesde.TabIndex = 8;
+            // 
+            // dateHasta
+            // 
+            this.dateHasta.EditValue = null;
+            this.dateHasta.Location = new System.Drawing.Point(111, 93);
+            this.dateHasta.Name = "dateHasta";
+            this.dateHasta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateHasta.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateHasta.Size = new System.Drawing.Size(196, 20);
+            this.dateHasta.TabIndex = 9;
+            // 
+            // cmdBusqueda
+            // 
+            this.cmdBusqueda.EditValue = global::Administracion.Properties.Resources.iconBusqueda_32;
+            this.cmdBusqueda.Location = new System.Drawing.Point(395, 32);
+            this.cmdBusqueda.Name = "cmdBusqueda";
+            this.cmdBusqueda.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.cmdBusqueda.Properties.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.cmdBusqueda.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.cmdBusqueda.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.cmdBusqueda.Size = new System.Drawing.Size(57, 45);
+            this.cmdBusqueda.TabIndex = 10;
+            this.cmdBusqueda.ToolTip = "Dashboards";
+            this.cmdBusqueda.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.cmdBusqueda.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.cmdBusqueda.ToolTipTitle = "FLUCOL";
+            this.cmdBusqueda.Click += new System.EventHandler(this.cmdBusqueda_Click);
+            // 
             // ctlDashBoardsPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +488,14 @@
             this.pnlContenedorDashboardsPrincipal.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.pnlEncabezadoDashboards.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picAtrasDashboardPrincipal.Properties)).EndInit();
+            this.pageAgenciasDisponibles.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDesde.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDesde.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHasta.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateHasta.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdBusqueda.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,7 +510,7 @@
         private DevExpress.XtraBars.Navigation.NavigationFrame navegacionDasboards;
         private DevExpress.XtraBars.Navigation.NavigationPage pageDashBoardsPrincipal;
         private System.Windows.Forms.Panel pnlEncabezadoDashboards;
-        private DevExpress.XtraBars.Navigation.NavigationPage page2;
+        private DevExpress.XtraBars.Navigation.NavigationPage pageAgenciasDisponibles;
         private System.Windows.Forms.Panel pnlContenedorDashboardsPrincipal;
         private DevExpress.XtraEditors.LabelControl lblTituloDashboardPrincipal;      
         private DevExpress.XtraBars.Navigation.NavigationPage pageInicial;
@@ -377,5 +524,13 @@
         private Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio ctlVisitasSegunPrioridadServicio1;
         private Core.Controles.Dashboards.ctlTraficoClientes ctlTraficoClientes1;
         private Core.Controles.Dashboards.ctlVisitasSegunCanalDeServicio ctlVisitasSegunCanalDeServicio1;
+        private ctlAgenciasDisponiblesParaDashboards ctlAgenciasDisponiblesParaDashboards1;
+        private DevExpress.XtraEditors.PictureEdit picAtrasDashboardPrincipal;
+        private DevExpress.XtraScheduler.SchedulerControl schedulerControl1;
+        private DevExpress.XtraEditors.PictureEdit cmdBusqueda;
+        private DevExpress.XtraEditors.DateEdit dateHasta;
+        private DevExpress.XtraEditors.DateEdit dtDesde;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

@@ -24,8 +24,8 @@ namespace Administracion.Pantallas
                                             int pID_Agencia_Servicio)
         {
             ctlDashBoardsPrincipal1.ConstruirControl(pConexion, 
-                                                     pID_Cliente_Servicio,
-                                                     pID_Agencia_Servicio);
+                                                     pID_Cliente_Servicio
+                                                     );
         }
     }
 }
