@@ -19,7 +19,7 @@ namespace Administracion.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -73,6 +73,16 @@ namespace Administracion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_dashboard_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_dashboard_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconBusqueda_32 {
             get {
                 object obj = ResourceManager.GetObject("iconBusqueda_32", resourceCulture);
@@ -83,19 +93,9 @@ namespace Administracion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconDashboard_32 {
+        internal static System.Drawing.Bitmap iconFiltro_64 {
             get {
-                object obj = ResourceManager.GetObject("iconDashboard_32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconDashboard_64 {
-            get {
-                object obj = ResourceManager.GetObject("iconDashboard_64", resourceCulture);
+                object obj = ResourceManager.GetObject("iconFiltro_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

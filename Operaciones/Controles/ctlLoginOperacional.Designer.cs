@@ -78,7 +78,7 @@
             this.lblUsuario.Appearance.Options.UseFont = true;
             this.lblUsuario.Location = new System.Drawing.Point(67, 234);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(81, 25);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "USUARIO";
             // 
@@ -89,7 +89,7 @@
             this.lblContrasenia.Appearance.Options.UseFont = true;
             this.lblContrasenia.Location = new System.Drawing.Point(34, 280);
             this.lblContrasenia.Name = "lblContrasenia";
-            this.lblContrasenia.Size = new System.Drawing.Size(97, 20);
+            this.lblContrasenia.Size = new System.Drawing.Size(124, 25);
             this.lblContrasenia.TabIndex = 3;
             this.lblContrasenia.Text = "CONTRASEÑA";
             // 
@@ -179,7 +179,7 @@
             // 
             // ctlLoginOperacional
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.picLogoInstitucion);

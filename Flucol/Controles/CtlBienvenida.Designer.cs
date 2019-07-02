@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblBienvenido = new DevExpress.XtraEditors.LabelControl();
-            this.tmrBienvenida = new System.Windows.Forms.Timer();
+            this.tmrBienvenida = new System.Windows.Forms.Timer(this.components);
             this.lblNombrePrograma = new DevExpress.XtraEditors.LabelControl();
             this.lblUltimaActualizacion = new DevExpress.XtraEditors.LabelControl();
             this.lblModulo = new DevExpress.XtraEditors.LabelControl();
@@ -39,10 +40,10 @@
             this.lblVersion = new DevExpress.XtraEditors.LabelControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Flucol.Pantallas.frmEspera), true, true, typeof(System.Windows.Forms.UserControl));
-            this.tmrCrearConexion = new System.Windows.Forms.Timer();
+            this.tmrCrearConexion = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -176,19 +177,6 @@
             this.panel7.Size = new System.Drawing.Size(551, 49);
             this.panel7.TabIndex = 7;
             // 
-            // progressPanel1
-            // 
-            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progressPanel1.Appearance.Options.UseBackColor = true;
-            this.progressPanel1.BarAnimationElementThickness = 2;
-            this.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressPanel1.Location = new System.Drawing.Point(0, 0);
-            this.progressPanel1.Name = "progressPanel1";
-            this.progressPanel1.Size = new System.Drawing.Size(551, 49);
-            this.progressPanel1.TabIndex = 0;
-            this.progressPanel1.Text = "progressPanel1";
-            this.progressPanel1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
-            // 
             // splashScreenManager1
             // 
             this.splashScreenManager1.ClosingDelay = 500;
@@ -203,9 +191,26 @@
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // progressPanel1
+            // 
+            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel1.Appearance.Options.UseBackColor = true;
+            this.progressPanel1.BarAnimationElementThickness = 2;
+            this.progressPanel1.Caption = " ";
+            this.progressPanel1.Description = " ";
+            this.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressPanel1.Location = new System.Drawing.Point(0, 0);
+            this.progressPanel1.Name = "progressPanel1";
+            this.progressPanel1.ShowCaption = false;
+            this.progressPanel1.ShowDescription = false;
+            this.progressPanel1.Size = new System.Drawing.Size(551, 49);
+            this.progressPanel1.TabIndex = 0;
+            this.progressPanel1.Text = "progressPanel1";
+            this.progressPanel1.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+            // 
             // CtlBienvenida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureEdit1);
@@ -238,9 +243,9 @@
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.LabelControl lblVersion;
         private System.Windows.Forms.Panel panel7;
-        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private System.Windows.Forms.Timer tmrCrearConexion;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
     }
 }

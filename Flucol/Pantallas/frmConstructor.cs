@@ -280,11 +280,11 @@ namespace Flucol.Pantallas
                     case NIVELES_ACCESO.ADMINISTRACION:
 
                         frmAdministracion = new frmAdministracion();
-                        frmAdministracion.MdiParent = this;
-                        frmAdministracion.StartPosition = FormStartPosition.CenterScreen;
                         frmAdministracion.ConstruirAdministracion(Pro_Conexion,
-                                                                  Pro_ID_ClienteServicio,
-                                                                  Pro_ID_AgenciaServicio);
+                                                               Pro_ID_ClienteServicio,
+                                                               Pro_ID_AgenciaServicio);
+                        frmAdministracion.MdiParent = this;
+                        frmAdministracion.StartPosition = FormStartPosition.CenterScreen;                    
                         frmAdministracion.Show();
                       
                         Pro_ModuloActivo = MODULOS.ADMINISTRACION;
@@ -502,5 +502,9 @@ namespace Flucol.Pantallas
 
         #endregion
 
+        private void FrmConstructor_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

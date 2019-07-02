@@ -59,22 +59,24 @@
             // 
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Location = new System.Drawing.Point(7, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(734, 42);
+            this.panel1.Size = new System.Drawing.Size(978, 52);
             this.panel1.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelControl1.Location = new System.Drawing.Point(0, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(734, 42);
+            this.labelControl1.Size = new System.Drawing.Size(978, 52);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "AGENCIAS DISPONIBLES";
             // 
@@ -83,14 +85,16 @@
             this.gridControl1.DataMember = "dtAgenciasDisponibles";
             this.gridControl1.DataSource = this.dsCore1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(5, 47);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gridControl1.Location = new System.Drawing.Point(7, 58);
             this.gridControl1.MainView = this.gvSucursalesDisponibles;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdVerDashboard,
             this.memoDireccion,
             this.memoNombreAgencia});
-            this.gridControl1.Size = new System.Drawing.Size(734, 417);
+            this.gridControl1.Size = new System.Drawing.Size(978, 513);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSucursalesDisponibles});
@@ -112,6 +116,7 @@
             this.coldireccion,
             this.colimg_ver_dashboard,
             this.colid_cliente_servicio});
+            this.gvSucursalesDisponibles.DetailHeight = 431;
             this.gvSucursalesDisponibles.GridControl = this.gridControl1;
             this.gvSucursalesDisponibles.Name = "gvSucursalesDisponibles";
             this.gvSucursalesDisponibles.OptionsView.ShowGroupPanel = false;
@@ -125,26 +130,27 @@
             this.colid_agencia_servicio.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colid_agencia_servicio.Caption = "CODIGO";
             this.colid_agencia_servicio.FieldName = "id_agencia_servicio";
-            this.colid_agencia_servicio.MaxWidth = 100;
-            this.colid_agencia_servicio.MinWidth = 100;
+            this.colid_agencia_servicio.MaxWidth = 133;
+            this.colid_agencia_servicio.MinWidth = 133;
             this.colid_agencia_servicio.Name = "colid_agencia_servicio";
             this.colid_agencia_servicio.OptionsColumn.AllowEdit = false;
             this.colid_agencia_servicio.OptionsColumn.AllowFocus = false;
             this.colid_agencia_servicio.Visible = true;
             this.colid_agencia_servicio.VisibleIndex = 0;
-            this.colid_agencia_servicio.Width = 100;
+            this.colid_agencia_servicio.Width = 133;
             // 
             // colnombre_agencia
             // 
             this.colnombre_agencia.Caption = "NOMBRE DE AGENCIA";
             this.colnombre_agencia.ColumnEdit = this.memoNombreAgencia;
             this.colnombre_agencia.FieldName = "nombre_agencia";
+            this.colnombre_agencia.MinWidth = 27;
             this.colnombre_agencia.Name = "colnombre_agencia";
             this.colnombre_agencia.OptionsColumn.AllowEdit = false;
             this.colnombre_agencia.OptionsColumn.AllowFocus = false;
             this.colnombre_agencia.Visible = true;
             this.colnombre_agencia.VisibleIndex = 1;
-            this.colnombre_agencia.Width = 296;
+            this.colnombre_agencia.Width = 395;
             // 
             // memoNombreAgencia
             // 
@@ -157,12 +163,13 @@
             this.coldireccion.Caption = "DIRECCIÓN";
             this.coldireccion.ColumnEdit = this.memoDireccion;
             this.coldireccion.FieldName = "direccion";
+            this.coldireccion.MinWidth = 27;
             this.coldireccion.Name = "coldireccion";
             this.coldireccion.OptionsColumn.AllowEdit = false;
             this.coldireccion.OptionsColumn.AllowFocus = false;
             this.coldireccion.Visible = true;
             this.coldireccion.VisibleIndex = 2;
-            this.coldireccion.Width = 286;
+            this.coldireccion.Width = 381;
             // 
             // memoDireccion
             // 
@@ -175,12 +182,12 @@
             this.colimg_ver_dashboard.Caption = " ";
             this.colimg_ver_dashboard.ColumnEdit = this.cmdVerDashboard;
             this.colimg_ver_dashboard.FieldName = "img_ver_dashboard";
-            this.colimg_ver_dashboard.MaxWidth = 50;
-            this.colimg_ver_dashboard.MinWidth = 50;
+            this.colimg_ver_dashboard.MaxWidth = 67;
+            this.colimg_ver_dashboard.MinWidth = 67;
             this.colimg_ver_dashboard.Name = "colimg_ver_dashboard";
             this.colimg_ver_dashboard.Visible = true;
             this.colimg_ver_dashboard.VisibleIndex = 3;
-            this.colimg_ver_dashboard.Width = 50;
+            this.colimg_ver_dashboard.Width = 67;
             // 
             // cmdVerDashboard
             // 
@@ -196,18 +203,21 @@
             // colid_cliente_servicio
             // 
             this.colid_cliente_servicio.FieldName = "id_cliente_servicio";
+            this.colid_cliente_servicio.MinWidth = 27;
             this.colid_cliente_servicio.Name = "colid_cliente_servicio";
+            this.colid_cliente_servicio.Width = 100;
             // 
             // ctlAgenciasDisponiblesParaDashboards
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctlAgenciasDisponiblesParaDashboards";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(744, 469);
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(992, 577);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCore1)).EndInit();

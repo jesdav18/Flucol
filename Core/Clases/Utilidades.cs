@@ -29,7 +29,11 @@ namespace Core.Clases
 
         public DateTime ObtenerHoraServidor(PgSqlConnection pConexion)
         {
-           
+
+            if (pConexion.State != System.Data.ConnectionState.Open)
+            {
+                pConexion.Open();
+            }
             string sentencia = "SELECT * FROM configuracion.ft_obtener_hora_servidor();";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, pConexion);
 

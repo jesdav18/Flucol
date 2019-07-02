@@ -36,7 +36,7 @@
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 335);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -51,6 +51,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConstructor_FormClosing);
             this.Load += new System.EventHandler(this.frmConstructor_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmConstructor_ClientSizeChanged);
+            this.SizeChanged += new System.EventHandler(this.FrmConstructor_SizeChanged);
             this.ResumeLayout(false);
 
         }

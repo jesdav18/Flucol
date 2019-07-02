@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using Core.Clases;
@@ -84,7 +78,8 @@ namespace Administracion.Controles
 
         #region EVENTOS
 
-        public event EventHandler OnSeleccionaAgencia;
+        public delegate void SeleccionaAgencia(int pID_Agencia, string pNombreSucursal);
+        public event SeleccionaAgencia OnSeleccionaAgencia;
 
         #endregion
 
@@ -94,7 +89,7 @@ namespace Administracion.Controles
 
             if (v_fila != null)
             {
-                OnSeleccionaAgencia?.Invoke(v_fila.id_agencia_servicio, e);
+                OnSeleccionaAgencia?.Invoke(v_fila.id_agencia_servicio, v_fila.nombre_agencia);
             }
         }
     }

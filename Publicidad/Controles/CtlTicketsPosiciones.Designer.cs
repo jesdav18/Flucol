@@ -72,7 +72,7 @@
             this.panelControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(573, 76);
+            this.panelControl1.Size = new System.Drawing.Size(607, 76);
             this.panelControl1.TabIndex = 0;
             // 
             // lblTituloPosiciones
@@ -87,7 +87,7 @@
             this.lblTituloPosiciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTituloPosiciones.Location = new System.Drawing.Point(300, 3);
             this.lblTituloPosiciones.Name = "lblTituloPosiciones";
-            this.lblTituloPosiciones.Size = new System.Drawing.Size(270, 70);
+            this.lblTituloPosiciones.Size = new System.Drawing.Size(304, 70);
             this.lblTituloPosiciones.TabIndex = 1;
             this.lblTituloPosiciones.Text = "POSICIÓN";
             // 
@@ -116,7 +116,7 @@
             this.panelControl2.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl2.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(573, 134);
+            this.panelControl2.Size = new System.Drawing.Size(607, 134);
             this.panelControl2.TabIndex = 1;
             // 
             // lblPosicion
@@ -133,7 +133,7 @@
             this.lblPosicion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPosicion.Location = new System.Drawing.Point(300, 3);
             this.lblPosicion.Name = "lblPosicion";
-            this.lblPosicion.Size = new System.Drawing.Size(270, 128);
+            this.lblPosicion.Size = new System.Drawing.Size(304, 128);
             this.lblPosicion.TabIndex = 2;
             this.lblPosicion.Text = "POS.";
             // 
@@ -165,7 +165,7 @@
             this.panelControl3.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl3.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(300, 177);
+            this.panelControl3.Size = new System.Drawing.Size(300, 283);
             this.panelControl3.TabIndex = 2;
             // 
             // gcTicket
@@ -177,7 +177,7 @@
             this.gcTicket.Location = new System.Drawing.Point(3, 3);
             this.gcTicket.MainView = this.gvTicket;
             this.gcTicket.Name = "gcTicket";
-            this.gcTicket.Size = new System.Drawing.Size(294, 171);
+            this.gcTicket.Size = new System.Drawing.Size(294, 277);
             this.gcTicket.TabIndex = 0;
             this.gcTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTicket});
@@ -233,7 +233,7 @@
             this.panelControl4.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.panelControl4.LookAndFeel.UseDefaultLookAndFeel = false;
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(273, 177);
+            this.panelControl4.Size = new System.Drawing.Size(307, 283);
             this.panelControl4.TabIndex = 3;
             // 
             // gcPosicion
@@ -244,7 +244,7 @@
             this.gcPosicion.Location = new System.Drawing.Point(3, 3);
             this.gcPosicion.MainView = this.gvPosicion;
             this.gcPosicion.Name = "gcPosicion";
-            this.gcPosicion.Size = new System.Drawing.Size(267, 171);
+            this.gcPosicion.Size = new System.Drawing.Size(301, 277);
             this.gcPosicion.TabIndex = 1;
             this.gcPosicion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPosicion});
@@ -296,7 +296,7 @@
             // 
             // CtlTicketsPosiciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelControl4);
@@ -305,7 +305,7 @@
             this.Controls.Add(this.panelControl1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CtlTicketsPosiciones";
-            this.Size = new System.Drawing.Size(573, 387);
+            this.Size = new System.Drawing.Size(607, 493);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();

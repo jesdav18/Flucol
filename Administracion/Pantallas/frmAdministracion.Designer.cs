@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctlDashBoardsPrincipal1 = new Administracion.Controles.ctlDashBoardsPrincipal();
+            this.ctlAdministracionPrincipal1 = new Administracion.Controles.ctlAdministracionPrincipal();
             this.SuspendLayout();
             // 
-            // ctlDashBoardsPrincipal1
+            // ctlAdministracionPrincipal1
             // 
-            this.ctlDashBoardsPrincipal1.BackColor = System.Drawing.Color.White;
-            this.ctlDashBoardsPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctlDashBoardsPrincipal1.Location = new System.Drawing.Point(0, 0);
-            this.ctlDashBoardsPrincipal1.Name = "ctlDashBoardsPrincipal1";
-            this.ctlDashBoardsPrincipal1.Padding = new System.Windows.Forms.Padding(5);
-            this.ctlDashBoardsPrincipal1.Pro_Conexion = null;
-            this.ctlDashBoardsPrincipal1.Pro_ID_Cliente_Servicio = 0;
-            this.ctlDashBoardsPrincipal1.Size = new System.Drawing.Size(699, 398);
-            this.ctlDashBoardsPrincipal1.TabIndex = 0;
+            this.ctlAdministracionPrincipal1.BackColor = System.Drawing.Color.White;
+            this.ctlAdministracionPrincipal1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctlAdministracionPrincipal1.Location = new System.Drawing.Point(0, 0);
+            this.ctlAdministracionPrincipal1.Name = "ctlAdministracionPrincipal1";
+            this.ctlAdministracionPrincipal1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ctlAdministracionPrincipal1.Size = new System.Drawing.Size(951, 509);
+            this.ctlAdministracionPrincipal1.TabIndex = 0;
             // 
             // frmAdministracion
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 398);
-            this.Controls.Add(this.ctlDashBoardsPrincipal1);
+            this.ClientSize = new System.Drawing.Size(951, 509);
+            this.Controls.Add(this.ctlAdministracionPrincipal1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdministracion";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdministracion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -61,8 +61,10 @@
         }
 
 
+
+
         #endregion
 
-        private Controles.ctlDashBoardsPrincipal ctlDashBoardsPrincipal1;
+        private Controles.ctlAdministracionPrincipal ctlAdministracionPrincipal1;
     }
 }
