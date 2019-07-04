@@ -281,8 +281,8 @@ namespace Flucol.Pantallas
 
                         frmAdministracion = new frmAdministracion();
                         frmAdministracion.ConstruirAdministracion(Pro_Conexion,
-                                                               Pro_ID_ClienteServicio,
-                                                               Pro_ID_AgenciaServicio);
+                                                                   Pro_ID_ClienteServicio,                                                              
+                                                                   pUsuario.Pro_Usuario);
                         frmAdministracion.MdiParent = this;
                         frmAdministracion.StartPosition = FormStartPosition.CenterScreen;                    
                         frmAdministracion.Show();

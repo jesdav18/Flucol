@@ -118,16 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconFiltro_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconFiltro_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_atras_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_atras_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconUsuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconUsuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconBusqueda_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconBusqueda_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_cerrar_sesion_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_cerrar_sesion_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_atras_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_atras_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_posiciones64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_posiciones64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tasa_cambio_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_tasa_cambio_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_dashboard_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_dashboard_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconFiltro_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconFiltro_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_configuracion_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_configuracion_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

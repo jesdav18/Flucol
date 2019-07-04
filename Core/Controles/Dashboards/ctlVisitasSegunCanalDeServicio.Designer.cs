@@ -28,36 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FunnelSeriesView funnelSeriesView1 = new DevExpress.XtraCharts.FunnelSeriesView();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            DevExpress.XtraCharts.BubbleSeriesView bubbleSeriesView1 = new DevExpress.XtraCharts.BubbleSeriesView();
+            DevExpress.XtraCharts.BubbleSeriesView bubbleSeriesView2 = new DevExpress.XtraCharts.BubbleSeriesView();
             this.dsDashboards1 = new Core.Controles.Dashboards.DataSet.dsDashboards();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTituloDashboard = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(funnelSeriesView1)).BeginInit();
+            this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(bubbleSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(bubbleSeriesView2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // chartControl1
-            // 
-            this.chartControl1.DataSource = this.dsDashboards1;
-            this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartControl1.Location = new System.Drawing.Point(5, 43);
-            this.chartControl1.Name = "chartControl1";
-            series1.ArgumentDataMember = "dtVisitasSegunCanalServicio.canal_servicio";
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.LegendName = "Default Legend";
-            series1.Name = "Serie1";
-            series1.ValueDataMembersSerializable = "dtVisitasSegunCanalServicio.conteo_visitas";
-            series1.View = funnelSeriesView1;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.chartControl1.Size = new System.Drawing.Size(373, 262);
-            this.chartControl1.TabIndex = 0;
             // 
             // dsDashboards1
             // 
@@ -68,9 +53,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(5, 39);
+            this.panel1.Location = new System.Drawing.Point(7, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 4);
+            this.panel1.Size = new System.Drawing.Size(497, 5);
             this.panel1.TabIndex = 9;
             // 
             // lblTituloDashboard
@@ -82,39 +68,65 @@
             this.lblTituloDashboard.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTituloDashboard.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTituloDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTituloDashboard.Location = new System.Drawing.Point(5, 5);
+            this.lblTituloDashboard.Location = new System.Drawing.Point(7, 6);
+            this.lblTituloDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTituloDashboard.Name = "lblTituloDashboard";
-            this.lblTituloDashboard.Size = new System.Drawing.Size(373, 34);
+            this.lblTituloDashboard.Size = new System.Drawing.Size(497, 42);
             this.lblTituloDashboard.TabIndex = 8;
             this.lblTituloDashboard.Text = "VISITAS SEGUN CANAL DE SERVICIO";
             // 
+            // chartControl2
+            // 
+            this.chartControl2.DataSource = this.dsDashboards1;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl2.Diagram = xyDiagram1;
+            this.chartControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartControl2.Legend.Name = "Default Legend";
+            this.chartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.chartControl2.Location = new System.Drawing.Point(7, 53);
+            this.chartControl2.Name = "chartControl2";
+            series1.ArgumentDataMember = "dtVisitasSegunCanalServicio.canal_servicio";
+            series1.Name = "Serie1";
+            series1.ValueDataMembersSerializable = "dtVisitasSegunCanalServicio.conteo_visitas;dtVisitasSegunCanalServicio.conteo_vis" +
+    "itas";
+            series1.View = bubbleSeriesView1;
+            this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.chartControl2.SeriesTemplate.SeriesColorizer = null;
+            this.chartControl2.SeriesTemplate.View = bubbleSeriesView2;
+            this.chartControl2.Size = new System.Drawing.Size(497, 323);
+            this.chartControl2.TabIndex = 10;
+            // 
             // ctlVisitasSegunCanalDeServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.chartControl2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloDashboard);
-            this.MaximumSize = new System.Drawing.Size(385, 312);
-            this.MinimumSize = new System.Drawing.Size(385, 312);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(513, 384);
+            this.MinimumSize = new System.Drawing.Size(513, 384);
             this.Name = "ctlVisitasSegunCanalDeServicio";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(385, 312);
-            ((System.ComponentModel.ISupportInitialize)(funnelSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(511, 382);
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(bubbleSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(bubbleSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraCharts.ChartControl chartControl1;
         private DataSet.dsDashboards dsDashboards1;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.LabelControl lblTituloDashboard;
+        private DevExpress.XtraCharts.ChartControl chartControl2;
     }
 }

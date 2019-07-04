@@ -31,27 +31,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data, Version=5.0.2120.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.PostgreSql, Version=7.12.1328.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data, Version=5.0.2194.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql, Version=7.13.1402.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.PostgreSql.Vs, Version=7.13.1402.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -62,11 +67,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controles\ctlDashBoardsPrincipal.cs">
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoTasaCambio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\ctlDashBoardsPrincipal.Designer.cs">
-      <DependentUpon>ctlDashBoardsPrincipal.cs</DependentUpon>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoTasaCambio.Designer.cs">
+      <DependentUpon>ctlMantenimientoTasaCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlAdministracionPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlAdministracionPrincipal.Designer.cs">
+      <DependentUpon>ctlAdministracionPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ctlAgenciasDisponiblesParaDashboards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ctlAgenciasDisponiblesParaDashboards.Designer.cs">
+      <DependentUpon>ctlAgenciasDisponiblesParaDashboards.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\frmEsperaDashboards.cs">
       <SubType>Form</SubType>
@@ -88,8 +105,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Controles\ctlDashBoardsPrincipal.resx">
-      <DependentUpon>ctlDashBoardsPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoTasaCambio.resx">
+      <DependentUpon>ctlMantenimientoTasaCambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlAdministracionPrincipal.resx">
+      <DependentUpon>ctlAdministracionPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ctlAgenciasDisponiblesParaDashboards.resx">
+      <DependentUpon>ctlAgenciasDisponiblesParaDashboards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmEsperaDashboards.resx">
       <DependentUpon>frmEsperaDashboards.cs</DependentUpon>
@@ -104,19 +127,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconDashboard_64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconDashboard_32.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{53D69824-0A2B-41D6-AA83-53F5CF32CF57}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Publicidad\Publicidad.csproj">
+      <Project>{C22010C2-436C-48A0-BAC8-32984C20A2DD}</Project>
+      <Name>Publicidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataSet\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\iconBusqueda_32.png" />
+    <None Include="Resources\icon_configuracion_64.png" />
+    <None Include="Resources\icon_cerrar_sesion_64.png" />
+    <None Include="Resources\icon_posiciones64.png" />
+    <None Include="Resources\icon_tasa_cambio_64.png" />
+    <None Include="Resources\icon_dashboard_64.png" />
+    <None Include="Resources\iconFiltro_64.png" />
+    <None Include="Resources\iconUsuario.png" />
+    <Content Include="Resources\icon_atras_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctlOperacionesSupervisor1 = new Operaciones.Controles.ctlOperacionesSupervisor();
+            this.ctlOperacionesSupervisor1 = new Core.Controles.Configuraciones.ctlOperacionesSupervisor();
             this.SuspendLayout();
             // 
             // ctlOperacionesSupervisor1
@@ -67,6 +67,6 @@
 
         #endregion
 
-        private Controles.ctlOperacionesSupervisor ctlOperacionesSupervisor1;
+        private Core.Controles.Configuraciones.ctlOperacionesSupervisor ctlOperacionesSupervisor1;
     }
 }

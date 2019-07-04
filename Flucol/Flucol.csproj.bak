@@ -11,20 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -57,24 +58,64 @@
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7D2753F4D95195496EF980AA34EF08D6C90A436A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Flucol_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data.PostgreSql, Version=7.10.1134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Devart.Data, Version=5.0.2120.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql, Version=7.12.1328.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql.Vs, Version=7.12.1328.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +139,12 @@
     <Compile Include="Pantallas\frmConstructor.Designer.cs">
       <DependentUpon>frmConstructor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmEspera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEspera.Designer.cs">
+      <DependentUpon>frmEspera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controles\CtlBienvenida.resx">
@@ -106,7 +153,9 @@
     <EmbeddedResource Include="Pantallas\frmConstructor.resx">
       <DependentUpon>frmConstructor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Pantallas\frmEspera.resx">
+      <DependentUpon>frmEspera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -133,6 +182,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Administracion\Administracion.csproj">
+      <Project>{FB2D1DA6-4CC8-4294-9C5B-44416A6C4C67}</Project>
+      <Name>Administracion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{53D69824-0A2B-41D6-AA83-53F5CF32CF57}</Project>
       <Name>Core</Name>
@@ -152,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cola.ico" />
+    <None Include="Resources\preloader.gif" />
     <None Include="Resources\img_Flucol.png" />
   </ItemGroup>
   <ItemGroup>

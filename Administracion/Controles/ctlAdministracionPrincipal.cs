@@ -16,6 +16,8 @@ namespace Administracion.Controles
             InitializeComponent();
             ctlAgenciasDisponiblesParaDashboards1.OnSeleccionaAgencia += ctlAgenciasDisponiblesParaDashboards1_OnSeleccionaAgencia;
             ctlContenedorDashboards1.OnIrAtras += ctlContenedorDashboards1_OnIrAtras;
+
+            ctlAgenciasDisponiblesParaDashboards2
         }
 
         #endregion
@@ -24,17 +26,19 @@ namespace Administracion.Controles
 
         public PgSqlConnection Pro_Conexion { get; set; }
         public int Pro_ID_ClienteServicio { get; set; }
+        public string Pro_Usuario { get; set; }
 
         #endregion
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion,int pID_ClienteServicio)
+        public void ConstruirControl(PgSqlConnection pConexion,int pID_ClienteServicio, string pUsuario)
         {
             picLogoInstitucion.Image = Image.FromFile(ConfigurationSettings.AppSettings["RUTA_LOGO_INSTITUCION"]);
 
             Pro_ID_ClienteServicio = pID_ClienteServicio;
             Pro_Conexion = pConexion;
+            Pro_Usuario = pUsuario;
 
             ctlAgenciasDisponiblesParaDashboards1.ConstruirControl(Pro_Conexion,
                                                                    Pro_ID_ClienteServicio);
@@ -68,6 +72,27 @@ namespace Administracion.Controles
 
         #endregion
 
+        private void PicTasasCambio_Click(object sender, EventArgs e)
+        {
+            NavigationPrincipal.SelectedPage = PageTasaCambio;
+            ctlMantenimientoTasaCambio1.ConstruirControl(Pro_Conexion,Pro_Usuario);
+        }
+
+        private void PicAsignarPosiciones_Click(object sender, EventArgs e)
+        {
+            NavigationPrincipal.SelectedPage = PageAsignacionPosiciones;
+            
+        }
+
+        private void PicMantenimiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureEdit3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

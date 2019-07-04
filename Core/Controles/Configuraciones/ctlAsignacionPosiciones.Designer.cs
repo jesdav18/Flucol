@@ -1,4 +1,4 @@
-﻿namespace Operaciones.Controles.Configuraciones
+﻿namespace Core.Controles.Configuraciones
 {
     partial class ctlAsignacionPosiciones
     {
@@ -39,7 +39,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gcEmpleadosDisponiblesAsignacion = new DevExpress.XtraGrid.GridControl();
-            this.dsConfiguraciones1 = new Operaciones.Controles.Configuraciones.DataSets.dsConfiguraciones();
+            this.dsConfiguraciones1 = new Core.Controles.Configuraciones.DataSets.dsConfiguraciones();
             this.gvEmpleadosDisponiblesAsignacion = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colusuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcodigo_empleado = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,7 +59,7 @@
             this.popupPosicionesDisponibles = new DevExpress.Utils.FlyoutPanel();
             this.flyoutPanelControl1 = new DevExpress.Utils.FlyoutPanelControl();
             this.ctlPosicionesDisponibles1 = new Core.Controles.Popups.ctlPosicionesDisponibles();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Operaciones.Pantallas.frmEspera), true, true, typeof(System.Windows.Forms.UserControl));
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Core.Pantallas.frmEsperaDashboard), true, true, typeof(System.Windows.Forms.UserControl));
             this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.gcEmpleadosDisponiblesAsignacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).BeginInit();
@@ -201,7 +201,7 @@
             this.cmdCargarPosiciones.Appearance.BackColor = System.Drawing.Color.White;
             this.cmdCargarPosiciones.Appearance.Options.UseBackColor = true;
             this.cmdCargarPosiciones.AutoHeight = false;
-            editorButtonImageOptions1.Image = global::Operaciones.Properties.Resources.icon_asignar_32;
+            editorButtonImageOptions1.Image = global::Core.Properties.Resources.icon_asignar_32;
             this.cmdCargarPosiciones.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdCargarPosiciones.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -226,7 +226,7 @@
             this.cmdAsignarPrioridadAtencion.Appearance.BackColor = System.Drawing.Color.White;
             this.cmdAsignarPrioridadAtencion.Appearance.Options.UseBackColor = true;
             this.cmdAsignarPrioridadAtencion.AutoHeight = false;
-            editorButtonImageOptions2.Image = global::Operaciones.Properties.Resources.icon_prioridad_32;
+            editorButtonImageOptions2.Image = global::Core.Properties.Resources.icon_prioridad_32;
             this.cmdAsignarPrioridadAtencion.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdAsignarPrioridadAtencion.LookAndFeel.UseDefaultLookAndFeel = false;

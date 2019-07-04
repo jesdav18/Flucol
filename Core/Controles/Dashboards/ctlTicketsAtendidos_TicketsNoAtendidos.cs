@@ -29,6 +29,8 @@ namespace Core.Controles.Dashboards
         public PgSqlConnection Pro_Conexion { get; set; }
         public int Pro_Cliente_Servicio { get; set; }
         public int Pro_Agencia_Servicio { get; set; }
+        public DateTime Pro_Desde { get; set; }
+        public DateTime Pro_Hasta { get; set; }
 
         #endregion
 
@@ -41,30 +43,40 @@ namespace Core.Controles.Dashboards
         #region FUNCIONES
 
         public void ConstruirControl(PgSqlConnection pConexion,
-                                     int pCliente_Servicio,
                                      int pAgencia_Servicio,
-                                     int pMes_a_evaluar)
+                                     int pCliente_Servicio,                                  
+                                     DateTime pDesde,
+                                     DateTime pHasta)
         {
+
             Pro_Conexion = pConexion;
             Pro_Agencia_Servicio = pAgencia_Servicio;
             Pro_Cliente_Servicio = pCliente_Servicio;
-            v_mes_a_evaluar = pMes_a_evaluar;
+            Pro_Desde = pDesde;
+            Pro_Hasta = pHasta;
+        
             CargarDatos();
         }
 
+      
         private void CargarDatos()
         {
             PgSqlConnection v_conexion_temporal = new PgSqlConnection(Pro_Conexion.ConnectionString);
             v_conexion_temporal.Password = Pro_Conexion.Password;
             v_conexion_temporal.Open();
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_tickets_atendidos_no_atendidos(:p_mes_a_evaluar,
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_dashboard_tickets_atendidos_no_atendidos(
                                                                                                               :p_id_cliente_servicio,
-                                                                                                              :p_id_agencia_servicio)";
+                                                                                                              :p_id_agencia_servicio,
+                                                                                                              :p_desde,
+                                                                                                              :p_hasta
+                                                                                                            )";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, v_conexion_temporal);
-            pgComando.Parameters.Add("p_mes_a_evaluar", PgSqlType.Int).Value = v_mes_a_evaluar;
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_Cliente_Servicio;
             pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_Agencia_Servicio;
+            pgComando.Parameters.Add("p_desde", PgSqlType.Date).Value = Pro_Desde;
+            pgComando.Parameters.Add("p_hasta", PgSqlType.Date).Value = Pro_Hasta;
+
 
             try
             {

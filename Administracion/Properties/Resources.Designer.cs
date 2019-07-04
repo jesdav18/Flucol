@@ -73,9 +73,49 @@ namespace Administracion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_cerrar_sesion_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_cerrar_sesion_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_configuracion_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_configuracion_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_dashboard_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_dashboard_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_posiciones64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_posiciones64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_tasa_cambio_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_tasa_cambio_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +136,16 @@ namespace Administracion.Properties {
         internal static System.Drawing.Bitmap iconFiltro_64 {
             get {
                 object obj = ResourceManager.GetObject("iconFiltro_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconUsuario {
+            get {
+                object obj = ResourceManager.GetObject("iconUsuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

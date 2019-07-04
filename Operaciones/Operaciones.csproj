@@ -55,14 +55,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.Vs.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
@@ -79,32 +79,6 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.Designer.cs">
-      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.Designer.cs">
-      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.Designer.cs">
-      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.cs">
-      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controles\ctlListaTicketsEspera.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,12 +102,6 @@
     </Compile>
     <Compile Include="Controles\ctlOperacionalReducido.Designer.cs">
       <DependentUpon>ctlOperacionalReducido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controles\ctlOperacionesSupervisor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controles\ctlOperacionesSupervisor.Designer.cs">
-      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\frmEspera.cs">
       <SubType>Form</SubType>
@@ -165,15 +133,6 @@
       <DependentUpon>frmSupervisor.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controles\Configuraciones\ctlAsignacionPosiciones.resx">
-      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoUsuarios.resx">
-      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.resx">
-      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlListaTicketsEspera.resx">
       <DependentUpon>ctlListaTicketsEspera.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ctlOperacionalReducido.resx">
       <DependentUpon>ctlOperacionalReducido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controles\ctlOperacionesSupervisor.resx">
-      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmEspera.resx">
       <DependentUpon>frmEspera.cs</DependentUpon>
@@ -212,17 +168,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsc">
-      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
-    </None>
-    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsConfiguraciones.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xss">
-      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
-    </None>
     <None Include="DataSets\dsTickets.xsc">
       <DependentUpon>dsTickets.xsd</DependentUpon>
     </None>

@@ -2,9 +2,9 @@
 using System.Data;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-using Operaciones.Controles.Configuraciones.DataSets;
+using Core.Controles.Configuraciones.DataSets;
 
-namespace Operaciones.Controles.Configuraciones
+namespace Core.Controles.Configuraciones
 {
     public partial class ctlTrasladosEmpleadosServicio : UserControl
     {

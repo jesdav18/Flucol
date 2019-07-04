@@ -43,18 +43,30 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data, Version=5.0.1926.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.PostgreSql, Version=7.10.1134.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data, Version=5.0.2120.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql, Version=7.12.1328.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="Devart.Data.PostgreSql.Vs, Version=7.12.1328.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,6 +86,18 @@
     <Compile Include="Controles\CtlSeleccionTransaccion.Designer.cs">
       <DependentUpon>CtlSeleccionTransaccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmEsperaCargandoConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaCargandoConexion.Designer.cs">
+      <DependentUpon>frmEsperaCargandoConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaRecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaRecepcion.Designer.cs">
+      <DependentUpon>frmEsperaRecepcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\frmRecepcion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,10 +108,15 @@
     <EmbeddedResource Include="Controles\CtlSeleccionTransaccion.resx">
       <DependentUpon>CtlSeleccionTransaccion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEsperaCargandoConexion.resx">
+      <DependentUpon>frmEsperaCargandoConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEsperaRecepcion.resx">
+      <DependentUpon>frmEsperaRecepcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\frmRecepcion.resx">
       <DependentUpon>frmRecepcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -127,12 +156,6 @@
     <None Include="Resources\iconServicioAlCliente.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconTerceraEdad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconTransacciones.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconIrAtras.png" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +163,25 @@
       <Project>{53D69824-0A2B-41D6-AA83-53F5CF32CF57}</Project>
       <Name>Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_Negocios_Negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_Negocios_Verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preloader.gif" />
+    <None Include="Resources\gif_cargando.gif" />
+    <Content Include="Resources\iconAncianos.png" />
+    <Content Include="Resources\iconAncianosVerde.png" />
+    <Content Include="Resources\iconDiscapacidadVerde.png" />
+    <Content Include="Resources\iconEmbarazadaVerde.png" />
+    <Content Include="Resources\iconEsperaGeneralVerde.png" />
+    <Content Include="Resources\iconIrAtrasVerde.png" />
+    <Content Include="Resources\iconServicioAlClienteVerde.png" />
+    <Content Include="Resources\iconTransaccionesCaja.png" />
+    <Content Include="Resources\IconTransaccionesCajaVerde.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

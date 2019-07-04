@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Operaciones.Controles.Configuraciones.DataSets {
+namespace Core.Controles.Configuraciones.DataSets {
     
     
     /// <summary>
@@ -35,7 +35,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public dsConfiguraciones() {
             this.BeginInit();
             this.InitClass();
@@ -46,7 +46,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected dsConfiguraciones(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
@@ -91,7 +91,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dtAsignacionPosicionesDataTable dtAsignacionPosiciones {
@@ -101,7 +101,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dtAgenciasServicioDataTable dtAgenciasServicio {
@@ -111,7 +111,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dtEmpleadosServicioDataTable dtEmpleadosServicio {
@@ -121,7 +121,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dtCargosEmpleadosDataTable dtCargosEmpleados {
@@ -131,7 +131,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -144,7 +144,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
             get {
@@ -153,7 +153,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataRelationCollection Relations {
             get {
@@ -162,7 +162,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -170,7 +170,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
             dsConfiguraciones cln = ((dsConfiguraciones)(base.Clone()));
             cln.InitVars();
@@ -179,19 +179,19 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
             if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 this.Reset();
@@ -225,7 +225,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
@@ -234,13 +234,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
             this.tabledtAsignacionPosiciones = ((dtAsignacionPosicionesDataTable)(base.Tables["dtAsignacionPosiciones"]));
             if ((initTable == true)) {
@@ -269,7 +269,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
             this.DataSetName = "dsConfiguraciones";
             this.Prefix = "";
@@ -287,31 +287,31 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedtAsignacionPosiciones() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedtAgenciasServicio() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedtEmpleadosServicio() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializedtCargosEmpleados() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -319,7 +319,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
             dsConfiguraciones ds = new dsConfiguraciones();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
@@ -365,16 +365,16 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             return type;
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dtAsignacionPosicionesRowChangeEventHandler(object sender, dtAsignacionPosicionesRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dtAgenciasServicioRowChangeEventHandler(object sender, dtAgenciasServicioRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dtEmpleadosServicioRowChangeEventHandler(object sender, dtEmpleadosServicioRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void dtCargosEmpleadosRowChangeEventHandler(object sender, dtCargosEmpleadosRowChangeEvent e);
         
         /// <summary>
@@ -405,7 +405,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataColumn columnid_tipo_ticket;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesDataTable() {
                 this.TableName = "dtAsignacionPosiciones";
                 this.BeginInit();
@@ -414,7 +414,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtAsignacionPosicionesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -431,14 +431,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected dtAsignacionPosicionesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn usuarioColumn {
                 get {
                     return this.columnusuario;
@@ -446,7 +446,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn codigo_empleadoColumn {
                 get {
                     return this.columncodigo_empleado;
@@ -454,7 +454,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn nombre_empleadoColumn {
                 get {
                     return this.columnnombre_empleado;
@@ -462,7 +462,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn cargo_empleadoColumn {
                 get {
                     return this.columncargo_empleado;
@@ -470,7 +470,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn cargar_posicionesColumn {
                 get {
                     return this.columncargar_posiciones;
@@ -478,7 +478,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn posicion_asignadaColumn {
                 get {
                     return this.columnposicion_asignada;
@@ -486,7 +486,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tipo_ticket_prioridadColumn {
                 get {
                     return this.columntipo_ticket_prioridad;
@@ -494,7 +494,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn descripcion_tipo_ticketColumn {
                 get {
                     return this.columndescripcion_tipo_ticket;
@@ -502,7 +502,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tiene_cambiosColumn {
                 get {
                     return this.columntiene_cambios;
@@ -510,7 +510,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn id_tipo_ticketColumn {
                 get {
                     return this.columnid_tipo_ticket;
@@ -518,7 +518,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -527,33 +527,33 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesRow this[int index] {
                 get {
                     return ((dtAsignacionPosicionesRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAsignacionPosicionesRowChangeEventHandler dtAsignacionPosicionesRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAsignacionPosicionesRowChangeEventHandler dtAsignacionPosicionesRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAsignacionPosicionesRowChangeEventHandler dtAsignacionPosicionesRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAsignacionPosicionesRowChangeEventHandler dtAsignacionPosicionesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AdddtAsignacionPosicionesRow(dtAsignacionPosicionesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesRow AdddtAsignacionPosicionesRow(string usuario, string codigo_empleado, string nombre_empleado, string cargo_empleado, string cargar_posiciones, int posicion_asignada, string tipo_ticket_prioridad, string descripcion_tipo_ticket, bool tiene_cambios, int id_tipo_ticket) {
                 dtAsignacionPosicionesRow rowdtAsignacionPosicionesRow = ((dtAsignacionPosicionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -573,7 +573,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 dtAsignacionPosicionesDataTable cln = ((dtAsignacionPosicionesDataTable)(base.Clone()));
                 cln.InitVars();
@@ -581,13 +581,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new dtAsignacionPosicionesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnusuario = base.Columns["usuario"];
                 this.columncodigo_empleado = base.Columns["codigo_empleado"];
@@ -602,7 +602,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnusuario = new global::System.Data.DataColumn("usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuario);
@@ -628,25 +628,25 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesRow NewdtAsignacionPosicionesRow() {
                 return ((dtAsignacionPosicionesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new dtAsignacionPosicionesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(dtAsignacionPosicionesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.dtAsignacionPosicionesRowChanged != null)) {
@@ -655,7 +655,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.dtAsignacionPosicionesRowChanging != null)) {
@@ -664,7 +664,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.dtAsignacionPosicionesRowDeleted != null)) {
@@ -673,7 +673,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.dtAsignacionPosicionesRowDeleting != null)) {
@@ -682,13 +682,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemovedtAsignacionPosicionesRow(dtAsignacionPosicionesRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -769,7 +769,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataColumn columnseleccionar_agencia;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioDataTable() {
                 this.TableName = "dtAgenciasServicio";
                 this.BeginInit();
@@ -778,7 +778,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtAgenciasServicioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -795,14 +795,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected dtAgenciasServicioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn id_agencia_servicioColumn {
                 get {
                     return this.columnid_agencia_servicio;
@@ -810,7 +810,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn id_cliente_servicioColumn {
                 get {
                     return this.columnid_cliente_servicio;
@@ -818,7 +818,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn nombre_agenciaColumn {
                 get {
                     return this.columnnombre_agencia;
@@ -826,7 +826,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn direccion_agenciaColumn {
                 get {
                     return this.columndireccion_agencia;
@@ -834,7 +834,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn seleccionar_agenciaColumn {
                 get {
                     return this.columnseleccionar_agencia;
@@ -842,7 +842,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -851,33 +851,33 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioRow this[int index] {
                 get {
                     return ((dtAgenciasServicioRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAgenciasServicioRowChangeEventHandler dtAgenciasServicioRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAgenciasServicioRowChangeEventHandler dtAgenciasServicioRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAgenciasServicioRowChangeEventHandler dtAgenciasServicioRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtAgenciasServicioRowChangeEventHandler dtAgenciasServicioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AdddtAgenciasServicioRow(dtAgenciasServicioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioRow AdddtAgenciasServicioRow(int id_agencia_servicio, int id_cliente_servicio, string nombre_agencia, string direccion_agencia, string seleccionar_agencia) {
                 dtAgenciasServicioRow rowdtAgenciasServicioRow = ((dtAgenciasServicioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -892,7 +892,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 dtAgenciasServicioDataTable cln = ((dtAgenciasServicioDataTable)(base.Clone()));
                 cln.InitVars();
@@ -900,13 +900,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new dtAgenciasServicioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid_agencia_servicio = base.Columns["id_agencia_servicio"];
                 this.columnid_cliente_servicio = base.Columns["id_cliente_servicio"];
@@ -916,7 +916,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnid_agencia_servicio = new global::System.Data.DataColumn("id_agencia_servicio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_agencia_servicio);
@@ -931,25 +931,25 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioRow NewdtAgenciasServicioRow() {
                 return ((dtAgenciasServicioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new dtAgenciasServicioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(dtAgenciasServicioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.dtAgenciasServicioRowChanged != null)) {
@@ -958,7 +958,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.dtAgenciasServicioRowChanging != null)) {
@@ -967,7 +967,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.dtAgenciasServicioRowDeleted != null)) {
@@ -976,7 +976,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.dtAgenciasServicioRowDeleting != null)) {
@@ -985,13 +985,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemovedtAgenciasServicioRow(dtAgenciasServicioRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1072,7 +1072,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataColumn columnseleccionar_empleado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioDataTable() {
                 this.TableName = "dtEmpleadosServicio";
                 this.BeginInit();
@@ -1081,7 +1081,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtEmpleadosServicioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -1098,14 +1098,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected dtEmpleadosServicioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn codigo_empleadoColumn {
                 get {
                     return this.columncodigo_empleado;
@@ -1113,7 +1113,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn usuarioColumn {
                 get {
                     return this.columnusuario;
@@ -1121,7 +1121,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn nombre_empleadoColumn {
                 get {
                     return this.columnnombre_empleado;
@@ -1129,7 +1129,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn cargoColumn {
                 get {
                     return this.columncargo;
@@ -1137,7 +1137,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn seleccionar_empleadoColumn {
                 get {
                     return this.columnseleccionar_empleado;
@@ -1145,7 +1145,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1154,33 +1154,33 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioRow this[int index] {
                 get {
                     return ((dtEmpleadosServicioRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtEmpleadosServicioRowChangeEventHandler dtEmpleadosServicioRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtEmpleadosServicioRowChangeEventHandler dtEmpleadosServicioRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtEmpleadosServicioRowChangeEventHandler dtEmpleadosServicioRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtEmpleadosServicioRowChangeEventHandler dtEmpleadosServicioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AdddtEmpleadosServicioRow(dtEmpleadosServicioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioRow AdddtEmpleadosServicioRow(string codigo_empleado, string usuario, string nombre_empleado, string cargo, string seleccionar_empleado) {
                 dtEmpleadosServicioRow rowdtEmpleadosServicioRow = ((dtEmpleadosServicioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1195,7 +1195,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 dtEmpleadosServicioDataTable cln = ((dtEmpleadosServicioDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1203,13 +1203,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new dtEmpleadosServicioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columncodigo_empleado = base.Columns["codigo_empleado"];
                 this.columnusuario = base.Columns["usuario"];
@@ -1219,7 +1219,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columncodigo_empleado = new global::System.Data.DataColumn("codigo_empleado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo_empleado);
@@ -1234,25 +1234,25 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioRow NewdtEmpleadosServicioRow() {
                 return ((dtEmpleadosServicioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new dtEmpleadosServicioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(dtEmpleadosServicioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.dtEmpleadosServicioRowChanged != null)) {
@@ -1261,7 +1261,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.dtEmpleadosServicioRowChanging != null)) {
@@ -1270,7 +1270,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.dtEmpleadosServicioRowDeleted != null)) {
@@ -1279,7 +1279,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.dtEmpleadosServicioRowDeleting != null)) {
@@ -1288,13 +1288,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemovedtEmpleadosServicioRow(dtEmpleadosServicioRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1369,7 +1369,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataColumn columndescripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosDataTable() {
                 this.TableName = "dtCargosEmpleados";
                 this.BeginInit();
@@ -1378,7 +1378,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtCargosEmpleadosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -1395,14 +1395,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected dtCargosEmpleadosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn id_cargoColumn {
                 get {
                     return this.columnid_cargo;
@@ -1410,7 +1410,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn descripcionColumn {
                 get {
                     return this.columndescripcion;
@@ -1418,7 +1418,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1427,33 +1427,33 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosRow this[int index] {
                 get {
                     return ((dtCargosEmpleadosRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtCargosEmpleadosRowChangeEventHandler dtCargosEmpleadosRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtCargosEmpleadosRowChangeEventHandler dtCargosEmpleadosRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtCargosEmpleadosRowChangeEventHandler dtCargosEmpleadosRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event dtCargosEmpleadosRowChangeEventHandler dtCargosEmpleadosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AdddtCargosEmpleadosRow(dtCargosEmpleadosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosRow AdddtCargosEmpleadosRow(int id_cargo, string descripcion) {
                 dtCargosEmpleadosRow rowdtCargosEmpleadosRow = ((dtCargosEmpleadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1465,7 +1465,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 dtCargosEmpleadosDataTable cln = ((dtCargosEmpleadosDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1473,20 +1473,20 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new dtCargosEmpleadosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid_cargo = base.Columns["id_cargo"];
                 this.columndescripcion = base.Columns["descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnid_cargo = new global::System.Data.DataColumn("id_cargo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_cargo);
@@ -1495,25 +1495,25 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosRow NewdtCargosEmpleadosRow() {
                 return ((dtCargosEmpleadosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new dtCargosEmpleadosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(dtCargosEmpleadosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.dtCargosEmpleadosRowChanged != null)) {
@@ -1522,7 +1522,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.dtCargosEmpleadosRowChanging != null)) {
@@ -1531,7 +1531,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.dtCargosEmpleadosRowDeleted != null)) {
@@ -1540,7 +1540,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.dtCargosEmpleadosRowDeleting != null)) {
@@ -1549,13 +1549,13 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemovedtCargosEmpleadosRow(dtCargosEmpleadosRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1626,14 +1626,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private dtAsignacionPosicionesDataTable tabledtAsignacionPosiciones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtAsignacionPosicionesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledtAsignacionPosiciones = ((dtAsignacionPosicionesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string usuario {
                 get {
                     try {
@@ -1649,7 +1649,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string codigo_empleado {
                 get {
                     try {
@@ -1666,7 +1666,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nombre_empleado {
                 get {
                     try {
@@ -1683,7 +1683,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string cargo_empleado {
                 get {
                     try {
@@ -1700,7 +1700,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string cargar_posiciones {
                 get {
                     try {
@@ -1717,7 +1717,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int posicion_asignada {
                 get {
                     try {
@@ -1734,7 +1734,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string tipo_ticket_prioridad {
                 get {
                     try {
@@ -1751,7 +1751,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string descripcion_tipo_ticket {
                 get {
                     try {
@@ -1768,7 +1768,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool tiene_cambios {
                 get {
                     try {
@@ -1785,7 +1785,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_tipo_ticket {
                 get {
                     try {
@@ -1802,121 +1802,121 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsusuarioNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.usuarioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetusuarioNull() {
                 this[this.tabledtAsignacionPosiciones.usuarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscodigo_empleadoNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.codigo_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setcodigo_empleadoNull() {
                 this[this.tabledtAsignacionPosiciones.codigo_empleadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isnombre_empleadoNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.nombre_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnombre_empleadoNull() {
                 this[this.tabledtAsignacionPosiciones.nombre_empleadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscargo_empleadoNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.cargo_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setcargo_empleadoNull() {
                 this[this.tabledtAsignacionPosiciones.cargo_empleadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscargar_posicionesNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.cargar_posicionesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setcargar_posicionesNull() {
                 this[this.tabledtAsignacionPosiciones.cargar_posicionesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isposicion_asignadaNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.posicion_asignadaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setposicion_asignadaNull() {
                 this[this.tabledtAsignacionPosiciones.posicion_asignadaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istipo_ticket_prioridadNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settipo_ticket_prioridadNull() {
                 this[this.tabledtAsignacionPosiciones.tipo_ticket_prioridadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isdescripcion_tipo_ticketNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setdescripcion_tipo_ticketNull() {
                 this[this.tabledtAsignacionPosiciones.descripcion_tipo_ticketColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Istiene_cambiosNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.tiene_cambiosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Settiene_cambiosNull() {
                 this[this.tabledtAsignacionPosiciones.tiene_cambiosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_tipo_ticketNull() {
                 return this.IsNull(this.tabledtAsignacionPosiciones.id_tipo_ticketColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_tipo_ticketNull() {
                 this[this.tabledtAsignacionPosiciones.id_tipo_ticketColumn] = global::System.Convert.DBNull;
             }
@@ -1930,14 +1930,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private dtAgenciasServicioDataTable tabledtAgenciasServicio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtAgenciasServicioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledtAgenciasServicio = ((dtAgenciasServicioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_agencia_servicio {
                 get {
                     try {
@@ -1954,7 +1954,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_cliente_servicio {
                 get {
                     try {
@@ -1971,7 +1971,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nombre_agencia {
                 get {
                     try {
@@ -1988,7 +1988,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string direccion_agencia {
                 get {
                     try {
@@ -2005,7 +2005,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string seleccionar_agencia {
                 get {
                     try {
@@ -2022,61 +2022,61 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_agencia_servicioNull() {
                 return this.IsNull(this.tabledtAgenciasServicio.id_agencia_servicioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_agencia_servicioNull() {
                 this[this.tabledtAgenciasServicio.id_agencia_servicioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_cliente_servicioNull() {
                 return this.IsNull(this.tabledtAgenciasServicio.id_cliente_servicioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_cliente_servicioNull() {
                 this[this.tabledtAgenciasServicio.id_cliente_servicioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isnombre_agenciaNull() {
                 return this.IsNull(this.tabledtAgenciasServicio.nombre_agenciaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnombre_agenciaNull() {
                 this[this.tabledtAgenciasServicio.nombre_agenciaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isdireccion_agenciaNull() {
                 return this.IsNull(this.tabledtAgenciasServicio.direccion_agenciaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setdireccion_agenciaNull() {
                 this[this.tabledtAgenciasServicio.direccion_agenciaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isseleccionar_agenciaNull() {
                 return this.IsNull(this.tabledtAgenciasServicio.seleccionar_agenciaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setseleccionar_agenciaNull() {
                 this[this.tabledtAgenciasServicio.seleccionar_agenciaColumn] = global::System.Convert.DBNull;
             }
@@ -2090,14 +2090,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private dtEmpleadosServicioDataTable tabledtEmpleadosServicio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtEmpleadosServicioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledtEmpleadosServicio = ((dtEmpleadosServicioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string codigo_empleado {
                 get {
                     try {
@@ -2114,7 +2114,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string usuario {
                 get {
                     try {
@@ -2130,7 +2130,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nombre_empleado {
                 get {
                     try {
@@ -2147,7 +2147,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string cargo {
                 get {
                     try {
@@ -2163,7 +2163,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string seleccionar_empleado {
                 get {
                     try {
@@ -2180,61 +2180,61 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Iscodigo_empleadoNull() {
                 return this.IsNull(this.tabledtEmpleadosServicio.codigo_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setcodigo_empleadoNull() {
                 this[this.tabledtEmpleadosServicio.codigo_empleadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsusuarioNull() {
                 return this.IsNull(this.tabledtEmpleadosServicio.usuarioColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetusuarioNull() {
                 this[this.tabledtEmpleadosServicio.usuarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isnombre_empleadoNull() {
                 return this.IsNull(this.tabledtEmpleadosServicio.nombre_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setnombre_empleadoNull() {
                 this[this.tabledtEmpleadosServicio.nombre_empleadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscargoNull() {
                 return this.IsNull(this.tabledtEmpleadosServicio.cargoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcargoNull() {
                 this[this.tabledtEmpleadosServicio.cargoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isseleccionar_empleadoNull() {
                 return this.IsNull(this.tabledtEmpleadosServicio.seleccionar_empleadoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setseleccionar_empleadoNull() {
                 this[this.tabledtEmpleadosServicio.seleccionar_empleadoColumn] = global::System.Convert.DBNull;
             }
@@ -2248,14 +2248,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private dtCargosEmpleadosDataTable tabledtCargosEmpleados;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal dtCargosEmpleadosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tabledtCargosEmpleados = ((dtCargosEmpleadosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id_cargo {
                 get {
                     try {
@@ -2271,7 +2271,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string descripcion {
                 get {
                     try {
@@ -2287,25 +2287,25 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isid_cargoNull() {
                 return this.IsNull(this.tabledtCargosEmpleados.id_cargoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setid_cargoNull() {
                 this[this.tabledtCargosEmpleados.id_cargoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsdescripcionNull() {
                 return this.IsNull(this.tabledtCargosEmpleados.descripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdescripcionNull() {
                 this[this.tabledtCargosEmpleados.descripcionColumn] = global::System.Convert.DBNull;
             }
@@ -2314,7 +2314,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class dtAsignacionPosicionesRowChangeEvent : global::System.EventArgs {
             
             private dtAsignacionPosicionesRow eventRow;
@@ -2322,14 +2322,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesRowChangeEvent(dtAsignacionPosicionesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAsignacionPosicionesRow Row {
                 get {
                     return this.eventRow;
@@ -2337,7 +2337,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -2348,7 +2348,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class dtAgenciasServicioRowChangeEvent : global::System.EventArgs {
             
             private dtAgenciasServicioRow eventRow;
@@ -2356,14 +2356,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioRowChangeEvent(dtAgenciasServicioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtAgenciasServicioRow Row {
                 get {
                     return this.eventRow;
@@ -2371,7 +2371,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -2382,7 +2382,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class dtEmpleadosServicioRowChangeEvent : global::System.EventArgs {
             
             private dtEmpleadosServicioRow eventRow;
@@ -2390,14 +2390,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioRowChangeEvent(dtEmpleadosServicioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtEmpleadosServicioRow Row {
                 get {
                     return this.eventRow;
@@ -2405,7 +2405,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -2416,7 +2416,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class dtCargosEmpleadosRowChangeEvent : global::System.EventArgs {
             
             private dtCargosEmpleadosRow eventRow;
@@ -2424,14 +2424,14 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosRowChangeEvent(dtCargosEmpleadosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public dtCargosEmpleadosRow Row {
                 get {
                     return this.eventRow;
@@ -2439,7 +2439,7 @@ namespace Operaciones.Controles.Configuraciones.DataSets {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;

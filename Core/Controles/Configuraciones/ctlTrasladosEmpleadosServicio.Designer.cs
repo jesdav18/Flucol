@@ -1,4 +1,4 @@
-﻿namespace Operaciones.Controles.Configuraciones
+﻿namespace Core.Controles.Configuraciones
 {
     partial class ctlTrasladosEmpleadosServicio
     {
@@ -31,7 +31,7 @@
             this.NavigationTraslados = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pageAgenciasServicio = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.dsConfiguraciones1 = new Operaciones.Controles.Configuraciones.DataSets.dsConfiguraciones();
+            this.dsConfiguraciones1 = new Core.Controles.Configuraciones.DataSets.dsConfiguraciones();
             this.gvAgenciasServicio = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid_agencia_servicio = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_cliente_servicio = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -199,7 +199,7 @@
             // 
             this.chkSeleccionarAgenciaServicio.AutoHeight = false;
             this.chkSeleccionarAgenciaServicio.CheckBoxOptions.Style = DevExpress.XtraEditors.Controls.CheckBoxStyle.Custom;
-            this.chkSeleccionarAgenciaServicio.ImageOptions.ImageChecked = global::Operaciones.Properties.Resources.icon_check_32;
+            this.chkSeleccionarAgenciaServicio.ImageOptions.ImageChecked = global::Core.Properties.Resources.icon_check_32;
             this.chkSeleccionarAgenciaServicio.Name = "chkSeleccionarAgenciaServicio";
             this.chkSeleccionarAgenciaServicio.EditValueChanged += new System.EventHandler(this.chkSeleccionarAgenciaServicio_EditValueChanged);
             // 
@@ -227,7 +227,7 @@
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureEdit1.EditValue = global::Operaciones.Properties.Resources.iconBusqueda_32;
+            this.pictureEdit1.EditValue = global::Core.Properties.Resources.iconBusqueda_32;
             this.pictureEdit1.Location = new System.Drawing.Point(0, 5);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -355,7 +355,7 @@
             // 
             this.chkSeleccionar.AutoHeight = false;
             this.chkSeleccionar.CheckBoxOptions.Style = DevExpress.XtraEditors.Controls.CheckBoxStyle.Custom;
-            this.chkSeleccionar.ImageOptions.ImageChecked = global::Operaciones.Properties.Resources.icon_check_32;
+            this.chkSeleccionar.ImageOptions.ImageChecked = global::Core.Properties.Resources.icon_check_32;
             this.chkSeleccionar.Name = "chkSeleccionar";
             this.chkSeleccionar.EditValueChanged += new System.EventHandler(this.chkSeleccionar_EditValueChanged);
             // 
@@ -398,7 +398,7 @@
             // pictureEdit2
             // 
             this.pictureEdit2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureEdit2.EditValue = global::Operaciones.Properties.Resources.iconBusqueda_32;
+            this.pictureEdit2.EditValue = global::Core.Properties.Resources.iconBusqueda_32;
             this.pictureEdit2.Location = new System.Drawing.Point(0, 38);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -450,7 +450,7 @@
             // cmdIrAtras
             // 
             this.cmdIrAtras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cmdIrAtras.EditValue = global::Operaciones.Properties.Resources.iconIrAtras;
+            this.cmdIrAtras.EditValue = global::Core.Properties.Resources.iconIrAtras;
             this.cmdIrAtras.Location = new System.Drawing.Point(0, 0);
             this.cmdIrAtras.Name = "cmdIrAtras";
             this.cmdIrAtras.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;

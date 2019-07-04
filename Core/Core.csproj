@@ -70,30 +70,31 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Devart\dotConnect\PostgreSQL\Devart.Data.PostgreSql.Vs.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Charts.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.UI, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v18.2.Wizard, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v18.2.Core, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v18.2.Win, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v18.2.Extensions, Version=18.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -119,6 +120,44 @@
     <Compile Include="Clases\Tiempos.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Utilidades.cs" />
+    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.Designer.cs">
+      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.Designer.cs">
+      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlOperacionesSupervisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlOperacionesSupervisor.Designer.cs">
+      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.Designer.cs">
+      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.cs">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\DataSets\dsConfiguraciones.Designer.cs">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlContenedorDashboards.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Dashboards\ctlContenedorDashboards.Designer.cs">
+      <DependentUpon>ctlContenedorDashboards.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Dashboards\ctlEmpleadoConMasTicketsAtendidos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +205,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDashboards.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\frmEsperaDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\frmEsperaDashboard.Designer.cs">
+      <DependentUpon>frmEsperaDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Popups\ctlPosicionesDisponibles.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +242,21 @@
       <DependentUpon>rptTicket.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlAsignacionPosiciones.resx">
+      <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoUsuarios.resx">
+      <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlOperacionesSupervisor.resx">
+      <DependentUpon>ctlOperacionesSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlTrasladosEmpleadosServicio.resx">
+      <DependentUpon>ctlTrasladosEmpleadosServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Dashboards\ctlContenedorDashboards.resx">
+      <DependentUpon>ctlContenedorDashboards.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\Dashboards\ctlEmpleadoConMasTicketsAtendidos.resx">
       <DependentUpon>ctlEmpleadoConMasTicketsAtendidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,12 +276,16 @@
     <EmbeddedResource Include="Controles\Dashboards\ctlTicketsAtendidos_TicketsNoAtendidos.resx">
       <DependentUpon>ctlTicketsAtendidos_TicketsNoAtendidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\frmEsperaDashboard.resx">
+      <DependentUpon>frmEsperaDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\Popups\ctlPosicionesDisponibles.resx">
       <DependentUpon>ctlPosicionesDisponibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\Popups\ctlTipoTicketServicio.resx">
       <DependentUpon>ctlTipoTicketServicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -230,6 +294,17 @@
       <DependentUpon>rptTicket.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsc">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </None>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConfiguraciones.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Controles\Configuraciones\DataSets\dsConfiguraciones.xss">
+      <DependentUpon>dsConfiguraciones.xsd</DependentUpon>
+    </None>
     <None Include="Controles\Dashboards\DataSet\dsDashboards.xsc">
       <DependentUpon>dsDashboards.xsd</DependentUpon>
     </None>
@@ -268,7 +343,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pantallas\" />
+    <None Include="Resources\gif_cargando.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconIrAtras.png" />
@@ -293,6 +368,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_check_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconFiltro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cerrar_sesion_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_posiciones64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_posiciones_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_traslados_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBusqueda_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_prioridad_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario_configuracion_negro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nuevo_usuario_negro_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_siguiente_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_atras_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cerrar_sesion_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_posiciones_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_traslados_verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_usuario_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_asignar_posiciones_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_nuevo_usuario_verde_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_configuracion_verde_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

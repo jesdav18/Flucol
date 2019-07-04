@@ -70,14 +70,18 @@ namespace Core.Controles.Dashboards
                                                                 (DateTime)dtHasta.EditValue
                                                                 );
 
-            /*ctlTicketsAtendidos_TicketsNoAtendidos1.ConstruirControl(Pro_Conexion,
-                                                                        Pro_ID_Cliente_Servicio,
-                                                                        Pro_ID_Agencia,
-                                                                        v_numero_mes_actual);
+            ctlTicketsAtendidos_TicketsNoAtendidos1.ConstruirControl(Pro_Conexion,
+                                                                     Pro_ID_Agencia,
+                                                                     Pro_ID_Cliente_Servicio,
+                                                                     (DateTime)dtDesde.EditValue,
+                                                                     (DateTime)dtHasta.EditValue
+                                                                     );
             ctlVisitasSegunPrioridadServicio1.ConstruirControl(Pro_Conexion,
+                                                                Pro_ID_Agencia,
                                                                 Pro_ID_Cliente_Servicio,
-                                                                pID_AgenciaServicio,
-                                                                v_numero_mes_actual);*/
+                                                                (DateTime)dtDesde.EditValue,
+                                                                (DateTime)dtHasta.EditValue
+                                                                );
 
             ctlPromedioAtencion1.ConstruirControl(Pro_Conexion,                                                   
                                                   Pro_ID_Agencia,
@@ -85,10 +89,11 @@ namespace Core.Controles.Dashboards
                                                   (DateTime)dtDesde.EditValue,
                                                   (DateTime)dtHasta.EditValue);
 
-           /* ctlTraficoClientes1.ConstruirControl(Pro_Conexion,
-                                                    v_numero_mes_actual,
-                                                    pID_AgenciaServicio,
-                                                    Pro_ID_Cliente_Servicio);*/
+            ctlTraficoClientes1.ConstruirControl(Pro_Conexion,                                                   
+                                                 Pro_ID_Agencia,
+                                                 Pro_ID_Cliente_Servicio,
+                                                 (DateTime)dtDesde.EditValue,
+                                                 (DateTime)dtHasta.EditValue);
 
             ctlPromedioEspera1.ConstruirControl(Pro_Conexion,
                                                 Pro_ID_Agencia,
@@ -96,10 +101,12 @@ namespace Core.Controles.Dashboards
                                                 (DateTime)dtDesde.EditValue,
                                                   (DateTime)dtHasta.EditValue);
 
-           /* ctlVisitasSegunCanalDeServicio1.ConstruirControl(Pro_Conexion,
-                                                            Pro_ID_Cliente_Servicio,
-                                                            pID_AgenciaServicio,
-                                                            v_numero_mes_actual);*/
+            ctlVisitasSegunCanalDeServicio1.ConstruirControl(Pro_Conexion,
+                                                             Pro_ID_Agencia,
+                                                             Pro_ID_Cliente_Servicio,
+                                                             (DateTime)dtDesde.EditValue,
+                                                             (DateTime)dtHasta.EditValue
+                                                             );
 
            
             ssmEsperaDashboard.CloseWaitForm();

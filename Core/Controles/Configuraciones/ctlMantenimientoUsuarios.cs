@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Core.Clases;
 using Devart.Data.PostgreSql;
 
-namespace Operaciones.Controles.Configuraciones
+namespace Core.Controles.Configuraciones
 {
     public partial class ctlMantenimientoUsuarios : UserControl
     {

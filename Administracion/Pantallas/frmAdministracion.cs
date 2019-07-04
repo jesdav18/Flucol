@@ -19,11 +19,12 @@ namespace Administracion.Pantallas
         #region FUNCIONES
 
         public void ConstruirAdministracion(PgSqlConnection pConexion,
-                                            int pID_Cliente_Servicio,
-                                            int pID_Agencia_Servicio)
+                                            int pID_Cliente_Servicio,                                           
+                                            string pUsuario)
         {
             ctlAdministracionPrincipal1.ConstruirControl(pConexion,
-                                                         pID_Cliente_Servicio
+                                                         pID_Cliente_Servicio,
+                                                         pUsuario
                                                         );
         }
 

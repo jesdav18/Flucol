@@ -3,9 +3,9 @@ using System.Data;
 using System.Windows.Forms;
 using Core.DataSets;
 using Devart.Data.PostgreSql;
-using Operaciones.Controles.Configuraciones.DataSets;
+using Core.Controles.Configuraciones.DataSets;
 
-namespace Operaciones.Controles.Configuraciones
+namespace Core.Controles.Configuraciones
 {
     public partial class ctlAsignacionPosiciones : UserControl
     {
