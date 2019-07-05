@@ -17,9 +17,10 @@ namespace Administracion.Controles
             ctlAgenciasDisponiblesParaDashboards1.OnSeleccionaAgencia += ctlAgenciasDisponiblesParaDashboards1_OnSeleccionaAgencia;
             ctlContenedorDashboards1.OnIrAtras += ctlContenedorDashboards1_OnIrAtras;
 
-            ctlAgenciasDisponiblesParaDashboards2
+            ctlAgenciasDisponiblesParaDashboards2.OnSeleccionaAgencia += ctlAgenciasDisponiblesParaDashboards2_OnSeleccionaAgencia;
         }
 
+      
         #endregion
 
         #region PROPIEDADES
@@ -81,6 +82,7 @@ namespace Administracion.Controles
         private void PicAsignarPosiciones_Click(object sender, EventArgs e)
         {
             NavigationPrincipal.SelectedPage = PageAsignacionPosiciones;
+            ctlAgenciasDisponiblesParaDashboards2.ConstruirControl(Pro_Conexion, Pro_ID_ClienteServicio);
             
         }
 
@@ -93,6 +95,12 @@ namespace Administracion.Controles
         {
 
         }
+
+        private void ctlAgenciasDisponiblesParaDashboards2_OnSeleccionaAgencia(int pID_Agencia, string pNombreSucursal)
+        {
+          
+        }
+
     }
 }
     

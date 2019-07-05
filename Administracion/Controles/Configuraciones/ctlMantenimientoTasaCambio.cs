@@ -28,6 +28,7 @@ namespace Administracion.Controles.Configuraciones
 
         public void ConstruirControl(PgSqlConnection pConexion, string pUsuario)
         {
+            LimpiarCajasTexto();
             Pro_Conexion = pConexion;
             Pro_Usuario = pUsuario;
             txtCompra.Focus();
@@ -54,11 +55,23 @@ namespace Administracion.Controles.Configuraciones
                 sentencia = null;
                 pgComando.Dispose();
                 pgComando = null;
+
+
+
+                MessageBox.Show("La tasa de cambio se actualizó exitosamente. ");
+
+                LimpiarCajasTexto();
             }
             catch (Exception Exc)
             {
                 MessageBox.Show("Algo salió mal en el momento de Gurdar cambios en la tasa de cambio. ");
             }
+        }
+
+        private void LimpiarCajasTexto()
+        {
+            txtCompra.Text = "";
+            txtVenta.Text = "";
         }
 
         #endregion
