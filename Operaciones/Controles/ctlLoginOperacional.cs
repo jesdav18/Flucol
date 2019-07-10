@@ -152,11 +152,11 @@ namespace Operaciones.Controles
                 Pro_Conexion.Open();
             }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_posicion_asignada (
-                                                                                                :p_usuario, 
-                                                                                                :p_agencia,
-                                                                                                :p_cliente
-                                                                                                );";
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_posicion_asignada (
+                                                                                        :p_usuario, 
+                                                                                        :p_agencia,
+                                                                                        :p_cliente
+                                                                                        );";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_usuario", PgSqlType.VarChar).Value = Pro_UsuarioEmpleado;
             pgComando.Parameters.Add("p_agencia", PgSqlType.Int).Value = Pro_Sucursal;

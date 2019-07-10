@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 
@@ -44,7 +38,7 @@ namespace Publicidad.Controles
                 Pro_Conexion.Open();
             }
 
-            string sentencia = "SELECT * FROM area_servicio.ft_proc_obtener_tasa_cambio();";
+            string sentencia = "SELECT * FROM area_servicio.ft_view_ultima_tasa_cambio();";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
 
             try

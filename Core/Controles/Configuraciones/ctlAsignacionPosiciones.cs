@@ -36,7 +36,8 @@ namespace Core.Controles.Configuraciones
         public void ConstruirControl(PgSqlConnection pConexion,
                                      int pID_AgenciaServicio,
                                      int pID_ClienteServicio,
-                                     string pUsuario)
+                                     string pUsuario,
+                                     string pNombreSucursal)
         {
 
             splashScreenManager1.ShowWaitForm();
@@ -45,11 +46,12 @@ namespace Core.Controles.Configuraciones
             Pro_ID_Agencia_Servicio = pID_AgenciaServicio;
             Pro_ID_Cliente_Servicio = pID_ClienteServicio;
             Pro_Usuario = pUsuario;
+            lblTitulo.Text = "ASIGNACION DE POSICIONES PARA AGENCIA " + pNombreSucursal;
 
             CargarDatos();
             ctlPosicionesDisponibles1.ConstruirControl(Pro_Conexion,
-                                                           Pro_ID_Agencia_Servicio,
-                                                           Pro_ID_Cliente_Servicio);
+                                                       Pro_ID_Agencia_Servicio,
+                                                       Pro_ID_Cliente_Servicio);
 
             ctlTipoTicketServicio1.ConstruirControl(Pro_Conexion);
 
@@ -59,8 +61,6 @@ namespace Core.Controles.Configuraciones
 
         private void CargarDatos()
         {
-           
-
             if (Pro_Conexion.State != ConnectionState.Open)
             {
                 Pro_Conexion.Open();
@@ -86,9 +86,6 @@ namespace Core.Controles.Configuraciones
             {
                 MessageBox.Show("Algo salió mal en la carga de empleados disponibles. " + Exc.Message);
             }
-
-          
-
         }
 
         private bool AsignarPosicion(int pPosicion, 
@@ -104,7 +101,7 @@ namespace Core.Controles.Configuraciones
                 Pro_Conexion.Open();
             }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_asignar_posicion_a_empleado(:p_id_agencia_servicio,
+            string sentencia = @"SELECT * FROM area_servicio.ft_mant_asignar_posicion_a_empleado(:p_id_agencia_servicio,
                                                                                                  :p_id_cliente_servicio,
                                                                                                  :p_empleado_asignado,
                                                                                                  :p_usuario_posteo,
@@ -187,13 +184,9 @@ namespace Core.Controles.Configuraciones
 
                                 if (iterador_posiciones.posicion == v_fila.posicion)
                                 {
-                                    if (v_posicion_anterior == 0)
+                                    if (v_posicion_anterior != 0)
                                     {
-                                        iterador.Delete();
-                                        iterador.AcceptChanges();
-                                    }
-                                    else
-                                    {
+                                                                    
                                         iterador_posiciones.posicion = v_posicion_anterior;
                                         iterador.AcceptChanges();
                                     }

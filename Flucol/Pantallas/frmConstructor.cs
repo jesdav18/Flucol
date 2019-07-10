@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data;
-using System.Text;
 using System.Windows.Forms;
 using Recepcion.Pantallas;
 using Publicidad.Pantallas;
@@ -197,10 +194,10 @@ namespace Flucol.Pantallas
 
             try
             {
-                string sentencia = @"SELECT * FROM area_servicio.ft_proc_obtiene_nombre_agencia_servicio (
-                                                                                                          :p_id_agencia_servicio,
-                                                                                                          :p_id_cliente_servicio
-                                                                                                        ) ;";
+                string sentencia = @"SELECT * FROM area_servicio.ft_view_nombre_agencia_servicio (
+                                                                                                    :p_id_agencia_servicio,
+                                                                                                    :p_id_cliente_servicio
+                                                                                                 );";
                 PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
                 pgComando.Parameters.Add("p_id_agencia_servicio", PgSqlType.Int).Value = Pro_ID_AgenciaServicio;
                 pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_ClienteServicio;
@@ -282,7 +279,8 @@ namespace Flucol.Pantallas
                         frmAdministracion = new frmAdministracion();
                         frmAdministracion.ConstruirAdministracion(Pro_Conexion,
                                                                    Pro_ID_ClienteServicio,                                                              
-                                                                   pUsuario.Pro_Usuario);
+                                                                   pUsuario.Pro_Usuario,
+                                                                   pUsuario.Pro_NombreEmpleado);
                         frmAdministracion.MdiParent = this;
                         frmAdministracion.StartPosition = FormStartPosition.CenterScreen;                    
                         frmAdministracion.Show();
@@ -501,10 +499,5 @@ namespace Flucol.Pantallas
         }
 
         #endregion
-
-        private void FrmConstructor_SizeChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

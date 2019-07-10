@@ -2,7 +2,7 @@
 using Devart.Data.PostgreSql;
 using System;
 using System.Net;
-
+using System.Windows.Forms;
 
 namespace Core.Clases
 {
@@ -37,7 +37,17 @@ namespace Core.Clases
             string sentencia = "SELECT * FROM configuracion.ft_obtener_hora_servidor();";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, pConexion);
 
-            return (DateTime)pgComando.ExecuteScalar();
+            try
+            {
+                return (DateTime)pgComando.ExecuteScalar();
+            }
+            catch (Exception Exc)
+            {
+                MessageBox.Show("Algo salió mal en el momento de recuperar la hora del servidor. ");
+                return Convert.ToDateTime(null);
+            }
+
+            
 
         }
 

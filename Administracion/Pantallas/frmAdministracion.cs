@@ -20,11 +20,13 @@ namespace Administracion.Pantallas
 
         public void ConstruirAdministracion(PgSqlConnection pConexion,
                                             int pID_Cliente_Servicio,                                           
-                                            string pUsuario)
+                                            string pUsuario,
+                                            string pNombreEmpleado)
         {
             ctlAdministracionPrincipal1.ConstruirControl(pConexion,
                                                          pID_Cliente_Servicio,
-                                                         pUsuario
+                                                         pUsuario,
+                                                         pNombreEmpleado
                                                         );
         }
 

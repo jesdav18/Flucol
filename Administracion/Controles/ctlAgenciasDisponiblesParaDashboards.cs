@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Devart.Data.PostgreSql;
 using Core.Clases;
 using Core.DataSets;
+using static Administracion.Controles.ctlAdministracionPrincipal;
 
 namespace Administracion.Controles
 {
@@ -22,10 +23,27 @@ namespace Administracion.Controles
 
         #region FUNCIONES
 
-        public void ConstruirControl(PgSqlConnection pConexion, int pID_ClienteServicio)
+        public void ConstruirControl(PgSqlConnection pConexion, 
+                                     int pID_ClienteServicio,
+                                     OPCIONES_MENU pOpcionMenu)
         {
             Pro_Conexion = pConexion;
             Pro_ID_ClienteServicio = pID_ClienteServicio;
+
+            switch (pOpcionMenu)
+            {
+                
+                case OPCIONES_MENU.DASHBOARDS:
+                    lblTitulo.Text = "AGENCIAS DISPONIBLES PARA VISUALIZACIÓN DE DASHBOARDS.";
+                    break;
+                case OPCIONES_MENU.ASIGNACION_POSICIONES:
+                    lblTitulo.Text = "AGENCIAS DISPONIBLES PARA ASIGNAR POSICIONES.";
+                    break;
+                case OPCIONES_MENU.MANTENIMIENTO_EMPLEADOS:
+                    lblTitulo.Text = "AGENCIAS DISPONIBLES PARA MANTENIMIENTO DE EMPLEADOS";
+                    break;
+                
+            }
 
             CargarDatos();
         }

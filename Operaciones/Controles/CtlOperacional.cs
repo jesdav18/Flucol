@@ -415,10 +415,10 @@ namespace Operaciones.Controles
             ValidarConexion();
 
             int v_estado_ticket = 0;
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_estado_ticket (
-                                                                                        :p_id_ticket_servicio,
-                                                                                        :p_id_cliente_servicio,
-                                                                                        :p_id_agencia_servicio
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_estado_ticket (
+                                                                                    :p_id_ticket_servicio,
+                                                                                    :p_id_cliente_servicio,
+                                                                                    :p_id_agencia_servicio
                                                                                     )";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_id_ticket_servicio",PgSqlType.VarChar).Value = Pro_Ticket_Servicio;

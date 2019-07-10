@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             this.lblTituloDashboard = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dsDashboards1 = new Core.Controles.Dashboards.DataSet.dsDashboards();
-            this.dsDashboards1BindingSource = new System.Windows.Forms.BindingSource();
+            this.dsDashboards1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1BindingSource)).BeginInit();
@@ -51,9 +52,10 @@
             this.lblTituloDashboard.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTituloDashboard.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTituloDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTituloDashboard.Location = new System.Drawing.Point(5, 5);
+            this.lblTituloDashboard.Location = new System.Drawing.Point(7, 6);
+            this.lblTituloDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblTituloDashboard.Name = "lblTituloDashboard";
-            this.lblTituloDashboard.Size = new System.Drawing.Size(373, 34);
+            this.lblTituloDashboard.Size = new System.Drawing.Size(497, 42);
             this.lblTituloDashboard.TabIndex = 1;
             this.lblTituloDashboard.Text = "VISITAS SEGÚN PRIORIDAD DE SERVICIO";
             // 
@@ -61,9 +63,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(5, 39);
+            this.panel1.Location = new System.Drawing.Point(7, 48);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 4);
+            this.panel1.Size = new System.Drawing.Size(497, 5);
             this.panel1.TabIndex = 6;
             // 
             // dsDashboards1
@@ -87,7 +90,8 @@
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Legend.Name = "Default Legend";
             this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.chartControl1.Location = new System.Drawing.Point(5, 43);
+            this.chartControl1.Location = new System.Drawing.Point(7, 53);
+            this.chartControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartControl1.Name = "chartControl1";
             series1.ArgumentDataMember = "dtVisitasSegunPrioridadServicio.prioridad_servicio";
             series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
@@ -96,23 +100,25 @@
             series1.ValueDataMembersSerializable = "dtVisitasSegunPrioridadServicio.conteo_visitas";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl1.Size = new System.Drawing.Size(373, 100);
+            this.chartControl1.SeriesTemplate.SeriesColorizer = null;
+            this.chartControl1.Size = new System.Drawing.Size(497, 215);
             this.chartControl1.TabIndex = 7;
             // 
             // ctlVisitasSegunPrioridadServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTituloDashboard);
-            this.MaximumSize = new System.Drawing.Size(385, 150);
-            this.MinimumSize = new System.Drawing.Size(385, 150);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(513, 276);
+            this.MinimumSize = new System.Drawing.Size(513, 276);
             this.Name = "ctlVisitasSegunPrioridadServicio";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(383, 148);
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(511, 276);
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDashboards1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

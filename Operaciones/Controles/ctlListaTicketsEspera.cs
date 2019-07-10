@@ -78,7 +78,7 @@ namespace Operaciones.Controles
             {
                 ValidarConexion();
 
-                string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_cola_tickets_en_espera(:p_id_cliente_servicio,
+                string sentencia = @"SELECT * FROM area_servicio.ft_view_cola_tickets_en_espera(:p_id_cliente_servicio,
                                                                                                          :p_id_agencia_servicio,
                                                                                                          :p_usuario);";
 

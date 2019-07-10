@@ -41,7 +41,7 @@ namespace Administracion.Controles.Configuraciones
                 Pro_Conexion.Open();
             }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_registra_tasa_cambio(:p_venta,
+            string sentencia = @"SELECT * FROM area_servicio.ft_mant_registra_tasa_cambio(:p_venta,
                                                                                     :p_compra,
                                                                                     :p_usuario);";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);

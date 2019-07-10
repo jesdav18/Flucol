@@ -34,7 +34,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.dsCore1 = new Core.DataSets.dsCore();
             this.gvSucursalesDisponibles = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -57,7 +57,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelControl1);
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(7, 6);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -65,20 +65,20 @@
             this.panel1.Size = new System.Drawing.Size(978, 52);
             this.panel1.TabIndex = 0;
             // 
-            // labelControl1
+            // lblTitulo
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseTextOptions = true;
-            this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(0, 0);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(978, 52);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "AGENCIAS DISPONIBLES";
+            this.lblTitulo.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Appearance.Options.UseFont = true;
+            this.lblTitulo.Appearance.Options.UseTextOptions = true;
+            this.lblTitulo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTitulo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(978, 52);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "AGENCIAS DISPONIBLES";
             // 
             // gridControl1
             // 
@@ -232,7 +232,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblTitulo;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gvSucursalesDisponibles;
         private Core.DataSets.dsCore dsCore1;

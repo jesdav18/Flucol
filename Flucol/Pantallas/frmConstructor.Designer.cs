@@ -51,7 +51,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmConstructor_FormClosing);
             this.Load += new System.EventHandler(this.frmConstructor_Load);
             this.ClientSizeChanged += new System.EventHandler(this.frmConstructor_ClientSizeChanged);
-            this.SizeChanged += new System.EventHandler(this.FrmConstructor_SizeChanged);
             this.ResumeLayout(false);
 
         }

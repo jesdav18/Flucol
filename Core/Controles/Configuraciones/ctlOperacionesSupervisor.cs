@@ -80,7 +80,9 @@ namespace Core.Controles.Configuraciones
             ctlMantenimientoUsuarios1.ConstruirControl(Pro_Conexion,
                                                        Pro_ID_AgenciaServicio,
                                                        Pro_ID_ClienteServicio,
-                                                       Pro_Usuario);
+                                                       Pro_Usuario,
+                                                       ""
+                                                      );
             NavigationPrincipal.SelectedPage = PageMantenimientoEmpleados;
             splashScreenManager1.CloseWaitForm();
         }
@@ -117,9 +119,10 @@ namespace Core.Controles.Configuraciones
             ReinicioImagenes();
             cmdAsignarPosicionesEmpleados.Image = Properties.Resources.icon_asignar_posiciones_verde_64;
             ctlAsignacionPosiciones1.ConstruirControl(Pro_Conexion,
-                                                     Pro_ID_AgenciaServicio,
-                                                     Pro_ID_ClienteServicio,
-                                                     Pro_Usuario);
+                                                      Pro_ID_AgenciaServicio,
+                                                      Pro_ID_ClienteServicio,
+                                                      Pro_Usuario,
+                                                      lblAgencia.Text);
             NavigationAsignacionesTraslados.SelectedPage = pageAsignaciones;
             splashScreenManager1.CloseWaitForm();
         }

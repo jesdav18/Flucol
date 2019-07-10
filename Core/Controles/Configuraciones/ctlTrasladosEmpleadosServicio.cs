@@ -106,7 +106,7 @@ namespace Core.Controles.Configuraciones
                 Pro_Conexion.Open();
             }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_trasladar_empleado_a_sucursal(:p_id_cliente_servicio,
+            string sentencia = @"SELECT * FROM area_servicio.ft_mant_trasladar_empleado_a_sucursal(:p_id_cliente_servicio,
                                                                                                    :p_id_agencia_servicio_destino,                                                                             
                                                                                                    :p_codigoempleado,
                                                                                                    :p_usuario);";

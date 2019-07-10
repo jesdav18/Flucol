@@ -34,8 +34,6 @@
             this.cmdAbrirFiltros = new DevExpress.XtraEditors.PictureEdit();
             this.cmdIrAtras = new DevExpress.XtraEditors.PictureEdit();
             this.flpPanelDashboards = new System.Windows.Forms.FlowLayoutPanel();
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1 = new Core.Controles.Dashboards.ctlTicketsAtendidos_TicketsNoAtendidos();
-            this.ctlVisitasSegunPrioridadServicio1 = new Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio();
             this.ctlPromedioEspera1 = new Core.Controles.Dashboards.ctlPromedioEspera();
             this.ctlEmpleadoConMasTicketsAtendidos1 = new Core.Controles.Dashboards.ctlEmpleadoConMasTicketsAtendidos();
             this.ctlPromedioAtencion1 = new Core.Controles.Dashboards.ctlPromedioAtencion();
@@ -50,6 +48,8 @@
             this.dtHasta = new DevExpress.XtraEditors.DateEdit();
             this.dtDesde = new DevExpress.XtraEditors.DateEdit();
             this.ssmEsperaDashboard = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Core.Pantallas.frmEsperaDashboard), true, true, typeof(System.Windows.Forms.UserControl));
+            this.ctlVisitasSegunPrioridadServicio1 = new Core.Controles.Dashboards.ctlVisitasSegunPrioridadServicio();
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1 = new Core.Controles.Dashboards.ctlTicketsAtendidos_TicketsNoAtendidos();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAbrirFiltros.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdIrAtras.Properties)).BeginInit();
@@ -141,62 +141,32 @@
             // 
             // flpPanelDashboards
             // 
-            this.flpPanelDashboards.Controls.Add(this.ctlTicketsAtendidos_TicketsNoAtendidos1);
             this.flpPanelDashboards.Controls.Add(this.ctlVisitasSegunPrioridadServicio1);
+            this.flpPanelDashboards.Controls.Add(this.ctlTicketsAtendidos_TicketsNoAtendidos1);
             this.flpPanelDashboards.Controls.Add(this.ctlPromedioEspera1);
             this.flpPanelDashboards.Controls.Add(this.ctlEmpleadoConMasTicketsAtendidos1);
             this.flpPanelDashboards.Controls.Add(this.ctlPromedioAtencion1);
-            this.flpPanelDashboards.Controls.Add(this.ctlTraficoClientes1);
             this.flpPanelDashboards.Controls.Add(this.ctlVisitasSegunCanalDeServicio1);
+            this.flpPanelDashboards.Controls.Add(this.ctlTraficoClientes1);
             this.flpPanelDashboards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPanelDashboards.Location = new System.Drawing.Point(5, 102);
             this.flpPanelDashboards.Name = "flpPanelDashboards";
             this.flpPanelDashboards.Size = new System.Drawing.Size(1299, 748);
             this.flpPanelDashboards.TabIndex = 1;
             // 
-            // ctlTicketsAtendidos_TicketsNoAtendidos1
-            // 
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.BackColor = System.Drawing.Color.White;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Location = new System.Drawing.Point(4, 4);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MaximumSize = new System.Drawing.Size(513, 184);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MinimumSize = new System.Drawing.Size(513, 184);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Name = "ctlTicketsAtendidos_TicketsNoAtendidos1";
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Agencia_Servicio = 0;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Cliente_Servicio = 0;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Conexion = null;
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Size = new System.Drawing.Size(513, 184);
-            this.ctlTicketsAtendidos_TicketsNoAtendidos1.TabIndex = 3;
-            // 
-            // ctlVisitasSegunPrioridadServicio1
-            // 
-            this.ctlVisitasSegunPrioridadServicio1.BackColor = System.Drawing.Color.White;
-            this.ctlVisitasSegunPrioridadServicio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlVisitasSegunPrioridadServicio1.Location = new System.Drawing.Point(525, 4);
-            this.ctlVisitasSegunPrioridadServicio1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ctlVisitasSegunPrioridadServicio1.MaximumSize = new System.Drawing.Size(513, 184);
-            this.ctlVisitasSegunPrioridadServicio1.MinimumSize = new System.Drawing.Size(513, 184);
-            this.ctlVisitasSegunPrioridadServicio1.Name = "ctlVisitasSegunPrioridadServicio1";
-            this.ctlVisitasSegunPrioridadServicio1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.ctlVisitasSegunPrioridadServicio1.Pro_Conexion = null;
-            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Agencia_Servicio = 0;
-            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Cliente_Servicio = 0;
-            this.ctlVisitasSegunPrioridadServicio1.Size = new System.Drawing.Size(513, 184);
-            this.ctlVisitasSegunPrioridadServicio1.TabIndex = 6;
-            // 
             // ctlPromedioEspera1
             // 
             this.ctlPromedioEspera1.BackColor = System.Drawing.Color.White;
             this.ctlPromedioEspera1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlPromedioEspera1.Location = new System.Drawing.Point(4, 196);
+            this.ctlPromedioEspera1.Location = new System.Drawing.Point(4, 288);
             this.ctlPromedioEspera1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctlPromedioEspera1.MaximumSize = new System.Drawing.Size(253, 276);
             this.ctlPromedioEspera1.MinimumSize = new System.Drawing.Size(253, 276);
             this.ctlPromedioEspera1.Name = "ctlPromedioEspera1";
             this.ctlPromedioEspera1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ctlPromedioEspera1.Pro_Conexion = null;
+            this.ctlPromedioEspera1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlPromedioEspera1.Pro_Hasta = new System.DateTime(((long)(0)));
             this.ctlPromedioEspera1.Pro_ID_AgenciaServicio = 0;
             this.ctlPromedioEspera1.Pro_ID_ClienteServicio = 0;
             this.ctlPromedioEspera1.Size = new System.Drawing.Size(253, 276);
@@ -206,8 +176,8 @@
             // 
             this.ctlEmpleadoConMasTicketsAtendidos1.BackColor = System.Drawing.Color.White;
             this.ctlEmpleadoConMasTicketsAtendidos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlEmpleadoConMasTicketsAtendidos1.Location = new System.Drawing.Point(265, 196);
-            this.ctlEmpleadoConMasTicketsAtendidos1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctlEmpleadoConMasTicketsAtendidos1.Location = new System.Drawing.Point(265, 288);
+            this.ctlEmpleadoConMasTicketsAtendidos1.Margin = new System.Windows.Forms.Padding(4);
             this.ctlEmpleadoConMasTicketsAtendidos1.MaximumSize = new System.Drawing.Size(253, 276);
             this.ctlEmpleadoConMasTicketsAtendidos1.MinimumSize = new System.Drawing.Size(253, 276);
             this.ctlEmpleadoConMasTicketsAtendidos1.Name = "ctlEmpleadoConMasTicketsAtendidos1";
@@ -225,12 +195,14 @@
             // 
             this.ctlPromedioAtencion1.BackColor = System.Drawing.Color.White;
             this.ctlPromedioAtencion1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlPromedioAtencion1.Location = new System.Drawing.Point(526, 196);
+            this.ctlPromedioAtencion1.Location = new System.Drawing.Point(526, 288);
             this.ctlPromedioAtencion1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctlPromedioAtencion1.MaximumSize = new System.Drawing.Size(253, 276);
             this.ctlPromedioAtencion1.MinimumSize = new System.Drawing.Size(253, 276);
             this.ctlPromedioAtencion1.Name = "ctlPromedioAtencion1";
             this.ctlPromedioAtencion1.Pro_Conexion = null;
+            this.ctlPromedioAtencion1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlPromedioAtencion1.Pro_Hasta = new System.DateTime(((long)(0)));
             this.ctlPromedioAtencion1.Pro_ID_AgenciaServicio = 0;
             this.ctlPromedioAtencion1.Pro_ID_ClienteServicio = 0;
             this.ctlPromedioAtencion1.Size = new System.Drawing.Size(253, 276);
@@ -240,13 +212,15 @@
             // 
             this.ctlTraficoClientes1.BackColor = System.Drawing.Color.White;
             this.ctlTraficoClientes1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlTraficoClientes1.Location = new System.Drawing.Point(4, 480);
+            this.ctlTraficoClientes1.Location = new System.Drawing.Point(525, 572);
             this.ctlTraficoClientes1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ctlTraficoClientes1.MaximumSize = new System.Drawing.Size(513, 384);
             this.ctlTraficoClientes1.MinimumSize = new System.Drawing.Size(513, 384);
             this.ctlTraficoClientes1.Name = "ctlTraficoClientes1";
             this.ctlTraficoClientes1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ctlTraficoClientes1.Pro_Conexion = null;
+            this.ctlTraficoClientes1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlTraficoClientes1.Pro_Hasta = new System.DateTime(((long)(0)));
             this.ctlTraficoClientes1.Pro_ID_AgenciaServicio = 0;
             this.ctlTraficoClientes1.Pro_ID_ClienteServicio = 0;
             this.ctlTraficoClientes1.Size = new System.Drawing.Size(513, 384);
@@ -256,13 +230,15 @@
             // 
             this.ctlVisitasSegunCanalDeServicio1.BackColor = System.Drawing.Color.White;
             this.ctlVisitasSegunCanalDeServicio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctlVisitasSegunCanalDeServicio1.Location = new System.Drawing.Point(525, 480);
-            this.ctlVisitasSegunCanalDeServicio1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctlVisitasSegunCanalDeServicio1.Location = new System.Drawing.Point(4, 572);
+            this.ctlVisitasSegunCanalDeServicio1.Margin = new System.Windows.Forms.Padding(4);
             this.ctlVisitasSegunCanalDeServicio1.MaximumSize = new System.Drawing.Size(513, 384);
             this.ctlVisitasSegunCanalDeServicio1.MinimumSize = new System.Drawing.Size(513, 384);
             this.ctlVisitasSegunCanalDeServicio1.Name = "ctlVisitasSegunCanalDeServicio1";
             this.ctlVisitasSegunCanalDeServicio1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ctlVisitasSegunCanalDeServicio1.Pro_Conexion = null;
+            this.ctlVisitasSegunCanalDeServicio1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlVisitasSegunCanalDeServicio1.Pro_Hasta = new System.DateTime(((long)(0)));
             this.ctlVisitasSegunCanalDeServicio1.Pro_ID_Agencia_Servicio = 0;
             this.ctlVisitasSegunCanalDeServicio1.Pro_ID_Cliente_Servicio = 0;
             this.ctlVisitasSegunCanalDeServicio1.Size = new System.Drawing.Size(513, 384);
@@ -384,6 +360,42 @@
             // 
             this.ssmEsperaDashboard.ClosingDelay = 500;
             // 
+            // ctlVisitasSegunPrioridadServicio1
+            // 
+            this.ctlVisitasSegunPrioridadServicio1.BackColor = System.Drawing.Color.White;
+            this.ctlVisitasSegunPrioridadServicio1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctlVisitasSegunPrioridadServicio1.Location = new System.Drawing.Point(4, 4);
+            this.ctlVisitasSegunPrioridadServicio1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlVisitasSegunPrioridadServicio1.MaximumSize = new System.Drawing.Size(513, 276);
+            this.ctlVisitasSegunPrioridadServicio1.MinimumSize = new System.Drawing.Size(513, 276);
+            this.ctlVisitasSegunPrioridadServicio1.Name = "ctlVisitasSegunPrioridadServicio1";
+            this.ctlVisitasSegunPrioridadServicio1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ctlVisitasSegunPrioridadServicio1.Pro_Conexion = null;
+            this.ctlVisitasSegunPrioridadServicio1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlVisitasSegunPrioridadServicio1.Pro_Hasta = new System.DateTime(((long)(0)));
+            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Agencia_Servicio = 0;
+            this.ctlVisitasSegunPrioridadServicio1.Pro_ID_Cliente_Servicio = 0;
+            this.ctlVisitasSegunPrioridadServicio1.Size = new System.Drawing.Size(513, 276);
+            this.ctlVisitasSegunPrioridadServicio1.TabIndex = 6;
+            // 
+            // ctlTicketsAtendidos_TicketsNoAtendidos1
+            // 
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.BackColor = System.Drawing.Color.White;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Location = new System.Drawing.Point(525, 4);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MaximumSize = new System.Drawing.Size(513, 276);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.MinimumSize = new System.Drawing.Size(513, 276);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Name = "ctlTicketsAtendidos_TicketsNoAtendidos1";
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Agencia_Servicio = 0;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Cliente_Servicio = 0;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Conexion = null;
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Desde = new System.DateTime(((long)(0)));
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Pro_Hasta = new System.DateTime(((long)(0)));
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.Size = new System.Drawing.Size(513, 276);
+            this.ctlTicketsAtendidos_TicketsNoAtendidos1.TabIndex = 7;
+            // 
             // ctlContenedorDashboards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -429,13 +441,13 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.DateEdit dtHasta;
         private DevExpress.XtraEditors.DateEdit dtDesde;
-        private ctlTicketsAtendidos_TicketsNoAtendidos ctlTicketsAtendidos_TicketsNoAtendidos1;
-        private ctlVisitasSegunPrioridadServicio ctlVisitasSegunPrioridadServicio1;
         private ctlPromedioEspera ctlPromedioEspera1;
         private ctlEmpleadoConMasTicketsAtendidos ctlEmpleadoConMasTicketsAtendidos1;
         private ctlPromedioAtencion ctlPromedioAtencion1;
         private ctlTraficoClientes ctlTraficoClientes1;
         private ctlVisitasSegunCanalDeServicio ctlVisitasSegunCanalDeServicio1;
         private DevExpress.XtraSplashScreen.SplashScreenManager ssmEsperaDashboard;
+        private ctlVisitasSegunPrioridadServicio ctlVisitasSegunPrioridadServicio1;
+        private ctlTicketsAtendidos_TicketsNoAtendidos ctlTicketsAtendidos_TicketsNoAtendidos1;
     }
 }

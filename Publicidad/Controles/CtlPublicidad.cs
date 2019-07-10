@@ -1,10 +1,6 @@
-﻿
-using System.Configuration;
+﻿using System.Configuration;
 using System.Drawing;
-using System.Windows.Forms;
 using Devart.Data.PostgreSql;
-
-
 
 namespace Publicidad.Controles
 {

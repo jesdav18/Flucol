@@ -77,10 +77,10 @@ namespace Publicidad.Controles
             vConexion.Open();
 
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_obtener_cola_tickets (
-                                                                                            :p_cliente_servicio,
-                                                                                            :p_agencia_servicio
-                                                                                            );";
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_cola_tickets (
+                                                                                    :p_cliente_servicio,
+                                                                                    :p_agencia_servicio
+                                                                                    );";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, vConexion);
             pgComando.Parameters.Add("p_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente;
             pgComando.Parameters.Add("p_agencia_servicio", PgSqlType.Int).Value = Pro_Sucursal;
@@ -118,7 +118,7 @@ namespace Publicidad.Controles
             vConexion.Password = Pro_Conexion.Password;
             vConexion.Open();
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_consulta_llamados_tickets (
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_consulta_llamados_tickets (
                                                                                                 :p_agencia_servicio,
                                                                                                 :p_cliente_servicio
                                                                                                 )";

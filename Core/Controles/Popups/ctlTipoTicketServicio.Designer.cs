@@ -53,9 +53,10 @@
             this.pnlSuperior.Controls.Add(this.labelControl1);
             this.pnlSuperior.Controls.Add(this.pictureEdit1);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperior.Location = new System.Drawing.Point(5, 5);
+            this.pnlSuperior.Location = new System.Drawing.Point(7, 6);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(596, 44);
+            this.pnlSuperior.Size = new System.Drawing.Size(794, 54);
             this.pnlSuperior.TabIndex = 2;
             // 
             // labelControl1
@@ -66,9 +67,10 @@
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(50, 0);
+            this.labelControl1.Location = new System.Drawing.Point(67, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(546, 44);
+            this.labelControl1.Size = new System.Drawing.Size(727, 54);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "TIPOS DE TICKETS";
             // 
@@ -77,10 +79,11 @@
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureEdit1.EditValue = global::Core.Properties.Resources.icon_mover_32;
             this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(50, 44);
+            this.pictureEdit1.Size = new System.Drawing.Size(67, 54);
             this.pictureEdit1.TabIndex = 0;
             // 
             // gcTipoTicket
@@ -88,12 +91,14 @@
             this.gcTipoTicket.DataMember = "dtTipoTickets";
             this.gcTipoTicket.DataSource = this.dsCore1;
             this.gcTipoTicket.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcTipoTicket.Location = new System.Drawing.Point(5, 49);
+            this.gcTipoTicket.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcTipoTicket.Location = new System.Drawing.Point(7, 60);
             this.gcTipoTicket.MainView = this.gvTipoTicketServicio;
+            this.gcTipoTicket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcTipoTicket.Name = "gcTipoTicket";
             this.gcTipoTicket.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkSeleccionar});
-            this.gcTipoTicket.Size = new System.Drawing.Size(596, 377);
+            this.gcTipoTicket.Size = new System.Drawing.Size(794, 464);
             this.gcTipoTicket.TabIndex = 3;
             this.gcTipoTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvTipoTicketServicio});
@@ -115,6 +120,7 @@
             this.colseleccionar_tipo_ticket,
             this.colid_prioridad,
             this.coldescripcion_prioridad});
+            this.gvTipoTicketServicio.DetailHeight = 431;
             this.gvTipoTicketServicio.GridControl = this.gcTipoTicket;
             this.gvTipoTicketServicio.Name = "gvTipoTicketServicio";
             this.gvTipoTicketServicio.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
@@ -124,15 +130,19 @@
             // colid_tipo_ticket_servicio
             // 
             this.colid_tipo_ticket_servicio.FieldName = "id_tipo_ticket_servicio";
+            this.colid_tipo_ticket_servicio.MinWidth = 27;
             this.colid_tipo_ticket_servicio.Name = "colid_tipo_ticket_servicio";
+            this.colid_tipo_ticket_servicio.Width = 100;
             // 
             // coldescripcion
             // 
             this.coldescripcion.Caption = "DESCRIPCION";
             this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.MinWidth = 27;
             this.coldescripcion.Name = "coldescripcion";
             this.coldescripcion.Visible = true;
             this.coldescripcion.VisibleIndex = 0;
+            this.coldescripcion.Width = 299;
             // 
             // colseleccionar_tipo_ticket
             // 
@@ -141,10 +151,11 @@
             this.colseleccionar_tipo_ticket.Caption = "SELECCIONAR";
             this.colseleccionar_tipo_ticket.ColumnEdit = this.chkSeleccionar;
             this.colseleccionar_tipo_ticket.FieldName = "seleccionar_tipo_ticket";
+            this.colseleccionar_tipo_ticket.MinWidth = 27;
             this.colseleccionar_tipo_ticket.Name = "colseleccionar_tipo_ticket";
             this.colseleccionar_tipo_ticket.Visible = true;
             this.colseleccionar_tipo_ticket.VisibleIndex = 2;
-            this.colseleccionar_tipo_ticket.Width = 137;
+            this.colseleccionar_tipo_ticket.Width = 229;
             // 
             // chkSeleccionar
             // 
@@ -156,26 +167,31 @@
             // colid_prioridad
             // 
             this.colid_prioridad.FieldName = "id_prioridad";
+            this.colid_prioridad.MinWidth = 27;
             this.colid_prioridad.Name = "colid_prioridad";
+            this.colid_prioridad.Width = 100;
             // 
             // coldescripcion_prioridad
             // 
             this.coldescripcion_prioridad.Caption = "PRIORIDAD";
             this.coldescripcion_prioridad.FieldName = "descripcion_prioridad";
+            this.coldescripcion_prioridad.MinWidth = 27;
             this.coldescripcion_prioridad.Name = "coldescripcion_prioridad";
             this.coldescripcion_prioridad.Visible = true;
             this.coldescripcion_prioridad.VisibleIndex = 1;
+            this.coldescripcion_prioridad.Width = 264;
             // 
             // ctlTipoTicketServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gcTipoTicket);
             this.Controls.Add(this.pnlSuperior);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ctlTipoTicketServicio";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(606, 431);
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(808, 530);
             this.pnlSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcTipoTicket)).EndInit();

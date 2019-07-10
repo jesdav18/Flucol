@@ -66,7 +66,7 @@ namespace Publicidad.Controles
                 Pro_Conexion.Open();
             }
 
-            string sentencia = @"SELECT * FROM area_servicio.ft_proc_devuelve_noticias_cliente (:p_id_cliente_servicio);";
+            string sentencia = @"SELECT * FROM area_servicio.ft_view_noticias_cliente (:p_id_cliente_servicio);";
             PgSqlCommand pgComando = new PgSqlCommand(sentencia, Pro_Conexion);
             pgComando.Parameters.Add("p_id_cliente_servicio", PgSqlType.Int).Value = Pro_ID_Cliente_Servicio;
 

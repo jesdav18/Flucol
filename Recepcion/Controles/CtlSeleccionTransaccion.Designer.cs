@@ -95,7 +95,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(215, 3);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1102, 98);
+            this.lblTitulo.Size = new System.Drawing.Size(1146, 98);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "BIENVENIDO";
             // 
@@ -110,7 +110,7 @@
             this.pnlTitulo.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1320, 194);
+            this.pnlTitulo.Size = new System.Drawing.Size(1364, 194);
             this.pnlTitulo.TabIndex = 1;
             // 
             // lblAgencia
@@ -128,7 +128,7 @@
             this.lblAgencia.Location = new System.Drawing.Point(215, 101);
             this.lblAgencia.Margin = new System.Windows.Forms.Padding(4);
             this.lblAgencia.Name = "lblAgencia";
-            this.lblAgencia.Size = new System.Drawing.Size(1102, 90);
+            this.lblAgencia.Size = new System.Drawing.Size(1146, 90);
             this.lblAgencia.TabIndex = 1;
             this.lblAgencia.Text = "BIENVENIDO";
             // 
@@ -165,7 +165,7 @@
             this.navPageTipoTransaccion,
             this.navPageTicket});
             this.navFrameMenuInicial.SelectedPage = this.navPageTipoTransaccion;
-            this.navFrameMenuInicial.Size = new System.Drawing.Size(1320, 436);
+            this.navFrameMenuInicial.Size = new System.Drawing.Size(1364, 599);
             this.navFrameMenuInicial.TabIndex = 2;
             this.navFrameMenuInicial.Text = "navMenuPrioridades";
             this.navFrameMenuInicial.TransitionAnimationProperties.FrameCount = 50;
@@ -184,30 +184,31 @@
             this.navPageTipoTransaccion.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navPageTipoTransaccion.Margin = new System.Windows.Forms.Padding(4);
             this.navPageTipoTransaccion.Name = "navPageTipoTransaccion";
-            this.navPageTipoTransaccion.Size = new System.Drawing.Size(1320, 436);
+            this.navPageTipoTransaccion.Size = new System.Drawing.Size(1364, 599);
             // 
             // lblNegocios
             // 
-            this.lblNegocios.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNegocios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNegocios.Appearance.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNegocios.Appearance.Options.UseFont = true;
             this.lblNegocios.Appearance.Options.UseTextOptions = true;
             this.lblNegocios.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblNegocios.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblNegocios.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblNegocios.Location = new System.Drawing.Point(834, 226);
+            this.lblNegocios.Location = new System.Drawing.Point(969, 350);
             this.lblNegocios.Margin = new System.Windows.Forms.Padding(4);
             this.lblNegocios.Name = "lblNegocios";
-            this.lblNegocios.Size = new System.Drawing.Size(329, 119);
+            this.lblNegocios.Size = new System.Drawing.Size(329, 143);
             this.lblNegocios.TabIndex = 10;
             this.lblNegocios.Text = "NEGOCIOS";
             this.lblNegocios.Click += new System.EventHandler(this.cmdNegocios_Click);
             // 
             // cmdNegocios
             // 
-            this.cmdNegocios.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmdNegocios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdNegocios.EditValue = global::Recepcion.Properties.Resources.icon_Negocios_Negro;
-            this.cmdNegocios.Location = new System.Drawing.Point(931, 76);
+            this.cmdNegocios.Location = new System.Drawing.Point(1066, 111);
             this.cmdNegocios.Margin = new System.Windows.Forms.Padding(4);
             this.cmdNegocios.Name = "cmdNegocios";
             this.cmdNegocios.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -218,30 +219,30 @@
             this.cmdNegocios.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdNegocios.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdNegocios.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdNegocios.Size = new System.Drawing.Size(153, 112);
+            this.cmdNegocios.Size = new System.Drawing.Size(153, 225);
             this.cmdNegocios.TabIndex = 9;
             this.cmdNegocios.Click += new System.EventHandler(this.cmdNegocios_Click);
             // 
             // lblTransacciones
             // 
-            this.lblTransacciones.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTransacciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTransacciones.Appearance.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransacciones.Appearance.Options.UseFont = true;
             this.lblTransacciones.Appearance.Options.UseTextOptions = true;
             this.lblTransacciones.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTransacciones.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTransacciones.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTransacciones.Location = new System.Drawing.Point(437, 226);
+            this.lblTransacciones.Location = new System.Drawing.Point(572, 350);
             this.lblTransacciones.Margin = new System.Windows.Forms.Padding(4);
             this.lblTransacciones.Name = "lblTransacciones";
-            this.lblTransacciones.Size = new System.Drawing.Size(329, 119);
+            this.lblTransacciones.Size = new System.Drawing.Size(329, 143);
             this.lblTransacciones.TabIndex = 6;
             this.lblTransacciones.Text = "TRANSACCIONES EN CAJA";
             this.lblTransacciones.Click += new System.EventHandler(this.cmdTransacciones_Click);
             // 
             // lblServicioAlCliente
             // 
-            this.lblServicioAlCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblServicioAlCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblServicioAlCliente.Appearance.BackColor = System.Drawing.Color.White;
             this.lblServicioAlCliente.Appearance.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServicioAlCliente.Appearance.Options.UseBackColor = true;
@@ -251,19 +252,20 @@
             this.lblServicioAlCliente.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblServicioAlCliente.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblServicioAlCliente.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblServicioAlCliente.Location = new System.Drawing.Point(102, 226);
+            this.lblServicioAlCliente.Location = new System.Drawing.Point(237, 350);
             this.lblServicioAlCliente.Margin = new System.Windows.Forms.Padding(4);
             this.lblServicioAlCliente.Name = "lblServicioAlCliente";
-            this.lblServicioAlCliente.Size = new System.Drawing.Size(281, 119);
+            this.lblServicioAlCliente.Size = new System.Drawing.Size(281, 143);
             this.lblServicioAlCliente.TabIndex = 5;
             this.lblServicioAlCliente.Text = "SERVICIO AL CLIENTE";
             this.lblServicioAlCliente.Click += new System.EventHandler(this.cmdServicioAlCliente_Click);
             // 
             // cmdTransacciones
             // 
-            this.cmdTransacciones.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmdTransacciones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdTransacciones.EditValue = global::Recepcion.Properties.Resources.iconTransaccionesCaja;
-            this.cmdTransacciones.Location = new System.Drawing.Point(531, 76);
+            this.cmdTransacciones.Location = new System.Drawing.Point(666, 111);
             this.cmdTransacciones.Margin = new System.Windows.Forms.Padding(4);
             this.cmdTransacciones.Name = "cmdTransacciones";
             this.cmdTransacciones.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -274,15 +276,16 @@
             this.cmdTransacciones.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdTransacciones.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdTransacciones.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdTransacciones.Size = new System.Drawing.Size(153, 112);
+            this.cmdTransacciones.Size = new System.Drawing.Size(153, 225);
             this.cmdTransacciones.TabIndex = 4;
             this.cmdTransacciones.Click += new System.EventHandler(this.cmdTransacciones_Click);
             // 
             // cmdServicioAlCliente
             // 
-            this.cmdServicioAlCliente.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmdServicioAlCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdServicioAlCliente.EditValue = global::Recepcion.Properties.Resources.iconServicioAlCliente;
-            this.cmdServicioAlCliente.Location = new System.Drawing.Point(169, 76);
+            this.cmdServicioAlCliente.Location = new System.Drawing.Point(304, 111);
             this.cmdServicioAlCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cmdServicioAlCliente.Name = "cmdServicioAlCliente";
             this.cmdServicioAlCliente.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -300,7 +303,7 @@
             this.cmdServicioAlCliente.Properties.NullText = " ";
             this.cmdServicioAlCliente.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdServicioAlCliente.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdServicioAlCliente.Size = new System.Drawing.Size(153, 112);
+            this.cmdServicioAlCliente.Size = new System.Drawing.Size(153, 225);
             this.cmdServicioAlCliente.TabIndex = 3;
             this.cmdServicioAlCliente.Click += new System.EventHandler(this.cmdServicioAlCliente_Click);
             // 
@@ -310,7 +313,7 @@
             this.navPageTicket.Controls.Add(this.documentViewer1);
             this.navPageTicket.Margin = new System.Windows.Forms.Padding(4);
             this.navPageTicket.Name = "navPageTicket";
-            this.navPageTicket.Size = new System.Drawing.Size(1320, 436);
+            this.navPageTicket.Size = new System.Drawing.Size(1364, 599);
             // 
             // documentViewer1
             // 
@@ -324,7 +327,7 @@
             this.documentViewer1.PageBorderColor = System.Drawing.Color.White;
             this.documentViewer1.SelectedPageBorderColor = System.Drawing.Color.White;
             this.documentViewer1.ShowPageMargins = false;
-            this.documentViewer1.Size = new System.Drawing.Size(1320, 436);
+            this.documentViewer1.Size = new System.Drawing.Size(1364, 599);
             this.documentViewer1.TabIndex = 0;
             // 
             // NavPagePrioridades
@@ -341,7 +344,7 @@
             this.NavPagePrioridades.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NavPagePrioridades.Margin = new System.Windows.Forms.Padding(4);
             this.NavPagePrioridades.Name = "NavPagePrioridades";
-            this.NavPagePrioridades.Size = new System.Drawing.Size(1320, 436);
+            this.NavPagePrioridades.Size = new System.Drawing.Size(1364, 599);
             // 
             // pnlInferior
             // 
@@ -349,12 +352,12 @@
             this.pnlInferior.Appearance.Options.UseBackColor = true;
             this.pnlInferior.Controls.Add(this.cmdIrSeleccionTransacciones);
             this.pnlInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInferior.Location = new System.Drawing.Point(0, 325);
+            this.pnlInferior.Location = new System.Drawing.Point(0, 488);
             this.pnlInferior.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.pnlInferior.LookAndFeel.UseDefaultLookAndFeel = false;
             this.pnlInferior.Margin = new System.Windows.Forms.Padding(4);
             this.pnlInferior.Name = "pnlInferior";
-            this.pnlInferior.Size = new System.Drawing.Size(1320, 111);
+            this.pnlInferior.Size = new System.Drawing.Size(1364, 111);
             this.pnlInferior.TabIndex = 9;
             // 
             // cmdIrSeleccionTransacciones
@@ -379,7 +382,7 @@
             // 
             this.cmdTerceraEdad.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmdTerceraEdad.EditValue = global::Recepcion.Properties.Resources.iconAncianos;
-            this.cmdTerceraEdad.Location = new System.Drawing.Point(230, 37);
+            this.cmdTerceraEdad.Location = new System.Drawing.Point(274, 118);
             this.cmdTerceraEdad.Margin = new System.Windows.Forms.Padding(4);
             this.cmdTerceraEdad.Name = "cmdTerceraEdad";
             this.cmdTerceraEdad.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -404,7 +407,7 @@
             this.lblEsperaGeneral.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblEsperaGeneral.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblEsperaGeneral.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblEsperaGeneral.Location = new System.Drawing.Point(895, 174);
+            this.lblEsperaGeneral.Location = new System.Drawing.Point(939, 255);
             this.lblEsperaGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.lblEsperaGeneral.Name = "lblEsperaGeneral";
             this.lblEsperaGeneral.Size = new System.Drawing.Size(260, 119);
@@ -421,7 +424,7 @@
             this.lblCondicionesEspeciales.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblCondicionesEspeciales.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblCondicionesEspeciales.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblCondicionesEspeciales.Location = new System.Drawing.Point(558, 174);
+            this.lblCondicionesEspeciales.Location = new System.Drawing.Point(602, 255);
             this.lblCondicionesEspeciales.Margin = new System.Windows.Forms.Padding(4);
             this.lblCondicionesEspeciales.Name = "lblCondicionesEspeciales";
             this.lblCondicionesEspeciales.Size = new System.Drawing.Size(260, 119);
@@ -438,7 +441,7 @@
             this.lblTerceraEdad.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTerceraEdad.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lblTerceraEdad.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTerceraEdad.Location = new System.Drawing.Point(211, 181);
+            this.lblTerceraEdad.Location = new System.Drawing.Point(255, 262);
             this.lblTerceraEdad.Margin = new System.Windows.Forms.Padding(4);
             this.lblTerceraEdad.Name = "lblTerceraEdad";
             this.lblTerceraEdad.Size = new System.Drawing.Size(199, 105);
@@ -450,7 +453,7 @@
             // 
             this.cmdCondicionesEspeciales01.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmdCondicionesEspeciales01.EditValue = global::Recepcion.Properties.Resources.iconDiscapacidad;
-            this.cmdCondicionesEspeciales01.Location = new System.Drawing.Point(679, 37);
+            this.cmdCondicionesEspeciales01.Location = new System.Drawing.Point(723, 118);
             this.cmdCondicionesEspeciales01.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCondicionesEspeciales01.Name = "cmdCondicionesEspeciales01";
             this.cmdCondicionesEspeciales01.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -470,7 +473,7 @@
             // 
             this.cmdEsperaGeneral.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmdEsperaGeneral.EditValue = global::Recepcion.Properties.Resources.iconEsperaGeneral;
-            this.cmdEsperaGeneral.Location = new System.Drawing.Point(945, 37);
+            this.cmdEsperaGeneral.Location = new System.Drawing.Point(989, 118);
             this.cmdEsperaGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEsperaGeneral.Name = "cmdEsperaGeneral";
             this.cmdEsperaGeneral.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -490,7 +493,7 @@
             // 
             this.cmdCondicionesEspeciales.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmdCondicionesEspeciales.EditValue = global::Recepcion.Properties.Resources.iconEmbarazada;
-            this.cmdCondicionesEspeciales.Location = new System.Drawing.Point(510, 37);
+            this.cmdCondicionesEspeciales.Location = new System.Drawing.Point(554, 118);
             this.cmdCondicionesEspeciales.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCondicionesEspeciales.Name = "cmdCondicionesEspeciales";
             this.cmdCondicionesEspeciales.Properties.AllowAnimationOnValueChanged = DevExpress.Utils.DefaultBoolean.False;
@@ -525,7 +528,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CtlSeleccionTransaccion";
             this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.Size = new System.Drawing.Size(1334, 642);
+            this.Size = new System.Drawing.Size(1378, 805);
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_LogoInstitucion.Properties)).EndInit();

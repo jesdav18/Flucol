@@ -53,12 +53,14 @@
             this.gcPosicionesDisponibles.DataMember = "dtPosicionesDisponibles";
             this.gcPosicionesDisponibles.DataSource = this.dsCore1;
             this.gcPosicionesDisponibles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPosicionesDisponibles.Location = new System.Drawing.Point(5, 49);
+            this.gcPosicionesDisponibles.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.gcPosicionesDisponibles.Location = new System.Drawing.Point(7, 60);
             this.gcPosicionesDisponibles.MainView = this.gvPosicionesDisponibles;
+            this.gcPosicionesDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.gcPosicionesDisponibles.Name = "gcPosicionesDisponibles";
             this.gcPosicionesDisponibles.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkSeleccionar});
-            this.gcPosicionesDisponibles.Size = new System.Drawing.Size(586, 319);
+            this.gcPosicionesDisponibles.Size = new System.Drawing.Size(781, 393);
             this.gcPosicionesDisponibles.TabIndex = 0;
             this.gcPosicionesDisponibles.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPosicionesDisponibles});
@@ -82,6 +84,7 @@
             this.colid_operacion_servicio,
             this.colseleccionar_posicion,
             this.coldescripcion_operacion_servicio});
+            this.gvPosicionesDisponibles.DetailHeight = 431;
             this.gvPosicionesDisponibles.GridControl = this.gcPosicionesDisponibles;
             this.gvPosicionesDisponibles.Name = "gvPosicionesDisponibles";
             this.gvPosicionesDisponibles.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
@@ -91,7 +94,9 @@
             // colid_registro
             // 
             this.colid_registro.FieldName = "id_registro";
+            this.colid_registro.MinWidth = 27;
             this.colid_registro.Name = "colid_registro";
+            this.colid_registro.Width = 100;
             // 
             // colposicion
             // 
@@ -99,24 +104,29 @@
             this.colposicion.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colposicion.Caption = "POSICION";
             this.colposicion.FieldName = "posicion";
+            this.colposicion.MinWidth = 27;
             this.colposicion.Name = "colposicion";
             this.colposicion.Visible = true;
             this.colposicion.VisibleIndex = 0;
+            this.colposicion.Width = 171;
             // 
             // colid_operacion_servicio
             // 
             this.colid_operacion_servicio.FieldName = "id_operacion_servicio";
+            this.colid_operacion_servicio.MinWidth = 27;
             this.colid_operacion_servicio.Name = "colid_operacion_servicio";
+            this.colid_operacion_servicio.Width = 100;
             // 
             // colseleccionar_posicion
             // 
             this.colseleccionar_posicion.Caption = " SELECCIONAR";
             this.colseleccionar_posicion.ColumnEdit = this.chkSeleccionar;
             this.colseleccionar_posicion.FieldName = "seleccionar_posicion";
+            this.colseleccionar_posicion.MinWidth = 27;
             this.colseleccionar_posicion.Name = "colseleccionar_posicion";
             this.colseleccionar_posicion.Visible = true;
             this.colseleccionar_posicion.VisibleIndex = 2;
-            this.colseleccionar_posicion.Width = 98;
+            this.colseleccionar_posicion.Width = 212;
             // 
             // chkSeleccionar
             // 
@@ -130,18 +140,21 @@
             // 
             this.coldescripcion_operacion_servicio.Caption = "DESCRIPCION";
             this.coldescripcion_operacion_servicio.FieldName = "descripcion_operacion_servicio";
+            this.coldescripcion_operacion_servicio.MinWidth = 27;
             this.coldescripcion_operacion_servicio.Name = "coldescripcion_operacion_servicio";
             this.coldescripcion_operacion_servicio.Visible = true;
             this.coldescripcion_operacion_servicio.VisibleIndex = 1;
+            this.coldescripcion_operacion_servicio.Width = 396;
             // 
             // pnlSuperior
             // 
             this.pnlSuperior.Controls.Add(this.labelControl1);
             this.pnlSuperior.Controls.Add(this.pictureEdit1);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSuperior.Location = new System.Drawing.Point(5, 5);
+            this.pnlSuperior.Location = new System.Drawing.Point(7, 6);
+            this.pnlSuperior.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSuperior.Name = "pnlSuperior";
-            this.pnlSuperior.Size = new System.Drawing.Size(586, 44);
+            this.pnlSuperior.Size = new System.Drawing.Size(781, 54);
             this.pnlSuperior.TabIndex = 1;
             // 
             // labelControl1
@@ -152,9 +165,10 @@
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(50, 0);
+            this.labelControl1.Location = new System.Drawing.Point(67, 0);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(536, 44);
+            this.labelControl1.Size = new System.Drawing.Size(714, 54);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "POSICIONES DISPONIBLES";
             // 
@@ -163,22 +177,24 @@
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureEdit1.EditValue = global::Core.Properties.Resources.icon_mover_32;
             this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(50, 44);
+            this.pictureEdit1.Size = new System.Drawing.Size(67, 54);
             this.pictureEdit1.TabIndex = 0;
             // 
             // ctlPosicionesDisponibles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gcPosicionesDisponibles);
             this.Controls.Add(this.pnlSuperior);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctlPosicionesDisponibles";
-            this.Padding = new System.Windows.Forms.Padding(5);
-            this.Size = new System.Drawing.Size(596, 373);
+            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Size = new System.Drawing.Size(795, 459);
             ((System.ComponentModel.ISupportInitialize)(this.gcPosicionesDisponibles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCore1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPosicionesDisponibles)).EndInit();
