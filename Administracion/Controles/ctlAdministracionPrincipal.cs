@@ -142,6 +142,25 @@ namespace Administracion.Controles
 
         #endregion
 
+        public event EventHandler OnCerrarSesion;
+
+        private void PicMantenimientoNoticas_Click(object sender, EventArgs e)
+        {
+            NavigationPrincipal.SelectedPage = PageMantenimientoNoticias;
+            ctlMantenimientoNoticias1.ConstruirControl(Pro_Conexion,Pro_ID_ClienteServicio,Pro_Usuario);
+        }
+
+        private void CmdCreacionAgencias_Click(object sender, EventArgs e)
+        {
+            NavigationPrincipal.SelectedPage = PageCreacionAgenciasServicio;
+            ctlCreacionAgenciasServicio1.ConstruirControl(Pro_Conexion, Pro_Usuario, Pro_ID_ClienteServicio);
+
+        }
+
+        private void PicCerrarSesion_Click(object sender, EventArgs e)
+        {
+            OnCerrarSesion?.Invoke(sender, e);
+        }
     }
 }
     

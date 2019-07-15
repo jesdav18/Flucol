@@ -126,6 +126,18 @@
     <Compile Include="Controles\Configuraciones\ctlAsignacionPosiciones.Designer.cs">
       <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\Configuraciones\ctlCreacionAgenciasServicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlCreacionAgenciasServicio.Designer.cs">
+      <DependentUpon>ctlCreacionAgenciasServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoNoticias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Configuraciones\ctlMantenimientoNoticias.Designer.cs">
+      <DependentUpon>ctlMantenimientoNoticias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Configuraciones\ctlMantenimientoUsuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,6 +257,12 @@
     <EmbeddedResource Include="Controles\Configuraciones\ctlAsignacionPosiciones.resx">
       <DependentUpon>ctlAsignacionPosiciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlCreacionAgenciasServicio.resx">
+      <DependentUpon>ctlCreacionAgenciasServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoNoticias.resx">
+      <DependentUpon>ctlMantenimientoNoticias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controles\Configuraciones\ctlMantenimientoUsuarios.resx">
       <DependentUpon>ctlMantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,7 +303,6 @@
     <EmbeddedResource Include="Controles\Popups\ctlTipoTicketServicio.resx">
       <DependentUpon>ctlTipoTicketServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -437,6 +454,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_apagado_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_agregar_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_visualizar_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconBorrar_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -120,7 +120,6 @@
     <EmbeddedResource Include="Pantallas\frmAdministracion.resx">
       <DependentUpon>frmAdministracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -141,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\iconBusqueda_32.png" />
+    <None Include="Resources\icon_noticia_64.png" />
     <None Include="Resources\icon_configuracion_64.png" />
     <None Include="Resources\icon_cerrar_sesion_64.png" />
     <None Include="Resources\icon_posiciones64.png" />
@@ -148,6 +148,7 @@
     <None Include="Resources\icon_dashboard_64.png" />
     <None Include="Resources\iconFiltro_64.png" />
     <None Include="Resources\iconUsuario.png" />
+    <None Include="Resources\icon_agencias_64.png" />
     <Content Include="Resources\icon_atras_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

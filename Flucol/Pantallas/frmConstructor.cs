@@ -281,6 +281,7 @@ namespace Flucol.Pantallas
                                                                    Pro_ID_ClienteServicio,                                                              
                                                                    pUsuario.Pro_Usuario,
                                                                    pUsuario.Pro_NombreEmpleado);
+                        frmAdministracion.OnCerrarSesion += frmAdministracion_OnCerrarSesion;
                         frmAdministracion.MdiParent = this;
                         frmAdministracion.StartPosition = FormStartPosition.CenterScreen;                    
                         frmAdministracion.Show();
@@ -340,7 +341,13 @@ namespace Flucol.Pantallas
             }
         }
 
-        
+        private void frmAdministracion_OnCerrarSesion(object sender, EventArgs e)
+        {
+            frmAdministracion.Dispose();
+            Construir_Acceso_Para_Operaciones();
+        }
+
+
 
         #endregion
 

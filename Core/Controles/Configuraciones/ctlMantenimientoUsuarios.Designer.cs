@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmdModicarUsuarios = new DevExpress.XtraEditors.PictureEdit();
             this.cmdCrearUsuarios = new DevExpress.XtraEditors.PictureEdit();
@@ -41,7 +41,9 @@
             this.pageCrearUsuarios = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.NavigationEmpleados = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.pagePrimeraPagina = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
+            this.picIrAtras = new DevExpress.XtraEditors.PictureEdit();
             this.gridAgencias = new DevExpress.XtraEditors.GridLookUpEdit();
             this.bsAgenciasServicio = new System.Windows.Forms.BindingSource(this.components);
             this.dsConfiguraciones1 = new Core.Controles.Configuraciones.DataSets.dsConfiguraciones();
@@ -95,8 +97,6 @@
             this.picBusquedaEmpleado = new DevExpress.XtraEditors.PictureEdit();
             this.pageInicial = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.epProveedorErrores = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.picIrAtras = new DevExpress.XtraEditors.PictureEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdModicarUsuarios.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCrearUsuarios.Properties)).BeginInit();
@@ -106,6 +106,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NavigationEmpleados)).BeginInit();
             this.NavigationEmpleados.SuspendLayout();
             this.pagePrimeraPagina.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIrAtras.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridAgencias.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAgenciasServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).BeginInit();
@@ -136,8 +138,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBusquedaEmpleado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epProveedorErrores)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picIrAtras.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,23 +145,21 @@
             this.panel1.Controls.Add(this.cmdModicarUsuarios);
             this.panel1.Controls.Add(this.cmdCrearUsuarios);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(7, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1076, 68);
+            this.panel1.Size = new System.Drawing.Size(808, 55);
             this.panel1.TabIndex = 0;
             // 
             // cmdModicarUsuarios
             // 
             this.cmdModicarUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmdModicarUsuarios.EditValue = global::Core.Properties.Resources.icon_usuario_configuracion_negro_64;
-            this.cmdModicarUsuarios.Location = new System.Drawing.Point(68, 0);
-            this.cmdModicarUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdModicarUsuarios.Location = new System.Drawing.Point(51, 0);
             this.cmdModicarUsuarios.Name = "cmdModicarUsuarios";
             this.cmdModicarUsuarios.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdModicarUsuarios.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdModicarUsuarios.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdModicarUsuarios.Size = new System.Drawing.Size(68, 68);
+            this.cmdModicarUsuarios.Size = new System.Drawing.Size(51, 55);
             this.cmdModicarUsuarios.TabIndex = 4;
             this.cmdModicarUsuarios.ToolTip = "Configuración de Empleados";
             this.cmdModicarUsuarios.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
@@ -174,12 +172,11 @@
             this.cmdCrearUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
             this.cmdCrearUsuarios.EditValue = global::Core.Properties.Resources.icon_nuevo_usuario_negro_64;
             this.cmdCrearUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.cmdCrearUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCrearUsuarios.Name = "cmdCrearUsuarios";
             this.cmdCrearUsuarios.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.cmdCrearUsuarios.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.cmdCrearUsuarios.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.cmdCrearUsuarios.Size = new System.Drawing.Size(68, 68);
+            this.cmdCrearUsuarios.Size = new System.Drawing.Size(51, 55);
             this.cmdCrearUsuarios.TabIndex = 3;
             this.cmdCrearUsuarios.ToolTip = "Nuevo Empleado";
             this.cmdCrearUsuarios.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
@@ -196,15 +193,14 @@
             this.NavigationPrincipal.Controls.Add(this.pageConfiguracionUsuarios);
             this.NavigationPrincipal.Controls.Add(this.pageInicial);
             this.NavigationPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NavigationPrincipal.Location = new System.Drawing.Point(7, 74);
-            this.NavigationPrincipal.Margin = new System.Windows.Forms.Padding(4);
+            this.NavigationPrincipal.Location = new System.Drawing.Point(5, 60);
             this.NavigationPrincipal.Name = "NavigationPrincipal";
             this.NavigationPrincipal.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pageCrearUsuarios,
             this.pageConfiguracionUsuarios,
             this.pageInicial});
             this.NavigationPrincipal.SelectedPage = this.pageInicial;
-            this.NavigationPrincipal.Size = new System.Drawing.Size(1076, 657);
+            this.NavigationPrincipal.Size = new System.Drawing.Size(808, 534);
             this.NavigationPrincipal.TabIndex = 1;
             this.NavigationPrincipal.TransitionAnimationProperties.FrameCount = 500;
             this.NavigationPrincipal.TransitionAnimationProperties.FrameInterval = 500;
@@ -213,9 +209,8 @@
             // 
             this.pageCrearUsuarios.Caption = "pageCrearUsuarios";
             this.pageCrearUsuarios.Controls.Add(this.NavigationEmpleados);
-            this.pageCrearUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.pageCrearUsuarios.Name = "pageCrearUsuarios";
-            this.pageCrearUsuarios.Size = new System.Drawing.Size(1076, 657);
+            this.pageCrearUsuarios.Size = new System.Drawing.Size(808, 534);
             // 
             // NavigationEmpleados
             // 
@@ -225,12 +220,11 @@
             this.NavigationEmpleados.Controls.Add(this.pagePrimeraPagina);
             this.NavigationEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NavigationEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.NavigationEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.NavigationEmpleados.Name = "NavigationEmpleados";
             this.NavigationEmpleados.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pagePrimeraPagina});
             this.NavigationEmpleados.SelectedPage = this.pagePrimeraPagina;
-            this.NavigationEmpleados.Size = new System.Drawing.Size(1076, 657);
+            this.NavigationEmpleados.Size = new System.Drawing.Size(808, 534);
             this.NavigationEmpleados.TabIndex = 0;
             this.NavigationEmpleados.Text = "navigationFrame1";
             this.NavigationEmpleados.TransitionAnimationProperties.FrameCount = 500;
@@ -261,9 +255,19 @@
             this.pagePrimeraPagina.Controls.Add(this.txtCodigoEmpleado);
             this.pagePrimeraPagina.Controls.Add(this.labelControl1);
             this.pagePrimeraPagina.Controls.Add(this.panel2);
-            this.pagePrimeraPagina.Margin = new System.Windows.Forms.Padding(4);
             this.pagePrimeraPagina.Name = "pagePrimeraPagina";
-            this.pagePrimeraPagina.Size = new System.Drawing.Size(1076, 657);
+            this.pagePrimeraPagina.Size = new System.Drawing.Size(808, 534);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.lblTitulo);
+            this.panel4.Controls.Add(this.picIrAtras);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(808, 32);
+            this.panel4.TabIndex = 52;
             // 
             // lblTitulo
             // 
@@ -273,19 +277,35 @@
             this.lblTitulo.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblTitulo.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Location = new System.Drawing.Point(68, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.lblTitulo.Location = new System.Drawing.Point(51, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1008, 40);
+            this.lblTitulo.Size = new System.Drawing.Size(757, 32);
             this.lblTitulo.TabIndex = 51;
             this.lblTitulo.Text = "CREACION DE NUEVO EMPLEADO";
+            // 
+            // picIrAtras
+            // 
+            this.picIrAtras.Dock = System.Windows.Forms.DockStyle.Left;
+            this.picIrAtras.EditValue = global::Core.Properties.Resources.icon_atras_64;
+            this.picIrAtras.Location = new System.Drawing.Point(0, 0);
+            this.picIrAtras.Name = "picIrAtras";
+            this.picIrAtras.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picIrAtras.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picIrAtras.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
+            this.picIrAtras.Size = new System.Drawing.Size(51, 32);
+            this.picIrAtras.TabIndex = 52;
+            this.picIrAtras.ToolTip = "Nuevo Empleado";
+            this.picIrAtras.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
+            this.picIrAtras.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
+            this.picIrAtras.ToolTipTitle = "FLUCOL";
+            this.picIrAtras.Visible = false;
+            this.picIrAtras.Click += new System.EventHandler(this.PicIrAtras_Click);
             // 
             // gridAgencias
             // 
             this.gridAgencias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gridAgencias.EditValue = "";
-            this.gridAgencias.Location = new System.Drawing.Point(558, 294);
-            this.gridAgencias.Margin = new System.Windows.Forms.Padding(4);
+            this.gridAgencias.Location = new System.Drawing.Point(419, 239);
             this.gridAgencias.Name = "gridAgencias";
             this.gridAgencias.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridAgencias.Properties.Appearance.Options.UseFont = true;
@@ -295,7 +315,7 @@
             this.gridAgencias.Properties.DisplayMember = "nombre_agencia";
             this.gridAgencias.Properties.PopupView = this.gluAgencias;
             this.gridAgencias.Properties.ValueMember = "id_agencia_servicio";
-            this.gridAgencias.Size = new System.Drawing.Size(380, 38);
+            this.gridAgencias.Size = new System.Drawing.Size(285, 32);
             this.gridAgencias.TabIndex = 50;
             // 
             // bsAgenciasServicio
@@ -338,8 +358,7 @@
             // 
             this.gridCargos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gridCargos.EditValue = "";
-            this.gridCargos.Location = new System.Drawing.Point(558, 205);
-            this.gridCargos.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCargos.Location = new System.Drawing.Point(419, 167);
             this.gridCargos.Name = "gridCargos";
             this.gridCargos.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridCargos.Properties.Appearance.Options.UseFont = true;
@@ -349,7 +368,7 @@
             this.gridCargos.Properties.DisplayMember = "descripcion";
             this.gridCargos.Properties.PopupView = this.gluCargos;
             this.gridCargos.Properties.ValueMember = "id_cargo";
-            this.gridCargos.Size = new System.Drawing.Size(380, 38);
+            this.gridCargos.Size = new System.Drawing.Size(285, 32);
             this.gridCargos.TabIndex = 49;
             // 
             // bsCargosEmpleados
@@ -386,12 +405,11 @@
             // txtContraseniaTemporal
             // 
             this.txtContraseniaTemporal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContraseniaTemporal.Location = new System.Drawing.Point(558, 472);
-            this.txtContraseniaTemporal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseniaTemporal.Location = new System.Drawing.Point(419, 384);
             this.txtContraseniaTemporal.Name = "txtContraseniaTemporal";
             this.txtContraseniaTemporal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseniaTemporal.Properties.Appearance.Options.UseFont = true;
-            this.txtContraseniaTemporal.Size = new System.Drawing.Size(380, 34);
+            this.txtContraseniaTemporal.Size = new System.Drawing.Size(285, 28);
             this.txtContraseniaTemporal.TabIndex = 48;
             // 
             // lblContraseniaTemporal
@@ -399,22 +417,20 @@
             this.lblContraseniaTemporal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContraseniaTemporal.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseniaTemporal.Appearance.Options.UseFont = true;
-            this.lblContraseniaTemporal.Location = new System.Drawing.Point(558, 439);
-            this.lblContraseniaTemporal.Margin = new System.Windows.Forms.Padding(4);
+            this.lblContraseniaTemporal.Location = new System.Drawing.Point(419, 357);
             this.lblContraseniaTemporal.Name = "lblContraseniaTemporal";
-            this.lblContraseniaTemporal.Size = new System.Drawing.Size(233, 28);
+            this.lblContraseniaTemporal.Size = new System.Drawing.Size(187, 21);
             this.lblContraseniaTemporal.TabIndex = 47;
             this.lblContraseniaTemporal.Text = "CONTRASEÑA TEMPORAL:";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.Location = new System.Drawing.Point(558, 383);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Location = new System.Drawing.Point(419, 311);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Properties.Appearance.Options.UseFont = true;
-            this.txtUsuario.Size = new System.Drawing.Size(380, 34);
+            this.txtUsuario.Size = new System.Drawing.Size(285, 28);
             this.txtUsuario.TabIndex = 46;
             // 
             // lblUsuario
@@ -422,10 +438,9 @@
             this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuario.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Appearance.Options.UseFont = true;
-            this.lblUsuario.Location = new System.Drawing.Point(558, 349);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUsuario.Location = new System.Drawing.Point(419, 284);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(88, 28);
+            this.lblUsuario.Size = new System.Drawing.Size(70, 21);
             this.lblUsuario.TabIndex = 45;
             this.lblUsuario.Text = "USUARIO:";
             // 
@@ -434,10 +449,9 @@
             this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(558, 261);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl9.Location = new System.Drawing.Point(419, 212);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(219, 28);
+            this.labelControl9.Size = new System.Drawing.Size(174, 21);
             this.labelControl9.TabIndex = 44;
             this.labelControl9.Text = "ASIGNAR A LA AGENCIA:";
             // 
@@ -446,22 +460,20 @@
             this.labelControl10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(558, 172);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Location = new System.Drawing.Point(419, 140);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(70, 28);
+            this.labelControl10.Size = new System.Drawing.Size(56, 21);
             this.labelControl10.TabIndex = 43;
             this.labelControl10.Text = "CARGO:";
             // 
             // txtIdentidadEmpleado
             // 
             this.txtIdentidadEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIdentidadEmpleado.Location = new System.Drawing.Point(558, 122);
-            this.txtIdentidadEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdentidadEmpleado.Location = new System.Drawing.Point(419, 99);
             this.txtIdentidadEmpleado.Name = "txtIdentidadEmpleado";
             this.txtIdentidadEmpleado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdentidadEmpleado.Properties.Appearance.Options.UseFont = true;
-            this.txtIdentidadEmpleado.Size = new System.Drawing.Size(380, 34);
+            this.txtIdentidadEmpleado.Size = new System.Drawing.Size(285, 28);
             this.txtIdentidadEmpleado.TabIndex = 42;
             // 
             // labelControl11
@@ -469,10 +481,9 @@
             this.labelControl11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(558, 88);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl11.Location = new System.Drawing.Point(419, 72);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(104, 28);
+            this.labelControl11.Size = new System.Drawing.Size(82, 21);
             this.labelControl11.TabIndex = 41;
             this.labelControl11.Text = "IDENTIDAD:";
             // 
@@ -480,13 +491,12 @@
             // 
             this.txtSegundoApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSegundoApellido.Location = new System.Drawing.Point(70, 473);
-            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(52, 384);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSegundoApellido.Properties.Appearance.Options.UseFont = true;
             this.txtSegundoApellido.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSegundoApellido.Size = new System.Drawing.Size(414, 34);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(311, 28);
             this.txtSegundoApellido.TabIndex = 26;
             // 
             // labelControl5
@@ -495,10 +505,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(70, 440);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl5.Location = new System.Drawing.Point(52, 358);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(188, 28);
+            this.labelControl5.Size = new System.Drawing.Size(151, 21);
             this.labelControl5.TabIndex = 25;
             this.labelControl5.Text = "SEGUNDO APELLIDO:";
             // 
@@ -506,13 +515,12 @@
             // 
             this.txtPrimerApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrimerApellido.Location = new System.Drawing.Point(70, 383);
-            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(52, 311);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrimerApellido.Properties.Appearance.Options.UseFont = true;
             this.txtPrimerApellido.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrimerApellido.Size = new System.Drawing.Size(414, 34);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(311, 28);
             this.txtPrimerApellido.TabIndex = 24;
             // 
             // labelControl4
@@ -521,10 +529,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(70, 350);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl4.Location = new System.Drawing.Point(52, 284);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(163, 28);
+            this.labelControl4.Size = new System.Drawing.Size(132, 21);
             this.labelControl4.TabIndex = 23;
             this.labelControl4.Text = "PRIMER APELLIDO:";
             // 
@@ -532,13 +539,12 @@
             // 
             this.txtSegundoNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSegundoNombre.Location = new System.Drawing.Point(70, 295);
-            this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(52, 240);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSegundoNombre.Properties.Appearance.Options.UseFont = true;
             this.txtSegundoNombre.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSegundoNombre.Size = new System.Drawing.Size(414, 34);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(311, 28);
             this.txtSegundoNombre.TabIndex = 22;
             // 
             // labelControl3
@@ -547,10 +553,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(70, 261);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(52, 212);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(183, 28);
+            this.labelControl3.Size = new System.Drawing.Size(146, 21);
             this.labelControl3.TabIndex = 21;
             this.labelControl3.Text = "SEGUNDO NOMBRE:";
             // 
@@ -558,13 +563,12 @@
             // 
             this.txtPrimerNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(70, 206);
-            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(52, 167);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrimerNombre.Properties.Appearance.Options.UseFont = true;
             this.txtPrimerNombre.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrimerNombre.Size = new System.Drawing.Size(414, 34);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(311, 28);
             this.txtPrimerNombre.TabIndex = 20;
             // 
             // labelControl2
@@ -573,10 +577,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(70, 173);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(52, 141);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(158, 28);
+            this.labelControl2.Size = new System.Drawing.Size(127, 21);
             this.labelControl2.TabIndex = 19;
             this.labelControl2.Text = "PRIMER NOMBRE:";
             // 
@@ -584,12 +587,11 @@
             // 
             this.txtCodigoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(70, 122);
-            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(52, 99);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
             this.txtCodigoEmpleado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoEmpleado.Properties.Appearance.Options.UseFont = true;
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(414, 34);
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(311, 28);
             this.txtCodigoEmpleado.TabIndex = 18;
             // 
             // labelControl1
@@ -598,10 +600,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(70, 89);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(52, 72);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 28);
+            this.labelControl1.Size = new System.Drawing.Size(63, 21);
             this.labelControl1.TabIndex = 17;
             this.labelControl1.Text = "CODIGO:";
             // 
@@ -610,10 +611,9 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.cmdRegistrarEmpleado);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 600);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 488);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1076, 57);
+            this.panel2.Size = new System.Drawing.Size(808, 46);
             this.panel2.TabIndex = 28;
             // 
             // cmdRegistrarEmpleado
@@ -621,10 +621,9 @@
             this.cmdRegistrarEmpleado.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdRegistrarEmpleado.Appearance.Options.UseFont = true;
             this.cmdRegistrarEmpleado.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cmdRegistrarEmpleado.Location = new System.Drawing.Point(788, 0);
-            this.cmdRegistrarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.cmdRegistrarEmpleado.Location = new System.Drawing.Point(592, 0);
             this.cmdRegistrarEmpleado.Name = "cmdRegistrarEmpleado";
-            this.cmdRegistrarEmpleado.Size = new System.Drawing.Size(288, 57);
+            this.cmdRegistrarEmpleado.Size = new System.Drawing.Size(216, 46);
             this.cmdRegistrarEmpleado.TabIndex = 1;
             this.cmdRegistrarEmpleado.Text = "REGISTRAR EMPLEADO";
             this.cmdRegistrarEmpleado.Click += new System.EventHandler(this.cmdRegistrarEmpleado_Click);
@@ -635,22 +634,23 @@
             this.pageConfiguracionUsuarios.Controls.Add(this.gcListaEmpleados);
             this.pageConfiguracionUsuarios.Controls.Add(this.pnlPopup);
             this.pageConfiguracionUsuarios.Controls.Add(this.panel3);
-            this.pageConfiguracionUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.pageConfiguracionUsuarios.Name = "pageConfiguracionUsuarios";
-            this.pageConfiguracionUsuarios.Size = new System.Drawing.Size(1076, 657);
+            this.pageConfiguracionUsuarios.Size = new System.Drawing.Size(808, 534);
             // 
             // gcListaEmpleados
             // 
             this.gcListaEmpleados.DataMember = "dtListaEmpleados";
             this.gcListaEmpleados.DataSource = this.dsConfiguraciones1;
             this.gcListaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcListaEmpleados.Location = new System.Drawing.Point(0, 53);
+            this.gcListaEmpleados.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gcListaEmpleados.Location = new System.Drawing.Point(0, 43);
             this.gcListaEmpleados.MainView = this.gvListaEmpleados;
+            this.gcListaEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.gcListaEmpleados.Name = "gcListaEmpleados";
             this.gcListaEmpleados.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.cmdEditarEmpleado,
             this.chkHabilitar_Deshabilitar});
-            this.gcListaEmpleados.Size = new System.Drawing.Size(1076, 604);
+            this.gcListaEmpleados.Size = new System.Drawing.Size(808, 491);
             this.gcListaEmpleados.TabIndex = 53;
             this.gcListaEmpleados.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvListaEmpleados});
@@ -669,6 +669,7 @@
             this.colimg_habilitar_deshabilitar,
             this.colhabilitado,
             this.colimg_edicion});
+            this.gvListaEmpleados.DetailHeight = 284;
             this.gvListaEmpleados.GridControl = this.gcListaEmpleados;
             this.gvListaEmpleados.Name = "gvListaEmpleados";
             this.gvListaEmpleados.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
@@ -681,13 +682,13 @@
             this.colcodigoempleado.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colcodigoempleado.Caption = "CODIGO";
             this.colcodigoempleado.FieldName = "codigoempleado";
-            this.colcodigoempleado.MinWidth = 25;
+            this.colcodigoempleado.MinWidth = 19;
             this.colcodigoempleado.Name = "colcodigoempleado";
             this.colcodigoempleado.OptionsColumn.AllowEdit = false;
             this.colcodigoempleado.OptionsColumn.AllowFocus = false;
             this.colcodigoempleado.Visible = true;
             this.colcodigoempleado.VisibleIndex = 0;
-            this.colcodigoempleado.Width = 129;
+            this.colcodigoempleado.Width = 97;
             // 
             // colnombre_empleado
             // 
@@ -695,13 +696,13 @@
             this.colnombre_empleado.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colnombre_empleado.Caption = "NOMBRE";
             this.colnombre_empleado.FieldName = "nombre_empleado";
-            this.colnombre_empleado.MinWidth = 25;
+            this.colnombre_empleado.MinWidth = 19;
             this.colnombre_empleado.Name = "colnombre_empleado";
             this.colnombre_empleado.OptionsColumn.AllowEdit = false;
             this.colnombre_empleado.OptionsColumn.AllowFocus = false;
             this.colnombre_empleado.Visible = true;
             this.colnombre_empleado.VisibleIndex = 1;
-            this.colnombre_empleado.Width = 279;
+            this.colnombre_empleado.Width = 209;
             // 
             // colagencia_servicio
             // 
@@ -709,9 +710,9 @@
             this.colagencia_servicio.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colagencia_servicio.Caption = "AGENCIA";
             this.colagencia_servicio.FieldName = "agencia_servicio";
-            this.colagencia_servicio.MinWidth = 25;
+            this.colagencia_servicio.MinWidth = 19;
             this.colagencia_servicio.Name = "colagencia_servicio";
-            this.colagencia_servicio.Width = 255;
+            this.colagencia_servicio.Width = 191;
             // 
             // colcargo
             // 
@@ -719,13 +720,13 @@
             this.colcargo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colcargo.Caption = "CARGO";
             this.colcargo.FieldName = "cargo";
-            this.colcargo.MinWidth = 25;
+            this.colcargo.MinWidth = 19;
             this.colcargo.Name = "colcargo";
             this.colcargo.OptionsColumn.AllowEdit = false;
             this.colcargo.OptionsColumn.AllowFocus = false;
             this.colcargo.Visible = true;
             this.colcargo.VisibleIndex = 2;
-            this.colcargo.Width = 183;
+            this.colcargo.Width = 137;
             // 
             // colimg_habilitar_deshabilitar
             // 
@@ -734,9 +735,9 @@
             this.colimg_habilitar_deshabilitar.Caption = "HABILITAR / DESHABILITAR";
             this.colimg_habilitar_deshabilitar.ColumnEdit = this.chkHabilitar_Deshabilitar;
             this.colimg_habilitar_deshabilitar.FieldName = "img_habilitar_deshabilitar";
-            this.colimg_habilitar_deshabilitar.MinWidth = 25;
+            this.colimg_habilitar_deshabilitar.MinWidth = 19;
             this.colimg_habilitar_deshabilitar.Name = "colimg_habilitar_deshabilitar";
-            this.colimg_habilitar_deshabilitar.Width = 150;
+            this.colimg_habilitar_deshabilitar.Width = 112;
             // 
             // chkHabilitar_Deshabilitar
             // 
@@ -755,12 +756,12 @@
             this.colhabilitado.Caption = "HABILITAR / DESHABILITAR";
             this.colhabilitado.ColumnEdit = this.chkHabilitar_Deshabilitar;
             this.colhabilitado.FieldName = "habilitado";
-            this.colhabilitado.MaxWidth = 145;
-            this.colhabilitado.MinWidth = 145;
+            this.colhabilitado.MaxWidth = 109;
+            this.colhabilitado.MinWidth = 109;
             this.colhabilitado.Name = "colhabilitado";
             this.colhabilitado.Visible = true;
             this.colhabilitado.VisibleIndex = 4;
-            this.colhabilitado.Width = 145;
+            this.colhabilitado.Width = 109;
             // 
             // colimg_edicion
             // 
@@ -769,19 +770,19 @@
             this.colimg_edicion.Caption = "EDITAR";
             this.colimg_edicion.ColumnEdit = this.cmdEditarEmpleado;
             this.colimg_edicion.FieldName = "img_edicion";
-            this.colimg_edicion.MaxWidth = 90;
-            this.colimg_edicion.MinWidth = 90;
+            this.colimg_edicion.MaxWidth = 67;
+            this.colimg_edicion.MinWidth = 67;
             this.colimg_edicion.Name = "colimg_edicion";
             this.colimg_edicion.Visible = true;
             this.colimg_edicion.VisibleIndex = 3;
-            this.colimg_edicion.Width = 90;
+            this.colimg_edicion.Width = 67;
             // 
             // cmdEditarEmpleado
             // 
             this.cmdEditarEmpleado.AutoHeight = false;
-            editorButtonImageOptions3.Image = global::Core.Properties.Resources.iconEditar_32;
+            editorButtonImageOptions1.Image = global::Core.Properties.Resources.iconEditar_32;
             this.cmdEditarEmpleado.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.cmdEditarEmpleado.Name = "cmdEditarEmpleado";
             this.cmdEditarEmpleado.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdEditarEmpleado.Click += new System.EventHandler(this.CmdEditarEmpleado_Click);
@@ -790,9 +791,10 @@
             // 
             this.pnlPopup.Controls.Add(this.popupBusquedaEmpleados);
             this.pnlPopup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlPopup.Location = new System.Drawing.Point(0, 48);
+            this.pnlPopup.Location = new System.Drawing.Point(0, 39);
+            this.pnlPopup.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPopup.Name = "pnlPopup";
-            this.pnlPopup.Size = new System.Drawing.Size(1076, 5);
+            this.pnlPopup.Size = new System.Drawing.Size(808, 4);
             this.pnlPopup.TabIndex = 55;
             // 
             // popupBusquedaEmpleados
@@ -800,15 +802,17 @@
             this.popupBusquedaEmpleados.Appearance.BackColor = System.Drawing.Color.White;
             this.popupBusquedaEmpleados.Appearance.Options.UseBackColor = true;
             this.popupBusquedaEmpleados.Controls.Add(this.flyoutPanelControl1);
-            this.popupBusquedaEmpleados.Location = new System.Drawing.Point(44, 8);
+            this.popupBusquedaEmpleados.Location = new System.Drawing.Point(33, 6);
             this.popupBusquedaEmpleados.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.popupBusquedaEmpleados.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.popupBusquedaEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.popupBusquedaEmpleados.Name = "popupBusquedaEmpleados";
             this.popupBusquedaEmpleados.Options.AnimationType = DevExpress.Utils.Win.PopupToolWindowAnimation.Fade;
             this.popupBusquedaEmpleados.Options.CloseOnOuterClick = true;
             this.popupBusquedaEmpleados.OptionsBeakPanel.BackColor = System.Drawing.Color.White;
+            this.popupBusquedaEmpleados.OptionsButtonPanel.ButtonPanelHeight = 24;
             this.popupBusquedaEmpleados.OwnerControl = this.pnlPopup;
-            this.popupBusquedaEmpleados.Size = new System.Drawing.Size(984, 77);
+            this.popupBusquedaEmpleados.Size = new System.Drawing.Size(738, 63);
             this.popupBusquedaEmpleados.TabIndex = 0;
             this.popupBusquedaEmpleados.Hidden += new DevExpress.Utils.FlyoutPanelEventHandler(this.PopupBusquedaEmpleados_Hidden);
             // 
@@ -819,20 +823,20 @@
             this.flyoutPanelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flyoutPanelControl1.FlyoutPanel = this.popupBusquedaEmpleados;
             this.flyoutPanelControl1.Location = new System.Drawing.Point(0, 0);
+            this.flyoutPanelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.flyoutPanelControl1.Name = "flyoutPanelControl1";
-            this.flyoutPanelControl1.Size = new System.Drawing.Size(984, 77);
+            this.flyoutPanelControl1.Size = new System.Drawing.Size(738, 63);
             this.flyoutPanelControl1.TabIndex = 0;
             // 
             // txtBusquedaEmpleado
             // 
             this.txtBusquedaEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusquedaEmpleado.Location = new System.Drawing.Point(212, 18);
-            this.txtBusquedaEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBusquedaEmpleado.Location = new System.Drawing.Point(159, 15);
             this.txtBusquedaEmpleado.Name = "txtBusquedaEmpleado";
             this.txtBusquedaEmpleado.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusquedaEmpleado.Properties.Appearance.Options.UseFont = true;
-            this.txtBusquedaEmpleado.Size = new System.Drawing.Size(743, 36);
+            this.txtBusquedaEmpleado.Size = new System.Drawing.Size(557, 30);
             this.txtBusquedaEmpleado.TabIndex = 20;
             this.txtBusquedaEmpleado.TextChanged += new System.EventHandler(this.TxtBusquedaEmpleado_TextChanged);
             // 
@@ -842,10 +846,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(17, 26);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl12.Location = new System.Drawing.Point(13, 21);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(175, 28);
+            this.labelControl12.Size = new System.Drawing.Size(139, 21);
             this.labelControl12.TabIndex = 19;
             this.labelControl12.Text = "BUSQUEDA RAPIDA";
             // 
@@ -855,8 +858,9 @@
             this.panel3.Controls.Add(this.picBusquedaEmpleado);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1076, 48);
+            this.panel3.Size = new System.Drawing.Size(808, 39);
             this.panel3.TabIndex = 54;
             // 
             // lblListaEmpleados
@@ -868,9 +872,8 @@
             this.lblListaEmpleados.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lblListaEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblListaEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.lblListaEmpleados.Margin = new System.Windows.Forms.Padding(4);
             this.lblListaEmpleados.Name = "lblListaEmpleados";
-            this.lblListaEmpleados.Size = new System.Drawing.Size(979, 48);
+            this.lblListaEmpleados.Size = new System.Drawing.Size(735, 39);
             this.lblListaEmpleados.TabIndex = 52;
             this.lblListaEmpleados.Text = "LISTA EMPLEADOS EN AGENCIAS";
             // 
@@ -878,13 +881,12 @@
             // 
             this.picBusquedaEmpleado.Dock = System.Windows.Forms.DockStyle.Right;
             this.picBusquedaEmpleado.EditValue = global::Core.Properties.Resources.iconBusqueda_32;
-            this.picBusquedaEmpleado.Location = new System.Drawing.Point(979, 0);
-            this.picBusquedaEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.picBusquedaEmpleado.Location = new System.Drawing.Point(735, 0);
             this.picBusquedaEmpleado.Name = "picBusquedaEmpleado";
             this.picBusquedaEmpleado.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.picBusquedaEmpleado.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picBusquedaEmpleado.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picBusquedaEmpleado.Size = new System.Drawing.Size(97, 48);
+            this.picBusquedaEmpleado.Size = new System.Drawing.Size(73, 39);
             this.picBusquedaEmpleado.TabIndex = 53;
             this.picBusquedaEmpleado.ToolTip = "Configuración de Empleados";
             this.picBusquedaEmpleado.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
@@ -895,54 +897,23 @@
             // pageInicial
             // 
             this.pageInicial.Caption = "pageInicial";
-            this.pageInicial.Margin = new System.Windows.Forms.Padding(4);
             this.pageInicial.Name = "pageInicial";
-            this.pageInicial.Size = new System.Drawing.Size(1076, 657);
+            this.pageInicial.Size = new System.Drawing.Size(808, 534);
             // 
             // epProveedorErrores
             // 
             this.epProveedorErrores.ContainerControl = this;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.lblTitulo);
-            this.panel4.Controls.Add(this.picIrAtras);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1076, 40);
-            this.panel4.TabIndex = 52;
-            // 
-            // picIrAtras
-            // 
-            this.picIrAtras.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picIrAtras.EditValue = global::Core.Properties.Resources.icon_atras_64;
-            this.picIrAtras.Location = new System.Drawing.Point(0, 0);
-            this.picIrAtras.Margin = new System.Windows.Forms.Padding(4);
-            this.picIrAtras.Name = "picIrAtras";
-            this.picIrAtras.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picIrAtras.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picIrAtras.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picIrAtras.Size = new System.Drawing.Size(68, 40);
-            this.picIrAtras.TabIndex = 52;
-            this.picIrAtras.ToolTip = "Nuevo Empleado";
-            this.picIrAtras.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Object;
-            this.picIrAtras.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
-            this.picIrAtras.ToolTipTitle = "FLUCOL";
-            this.picIrAtras.Visible = false;
-            this.picIrAtras.Click += new System.EventHandler(this.PicIrAtras_Click);
-            // 
             // ctlMantenimientoUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.NavigationPrincipal);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ctlMantenimientoUsuarios";
-            this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.Size = new System.Drawing.Size(1090, 737);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Size = new System.Drawing.Size(818, 599);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmdModicarUsuarios.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCrearUsuarios.Properties)).EndInit();
@@ -953,6 +924,8 @@
             this.NavigationEmpleados.ResumeLayout(false);
             this.pagePrimeraPagina.ResumeLayout(false);
             this.pagePrimeraPagina.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picIrAtras.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridAgencias.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsAgenciasServicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsConfiguraciones1)).EndInit();
@@ -984,8 +957,6 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBusquedaEmpleado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epProveedorErrores)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picIrAtras.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

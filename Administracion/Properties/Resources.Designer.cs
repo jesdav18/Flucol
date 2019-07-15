@@ -63,6 +63,16 @@ namespace Administracion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_agencias_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_agencias_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_atras_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_atras_64", resourceCulture);
@@ -96,6 +106,16 @@ namespace Administracion.Properties {
         internal static System.Drawing.Bitmap icon_dashboard_64 {
             get {
                 object obj = ResourceManager.GetObject("icon_dashboard_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_noticia_64 {
+            get {
+                object obj = ResourceManager.GetObject("icon_noticia_64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
